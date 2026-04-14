@@ -1,0 +1,144 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "SF Pro Text",
+      "role": "body"
+    },
+    {
+      "family": "SF Pro Display",
+      "role": "heading"
+    },
+    {
+      "family": "Myriad Set Pro",
+      "role": "unknown"
+    },
+    {
+      "family": "Helvetica Neue",
+      "role": "body"
+    },
+    {
+      "family": "Arial",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#0066CC",
+    "secondary": "#0071E3",
+    "accent": "#2997FF",
+    "background": "#FFFFFF",
+    "textPrimary": "#000000",
+    "link": "#2997FF"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "SF Pro Text",
+      "heading": "SF Pro Display"
+    },
+    "fontStacks": {
+      "heading": [
+        "SF Pro Text",
+        "SF Pro Icons",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ],
+      "body": [
+        "SF Pro Text",
+        "SF Pro Icons",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "SF Pro Display",
+        "SF Pro Icons",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "34px",
+      "h2": "12px",
+      "body": "32px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "3px"
+  },
+  "components": {
+    "input": {
+      "background": "transparent",
+      "textColor": "#333336",
+      "borderColor": null,
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.svg",
+    "favicon": null,
+    "ogImage": "https://www.apple.com/v/apple-card/n/images/meta/og__dtukeczp0ygm_overview.png?202602031203",
+    "logoHref": "File saved at: attached_assets/logoHref.html"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, and links to the homepage, which aligns with the brand 'Apple'.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "All buttons have the same background color (#FFFFFF) and lack vibrant, action-oriented text, making it impossible to distinguish a primary CTA."
+    },
+    "secondary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "Since no primary button could be identified, a secondary button cannot be selected either."
+    },
+    "confidence": 0.9
+  },
+  "personality": {
+    "tone": "modern",
+    "energy": "medium",
+    "targetAudience": "tech-savvy consumers"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.9,
+    "colors": 0.95,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, and links to the homepage, which aligns with the brand 'Apple'.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}
