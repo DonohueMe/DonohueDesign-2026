@@ -164,7 +164,10 @@ export default function Home() {
       {/* ── Hero ───────────────────────────────────────────────── */}
       <section
         data-testid="hero-section"
-        className="pt-[44px] bg-white"
+        className="pt-[44px]"
+        style={{
+          background: "linear-gradient(180deg, #f0f6ff 0%, #ffffff 60%)",
+        }}
       >
         <div className="max-w-[980px] mx-auto px-5 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
@@ -512,13 +515,18 @@ export default function Home() {
             <div>
               <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[#6e6e73] mb-3">Services</p>
               <ul className="space-y-2">
-                {["Website Design", "Internet Marketing", "Graphic Design"].map((s) => (
-                  <li key={s}>
+                {[
+                  { label: "Website Design", id: "website-designer" },
+                  { label: "Internet Marketing", id: "internet-marketing" },
+                  { label: "Graphic Design", id: "graphic-designer" },
+                ].map(({ label, id }) => (
+                  <li key={id}>
                     <button
-                      onClick={() => scrollTo(s.toLowerCase().replace(" ", "-"))}
+                      onClick={() => scrollTo(id)}
                       className="text-[13px] text-[#6e6e73] hover:text-[#0066cc] transition-colors"
+                      data-testid={`footer-link-${id}`}
                     >
-                      {s}
+                      {label}
                     </button>
                   </li>
                 ))}
