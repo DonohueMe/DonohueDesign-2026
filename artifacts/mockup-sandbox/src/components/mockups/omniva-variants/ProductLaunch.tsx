@@ -1,134 +1,127 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+
+const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
+
+const serviceRows = [
+  {
+    category: 'Website Designer',
+    headline: 'Websites that work as hard as you do.',
+    body: 'Fast, beautiful, and built to convert. From simple brochure sites to fully custom e-commerce stores.',
+    items: ['Website Design', 'Website Development', 'E-commerce', 'SEO-Optimized Design', 'Website Redesign'],
+  },
+  {
+    category: 'Internet Marketing',
+    headline: 'Smarter marketing, powered by AI.',
+    body: 'AI voice assistants, email automation, and local SEO that get you found first.',
+    items: ['AI Voice Assistant', 'AI Receptionist', 'Email Marketing Automation', 'Local SEO (GMB)'],
+  },
+  {
+    category: 'Graphic Designer',
+    headline: "A brand identity you\u2019re proud to show off.",
+    body: 'Logos, print materials, and digital assets that communicate who you are at first glance.',
+    items: ['Logo Design', 'Brand Identity', 'Stationery & Business Cards', 'Brochure & Flyer Design'],
+  },
+];
 
 export function ProductLaunch() {
   return (
-    <div style={{ fontFamily: '-apple-system, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif' }} className="min-h-screen bg-white text-[#000000] selection:bg-[#2997FF] selection:text-white">
-      
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-[#d2d2d7]">
-        <div className="max-w-[980px] mx-auto px-4 h-12 flex items-center justify-between text-[12px] text-[#6e6e73]">
-          <a href="#" className="font-semibold text-black hover:text-black/70 transition-colors">Omniva Design</a>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#websites" className="hover:text-black transition-colors">Websites</a>
-            <a href="#marketing" className="hover:text-black transition-colors">Marketing</a>
-            <a href="#design" className="hover:text-black transition-colors">Design</a>
-          </div>
-          <a href="#contact" className="bg-[#0066CC] hover:bg-[#0066CC]/90 text-white px-3 py-1 rounded-full font-medium transition-colors">Contact</a>
+    <div style={{ fontFamily: SF, margin: 0, padding: 0, overflowX: 'hidden' }}>
+      {/* Hero — Apple Card gradient: lavender · pink · peach · orange · yellow */}
+      <section style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        padding: '0 24px',
+        background: [
+          'radial-gradient(ellipse at 10% 25%, rgba(196,153,226,0.85) 0%, transparent 45%)',
+          'radial-gradient(ellipse at 88% 18%, rgba(255,185,120,0.85) 0%, transparent 45%)',
+          'radial-gradient(ellipse at 55% 55%, rgba(248,140,170,0.70) 0%, transparent 48%)',
+          'radial-gradient(ellipse at 82% 82%, rgba(255,220,100,0.80) 0%, transparent 40%)',
+          'radial-gradient(ellipse at 18% 80%, rgba(175,145,230,0.65) 0%, transparent 40%)',
+          '#f5eef8',
+        ].join(','),
+      }}>
+        {/* Eyebrow */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 20 }}>
+          <svg width="18" height="18" viewBox="0 0 56 56" fill="currentColor">
+            <path d="M37.5 5.8a14.1 14.1 0 0 0-3.3 10.1 13.7 13.7 0 0 0 8.3 12.5 32.7 32.7 0 0 1-4.2 8.7c-2.6 3.8-5.4 7.6-9.6 7.6s-5.3-2.4-10.1-2.4-4.9 2.5-10.2 2.5-7-3.5-9.6-7.8A37.9 37.9 0 0 1 -7 16.6C-7 4.6.8-1.8 8.4-1.8c4.1 0 7.5 2.7 10 2.7s6.2-2.8 10.9-2.8a13.5 13.5 0 0 1 8.2 3.7z"/>
+          </svg>
+          <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f', letterSpacing: '-0.01em' }}>Omniva Design</span>
         </div>
-      </nav>
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 text-center border-b border-[#d2d2d7] bg-gradient-to-b from-[#f0f6ff] to-white">
-        <div className="max-w-[980px] mx-auto">
-          <p className="text-[14px] uppercase tracking-[0.1em] text-[#2997FF] font-semibold mb-4">Omniva Design</p>
-          <h1 className="text-[56px] md:text-[80px] font-bold leading-[1] tracking-[-0.05em] mb-6">
-            Pro. In every way.
-          </h1>
-          <p className="text-[21px] text-[#6e6e73] leading-[1.5] max-w-[600px] mx-auto mb-10">
-            A web design and digital marketing agency built for modern businesses. Santa Rosa, CA.
-          </p>
-          <div className="flex items-center justify-center gap-6">
-            <a href="#websites" className="bg-[#0066CC] hover:bg-[#0066CC]/90 text-white px-6 py-3 rounded-full font-medium text-[17px] transition-colors">
-              View our services
-            </a>
-            <a href="#contact" className="group flex items-center text-[#2997FF] hover:underline text-[17px] font-medium">
-              Get in touch <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-        </div>
+        <h1 style={{
+          fontSize: 'clamp(48px, 7vw, 80px)',
+          fontWeight: 700,
+          lineHeight: 1.05,
+          letterSpacing: '-0.04em',
+          color: '#000000',
+          maxWidth: 720,
+          margin: '0 0 28px',
+        }}>
+          The simplicity of Apple.<br />In your website.
+        </h1>
+
+        <button style={{
+          background: '#1d1d1f',
+          color: '#fff',
+          border: 'none',
+          borderRadius: 980,
+          padding: '10px 22px',
+          fontSize: 15,
+          fontWeight: 500,
+          fontFamily: SF,
+          cursor: 'pointer',
+          letterSpacing: '-0.01em',
+        }}>
+          Get started
+        </button>
       </section>
 
-      {/* Websites Section */}
-      <section id="websites" className="py-32 px-4 text-center border-b border-[#d2d2d7]">
-        <div className="max-w-[980px] mx-auto">
-          <p className="text-[14px] uppercase tracking-[0.1em] text-[#6e6e73] font-semibold mb-4">Website Designer</p>
-          <h2 className="text-[40px] md:text-[64px] font-bold leading-[1.1] tracking-tight mb-6">
-            A website that works as hard as you do.
-          </h2>
-          <p className="text-[21px] text-[#6e6e73] leading-[1.5] max-w-[600px] mx-auto mb-10">
-            From complete redesigns to high-performance e-commerce platforms. Built for speed, optimized for search.
-          </p>
-          <a href="#" className="group flex justify-center items-center text-[#2997FF] hover:underline text-[21px] font-medium mb-16">
-            Learn more about Websites <ChevronRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-          </a>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-[17px] font-medium text-black">
-            <div>Website Design</div>
-            <div>Website Development</div>
-            <div>Website Redesign</div>
-            <div>E-commerce</div>
-            <div>SEO</div>
+      {/* Feature sections */}
+      {serviceRows.map((s, i) => (
+        <section key={s.category} style={{
+          background: i % 2 === 0 ? '#ffffff' : '#f5f5f7',
+          borderTop: '1px solid #d2d2d7',
+          padding: '100px 24px',
+        }}>
+          <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
+            <div style={i % 2 === 0 ? { order: 0 } : { order: 1 }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#6e6e73', marginBottom: 16 }}>
+                {s.category}
+              </p>
+              <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, color: '#000', margin: '0 0 20px' }}>
+                {s.headline}
+              </h2>
+              <p style={{ fontSize: 19, lineHeight: 1.55, color: '#6e6e73', margin: 0 }}>
+                {s.body}
+              </p>
+            </div>
+            <div style={i % 2 === 0 ? { order: 1 } : { order: 0 }}>
+              {s.items.map((item) => (
+                <div key={item} style={{ borderBottom: '1px solid #d2d2d7', padding: '16px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: 17, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 17, fontWeight: 400 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* Footer */}
+      <footer style={{ borderTop: '1px solid #d2d2d7', padding: '40px 24px', background: '#ffffff' }}>
+        <div style={{ maxWidth: 980, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span style={{ fontSize: 13, color: '#6e6e73' }}>© 2025 Omniva Design. Santa Rosa, CA.</span>
+          <div style={{ display: 'flex', gap: 24 }}>
+            {['Website Designer', 'Internet Marketing', 'Graphic Designer'].map(l => (
+              <a key={l} href="#" style={{ fontSize: 13, color: '#6e6e73', textDecoration: 'none' }}>{l}</a>
+            ))}
           </div>
         </div>
-      </section>
-
-      {/* Internet Marketing Section */}
-      <section id="marketing" className="py-32 px-4 text-center border-b border-[#d2d2d7]">
-        <div className="max-w-[980px] mx-auto">
-          <p className="text-[14px] uppercase tracking-[0.1em] text-[#6e6e73] font-semibold mb-4">Internet Marketing</p>
-          <h2 className="text-[40px] md:text-[64px] font-bold leading-[1.1] tracking-tight mb-6">
-            Smarter marketing.<br />Real results.
-          </h2>
-          <p className="text-[21px] text-[#6e6e73] leading-[1.5] max-w-[600px] mx-auto mb-10">
-            Leverage AI voice assistants, automate your email campaigns, and dominate local search.
-          </p>
-          <a href="#" className="group flex justify-center items-center text-[#2997FF] hover:underline text-[21px] font-medium mb-16">
-            Learn more about Marketing <ChevronRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-          </a>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-[17px] font-medium text-black">
-            <div>AI Voice Assistant</div>
-            <div>AI Receptionist</div>
-            <div>Email Marketing</div>
-            <div>Local SEO (GMB)</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Graphic Design Section */}
-      <section id="design" className="py-32 px-4 text-center border-b border-[#d2d2d7]">
-        <div className="max-w-[980px] mx-auto">
-          <p className="text-[14px] uppercase tracking-[0.1em] text-[#6e6e73] font-semibold mb-4">Graphic Designer</p>
-          <h2 className="text-[40px] md:text-[64px] font-bold leading-[1.1] tracking-tight mb-6">
-            Your brand. Redefined.
-          </h2>
-          <p className="text-[21px] text-[#6e6e73] leading-[1.5] max-w-[600px] mx-auto mb-10">
-            Stand out with a cohesive brand identity, from logo design to essential print materials.
-          </p>
-          <a href="#" className="group flex justify-center items-center text-[#2997FF] hover:underline text-[21px] font-medium mb-16">
-            Learn more about Design <ChevronRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-          </a>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-[17px] font-medium text-black">
-            <div>Logo Design</div>
-            <div>Brand Identity</div>
-            <div>Print Design</div>
-            <div>Stationery</div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="contact" className="py-32 px-4 text-center">
-        <div className="max-w-[980px] mx-auto">
-          <h2 className="text-[40px] md:text-[64px] font-bold leading-[1.1] tracking-tight mb-6">
-            Ready to start?
-          </h2>
-          <p className="text-[21px] text-[#6e6e73] leading-[1.5] max-w-[600px] mx-auto mb-10">
-            Let's build something extraordinary together.
-          </p>
-          <div className="flex items-center justify-center gap-6">
-            <a href="#" className="bg-[#0066CC] hover:bg-[#0066CC]/90 text-white px-8 py-4 rounded-full font-medium text-[17px] transition-colors">
-              Contact us today
-            </a>
-            <a href="#" className="border-2 border-[#0066CC] text-[#0066CC] hover:bg-[#0066CC] hover:text-white px-8 py-4 rounded-full font-medium text-[17px] transition-colors">
-              Schedule a call
-            </a>
-          </div>
-        </div>
-      </section>
-
+      </footer>
     </div>
   );
 }
