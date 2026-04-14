@@ -2,39 +2,32 @@ import React from 'react';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
-const services = [
-  {
-    category: 'Website Designer',
-    headline: 'Your website. Redesigned for results.',
-    body: 'We design and build fast, beautiful websites that drive real business outcomes — from simple brochure sites to full e-commerce.',
-    items: ['Website Design', 'Website Development', 'E-commerce Store', 'Website Redesign', 'SEO-Optimized Design'],
-  },
-  {
-    category: 'Internet Marketing',
-    headline: 'Marketing that never sleeps.',
-    body: 'AI-powered tools that answer your calls, send your emails, and rank your business on Google — automatically.',
-    items: ['AI Voice Assistant', 'AI Receptionist', 'Email Marketing Automation', 'Local SEO (GMB)'],
-  },
-  {
-    category: 'Graphic Designer',
-    headline: 'Design that speaks before you do.',
-    body: 'Logos, brand guides, print materials, and digital assets crafted to communicate your identity in an instant.',
-    items: ['Logo Design', 'Brand Identity Design', 'Stationery & Business Cards', 'Brochure & Flyer Design'],
-  },
-];
+function PlusBtn() {
+  return (
+    <div style={{
+      position: 'absolute', bottom: 20, right: 20,
+      width: 28, height: 28, borderRadius: '50%',
+      background: '#1d1d1f',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+    }}>
+      <svg width="12" height="12" viewBox="0 0 12 12">
+        <path d="M6 1v10M1 6h10" stroke="white" strokeWidth="1.6" strokeLinecap="round"/>
+      </svg>
+    </div>
+  );
+}
 
+// Layout B — single-column LARGE statement tiles, stacked vertically
 export function CardPage() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, overflowX: 'hidden' }}>
-      {/* Hero — ocean blue · cyan · seafoam · mint gradient */}
+
+      {/* Hero — ocean blue · cyan · seafoam · mint */}
       <section style={{
         minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        padding: '0 24px',
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center',
+        textAlign: 'center', padding: '0 24px',
         background: [
           'radial-gradient(ellipse at 12% 20%, rgba(90,170,255,0.90) 0%, transparent 45%)',
           'radial-gradient(ellipse at 85% 15%, rgba(70,220,195,0.85) 0%, transparent 45%)',
@@ -45,95 +38,128 @@ export function CardPage() {
         ].join(','),
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 22 }}>
-          <svg width="16" height="16" viewBox="0 0 56 56" fill="#1d1d1f">
-            <path d="M37.5 5.8a14.1 14.1 0 0 0-3.3 10.1 13.7 13.7 0 0 0 8.3 12.5 32.7 32.7 0 0 1-4.2 8.7c-2.6 3.8-5.4 7.6-9.6 7.6s-5.3-2.4-10.1-2.4-4.9 2.5-10.2 2.5-7-3.5-9.6-7.8A37.9 37.9 0 0 1 -7 16.6C-7 4.6.8-1.8 8.4-1.8c4.1 0 7.5 2.7 10 2.7s6.2-2.8 10.9-2.8a13.5 13.5 0 0 1 8.2 3.7z"/>
+          <svg width="17" height="17" viewBox="0 0 814 1000" fill="#1d1d1f">
+            <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.4 135.4-316.8 269.1-316.8 71 0 130.5 46.4 174.5 46.4 42.7 0 109.2-49.9 188.4-49.9 30.5.1 108.2 5.8 160.2 67.5z"/>
           </svg>
           <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Omniva Design</span>
         </div>
-
         <h1 style={{
-          fontSize: 'clamp(44px, 7vw, 78px)',
-          fontWeight: 700,
-          lineHeight: 1.05,
-          letterSpacing: '-0.04em',
-          color: '#000000',
-          maxWidth: 760,
-          margin: '0 0 28px',
+          fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700,
+          lineHeight: 1.05, letterSpacing: '-0.04em',
+          color: '#000000', maxWidth: 740, margin: '0 0 28px',
         }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
-
         <button style={{
-          background: '#1d1d1f',
-          color: '#fff',
-          border: 'none',
-          borderRadius: 980,
-          padding: '10px 22px',
-          fontSize: 15,
-          fontWeight: 500,
-          fontFamily: SF,
-          cursor: 'pointer',
-          letterSpacing: '-0.01em',
+          background: '#1d1d1f', color: '#fff', border: 'none',
+          borderRadius: 980, padding: '10px 22px',
+          fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
         }}>
           Get a free consultation
         </button>
       </section>
 
-      {/* Services — centered layout, Apple Card style */}
-      {services.map((s, i) => (
-        <section key={s.category} style={{
-          background: '#ffffff',
-          borderTop: '1px solid #d2d2d7',
-          padding: '120px 24px',
-          textAlign: 'center',
-        }}>
-          <div style={{ maxWidth: 680, margin: '0 auto' }}>
-            <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#6e6e73', marginBottom: 20 }}>
-              {s.category}
+      {/* ── Tile Grid — single column, large full-width statement tiles ── */}
+      <div style={{ background: '#f5f5f7', padding: '20px 20px 60px' }}>
+        <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 12 }}>
+
+          {/* Tile 1 — Full-width typographic statement */}
+          <div style={{
+            background: '#fff', borderRadius: 20, padding: '64px 72px',
+            position: 'relative', overflow: 'hidden',
+          }}>
+            <p style={{ margin: '0 0 0', fontSize: 'clamp(52px, 6.5vw, 80px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em' }}>
+              <span style={{
+                background: 'linear-gradient(135deg, #5aaeff, #46dcc3)',
+                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+              }}>No setup fees.</span>
             </p>
-            <h2 style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.1, color: '#000', margin: '0 0 20px' }}>
-              {s.headline}
-            </h2>
-            <p style={{ fontSize: 21, lineHeight: 1.55, color: '#6e6e73', margin: '0 0 48px' }}>
-              {s.body}
+            <p style={{ margin: '6px 0 0', fontSize: 'clamp(44px, 5.5vw, 68px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em', color: '#1d1d1f' }}>
+              Not even the fine print.
             </p>
-            <div style={{ textAlign: 'left', borderTop: '1px solid #d2d2d7' }}>
-              {s.items.map(item => (
-                <div key={item} style={{ borderBottom: '1px solid #d2d2d7', padding: '18px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontSize: 17, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#2997ff', fontSize: 20 }}>›</span>
+            <PlusBtn/>
+          </div>
+
+          {/* Tile 2 — Full-width Website Services */}
+          <div style={{
+            background: '#fff', borderRadius: 20, padding: '52px 72px',
+            position: 'relative', overflow: 'hidden',
+            display: 'flex', gap: 80, alignItems: 'center',
+          }}>
+            <div style={{ flex: '0 0 420px' }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Website Designer</p>
+              <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                Your website. Working harder than ever.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Fast, beautiful, and built to convert — from simple brochures to full e-commerce.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
+              {['Website Design', 'Website Development', 'E-commerce Store', 'Website Redesign', 'SEO-Optimized Design'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
                 </div>
               ))}
             </div>
+            <PlusBtn/>
           </div>
-        </section>
-      ))}
 
-      {/* CTA banner */}
-      <section style={{
-        background: '#f5f5f7',
-        borderTop: '1px solid #d2d2d7',
-        padding: '100px 24px',
-        textAlign: 'center',
-      }}>
-        <div style={{ maxWidth: 680, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 48, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 16px' }}>
-            Ready to grow?
-          </h2>
-          <p style={{ fontSize: 21, color: '#6e6e73', margin: '0 0 36px' }}>
-            Based in Santa Rosa, CA. Serving businesses throughout Sonoma County and Northern California.
-          </p>
-          <button style={{
-            background: '#0066cc', color: '#fff', border: 'none', borderRadius: 980,
-            padding: '14px 28px', fontSize: 17, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
+          {/* Tile 3 — Full-width Internet Marketing */}
+          <div style={{
+            background: '#fff', borderRadius: 20, padding: '52px 72px',
+            position: 'relative', overflow: 'hidden',
+            display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse',
           }}>
-            Start your project
-          </button>
-        </div>
-      </section>
+            <div style={{ flex: '0 0 380px' }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Internet Marketing</p>
+              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                AI marketing that works while you sleep.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Voice assistants, email automation, local SEO — enterprise tools at small-business prices.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
+              {['AI Voice Assistant', 'AI Receptionist', 'Email Marketing Automation', 'Local SEO (GMB)'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+            <PlusBtn/>
+          </div>
 
-      <footer style={{ borderTop: '1px solid #d2d2d7', padding: '40px 24px', background: '#ffffff', textAlign: 'center' }}>
-        <p style={{ fontSize: 13, color: '#6e6e73', margin: 0 }}>© 2025 Omniva Design — Santa Rosa, CA</p>
+          {/* Tile 4 — Full-width CTA gradient */}
+          <div style={{
+            borderRadius: 20, padding: '72px 72px',
+            position: 'relative', overflow: 'hidden',
+            background: [
+              'radial-gradient(ellipse at 8% 30%, rgba(90,170,255,0.95) 0%, transparent 50%)',
+              'radial-gradient(ellipse at 92% 25%, rgba(70,220,195,0.90) 0%, transparent 50%)',
+              'radial-gradient(ellipse at 50% 75%, rgba(100,195,250,0.80) 0%, transparent 50%)',
+              '#a8e8f5',
+            ].join(','),
+          }}>
+            <p style={{ fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 32px', lineHeight: 1.05, textShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
+              Ready to take your business to the next level?
+            </p>
+            <button style={{
+              background: '#1d1d1f', color: '#fff', border: 'none',
+              borderRadius: 980, padding: '14px 28px',
+              fontSize: 17, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
+            }}>
+              Start your project
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <footer style={{ background: '#f5f5f7', padding: '32px 24px', borderTop: '1px solid #d2d2d7', textAlign: 'center' }}>
+        <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>© 2025 Omniva Design — Santa Rosa, CA</p>
       </footer>
     </div>
   );
