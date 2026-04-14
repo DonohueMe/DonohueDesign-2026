@@ -4,6 +4,7 @@ export const modules: ModuleMap = {
   "./components/mockups/omniva-variants/CardPage.tsx": () => import("../components/mockups/omniva-variants/CardPage.tsx"),
   "./components/mockups/omniva-variants/DarkPremium.tsx": () => import("../components/mockups/omniva-variants/DarkPremium.tsx"),
   "./components/mockups/omniva-variants/EditorialGrid.tsx": () => import("../components/mockups/omniva-variants/EditorialGrid.tsx"),
+  "./components/mockups/omniva-variants/FullSite.tsx": () => import("../components/mockups/omniva-variants/FullSite.tsx"),
   "./components/mockups/omniva-variants/PL_Var1.tsx": () => import("../components/mockups/omniva-variants/PL_Var1.tsx"),
   "./components/mockups/omniva-variants/PL_Var2.tsx": () => import("../components/mockups/omniva-variants/PL_Var2.tsx"),
   "./components/mockups/omniva-variants/PL_Var3.tsx": () => import("../components/mockups/omniva-variants/PL_Var3.tsx"),
