@@ -80,6 +80,42 @@ function AppleLogo({ size = 17, fill = '#1d1d1f' }: { size?: number; fill?: stri
   );
 }
 
+const NAV_LINKS = ['Website Designer', 'Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
+
+function StickyNav() {
+  return (
+    <nav style={{
+      position: 'fixed', top: 16, left: '50%',
+      transform: 'translateX(-50%)',
+      zIndex: 1000,
+      background: '#0d1535',
+      borderRadius: 980,
+      padding: '0 28px',
+      height: 52,
+      display: 'flex', alignItems: 'center', gap: 4,
+      whiteSpace: 'nowrap',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.22)',
+    }}>
+      {NAV_LINKS.map((link, i) => (
+        <a key={link} href="#" style={{
+          fontSize: 14, fontWeight: 500,
+          color: i === NAV_LINKS.length - 1 ? '#a8b4d0' : 'rgba(255,255,255,0.88)',
+          textDecoration: 'none',
+          padding: '6px 14px',
+          borderRadius: 980,
+          transition: 'background 0.15s',
+          letterSpacing: '-0.01em',
+        }}
+          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+          onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+        >
+          {link}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
 /**
  * Variation 3 — EDITORIAL TEXT + CALL-OUTS
  * The full body copy runs as a readable article in the left column.
@@ -88,6 +124,7 @@ function AppleLogo({ size = 17, fill = '#1d1d1f' }: { size?: number; fill?: stri
 export function PL_Var3() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, overflowX: 'hidden' }}>
+      <StickyNav />
 
       {/* ── Hero ── */}
       <section style={{
