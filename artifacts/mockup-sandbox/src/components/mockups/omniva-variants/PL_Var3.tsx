@@ -237,7 +237,7 @@ export function PL_Var3() {
               </p>
             </div>
 
-            {/* Right — AI + Brand call-outs */}
+            {/* Right — AI call-out only */}
             <div>
               <CalloutDark>
                 <Label>Internet Marketing</Label>
@@ -248,16 +248,6 @@ export function PL_Var3() {
                   <Row key={item} label={item} light/>
                 ))}
               </CalloutDark>
-
-              <Callout>
-                <Label>Brand &amp; Print</Label>
-                <h4 style={{ fontSize: 16, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 12px', lineHeight: 1.3 }}>
-                  An identity as strong as your business.
-                </h4>
-                {['Logo & Brand Identity', 'Business Cards & Stationery', 'Brochures & Flyers', 'Infographic Design', 'Presentation Design'].map(item => (
-                  <Row key={item} label={item}/>
-                ))}
-              </Callout>
             </div>
           </div>
 
@@ -275,16 +265,16 @@ export function PL_Var3() {
               </p>
             </div>
 
-            {/* Right — location + CTA call-outs */}
+            {/* Right — Brand + CTA call-outs */}
             <div>
               <Callout>
-                <Label>Service Area</Label>
-                <p style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 10px', lineHeight: 1.2 }}>
-                  Santa Rosa &amp; Sonoma County.
-                </p>
-                <p style={{ fontSize: 13, color: '#6e6e73', lineHeight: 1.6, margin: 0 }}>
-                  Windsor · Rohnert Park · Petaluma · Healdsburg · Sebastopol · and all of Northern California.
-                </p>
+                <Label>Brand &amp; Print</Label>
+                <h4 style={{ fontSize: 16, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 12px', lineHeight: 1.3 }}>
+                  An identity as strong as your business.
+                </h4>
+                {['Logo & Brand Identity', 'Business Cards & Stationery', 'Brochures & Flyers', 'Infographic Design', 'Presentation Design'].map(item => (
+                  <Row key={item} label={item}/>
+                ))}
               </Callout>
 
               <div style={{
