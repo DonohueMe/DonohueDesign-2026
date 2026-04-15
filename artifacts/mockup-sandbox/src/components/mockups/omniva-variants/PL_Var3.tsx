@@ -194,7 +194,6 @@ export function PL_Var3() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, overflowX: 'hidden' }}>
       <StickyNav />
-
       {/* ── Hero ── */}
       <section style={{
         minHeight: '100vh', display: 'flex', flexDirection: 'column',
@@ -223,7 +222,6 @@ export function PL_Var3() {
           Get started
         </button>
       </section>
-
       {/* ── Editorial body ── */}
       <div style={{ background: '#f5f5f7', padding: '32px 20px 48px' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto' }}>
@@ -249,7 +247,9 @@ export function PL_Var3() {
           </div>
 
           {/* ── SECTION 1: Opening + bio — text left, stats + contract call-out right ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 28, alignItems: 'start' }}>
+          <div
+            style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 28, alignItems: 'start' }}
+            className="mb-[10px]">
 
             {/* Left — prose */}
             <div>
@@ -408,7 +408,6 @@ export function PL_Var3() {
 
         </div>
       </div>
-
       <footer style={{ background: '#f5f5f7', padding: '32px 24px', borderTop: '1px solid #d2d2d7' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
