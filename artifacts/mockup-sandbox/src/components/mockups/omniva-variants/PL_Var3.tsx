@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 const HERO_BG = [
@@ -80,39 +80,108 @@ function AppleLogo({ size = 17, fill = '#1d1d1f' }: { size?: number; fill?: stri
   );
 }
 
-const NAV_LINKS = ['Website Designer', 'Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
+const WEB_DESIGN_SERVICES = [
+  'Website Design',
+  'Website Development',
+  'Website Redesign',
+  'E-commerce Website Design',
+  'SEO-Optimized Website Design',
+  'UX/UI Design & Strategy',
+  'Website Maintenance',
+];
+
+const OTHER_NAV_LINKS = ['Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
 
 function StickyNav() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav style={{
-      position: 'fixed', top: 16, left: '50%',
-      transform: 'translateX(-50%)',
-      zIndex: 1000,
-      background: '#0d1535',
-      borderRadius: 980,
-      padding: '0 28px',
-      height: 52,
-      display: 'flex', alignItems: 'center', gap: 4,
-      whiteSpace: 'nowrap',
-      boxShadow: '0 4px 24px rgba(0,0,0,0.22)',
-    }}>
-      {NAV_LINKS.map((link, i) => (
-        <a key={link} href="#" style={{
-          fontSize: 14, fontWeight: 500,
-          color: i === NAV_LINKS.length - 1 ? '#a8b4d0' : 'rgba(255,255,255,0.88)',
-          textDecoration: 'none',
-          padding: '6px 14px',
-          borderRadius: 980,
-          transition: 'background 0.15s',
-          letterSpacing: '-0.01em',
-        }}
-          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
-          onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+    <div style={{ position: 'fixed', top: 16, left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
+      <nav style={{
+        background: '#0d1535',
+        borderRadius: 980,
+        padding: '0 28px',
+        height: 52,
+        display: 'flex', alignItems: 'center', gap: 4,
+        whiteSpace: 'nowrap',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.22)',
+        position: 'relative',
+      }}>
+
+        {/* ── Website Designer dropdown trigger ── */}
+        <div
+          style={{ position: 'relative' }}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
         >
-          {link}
-        </a>
-      ))}
-    </nav>
+          <button style={{
+            fontSize: 14, fontWeight: 500,
+            color: open ? '#fff' : 'rgba(255,255,255,0.88)',
+            background: open ? 'rgba(255,255,255,0.12)' : 'transparent',
+            border: 'none', cursor: 'pointer',
+            padding: '6px 14px', borderRadius: 980,
+            letterSpacing: '-0.01em', fontFamily: SF,
+            display: 'flex', alignItems: 'center', gap: 5,
+            transition: 'background 0.15s',
+          }}>
+            Website Designer
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d={open ? 'M1 5l4-4 4 4' : 'M1 1l4 4 4-4'} stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+
+          {/* Dropdown panel */}
+          {open && (
+            <div style={{
+              position: 'absolute', top: 'calc(100% + 10px)', left: '50%',
+              transform: 'translateX(-50%)',
+              background: '#0d1535',
+              borderRadius: 16,
+              padding: '8px 0',
+              minWidth: 240,
+              boxShadow: '0 12px 40px rgba(0,0,0,0.35)',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              {WEB_DESIGN_SERVICES.map((item, i) => (
+                <a key={item} href="#" style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  padding: '10px 20px',
+                  fontSize: 14, fontWeight: 500,
+                  color: 'rgba(255,255,255,0.85)',
+                  textDecoration: 'none',
+                  borderBottom: i < WEB_DESIGN_SERVICES.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+                  transition: 'background 0.1s',
+                }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                >
+                  {item}
+                  <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* ── Remaining nav links ── */}
+        {OTHER_NAV_LINKS.map((link, i) => (
+          <a key={link} href="#" style={{
+            fontSize: 14, fontWeight: 500,
+            color: i === OTHER_NAV_LINKS.length - 1 ? '#a8b4d0' : 'rgba(255,255,255,0.88)',
+            textDecoration: 'none',
+            padding: '6px 14px',
+            borderRadius: 980,
+            transition: 'background 0.15s',
+            letterSpacing: '-0.01em',
+          }}
+            onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+            onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+          >
+            {link}
+          </a>
+        ))}
+      </nav>
+    </div>
   );
 }
 
