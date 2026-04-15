@@ -87,43 +87,43 @@ function Nav() {
 function Hero() {
   return (
     <section style={{
-      minHeight: '100vh', display: 'flex', flexDirection: 'column',
+      minHeight: '40vh', display: 'flex', flexDirection: 'column',
       alignItems: 'center', justifyContent: 'center',
-      textAlign: 'center', padding: '0 24px',
+      textAlign: 'center', padding: '48px 24px',
       background: HERO_BG,
     }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 24 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 10 }}>
         <AppleLogo size={16}/>
         <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Omniva Design</span>
       </div>
       <h1 style={{
-        fontSize: 'clamp(52px, 7.5vw, 88px)', fontWeight: 700,
+        fontSize: 'clamp(32px, 4.5vw, 52px)', fontWeight: 700,
         lineHeight: 1.03, letterSpacing: '-0.04em',
-        color: '#000', maxWidth: 760, margin: '0 0 12px',
+        color: '#000', maxWidth: 760, margin: '0 0 6px',
       }}>
         The simplicity<br />of Apple.
       </h1>
       <h2 style={{
-        fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 700,
+        fontSize: 'clamp(22px, 3vw, 36px)',
         lineHeight: 1.05, letterSpacing: '-0.03em',
-        color: '#3d3d3f', maxWidth: 700, margin: '0 0 32px',
+        color: '#3d3d3f', maxWidth: 700, margin: '0 0 14px',
         fontWeight: 400,
       }}>
         For your business website.
       </h2>
-      <p style={{ fontSize: 19, color: '#3d3d3f', maxWidth: 500, lineHeight: 1.55, margin: '0 0 36px' }}>
+      <p style={{ fontSize: 14, color: '#3d3d3f', maxWidth: 500, lineHeight: 1.55, margin: '0 0 16px' }}>
         Omniva Design builds stunning, conversion-focused websites and AI-powered marketing systems for local businesses in Sonoma County.
       </p>
       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
         <button style={{
           background: '#1d1d1f', color: '#fff', border: 'none',
-          borderRadius: 980, padding: '13px 26px',
-          fontSize: 17, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
+          borderRadius: 980, padding: '8px 18px',
+          fontSize: 14, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
         }}>
           Get a free consultation
         </button>
         <a href="#services" style={{
-          fontSize: 17, color: '#2997ff', textDecoration: 'none', fontWeight: 500,
+          fontSize: 14, color: '#2997ff', textDecoration: 'none', fontWeight: 500,
           display: 'flex', alignItems: 'center', gap: 4,
         }}>
           See our services ›
