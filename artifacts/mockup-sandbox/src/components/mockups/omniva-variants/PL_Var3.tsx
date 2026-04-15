@@ -196,28 +196,28 @@ export function PL_Var3() {
       <StickyNav />
       {/* ── Hero ── */}
       <section style={{
-        minHeight: '100vh', display: 'flex', flexDirection: 'column',
+        minHeight: '60vh', display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
-        textAlign: 'center', padding: '0 24px', background: HERO_BG,
+        textAlign: 'center', padding: '48px 24px', background: HERO_BG,
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 22 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 14 }}>
           <AppleLogo/>
           <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Omniva Design</span>
         </div>
         <h1 style={{
-          fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700,
+          fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 700,
           lineHeight: 1.05, letterSpacing: '-0.04em',
-          color: '#000', maxWidth: 720, margin: '0 0 28px',
+          color: '#000', maxWidth: 720, margin: '0 0 16px',
         }}>
           Website Designer<br />in Santa Rosa, CA.
         </h1>
-        <p style={{ fontSize: 19, color: '#3d3d3f', maxWidth: 480, lineHeight: 1.55, margin: '0 0 32px' }}>
+        <p style={{ fontSize: 16, color: '#3d3d3f', maxWidth: 480, lineHeight: 1.55, margin: '0 0 20px' }}>
           Strategy-driven design that works.
         </p>
         <button style={{
           background: '#1d1d1f', color: '#fff', border: 'none',
-          borderRadius: 980, padding: '10px 22px',
-          fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
+          borderRadius: 980, padding: '8px 18px',
+          fontSize: 14, fontWeight: 500, fontFamily: SF, cursor: 'pointer',
         }}>
           Get started
         </button>
