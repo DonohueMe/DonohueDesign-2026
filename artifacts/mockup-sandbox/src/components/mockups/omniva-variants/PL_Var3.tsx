@@ -228,7 +228,7 @@ export function PL_Var3() {
       </section>
       {/* ── Editorial body ── */}
       <div style={{ background: '#f5f5f7', padding: '8px 20px 12px' }}>
-        <div style={{ maxWidth: 1020, margin: '0 auto' }}>
+        <div style={{ maxWidth: 1440, margin: '0 auto' }}>
 
           {/* Page headline */}
           <div style={{ marginBottom: 7 }}>
@@ -397,7 +397,7 @@ export function PL_Var3() {
         </div>
       </div>
       <footer style={{ background: '#f5f5f7', padding: '32px 24px', borderTop: '1px solid #d2d2d7' }}>
-        <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ maxWidth: 1440, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <AppleLogo size={13} fill="#6e6e73"/>
             <span style={{ fontSize: 12, color: '#6e6e73' }}>© 2025 Omniva Design · Jim Donohue · Santa Rosa, CA</span>
