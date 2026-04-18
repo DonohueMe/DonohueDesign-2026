@@ -56,7 +56,7 @@ function CalloutGrad({ children }: { children: React.ReactNode }) {
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.11em', color: '#6e6e73', margin: '0 0 10px' }}>
+    <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.11em', color: '#6e6e73', margin: '0 0 3px' }}>
       {children}
     </p>
   );
@@ -227,11 +227,11 @@ export function PL_Var3() {
         </button>
       </section>
       {/* ── Editorial body ── */}
-      <div style={{ background: '#f5f5f7', padding: '32px 20px 48px' }}>
+      <div style={{ background: '#f5f5f7', padding: '8px 20px 12px' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto' }}>
 
           {/* Page headline */}
-          <div style={{ marginBottom: 28 }}>
+          <div style={{ marginBottom: 7 }}>
             <h2 style={{
               fontSize: 'clamp(36px, 5.5vw, 64px)', fontWeight: 800,
               letterSpacing: '-0.04em', lineHeight: 1.05,
@@ -252,21 +252,21 @@ export function PL_Var3() {
 
           {/* ── SECTION 1: Opening + bio — text left, stats + contract call-out right ── */}
           <div
-            style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 28, alignItems: 'start' }}
+            style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 7, alignItems: 'start' }}
             className="mb-[10px]">
 
             {/* Left — prose */}
             <div>
-              <p style={{ fontSize: 17, color: '#1d1d1f', lineHeight: 1.55, margin: '0 0 10px' }}>
+              <p style={{ fontSize: 17, color: '#1d1d1f', lineHeight: 1.55, margin: '0 0 3px' }}>
                 Most website designers jump straight into building. I start with strategy.
               </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 10px' }}>
+              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
                 Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
               </p>
               <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
                 My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I spent years as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used across dozens of applications and leading redesigns that drove measurable results. A 15% lift in subscriptions. A 22% jump in user engagement. Design systems adopted across 90+ apps.
               </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '10px 0 0' }}>
+              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '3px 0 0' }}>
                 Now I bring that same strategic, research-driven approach to businesses here in Sonoma County.
               </p>
             </div>
@@ -306,12 +306,12 @@ export function PL_Var3() {
           </div>
 
           {/* ── SECTION 2: What I Do ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 28, alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 7, alignItems: 'start' }}>
 
             {/* Left — prose */}
             <div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 8px' }}>What I Do</h3>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 10px' }}>
+              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>What I Do</h3>
+              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
                 I offer website design, website development, and website redesign for local businesses — from tasting rooms along Highway 12 to shops in Railroad Square to service companies in Rincon Valley. Every site I build starts with research and ends with something that actually performs.
               </p>
               <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
@@ -334,12 +334,12 @@ export function PL_Var3() {
           </div>
 
           {/* ── SECTION 3: Beyond the Website ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 28, alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 7, alignItems: 'start' }}>
 
             {/* Left — prose */}
             <div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 8px' }}>Beyond the Website</h3>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 10px' }}>
+              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>Beyond the Website</h3>
+              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
                 Your site is the foundation. I also offer local SEO services, email marketing automation, and AI-powered tools — AI chat assistants, AI receptionists, and AI voice assistants — that capture leads and handle customer questions even when you're closed.
               </p>
               <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
@@ -366,8 +366,8 @@ export function PL_Var3() {
 
             {/* Left — prose */}
             <div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 8px' }}>Serving Santa Rosa and Sonoma County</h3>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 10px' }}>
+              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>Serving Santa Rosa and Sonoma County</h3>
+              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
                 I work with businesses across Santa Rosa — from Fountaingrove to Roseland, from Montgomery Village to the shops along Santa Rosa Avenue — and throughout Sonoma County, including Windsor, Rohnert Park, Petaluma, Healdsburg, and Sebastopol.
               </p>
               <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
