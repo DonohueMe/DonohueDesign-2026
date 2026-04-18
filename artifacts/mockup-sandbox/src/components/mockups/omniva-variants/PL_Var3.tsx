@@ -133,8 +133,11 @@ function StickyNav() {
           {/* Dropdown panel */}
           {open && (
             <div style={{
-              position: 'absolute', top: 'calc(100% + 10px)', left: '50%',
+              position: 'absolute', top: '100%', left: '50%',
               transform: 'translateX(-50%)',
+              paddingTop: 10,
+            }}>
+            <div style={{
               background: '#0d1535',
               borderRadius: 16,
               padding: '8px 0',
@@ -159,6 +162,7 @@ function StickyNav() {
                   <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
                 </a>
               ))}
+            </div>
             </div>
           )}
         </div>
