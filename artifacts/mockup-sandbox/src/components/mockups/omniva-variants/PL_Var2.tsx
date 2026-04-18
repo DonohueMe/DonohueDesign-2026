@@ -65,10 +65,10 @@ export function PL_Var2() {
 
       {/* ── CONTENT SECTION ── */}
       <div style={{ background: '#f5f5f7', padding: '48px 24px 60px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
 
           {/* h1 + intro */}
-          <div style={{ marginBottom: 20 }}>
+          <div style={{ marginBottom: 40 }}>
             <h1 style={{
               fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 800,
               letterSpacing: '-0.04em', lineHeight: 1.05,
@@ -82,7 +82,7 @@ export function PL_Var2() {
           </div>
 
           {/* Row 1 — 3 service tiles */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
 
             {/* Website Designer */}
             <div style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
@@ -125,7 +125,7 @@ export function PL_Var2() {
           </div>
 
           {/* Row 2 — Reviews + Google Map */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
 
             {/* Reviews tile */}
             <div style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
