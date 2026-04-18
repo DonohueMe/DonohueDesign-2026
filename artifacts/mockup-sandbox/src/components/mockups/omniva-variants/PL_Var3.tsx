@@ -231,7 +231,7 @@ export function PL_Var3() {
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
 
           {/* Page headline */}
-          <div style={{ marginBottom: 7 }}>
+          <div style={{ marginBottom: 32 }}>
             <h2 style={{
               fontSize: 'clamp(36px, 5.5vw, 64px)', fontWeight: 800,
               letterSpacing: '-0.04em', lineHeight: 1.05,
