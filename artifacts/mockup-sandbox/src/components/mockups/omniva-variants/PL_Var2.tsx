@@ -37,7 +37,7 @@ export function PL_Var2() {
 
       {/* Hero */}
       <section style={{
-        minHeight: '100vh', display: 'flex', flexDirection: 'column',
+        minHeight: '50vh', display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '0 24px', background: HERO_BG,
       }}>
@@ -72,12 +72,12 @@ export function PL_Var2() {
             <h1 style={{
               fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 800,
               letterSpacing: '-0.04em', lineHeight: 1.05,
-              color: '#1d1d1f', margin: '0 0 10px',
+              color: '#1d1d1f', margin: '0 0 10px', maxWidth: '100%',
             }}>
               Website Designer in Santa Rosa, CA.
             </h1>
-            <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.6, maxWidth: 680, margin: 0 }}>
-              I'm Jim Donohue — a website designer, internet marketer, and graphic designer serving businesses across Sonoma County. I start with strategy, build with purpose, and measure everything. No contracts. No guesswork. Just results.
+            <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.6, maxWidth: '100%', margin: 0 }}>
+              I'm Jim Donohue — a website designer, internet marketer, and graphic designer with over 20 years of experience, including senior roles at Wells Fargo and Deloitte. I work with local businesses across Santa Rosa and Sonoma County — from wineries along Highway 12 to shops in Railroad Square to service companies in Rincon Valley. Every project starts with a clear strategy: who your customers are, how they find you, and what needs to happen when they land on your site. I design websites that convert, build marketing systems that run around the clock, and create brands that hold together across every touchpoint. No contracts. No guesswork. Just a designer who thinks before he builds.
             </p>
           </div>
 
@@ -98,16 +98,16 @@ export function PL_Var2() {
             </div>
 
             {/* Internet Marketing Service */}
-            <div style={{ background: '#1d1d1f', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
-              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: 'rgba(255,255,255,0.45)', margin: '0 0 10px' }}>Internet Marketing Service</p>
-              <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: '-0.03em', color: '#fff', margin: '0 0 14px', lineHeight: 1.2 }}>AI marketing that<br />never sleeps.</h3>
+            <div style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: '0 0 10px' }}>Internet Marketing Service</p>
+              <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>AI marketing that<br />never sleeps.</h3>
               {['Local SEO (Google Business)', 'Email Marketing Automation', 'AI Chat Assistant', 'AI Receptionist', 'AI Voice Assistant', 'Paid Ads Management'].map(item => (
-                <div key={item} style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', padding: '7px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)' }}>{item}</span>
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '7px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 12, color: '#1d1d1f' }}>{item}</span>
                   <span style={{ color: '#2997ff', fontSize: 12 }}>›</span>
                 </div>
               ))}
-              <PlusBtn light/>
+              <PlusBtn/>
             </div>
 
             {/* Graphic Designer */}
