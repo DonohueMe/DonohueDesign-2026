@@ -250,29 +250,66 @@ export function PL_Var3() {
             </h2>
           </div>
 
-          {/* ── SECTION 1: Opening + bio — text left, stats + contract call-out right ── */}
-          <div
-            style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 7, alignItems: 'start' }}
-            className="mb-[10px]">
+          {/* ── Single two-column grid: left = all prose, right = all tiles (decoupled heights) ── */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, alignItems: 'start' }}>
 
-            {/* Left — prose */}
-            <div>
-              <p style={{ fontSize: 17, color: '#1d1d1f', lineHeight: 1.55, margin: '0 0 3px' }}>
-                Most website designers jump straight into building. I start with strategy.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
-                Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
-                My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I spent years as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used across dozens of applications and leading redesigns that drove measurable results. A 15% lift in subscriptions. A 22% jump in user engagement. Design systems adopted across 90+ apps.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '3px 0 0' }}>
-                Now I bring that same strategic, research-driven approach to businesses here in Sonoma County.
-              </p>
+            {/* ── LEFT: all prose stacked ── */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+
+              {/* Opening */}
+              <div>
+                <p style={{ fontSize: 17, color: '#1d1d1f', lineHeight: 1.55, margin: '0 0 3px' }}>
+                  Most website designers jump straight into building. I start with strategy.
+                </p>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
+                  Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
+                </p>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
+                  My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I spent years as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used across dozens of applications and leading redesigns that drove measurable results. A 15% lift in subscriptions. A 22% jump in user engagement. Design systems adopted across 90+ apps.
+                </p>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
+                  Now I bring that same strategic, research-driven approach to businesses here in Sonoma County.
+                </p>
+              </div>
+
+              {/* What I Do */}
+              <div>
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>What I Do</h3>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
+                  I offer website design, website development, and website redesign for local businesses — from tasting rooms along Highway 12 to shops in Railroad Square to service companies in Rincon Valley. Every site I build starts with research and ends with something that actually performs.
+                </p>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
+                  I also handle e-commerce website design for Sonoma County businesses selling products online, and SEO-optimized website design so your site shows up when people search for what you do. UX/UI design and strategy is the core of my process — making sure every page is built around how real people use the web, not just how it looks on a screen. And I offer website maintenance to keep everything running, secure, and fast after launch.
+                </p>
+              </div>
+
+              {/* Beyond the Website */}
+              <div>
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>Beyond the Website</h3>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
+                  Your site is the foundation. I also offer local SEO services, email marketing automation, and AI-powered tools — AI chat assistants, AI receptionists, and AI voice assistants — that capture leads and handle customer questions even when you're closed.
+                </p>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
+                  On the brand side, I handle logo design, brand identity design, stationery and business card design, brochure and flyer design, infographic design, and presentation design. Everything matches your website. Same colors, same feel, same level of quality — so your brand holds together whether someone finds you on Google or picks up your card at a Chamber event at Old Courthouse Square.
+                </p>
+              </div>
+
+              {/* Serving Sonoma */}
+              <div>
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>Serving Santa Rosa and Sonoma County</h3>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
+                  I work with businesses across Santa Rosa — from Fountaingrove to Roseland, from Montgomery Village to the shops along Santa Rosa Avenue — and throughout Sonoma County, including Windsor, Rohnert Park, Petaluma, Healdsburg, and Sebastopol.
+                </p>
+                <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
+                  If your website isn't bringing in the calls and customers it should, the issue is usually strategy. Let's figure out what's wrong and fix it. No jargon. No pressure. Just a website designer in Santa Rosa, CA who thinks before he builds.
+                </p>
+              </div>
+
             </div>
 
-            {/* Right — call-outs */}
-            <div>
+            {/* ── RIGHT: all tiles stacked independently ── */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+
               <Callout>
                 <Label>Proven Results</Label>
                 {[
@@ -302,25 +339,7 @@ export function PL_Var3() {
                   Month-to-month. Cancel anytime.
                 </p>
               </CalloutGrad>
-            </div>
-          </div>
 
-          {/* ── SECTION 2: What I Do ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 7, alignItems: 'start' }}>
-
-            {/* Left — prose */}
-            <div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>What I Do</h3>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
-                I offer website design, website development, and website redesign for local businesses — from tasting rooms along Highway 12 to shops in Railroad Square to service companies in Rincon Valley. Every site I build starts with research and ends with something that actually performs.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
-                I also handle e-commerce website design for Sonoma County businesses selling products online, and SEO-optimized website design so your site shows up when people search for what you do. UX/UI design and strategy is the core of my process — making sure every page is built around how real people use the web, not just how it looks on a screen. And I offer website maintenance to keep everything running, secure, and fast after launch.
-              </p>
-            </div>
-
-            {/* Right — services call-out */}
-            <div>
               <Callout>
                 <Label>Website Services</Label>
                 <h4 style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>
@@ -330,25 +349,7 @@ export function PL_Var3() {
                   <Row key={item} label={item}/>
                 ))}
               </Callout>
-            </div>
-          </div>
 
-          {/* ── SECTION 3: Beyond the Website ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, marginBottom: 7, alignItems: 'start' }}>
-
-            {/* Left — prose */}
-            <div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>Beyond the Website</h3>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
-                Your site is the foundation. I also offer local SEO services, email marketing automation, and AI-powered tools — AI chat assistants, AI receptionists, and AI voice assistants — that capture leads and handle customer questions even when you're closed.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
-                On the brand side, I handle logo design, brand identity design, stationery and business card design, brochure and flyer design, infographic design, and presentation design. Everything matches your website. Same colors, same feel, same level of quality — so your brand holds together whether someone finds you on Google or picks up your card at a Chamber event at Old Courthouse Square.
-              </p>
-            </div>
-
-            {/* Right — AI call-out only */}
-            <div>
               <CalloutDark>
                 <Label>Internet Marketing</Label>
                 <h4 style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: '#fff', margin: '0 0 14px', lineHeight: 1.2 }}>
@@ -358,25 +359,7 @@ export function PL_Var3() {
                   <Row key={item} label={item} light/>
                 ))}
               </CalloutDark>
-            </div>
-          </div>
 
-          {/* ── SECTION 4: Serving Sonoma + closing ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 40, alignItems: 'start' }}>
-
-            {/* Left — prose */}
-            <div>
-              <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 2px' }}>Serving Santa Rosa and Sonoma County</h3>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: '0 0 3px' }}>
-                I work with businesses across Santa Rosa — from Fountaingrove to Roseland, from Montgomery Village to the shops along Santa Rosa Avenue — and throughout Sonoma County, including Windsor, Rohnert Park, Petaluma, Healdsburg, and Sebastopol.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.55, margin: 0 }}>
-                If your website isn't bringing in the calls and customers it should, the issue is usually strategy. Let's figure out what's wrong and fix it. No jargon. No pressure. Just a website designer in Santa Rosa, CA who thinks before he builds.
-              </p>
-            </div>
-
-            {/* Right — Brand + CTA call-outs */}
-            <div>
               <Callout>
                 <Label>Brand &amp; Print</Label>
                 <h4 style={{ fontSize: 16, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 12px', lineHeight: 1.3 }}>
@@ -407,6 +390,7 @@ export function PL_Var3() {
                   Get a free consultation
                 </button>
               </div>
+
             </div>
           </div>
 
