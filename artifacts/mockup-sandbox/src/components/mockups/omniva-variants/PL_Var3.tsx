@@ -307,66 +307,37 @@ export function PL_Var3() {
 
             </div>
 
-            {/* ── RIGHT: all tiles stacked independently ── */}
+            {/* ── RIGHT: strategy framework tiles ── */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
               <Callout>
-                <Label>Proven Results</Label>
+                <Label>Website Strategy</Label>
+                <h4 style={{ fontSize: 17, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>
+                  Strategy first. Everything else follows.
+                </h4>
                 {[
-                  { stat: '+15%', label: 'lift in subscriptions' },
-                  { stat: '+22%', label: 'jump in user engagement' },
-                  { stat: '90+', label: 'apps adopted the design system' },
-                ].map(({ stat, label }) => (
-                  <div key={stat} style={{ display: 'flex', alignItems: 'baseline', gap: 8, borderBottom: '1px solid #e5e5ea', padding: '10px 0' }}>
+                  { n: '1', title: 'Purpose & Goals', sub: 'Lead generation, e-commerce, brand awareness — with measurable KPIs tied to business objectives.' },
+                  { n: '2', title: 'Target Audience', sub: 'User personas, journey mapping, pain points, and how real customers behave.' },
+                  { n: '3', title: 'Content Strategy', sub: 'What to create, how to organize it, tone of voice, and messaging hierarchy.' },
+                  { n: '4', title: 'Information Architecture', sub: 'Site structure, navigation, and page hierarchy so users find what they need.' },
+                  { n: '5', title: 'Technical Strategy', sub: 'Platform, hosting, performance, security, accessibility, and mobile-friendliness.' },
+                  { n: '6', title: 'SEO & Discoverability', sub: 'Keyword targeting, on-page optimization, and visibility in search and AI-powered results.' },
+                  { n: '7', title: 'Conversion Optimization', sub: 'CTAs, landing pages, and funnel design that turn visitors into customers.' },
+                  { n: '8', title: 'Measurement & Iteration', sub: 'Analytics, A/B testing, and ongoing performance review cycles.' },
+                ].map(({ n, title, sub }) => (
+                  <div key={n} style={{ borderTop: '1px solid #e5e5ea', padding: '10px 0', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                     <span style={{
-                      fontSize: 24, fontWeight: 800, letterSpacing: '-0.04em',
-                      background: 'linear-gradient(135deg, #c898e2, #f4a0b8, #ffb347)',
-                      WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-                    }}>{stat}</span>
-                    <span style={{ fontSize: 12, color: '#6e6e73', lineHeight: 1.4 }}>{label}</span>
+                      fontSize: 11, fontWeight: 700, color: '#fff',
+                      background: 'linear-gradient(135deg, #c898e2, #f4a0b8)',
+                      borderRadius: '50%', width: 20, height: 20, minWidth: 20,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      marginTop: 1,
+                    }}>{n}</span>
+                    <div>
+                      <p style={{ fontSize: 13, fontWeight: 600, color: '#1d1d1f', margin: '0 0 2px' }}>{title}</p>
+                      <p style={{ fontSize: 12, color: '#6e6e73', lineHeight: 1.45, margin: 0 }}>{sub}</p>
+                    </div>
                   </div>
-                ))}
-              </Callout>
-
-              <CalloutGrad>
-                <p style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 8px', lineHeight: 1.1 }}>
-                  No contracts.
-                </p>
-                <p style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 12px', lineHeight: 1.1 }}>
-                  Not even the fine print.
-                </p>
-                <p style={{ fontSize: 13, color: 'rgba(0,0,0,0.55)', margin: 0, lineHeight: 1.55 }}>
-                  Month-to-month. Cancel anytime.
-                </p>
-              </CalloutGrad>
-
-              <Callout>
-                <Label>Website Services</Label>
-                <h4 style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>
-                  Sites that work as hard as you do.
-                </h4>
-                {['Website Design', 'Website Development', 'Website Redesign', 'E-commerce Design', 'SEO-Optimized Design', 'UX/UI Strategy', 'Website Maintenance'].map(item => (
-                  <Row key={item} label={item}/>
-                ))}
-              </Callout>
-
-              <CalloutDark>
-                <Label>Internet Marketing</Label>
-                <h4 style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: '#fff', margin: '0 0 14px', lineHeight: 1.2 }}>
-                  AI marketing that<br />never sleeps.
-                </h4>
-                {['Local SEO (GMB)', 'Email Marketing Automation', 'AI Chat Assistant', 'AI Receptionist', 'AI Voice Assistant'].map(item => (
-                  <Row key={item} label={item} light/>
-                ))}
-              </CalloutDark>
-
-              <Callout>
-                <Label>Brand &amp; Print</Label>
-                <h4 style={{ fontSize: 16, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 12px', lineHeight: 1.3 }}>
-                  An identity as strong as your business.
-                </h4>
-                {['Logo & Brand Identity', 'Business Cards & Stationery', 'Brochures & Flyers', 'Infographic Design', 'Presentation Design'].map(item => (
-                  <Row key={item} label={item}/>
                 ))}
               </Callout>
 
