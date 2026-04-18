@@ -63,49 +63,32 @@ export function PL_Var2() {
         </button>
       </section>
 
-      {/* ── TILE GRID — Dense 4-column Mosaic ── */}
-      <div style={{ background: '#f5f5f7', padding: '16px 16px 60px' }}>
-        <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 8 }}>
+      {/* ── CONTENT SECTION ── */}
+      <div style={{ background: '#f5f5f7', padding: '48px 24px 60px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 8 }}>
 
-          {/* Row 1 — 4 compact tiles */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 8 }}>
-            {/* Small label tiles */}
-            {[
-              { cat: 'Website Design', stat: '3–5', unit: 'day turnaround' },
-              { cat: 'Local SEO', stat: '#1', unit: 'Google ranking goal' },
-              { cat: 'AI Marketing', stat: '24/7', unit: 'automated response' },
-              { cat: 'Graphic Design', stat: '100%', unit: 'custom creative' },
-            ].map(({ cat, stat, unit }) => (
-              <div key={cat} style={{ background: '#fff', borderRadius: 16, padding: '24px 24px', position: 'relative', overflow: 'hidden' }}>
-                <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: '0 0 10px' }}>{cat}</p>
-                <p style={{ fontSize: 40, fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 2px', lineHeight: 1 }}>{stat}</p>
-                <p style={{ fontSize: 13, color: '#6e6e73', margin: 0 }}>{unit}</p>
-                <PlusBtn/>
-              </div>
-            ))}
+          {/* h1 + intro */}
+          <div style={{ marginBottom: 20 }}>
+            <h1 style={{
+              fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 800,
+              letterSpacing: '-0.04em', lineHeight: 1.05,
+              color: '#1d1d1f', margin: '0 0 10px',
+            }}>
+              Website Designer in Santa Rosa, CA.
+            </h1>
+            <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.6, maxWidth: 680, margin: 0 }}>
+              I'm Jim Donohue — a website designer, internet marketer, and graphic designer serving businesses across Sonoma County. I start with strategy, build with purpose, and measure everything. No contracts. No guesswork. Just results.
+            </p>
           </div>
 
-          {/* Row 2 — 3 tiles: statement (span 2) + service list */}
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 8 }}>
-            {/* Wide statement tile */}
-            <div style={{ background: '#fff', borderRadius: 16, padding: '32px 36px', position: 'relative', overflow: 'hidden' }}>
-              <p style={{ margin: 0, fontSize: 'clamp(36px, 4vw, 52px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em' }}>
-                <span style={{
-                  background: 'linear-gradient(135deg, #c898e2, #f4a0b8, #ffb347)',
-                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-                }}>No contracts.</span>
-              </p>
-              <p style={{ margin: '4px 0 0', fontSize: 'clamp(28px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em', color: '#1d1d1f' }}>
-                Not even the fine print.
-              </p>
-              <PlusBtn/>
-            </div>
+          {/* Row 1 — 3 service tiles */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
 
-            {/* Website services */}
-            <div style={{ background: '#fff', borderRadius: 16, padding: '24px 24px', position: 'relative', overflow: 'hidden' }}>
-              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: '0 0 10px' }}>Websites</p>
-              <h4 style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>Converts browsers<br />into buyers.</h4>
-              {['Design', 'Development', 'E-commerce', 'SEO'].map(item => (
+            {/* Website Designer */}
+            <div style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: '0 0 10px' }}>Website Designer</p>
+              <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>Sites built to<br />convert visitors.</h3>
+              {['Website Design', 'Website Development', 'Website Redesign', 'E-commerce Design', 'SEO-Optimized Design', 'UX/UI Strategy'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '7px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 12, color: '#1d1d1f' }}>{item}</span>
                   <span style={{ color: '#2997ff', fontSize: 12 }}>›</span>
@@ -114,76 +97,93 @@ export function PL_Var2() {
               <PlusBtn/>
             </div>
 
-            {/* AI Marketing */}
-            <div style={{ background: '#fff', borderRadius: 16, padding: '24px 24px', position: 'relative', overflow: 'hidden' }}>
-              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: '0 0 10px' }}>AI Marketing</p>
-              <h4 style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.02em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>Never sleeps.<br />Never misses a lead.</h4>
-              {['AI Voice', 'AI Receptionist', 'Email', 'SEO (GMB)'].map(item => (
-                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '7px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: 12, color: '#1d1d1f' }}>{item}</span>
+            {/* Internet Marketing Service */}
+            <div style={{ background: '#1d1d1f', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: 'rgba(255,255,255,0.45)', margin: '0 0 10px' }}>Internet Marketing Service</p>
+              <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: '-0.03em', color: '#fff', margin: '0 0 14px', lineHeight: 1.2 }}>AI marketing that<br />never sleeps.</h3>
+              {['Local SEO (Google Business)', 'Email Marketing Automation', 'AI Chat Assistant', 'AI Receptionist', 'AI Voice Assistant', 'Paid Ads Management'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', padding: '7px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)' }}>{item}</span>
                   <span style={{ color: '#2997ff', fontSize: 12 }}>›</span>
                 </div>
               ))}
-              <PlusBtn/>
-            </div>
-          </div>
-
-          {/* Row 3 — 4 tiles: dark statement + 3 service badges */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 8 }}>
-            {/* Dark tile */}
-            <div style={{ background: '#1d1d1f', borderRadius: 16, padding: '24px 24px', position: 'relative', overflow: 'hidden' }}>
-              <p style={{ fontSize: 28, fontWeight: 800, letterSpacing: '-0.04em', color: '#fff', margin: 0, lineHeight: 1.1 }}>Month-to-month.<br />Always.</p>
               <PlusBtn light/>
             </div>
 
-            {/* 3 brand badges */}
-            {[
-              { label: 'Logo Design', sub: 'Brand Identity' },
-              { label: 'Santa Rosa', sub: 'Sonoma County, CA' },
-              { label: 'Free Consult', sub: 'No commitment' },
-            ].map(({ label, sub }) => (
-              <div key={label} style={{ background: '#fff', borderRadius: 16, padding: '24px 24px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                <p style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 4px', lineHeight: 1.1 }}>{label}</p>
-                <p style={{ fontSize: 13, color: '#6e6e73', margin: 0 }}>{sub}</p>
-                <PlusBtn/>
-              </div>
-            ))}
+            {/* Graphic Designer */}
+            <div style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: '0 0 10px' }}>Graphic Designer</p>
+              <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: '-0.03em', color: '#000', margin: '0 0 14px', lineHeight: 1.2 }}>A brand as strong<br />as your business.</h3>
+              {['Logo & Brand Identity', 'Business Cards & Stationery', 'Brochures & Flyers', 'Infographic Design', 'Presentation Design', 'Social Media Graphics'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '7px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 12, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 12 }}>›</span>
+                </div>
+              ))}
+              <PlusBtn/>
+            </div>
           </div>
 
-          {/* Row 4 — Full-width gradient CTA */}
-          <div style={{
-            borderRadius: 16, padding: '44px 52px',
-            position: 'relative', overflow: 'hidden',
-            background: [
-              'radial-gradient(ellipse at 10% 30%, rgba(196,153,226,0.90) 0%, transparent 50%)',
-              'radial-gradient(ellipse at 90% 20%, rgba(255,185,120,0.90) 0%, transparent 50%)',
-              'radial-gradient(ellipse at 50% 70%, rgba(248,140,170,0.70) 0%, transparent 50%)',
-              '#f5c8e0',
-            ].join(','),
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <div>
-                <div style={{
-                  width: 52, height: 52, borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.90)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  marginBottom: 18,
-                }}>
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                  </svg>
+          {/* Row 2 — Reviews + Google Map */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+
+            {/* Reviews tile */}
+            <div style={{ background: '#fff', borderRadius: 16, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.09em', color: '#6e6e73', margin: 0 }}>Client Reviews</p>
+                <div style={{ display: 'flex', gap: 2 }}>
+                  {[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 13 }}>★</span>)}
                 </div>
-                <p style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#fff', margin: 0, lineHeight: 1.1, textShadow: '0 1px 4px rgba(0,0,0,0.12)' }}>
-                  AI Marketing that never sleeps.
-                </p>
+                <span style={{ fontSize: 12, color: '#6e6e73' }}>5.0 · Google</span>
               </div>
-              <button style={{
-                background: '#1d1d1f', color: '#fff', border: 'none',
-                borderRadius: 980, padding: '12px 24px', flexShrink: 0,
-                fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer', marginLeft: 40,
+              {[
+                { name: 'Maria T.', location: 'Santa Rosa, CA', text: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
+                { name: 'Derek H.', location: 'Petaluma, CA', text: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy Jim put together was exactly what our shop needed.' },
+                { name: 'Lisa M.', location: 'Healdsburg, CA', text: 'The AI receptionist handles after-hours calls now. We haven\'t missed a lead in weeks. Worth every penny.' },
+              ].map(({ name, location, text }) => (
+                <div key={name} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 5 }}>
+                    <div style={{
+                      width: 30, height: 30, borderRadius: '50%', minWidth: 30,
+                      background: 'linear-gradient(135deg, #c898e2, #f4a0b8)',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      <span style={{ fontSize: 12, fontWeight: 700, color: '#fff' }}>{name[0]}</span>
+                    </div>
+                    <div>
+                      <p style={{ fontSize: 12, fontWeight: 600, color: '#1d1d1f', margin: 0 }}>{name}</p>
+                      <p style={{ fontSize: 11, color: '#6e6e73', margin: 0 }}>{location}</p>
+                    </div>
+                    <div style={{ marginLeft: 'auto', display: 'flex', gap: 1 }}>
+                      {[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 10 }}>★</span>)}
+                    </div>
+                  </div>
+                  <p style={{ fontSize: 13, color: '#3d3d3f', lineHeight: 1.5, margin: 0 }}>"{text}"</p>
+                </div>
+              ))}
+              <PlusBtn/>
+            </div>
+
+            {/* Google Map tile */}
+            <div style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', minHeight: 320 }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block', minHeight: 320 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Omniva Design — Santa Rosa, CA"
+              />
+              <div style={{
+                position: 'absolute', bottom: 16, left: 16,
+                background: '#fff', borderRadius: 12, padding: '10px 14px',
+                boxShadow: '0 2px 12px rgba(0,0,0,0.15)',
               }}>
-                Get started
-              </button>
+                <p style={{ fontSize: 12, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+                <p style={{ fontSize: 11, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
+              </div>
             </div>
           </div>
 
