@@ -92,7 +92,7 @@ export function CardPage() {
                 Your website. Working harder than ever.
               </h2>
               <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                Fast, beautiful, and built to convert — from simple brochures to full e-commerce.
+                A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
               </p>
             </div>
             <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
