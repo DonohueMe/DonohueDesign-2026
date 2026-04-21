@@ -194,13 +194,13 @@ function StickyNav() {
  * The full body copy runs as a readable article in the left column.
  * Apple-style tiles on the right are anchored as call-outs to specific paragraphs.
  */
-export function PL_Var3() {
+export function OmnivaVariantsCopyScWwKs8m() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, overflowX: 'hidden' }}>
       <StickyNav />
       {/* ── Hero ── */}
       <section style={{
-        minHeight: 800, display: 'flex', flexDirection: 'column',
+        minHeight: '60vh', display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '48px 24px', background: HERO_BG,
       }}>

@@ -8,5 +8,13 @@ export const modules: ModuleMap = {
   "./components/mockups/omniva-variants/PL_Var1.tsx": () => import("../components/mockups/omniva-variants/PL_Var1.tsx"),
   "./components/mockups/omniva-variants/PL_Var2.tsx": () => import("../components/mockups/omniva-variants/PL_Var2.tsx"),
   "./components/mockups/omniva-variants/PL_Var3.tsx": () => import("../components/mockups/omniva-variants/PL_Var3.tsx"),
-  "./components/mockups/omniva-variants/ProductLaunch.tsx": () => import("../components/mockups/omniva-variants/ProductLaunch.tsx")
+  "./components/mockups/omniva-variants/ProductLaunch.tsx": () => import("../components/mockups/omniva-variants/ProductLaunch.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/CardPage.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/CardPage.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/DarkPremium.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/DarkPremium.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/EditorialGrid.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/EditorialGrid.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/FullSite.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/FullSite.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/OmnivaVariantsCopyScWwKs8m.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/OmnivaVariantsCopyScWwKs8m.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/PL_Var1.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/PL_Var1.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/PL_Var2.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/PL_Var2.tsx"),
+  "./components/mockups/omniva-variants-copy-scWwKs8m/ProductLaunch.tsx": () => import("../components/mockups/omniva-variants-copy-scWwKs8m/ProductLaunch.tsx")
 };
