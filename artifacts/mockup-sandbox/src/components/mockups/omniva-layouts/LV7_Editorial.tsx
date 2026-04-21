@@ -37,23 +37,42 @@ const timelineSteps = [
   { label: 'Grow',     body: 'SEO, email, and AI tools that keep working after you launch.' },
 ];
 
+const IconMarketing = () => (
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="17" width="4" height="8" rx="1"/>
+    <rect x="9" y="12" width="4" height="13" rx="1"/>
+    <rect x="15" y="7" width="4" height="18" rx="1"/>
+    <rect x="21" y="3" width="4" height="22" rx="1"/>
+  </svg>
+);
+const IconAI = () => (
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="14" cy="14" r="5"/>
+    <path d="M14 3v4M14 21v4M3 14h4M21 14h4"/>
+    <path d="M6.22 6.22l2.83 2.83M18.95 18.95l2.83 2.83M21.78 6.22l-2.83 2.83M9.05 18.95l-2.83 2.83"/>
+  </svg>
+);
+const IconDesign = () => (
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 24l4-1 14-14a2.83 2.83 0 00-4-4L4 19l-1 4z"/>
+    <path d="M17 7l4 4"/>
+  </svg>
+);
+
 const serviceCards = [
   {
     title: 'Digital Marketing',
-    icon: '📣',
-    accent: 'linear-gradient(135deg,#e8472a,#f07030)',
+    Icon: IconMarketing,
     items: ['Email marketing automation', 'Local SEO Services (GMB)'],
   },
   {
     title: 'Internet Marketing Service',
-    icon: '🤖',
-    accent: 'linear-gradient(135deg,#6e3de8,#a855f7)',
+    Icon: IconAI,
     items: ['AI Receptionist', 'AI Voice Assistant, website', 'AI Chat Assistant, website'],
   },
   {
     title: 'Graphic Design',
-    icon: '🎨',
-    accent: 'linear-gradient(135deg,#0066cc,#34aadc)',
+    Icon: IconDesign,
     items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
   },
 ];
@@ -174,19 +193,17 @@ export default function LV7_Editorial() {
             </button>
           </div>
 
-          {/* Service category cards */}
-          {serviceCards.map(({ title, icon, accent, items }) => (
-            <div key={title} style={{ background: '#fff', borderRadius: 16, overflow: 'hidden', marginBottom: 10, boxShadow: '0 2px 12px rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.05)' }}>
-              {/* Accent stripe + icon */}
-              <div style={{ background: accent, padding: '10px 14px 10px', display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ fontSize: 18, lineHeight: 1 }}>{icon}</span>
-                <p style={{ fontSize: 12, fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '-0.01em' }}>{title}</p>
-              </div>
-              {/* Items */}
-              <div style={{ padding: '10px 14px 12px' }}>
-                {items.map(item => (
-                  <p key={item} style={{ fontSize: 11.5, color: '#0066cc', margin: '0 0 5px', lineHeight: 1.45, cursor: 'pointer' }}>{item}</p>
-                ))}
+          {/* Service category cards — Apple style */}
+          {serviceCards.map(({ title, Icon, items }) => (
+            <div key={title} style={{ background: '#fff', borderRadius: 18, padding: '14px 14px 40px', marginBottom: 10, border: '1px solid #e5e5ea', position: 'relative' }}>
+              <Icon />
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 6px', lineHeight: 1.2 }}>{title}</p>
+              {items.map(item => (
+                <p key={item} style={{ fontSize: 11, color: '#6e6e73', margin: '0 0 3px', lineHeight: 1.45 }}>{item}</p>
+              ))}
+              {/* "+" button */}
+              <div style={{ position: 'absolute', bottom: 12, right: 12, width: 26, height: 26, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                <span style={{ color: '#fff', fontSize: 18, lineHeight: 1, marginTop: -1 }}>+</span>
               </div>
             </div>
           ))}
