@@ -24,7 +24,7 @@ export function CardPage() {
 
       {/* Hero — ocean blue · cyan · seafoam · mint */}
       <section style={{
-        minHeight: 1000,
+        minHeight: 800,
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '0 24px',
