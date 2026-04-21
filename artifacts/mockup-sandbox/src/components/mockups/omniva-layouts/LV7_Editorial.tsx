@@ -37,10 +37,15 @@ const timelineSteps = [
   { label: 'Grow',     body: 'SEO, email, and AI tools that keep working after you launch.' },
 ];
 
-const navSections = [
-  { title: 'Website Design',    items: ['UX/UI \u00b7 Strategy \u00b7 Development'] },
-  { title: 'Digital Marketing', items: ['SEO \u00b7 Email \u00b7 AI tools'] },
-  { title: 'Graphic Design',    items: ['Brand \u00b7 Logo \u00b7 Print'] },
+const serviceCards = [
+  {
+    title: 'Digital Marketing',
+    items: ['Email marketing automation', 'Local SEO Services (GMB)'],
+  },
+  {
+    title: 'Internet Marketing Service',
+    items: ['AI Receptionist', 'AI Voice Assistant, website', 'AI Chat Assistant, website'],
+  },
 ];
 
 export default function LV7_Editorial() {
@@ -159,28 +164,15 @@ export default function LV7_Editorial() {
             </button>
           </div>
 
-          {/* Page nav — service sections */}
-          <div style={{ background: '#f9f9fb', borderRadius: 16, padding: '16px', marginBottom: 12 }}>
-            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8e8e93', margin: '0 0 12px' }}>On this page</p>
-            {navSections.map(({ title, items }, i) => (
-              <div key={title} style={{ borderTop: i === 0 ? 'none' : '1px solid #e5e5ea', paddingTop: i === 0 ? 0 : 10, marginBottom: 10 }}>
-                <p style={{ fontSize: 13, fontWeight: 600, color: '#1d1d1f', margin: '0 0 3px', cursor: 'pointer' }}>{title}</p>
-                {items.map(item => (
-                  <p key={item} style={{ fontSize: 12, color: '#8e8e93', margin: 0, lineHeight: 1.4 }}>{item}</p>
-                ))}
-              </div>
-            ))}
-          </div>
-
-          {/* CTA card */}
-          <div style={{ background: '#1d1d1f', borderRadius: 14, padding: '16px', textAlign: 'center' }}>
-            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', margin: '0 0 10px', lineHeight: 1.4 }}>
-              Ready to work together?
-            </p>
-            <button style={{ width: '100%', background: '#2997ff', color: '#fff', border: 'none', borderRadius: 980, padding: '9px 0', fontSize: 13, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
-              Get a free quote
-            </button>
-          </div>
+          {/* Service category cards */}
+          {serviceCards.map(({ title, items }) => (
+            <div key={title} style={{ background: '#f9f9fb', borderRadius: 16, padding: '16px', marginBottom: 10 }}>
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 8px' }}>{title}</p>
+              {items.map(item => (
+                <p key={item} style={{ fontSize: 12, color: '#0066cc', margin: '0 0 5px', lineHeight: 1.45, cursor: 'pointer' }}>{item}</p>
+              ))}
+            </div>
+          ))}
 
         </aside>
       </div>
