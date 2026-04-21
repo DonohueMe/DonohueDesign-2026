@@ -74,7 +74,7 @@ export default function SB1_Sticky() {
           </p>
 
           {[
-            { title: 'Website Design & Strategy', body: 'A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal.' },
+            { title: 'Website Design & Strategy', body: "A well-designed website isn\u2019t just attractive \u2014 it\u2019s strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal." },
             { title: 'Digital Marketing', body: 'Email campaigns and local SEO that put your business in front of the right people at the right time.' },
             { title: 'AI-Powered Marketing', body: 'Enterprise-grade automation tools built for small businesses — so you never miss a lead.' },
             { title: 'Graphic Design', body: 'Everything matches your website — same colors, same feel, same level of quality across every touchpoint.' },
