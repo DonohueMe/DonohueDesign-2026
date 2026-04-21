@@ -6,14 +6,15 @@ const BRAND_ORANGE = '#f47c20';
 
 /* Palette — matched to Donohue UX screenshot */
 const C = {
-  pageBg:    '#f4f1eb',   /* barely-warm eggshell — the page bg */
-  cardBg:    '#e8e5dd',   /* slightly deeper cream — sidebar card */
-  cardBg2:   '#edeae3',   /* service card fill */
-  border:    '#ccc8bc',   /* warm light divider */
-  textDark:  '#1c1c1a',   /* near-black charcoal */
-  textMid:   '#4a4640',   /* medium charcoal */
+  pageBg:    '#f4f1eb',   /* barely-warm eggshell page bg */
+  contentBg: '#ffffff',   /* white — content text area bg */
+  cardBg:    '#ffffff',   /* white sidebar card */
+  cardBg2:   '#ffffff',   /* white service card */
+  border:    '#e0ddd5',   /* soft warm divider */
+  textDark:  '#2c2c2a',   /* dark charcoal (not pure black) */
+  textMid:   '#555250',   /* medium charcoal */
   textLight: '#888078',   /* muted warm grey */
-  sectionSep:'#ccc8bc',
+  sectionSep:'#e0ddd5',
 };
 
 const HERO_BG = [
@@ -116,11 +117,12 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
         </button>
       </section>
 
-      {/* Body — warm palette */}
-      <div style={{ display: 'flex', gap: 52, padding: '60px 40px 80px', maxWidth: 1100, margin: '0 auto', alignItems: 'flex-start' }}>
+      {/* Body — eggshell outer, white inner panels */}
+      <div style={{ background: C.pageBg, padding: '60px 40px 80px' }}>
+        <div style={{ display: 'flex', gap: 40, maxWidth: 1100, margin: '0 auto', alignItems: 'flex-start' }}>
 
-        {/* Main */}
-        <main style={{ flex: '1 1 0', minWidth: 0 }}>
+        {/* Main — white content panel */}
+        <main style={{ flex: '1 1 0', minWidth: 0, background: '#fff', borderRadius: 12, padding: '40px 40px 40px', border: `1px solid ${C.border}` }}>
           {sections.map(({ h1 }, si) => (
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56, paddingBottom: 48, borderBottom: `1px solid ${C.sectionSep}` }}>
@@ -158,7 +160,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
                     <div style={{ height: 320, overflow: 'hidden' }}>
                       <img src={portfolioImg} alt="Deloitte BersinWorks activity feed" style={{ width: '100%', display: 'block', objectFit: 'cover', objectPosition: 'top' }} />
                     </div>
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: `linear-gradient(to bottom, transparent, ${C.pageBg})` }} />
+                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.95))' }} />
                   </div>
                   <p style={{ fontSize: 12, color: C.textLight, margin: '8px 0 0', lineHeight: 1.4 }}>
                     Deloitte / BersinWorks \u2014 enterprise activity feed UX, information architecture, and HR platform design.
@@ -206,6 +208,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           ))}
 
         </aside>
+        </div>
       </div>
     </div>
   );
