@@ -63,20 +63,42 @@ export function CardPage() {
       <div style={{ background: '#f5f5f7', padding: '20px 20px 60px' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 12 }}>
 
-          {/* Tile 1 — Full-width typographic statement */}
+          {/* Tile 1 — Full-width typographic statement + bio */}
           <div style={{
             background: '#fff', borderRadius: 20, padding: '64px 72px',
             position: 'relative', overflow: 'hidden',
+            display: 'flex', gap: 80, alignItems: 'flex-start',
           }}>
-            <p style={{ margin: '0 0 0', fontSize: 'clamp(52px, 6.5vw, 80px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em' }}>
-              <span style={{
-                background: 'linear-gradient(135deg, #5aaeff, #46dcc3)',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-              }}>No setup fees.</span>
-            </p>
-            <p style={{ margin: '6px 0 0', fontSize: 'clamp(44px, 5.5vw, 68px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em', color: '#1d1d1f' }}>
-              Not even the fine print.
-            </p>
+            {/* Left — statement */}
+            <div style={{ flex: '0 0 auto' }}>
+              <p style={{ margin: '0 0 0', fontSize: 'clamp(52px, 6.5vw, 80px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em' }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #5aaeff, #46dcc3)',
+                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+                }}>No setup fees.</span>
+              </p>
+              <p style={{ margin: '6px 0 0', fontSize: 'clamp(44px, 5.5vw, 68px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.04em', color: '#1d1d1f' }}>
+                Not even the fine print.
+              </p>
+            </div>
+            {/* Right — h1 + bio */}
+            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
+              <h1 style={{ fontSize: 'clamp(22px, 2.5vw, 32px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1, color: '#1d1d1f', margin: '0 0 8px' }}>
+                Website Designer, Santa Rosa, CA
+              </h1>
+              <p style={{ fontSize: 13, fontWeight: 600, color: '#6e6e73', margin: '0 0 20px', lineHeight: 1.4 }}>
+                Design, Strategy, and UX for Local Businesses
+              </p>
+              <p style={{ fontSize: 15, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 12px' }}>
+                Most website designers jump straight into building. I start with strategy.
+              </p>
+              <p style={{ fontSize: 15, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 12px' }}>
+                Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
+              </p>
+              <p style={{ fontSize: 15, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
+                My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I've spent a good chunk of that time working as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used by thousands of people across dozens of applications. I led redesigns that drove real, measurable results. A 15% lift in subscriptions. A 22% increase in user engagement. Design systems adopted across 90+ apps.
+              </p>
+            </div>
             <PlusBtn/>
           </div>
 
@@ -84,23 +106,15 @@ export function CardPage() {
           <div style={{
             background: '#fff', borderRadius: 20, padding: '52px 72px',
             position: 'relative', overflow: 'hidden',
-            display: 'flex', gap: 80, alignItems: 'flex-start',
+            display: 'flex', gap: 80, alignItems: 'center',
           }}>
-            <div style={{ flex: '1 1 0' }}>
-              <h1 style={{ fontSize: 'clamp(28px, 3vw, 40px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#1d1d1f', margin: '0 0 8px' }}>
-                Website Designer, Santa Rosa, CA
-              </h1>
-              <p style={{ fontSize: 15, fontWeight: 600, color: '#6e6e73', margin: '0 0 24px', lineHeight: 1.4 }}>
-                Website Designer in Santa Rosa, CA — Design, Strategy, and UX for Local Businesses
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
-                Most website designers jump straight into building. I start with strategy.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
-                Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
-              </p>
-              <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
-                My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I've spent a good chunk of that time working as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used by thousands of people across dozens of applications. I led redesigns that drove real, measurable results. A 15% lift in subscriptions. A 22% increase in user engagement. Design systems adopted across 90+ apps.
+            <div style={{ flex: '0 0 420px' }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Website Designer</p>
+              <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                Your website. Working harder than ever.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
               </p>
             </div>
             <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
