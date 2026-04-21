@@ -96,14 +96,13 @@ export function CardPage() {
               </p>
             </div>
             <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
-              {['Website Design', 'Website Development', 'E-commerce Store', 'Website Redesign', 'SEO-Optimized Design'].map(item => (
+              {['Website Design', 'Website Development', 'Website Redesign', 'E-commerce Website Design', 'UX/UI Design', 'SEO-Optimized Website Design', 'Website Maintenance'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
                   <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
                 </div>
               ))}
             </div>
-            <PlusBtn/>
           </div>
 
           {/* Tile 3 — Full-width Internet Marketing */}
