@@ -1,6 +1,5 @@
 import React from 'react';
-
-const mcafeeImg = `${import.meta.env.BASE_URL}mcafee.jpg`;
+import mcafeeImg from '../../../assets/mcafee.jpg';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
