@@ -4,11 +4,15 @@ import portfolioImg from '../../../assets/deloitte.png';
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
 const HERO_BG = [
-  'radial-gradient(ellipse 65% 70% at 8% 22%, rgba(255,95,0,0.88) 0%, transparent 58%)',
-  'radial-gradient(ellipse 55% 60% at 50% 18%, rgba(228,55,175,0.92) 0%, transparent 62%)',
-  'radial-gradient(ellipse 48% 55% at 90% 18%, rgba(25,45,220,0.88) 0%, transparent 58%)',
-  'radial-gradient(ellipse 22% 28% at 100% 12%, rgba(0,210,165,0.65) 0%, transparent 55%)',
-  '#060606',
+  /* orange spotlight — top-left, tight circle bleeding from corner */
+  'radial-gradient(circle 32% at 6% 0%, rgba(255,100,0,1) 0%, rgba(200,55,0,0.55) 40%, transparent 68%)',
+  /* hot pink spotlight — center top */
+  'radial-gradient(circle 28% at 50% 5%, rgba(238,50,172,1) 0%, rgba(190,30,130,0.45) 45%, transparent 70%)',
+  /* electric blue spotlight — top-right */
+  'radial-gradient(circle 26% at 94% 3%, rgba(18,38,230,1) 0%, rgba(12,25,185,0.45) 45%, transparent 70%)',
+  /* teal accent — far upper-right edge */
+  'radial-gradient(circle 14% at 100% 0%, rgba(0,205,160,0.75) 0%, transparent 65%)',
+  '#020202',
 ].join(',');
 
 const GRAD_WARM: React.CSSProperties = {
