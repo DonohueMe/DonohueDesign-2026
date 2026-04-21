@@ -1,5 +1,7 @@
 import React from 'react';
 
+const mcafeeImg = `${import.meta.env.BASE_URL}mcafee.jpg`;
+
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
 const HERO_BG = [
@@ -79,19 +81,58 @@ export default function LV7_Editorial() {
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
           {sections.map(({ h1 }, si) => (
-            <div key={si} style={{ marginBottom: 64 }}>
-              <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 0', lineHeight: 1.1 }}>
-                {h1}
-              </h2>
-              <p style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: 700, margin: '2px 0 20px', lineHeight: 1.15, ...(GRAD_WARM as any) }}>
-                Strategy-Driven Design That Works
-              </p>
-              {BIO.map((para, pi) => (
-                <p key={pi} style={{ fontSize: 14, lineHeight: 1.75, margin: '0 0 12px', color: '#3d3d3f', ...(pi === 0 ? { fontWeight: 600, color: '#1d1d1f' } : {}) }}>
-                  {para}
+            <React.Fragment key={si}>
+              <div style={{ marginBottom: 56 }}>
+                <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 0', lineHeight: 1.1 }}>
+                  {h1}
+                </h2>
+                <p style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: 700, margin: '2px 0 20px', lineHeight: 1.15, ...(GRAD_WARM as any) }}>
+                  Strategy-Driven Design That Works
                 </p>
-              ))}
-            </div>
+                {BIO.map((para, pi) => (
+                  <p key={pi} style={{ fontSize: 14, lineHeight: 1.75, margin: '0 0 12px', color: '#3d3d3f', ...(pi === 0 ? { fontWeight: 600, color: '#1d1d1f' } : {}) }}>
+                    {para}
+                  </p>
+                ))}
+              </div>
+
+              {/* Portfolio sample — shown after first section */}
+              {si === 0 && (
+                <div style={{ marginBottom: 56 }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 10 }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#8e8e93' }}>Client work</span>
+                    <span style={{ fontSize: 12, color: '#2997ff', cursor: 'pointer', fontWeight: 500 }}>View case study ›</span>
+                  </div>
+                  {/* Image clipped to show top portion — browser-in-browser feel */}
+                  <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid #e5e5ea', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', position: 'relative' }}>
+                    {/* Fake browser chrome */}
+                    <div style={{ background: '#f2f2f2', borderBottom: '1px solid #e0e0e0', padding: '8px 12px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <div style={{ display: 'flex', gap: 5 }}>
+                        {['#ff5f57','#febc2e','#28c840'].map(c => (
+                          <div key={c} style={{ width: 10, height: 10, borderRadius: '50%', background: c }} />
+                        ))}
+                      </div>
+                      <div style={{ flex: 1, background: '#fff', borderRadius: 4, padding: '3px 10px', fontSize: 11, color: '#8e8e93', border: '1px solid #e0e0e0' }}>
+                        mcafee.com
+                      </div>
+                    </div>
+                    {/* Clipped screenshot — shows top 300px of the image */}
+                    <div style={{ height: 300, overflow: 'hidden' }}>
+                      <img
+                        src={mcafeeImg}
+                        alt="McAfee website design"
+                        style={{ width: '100%', display: 'block', objectFit: 'cover', objectPosition: 'top' }}
+                      />
+                    </div>
+                    {/* Fade-out at the bottom */}
+                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.95))' }} />
+                  </div>
+                  <p style={{ fontSize: 12, color: '#8e8e93', margin: '8px 0 0', lineHeight: 1.4 }}>
+                    McAfee \u2014 consumer security product UX, navigation redesign, and conversion-focused layout.
+                  </p>
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </main>
 
