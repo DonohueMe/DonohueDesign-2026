@@ -30,11 +30,11 @@ const sections = [
 ];
 
 const timelineSteps = [
-  { label: 'Strategy',  color: '#ff6b35' },
-  { label: 'Design',    color: '#f9ca24' },
-  { label: 'Build',     color: '#34c759' },
-  { label: 'Launch',    color: '#2997ff' },
-  { label: 'Grow',      color: '#c899e2' },
+  { label: 'Strategy', body: 'We map your customers, goals, and competitive landscape before a single pixel is placed.' },
+  { label: 'Design',   body: 'Wireframes, visual design, and UX flows \u2014 all reviewed and refined with your feedback.' },
+  { label: 'Build',    body: 'Clean, fast, mobile-first development with no bloated templates.' },
+  { label: 'Launch',   body: 'Go live with confidence. Hosting, DNS, and testing all handled.' },
+  { label: 'Grow',     body: 'SEO, email, and AI tools that keep working after you launch.' },
 ];
 
 const navSections = [
@@ -140,20 +140,21 @@ export default function LV7_Editorial() {
 
           {/* Strategy timeline */}
           <div style={{ background: '#f9f9fb', borderRadius: 16, padding: '18px 16px', marginBottom: 12 }}>
-            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8e8e93', margin: '0 0 16px' }}>How it works</p>
-            <div style={{ position: 'relative' }}>
-              {/* Vertical line */}
-              <div style={{ position: 'absolute', left: 13, top: 14, bottom: 14, width: 2, background: 'linear-gradient(180deg, #ff6b35, #f9ca24, #34c759, #2997ff, #c899e2)', borderRadius: 2 }} />
-              {timelineSteps.map(({ label, color }, i) => (
-                <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: i < timelineSteps.length - 1 ? 14 : 0, position: 'relative' }}>
-                  <div style={{ width: 28, height: 28, borderRadius: '50%', background: color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1, boxShadow: '0 0 0 3px #f9f9fb' }}>
-                    <span style={{ fontSize: 11, fontWeight: 800, color: '#fff' }}>{i + 1}</span>
-                  </div>
-                  <span style={{ fontSize: 14, fontWeight: 600, color: '#1d1d1f' }}>{label}</span>
+            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8e8e93', margin: '0 0 18px' }}>How it works</p>
+            {timelineSteps.map(({ label, body }, i) => (
+              <div key={label} style={{ display: 'flex', gap: 12, marginBottom: i < timelineSteps.length - 1 ? 18 : 0 }}>
+                {/* Circle */}
+                <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#e8472a', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
+                  <span style={{ fontSize: 12, fontWeight: 800, color: '#fff' }}>{i + 1}</span>
                 </div>
-              ))}
-            </div>
-            <button style={{ marginTop: 16, width: '100%', background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '9px 0', fontSize: 12, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
+                {/* Text */}
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: 14, fontWeight: 700, color: '#1d1d1f', margin: '0 0 4px', lineHeight: 1.2 }}>{label}</p>
+                  <p style={{ fontSize: 12, color: '#6e6e73', margin: 0, lineHeight: 1.55 }}>{body}</p>
+                </div>
+              </div>
+            ))}
+            <button style={{ marginTop: 20, width: '100%', background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '11px 0', fontSize: 13, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
               Start with a free call
             </button>
           </div>
