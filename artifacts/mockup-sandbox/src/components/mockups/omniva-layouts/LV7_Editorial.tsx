@@ -40,11 +40,21 @@ const timelineSteps = [
 const serviceCards = [
   {
     title: 'Digital Marketing',
+    icon: '📣',
+    accent: 'linear-gradient(135deg,#e8472a,#f07030)',
     items: ['Email marketing automation', 'Local SEO Services (GMB)'],
   },
   {
     title: 'Internet Marketing Service',
+    icon: '🤖',
+    accent: 'linear-gradient(135deg,#6e3de8,#a855f7)',
     items: ['AI Receptionist', 'AI Voice Assistant, website', 'AI Chat Assistant, website'],
+  },
+  {
+    title: 'Graphic Design',
+    icon: '🎨',
+    accent: 'linear-gradient(135deg,#0066cc,#34aadc)',
+    items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
   },
 ];
 
@@ -165,12 +175,19 @@ export default function LV7_Editorial() {
           </div>
 
           {/* Service category cards */}
-          {serviceCards.map(({ title, items }) => (
-            <div key={title} style={{ background: '#f9f9fb', borderRadius: 16, padding: '16px', marginBottom: 10 }}>
-              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 8px' }}>{title}</p>
-              {items.map(item => (
-                <p key={item} style={{ fontSize: 12, color: '#0066cc', margin: '0 0 5px', lineHeight: 1.45, cursor: 'pointer' }}>{item}</p>
-              ))}
+          {serviceCards.map(({ title, icon, accent, items }) => (
+            <div key={title} style={{ background: '#fff', borderRadius: 16, overflow: 'hidden', marginBottom: 10, boxShadow: '0 2px 12px rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.05)' }}>
+              {/* Accent stripe + icon */}
+              <div style={{ background: accent, padding: '10px 14px 10px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ fontSize: 18, lineHeight: 1 }}>{icon}</span>
+                <p style={{ fontSize: 12, fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '-0.01em' }}>{title}</p>
+              </div>
+              {/* Items */}
+              <div style={{ padding: '10px 14px 12px' }}>
+                {items.map(item => (
+                  <p key={item} style={{ fontSize: 11.5, color: '#0066cc', margin: '0 0 5px', lineHeight: 1.45, cursor: 'pointer' }}>{item}</p>
+                ))}
+              </div>
             </div>
           ))}
 
