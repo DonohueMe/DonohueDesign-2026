@@ -110,33 +110,128 @@ export function CardPage() {
             </div>
           </div>
 
-          {/* Tile 3 — Full-width Internet Marketing */}
+          {/* Tile 3 — Digital Marketing — row-reverse (text RIGHT, list LEFT) */}
           <div style={{
             background: '#fff', borderRadius: 20, padding: '52px 72px',
             position: 'relative', overflow: 'hidden',
             display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse',
           }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Internet Marketing</p>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Digital Marketing</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                AI marketing that works while you sleep.
+                Get found. Stay top of mind.
               </h2>
               <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                Voice assistants, email automation, local SEO — enterprise tools at small-business prices.
+                Email campaigns and local SEO that put your business in front of the right people at the right time.
               </p>
             </div>
             <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
-              {['AI Voice Assistant', 'AI Receptionist', 'Email Marketing Automation', 'Local SEO (GMB)'].map(item => (
+              {['Email Marketing Automation', 'Local SEO Services (GMB)'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
                   <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
                 </div>
               ))}
             </div>
-            <PlusBtn/>
           </div>
 
-          {/* Tile 4 — Full-width CTA gradient */}
+          {/* Tile 4 — Internet Marketing Service — normal (text LEFT, list RIGHT) */}
+          <div style={{
+            background: '#fff', borderRadius: 20, padding: '52px 72px',
+            position: 'relative', overflow: 'hidden',
+            display: 'flex', gap: 80, alignItems: 'center',
+          }}>
+            <div style={{ flex: '0 0 380px' }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Internet Marketing Service</p>
+              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                AI that answers, books, and converts — 24/7.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Enterprise-grade automation tools built for small businesses — so you never miss a lead.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
+              {['AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tile 5 — Graphic Designer — row-reverse (text RIGHT, list LEFT) */}
+          <div style={{
+            background: '#fff', borderRadius: 20, padding: '52px 72px',
+            position: 'relative', overflow: 'hidden',
+            display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse',
+          }}>
+            <div style={{ flex: '0 0 380px' }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Graphic Designer</p>
+              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                A brand as strong as your business.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
+              {['Email Design', 'Logo Design', 'Brochure & Flyer Design', 'Presentation Design'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tile 6 — Reviews */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: 0 }}>Client Reviews</p>
+              <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
+              <span style={{ fontSize: 13, color: '#6e6e73' }}>5.0 · Google</span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32 }}>
+              {[
+                { name: 'Maria T.', location: 'Santa Rosa, CA', text: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
+                { name: 'Derek H.', location: 'Petaluma, CA', text: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy Jim put together was exactly what our shop needed.' },
+                { name: 'Lisa M.', location: 'Healdsburg, CA', text: "The AI receptionist handles after-hours calls now. We haven't missed a lead in weeks. Worth every penny." },
+              ].map(({ name, location, text }) => (
+                <div key={name}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
+                    <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg, #5aaeff, #46dcc3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#fff' }}>{name[0]}</span>
+                    </div>
+                    <div>
+                      <p style={{ fontSize: 14, fontWeight: 600, color: '#1d1d1f', margin: 0 }}>{name}</p>
+                      <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>{location}</p>
+                    </div>
+                    <div style={{ marginLeft: 'auto', display: 'flex', gap: 1 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 11 }}>★</span>)}</div>
+                  </div>
+                  <p style={{ fontSize: 15, color: '#3d3d3f', lineHeight: 1.6, margin: 0 }}>"{text}"</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tile 7 — Map */}
+          <div style={{ borderRadius: 20, overflow: 'hidden', position: 'relative', minHeight: 400 }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+              width="100%" height="400"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Omniva Design — Santa Rosa, CA"
+            />
+            <div style={{ position: 'absolute', bottom: 20, left: 20, background: '#fff', borderRadius: 14, padding: '12px 18px', boxShadow: '0 2px 16px rgba(0,0,0,0.14)' }}>
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+              <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
+            </div>
+          </div>
+
+          {/* Tile 8 — CTA gradient */}
           <div style={{
             borderRadius: 20, padding: '72px 72px',
             position: 'relative', overflow: 'hidden',
