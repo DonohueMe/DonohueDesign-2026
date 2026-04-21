@@ -60,7 +60,7 @@ export function CardPage() {
       </section>
 
       {/* ── Tile Grid — single column, large full-width statement tiles ── */}
-      <div style={{ background: '#f5f5f7', padding: '20px 20px 60px' }}>
+      <div style={{ background: '#f5f5f7', padding: '60px 20px 60px' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
 
           {/* Tile 1 — Full-width h1 + bio */}
