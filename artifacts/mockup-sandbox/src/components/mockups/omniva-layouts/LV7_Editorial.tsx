@@ -1,5 +1,5 @@
 import React from 'react';
-import mcafeeImg from '../../../assets/mcafee.jpg';
+import portfolioImg from '../../../assets/deloitte.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
@@ -112,14 +112,14 @@ export default function LV7_Editorial() {
                         ))}
                       </div>
                       <div style={{ flex: 1, background: '#fff', borderRadius: 4, padding: '3px 10px', fontSize: 11, color: '#8e8e93', border: '1px solid #e0e0e0' }}>
-                        mcafee.com
+                        bersinworks.deloitte.com
                       </div>
                     </div>
-                    {/* Clipped screenshot — shows top 300px of the image */}
-                    <div style={{ height: 300, overflow: 'hidden' }}>
+                    {/* Clipped screenshot — shows top portion of the image */}
+                    <div style={{ height: 320, overflow: 'hidden' }}>
                       <img
-                        src={mcafeeImg}
-                        alt="McAfee website design"
+                        src={portfolioImg}
+                        alt="Deloitte BersinWorks activity feed"
                         style={{ width: '100%', display: 'block', objectFit: 'cover', objectPosition: 'top' }}
                       />
                     </div>
@@ -127,7 +127,7 @@ export default function LV7_Editorial() {
                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.95))' }} />
                   </div>
                   <p style={{ fontSize: 12, color: '#8e8e93', margin: '8px 0 0', lineHeight: 1.4 }}>
-                    McAfee \u2014 consumer security product UX, navigation redesign, and conversion-focused layout.
+                    Deloitte / BersinWorks \u2014 enterprise activity feed UX, information architecture, and HR platform design.
                   </p>
                 </div>
               )}
