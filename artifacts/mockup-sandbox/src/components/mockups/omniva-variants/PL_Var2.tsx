@@ -37,7 +37,7 @@ export function PL_Var2() {
 
       {/* Hero */}
       <section style={{
-        minHeight: '50vh', display: 'flex', flexDirection: 'column',
+        minHeight: 800, display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '0 24px', background: HERO_BG,
       }}>
