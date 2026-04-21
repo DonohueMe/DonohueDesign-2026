@@ -177,24 +177,35 @@ export default function OmnivaLayoutsCopy3cWomlo3() {
         {/* Sidebar */}
         <aside style={{ flex: '0 0 200px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
-          {/* Strategy timeline */}
-          <div style={{ background: '#f9f9fb', borderRadius: 16, padding: '18px 16px', marginBottom: 12 }}>
-            <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#8e8e93', margin: '0 0 18px' }}>How it works</p>
-            {timelineSteps.map(({ label, body }, i) => (
-              <div key={label} style={{ display: 'flex', gap: 12, marginBottom: i < timelineSteps.length - 1 ? 18 : 0 }}>
-                {/* Circle */}
-                <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#e8472a', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                  <span style={{ fontSize: 12, fontWeight: 800, color: '#fff' }}>{i + 1}</span>
-                </div>
-                {/* Text */}
-                <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: '#1d1d1f', margin: '0 0 4px', lineHeight: 1.2 }}>{label}</p>
-                  <p style={{ fontSize: 12, color: '#6e6e73', margin: 0, lineHeight: 1.55 }}>{body}</p>
+          {/* Stats card — blue-to-teal gradient */}
+          <div style={{
+            background: 'linear-gradient(160deg, #2d8cff 0%, #1a6fd4 35%, #0fb8c9 100%)',
+            borderRadius: 22,
+            padding: '22px 20px 20px',
+            marginBottom: 12,
+          }}>
+            {/* Label */}
+            <p style={{ fontSize: 9.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.13em', color: 'rgba(255,255,255,0.60)', margin: '0 0 8px' }}>One Designer</p>
+            {/* Headline */}
+            <p style={{ fontSize: 20, fontWeight: 800, color: '#fff', margin: '0 0 20px', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Full-stack results.</p>
+            {/* Stat rows */}
+            {[
+              { stat: '+15%', label: 'Subscriptions' },
+              { stat: '+22%', label: 'Engagement' },
+              { stat: '90+',  label: 'Apps' },
+              { stat: '20 yrs', label: 'Experience' },
+            ].map(({ stat, label }, i) => (
+              <div key={stat}>
+                {i > 0 && <div style={{ height: 1, background: 'rgba(255,255,255,0.18)', margin: '0 0 0' }} />}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '11px 0' }}>
+                  <span style={{ fontSize: 18, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>{stat}</span>
+                  <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.58)', fontWeight: 500 }}>{label}</span>
                 </div>
               </div>
             ))}
-            <button style={{ marginTop: 20, width: '100%', background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '11px 0', fontSize: 13, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
-              Start with a free call
+            {/* CTA button */}
+            <button style={{ marginTop: 8, width: '100%', background: '#fff', color: '#1a6fd4', border: 'none', borderRadius: 980, padding: '13px 0', fontSize: 13, fontWeight: 700, fontFamily: SF, cursor: 'pointer', letterSpacing: '-0.01em' }}>
+              Start your project
             </button>
           </div>
 
