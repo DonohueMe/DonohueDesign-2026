@@ -6,7 +6,7 @@ const BRAND_ORANGE = '#f47c20';
 
 /* Palette — matched to Donohue UX screenshot */
 const C = {
-  pageBg:    '#f4f1eb',   /* barely-warm eggshell page bg */
+  pageBg:    '#f5f5f7',   /* Apple neutral grey page bg */
   contentBg: '#ffffff',   /* white — content text area bg */
   cardBg:    '#ffffff',   /* white sidebar card */
   cardBg2:   '#ffffff',   /* white service card */
