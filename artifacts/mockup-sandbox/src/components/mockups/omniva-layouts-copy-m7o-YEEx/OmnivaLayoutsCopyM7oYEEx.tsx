@@ -4,16 +4,16 @@ import portfolioImg from '../../../assets/deloitte.png';
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 const BRAND_ORANGE = '#f47c20';
 
-/* Warm palette — Donohue UX-inspired */
+/* Palette — matched to Donohue UX screenshot */
 const C = {
-  pageBg:    '#f6f2ea',   /* warm off-white / parchment */
-  cardBg:    '#ede8db',   /* light tan card */
-  cardBg2:   '#f9f5ed',   /* service card fill */
-  border:    '#cfc6b0',   /* warm tan border */
-  textDark:  '#251508',   /* deep warm brown */
-  textMid:   '#574030',   /* mid warm brown */
-  textLight: '#907055',   /* muted tawny */
-  sectionSep:'#cfc6b0',
+  pageBg:    '#f4f1eb',   /* barely-warm eggshell — the page bg */
+  cardBg:    '#e8e5dd',   /* slightly deeper cream — sidebar card */
+  cardBg2:   '#edeae3',   /* service card fill */
+  border:    '#ccc8bc',   /* warm light divider */
+  textDark:  '#1c1c1a',   /* near-black charcoal */
+  textMid:   '#4a4640',   /* medium charcoal */
+  textLight: '#888078',   /* muted warm grey */
+  sectionSep:'#ccc8bc',
 };
 
 const HERO_BG = [
@@ -23,12 +23,6 @@ const HERO_BG = [
   '#f0eaf8',
 ].join(',');
 
-const GRAD_WARM: React.CSSProperties = {
-  background: `linear-gradient(135deg, ${BRAND_ORANGE}, #f5a030)`,
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  display: 'inline',
-};
 
 const BrandLogo = () => (
   <div style={{ display: 'flex', alignItems: 'stretch', borderRadius: 4, overflow: 'hidden', height: 28 }}>
@@ -130,12 +124,9 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           {sections.map(({ h1 }, si) => (
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56, paddingBottom: 48, borderBottom: `1px solid ${C.sectionSep}` }}>
-                <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.03em', color: C.textDark, margin: '0 0 0', lineHeight: 1.1 }}>
+                <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.03em', color: C.textDark, margin: '0 0 20px', lineHeight: 1.1 }}>
                   {h1}
                 </h2>
-                <p style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: 700, margin: '4px 0 20px', lineHeight: 1.15, ...(GRAD_WARM as any) }}>
-                  Strategy-Driven Design That Works
-                </p>
                 {BIO.map((para, pi) => (
                   <p key={pi} style={{
                     fontSize: 14, lineHeight: 1.8, margin: '0 0 14px',
