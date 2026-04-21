@@ -92,7 +92,7 @@ export function CardPage() {
             display: 'flex', gap: 80, alignItems: 'center',
           }}>
             <div style={{ flex: '0 0 420px' }}>
-              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Website Designer</p>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Website Designer</p>
               <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 Your website. Working harder than ever.
               </h2>
@@ -117,7 +117,7 @@ export function CardPage() {
             display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse',
           }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Digital Marketing</p>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Digital Marketing</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 Get found. Stay top of mind.
               </h2>
@@ -142,7 +142,7 @@ export function CardPage() {
             display: 'flex', gap: 80, alignItems: 'center',
           }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Internet Marketing Service</p>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Internet Marketing Service</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 AI that answers, books, and converts — 24/7.
               </h2>
@@ -167,7 +167,7 @@ export function CardPage() {
             display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse',
           }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: '0 0 16px' }}>Graphic Designer</p>
+              <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Graphic Designer</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 A brand as strong as your business.
               </h2>
@@ -190,7 +190,7 @@ export function CardPage() {
             {/* Reviews section */}
             <div style={{ padding: '52px 72px 48px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
-                <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6e6e73', margin: 0 }}>Client Reviews</p>
+                <p style={{ fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: 0 }}>Client Reviews</p>
                 <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
                 <span style={{ fontSize: 13, color: '#6e6e73' }}>5.0 · Google</span>
               </div>
