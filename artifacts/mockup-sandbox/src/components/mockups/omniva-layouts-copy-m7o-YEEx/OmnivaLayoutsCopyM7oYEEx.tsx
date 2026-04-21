@@ -4,16 +4,16 @@ import portfolioImg from '../../../assets/deloitte.png';
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 const BRAND_ORANGE = '#f47c20';
 
-/* Warm palette */
+/* Warm palette — Donohue UX-inspired */
 const C = {
-  pageBg:    '#f5f0e6',   /* warm linen */
-  cardBg:    '#ece6d8',   /* light tan card */
-  cardBg2:   '#faf6ee',   /* service card fill */
-  border:    '#d4c9b0',   /* warm tan border */
-  textDark:  '#2b1a08',   /* deep warm brown */
-  textMid:   '#5c4530',   /* mid warm brown */
-  textLight: '#9a8060',   /* muted tawny */
-  sectionSep:'#d4c9b0',
+  pageBg:    '#f6f2ea',   /* warm off-white / parchment */
+  cardBg:    '#ede8db',   /* light tan card */
+  cardBg2:   '#f9f5ed',   /* service card fill */
+  border:    '#cfc6b0',   /* warm tan border */
+  textDark:  '#251508',   /* deep warm brown */
+  textMid:   '#574030',   /* mid warm brown */
+  textLight: '#907055',   /* muted tawny */
+  sectionSep:'#cfc6b0',
 };
 
 const HERO_BG = [
@@ -91,7 +91,7 @@ const serviceCards = [
 
 export default function OmnivaLayoutsCopyM7oYEEx() {
   return (
-    <div style={{ fontFamily: SF, margin: 0, padding: 0, background: C.pageBg }}>
+    <div style={{ fontFamily: SF, margin: 0, padding: 0, background: C.pageBg, minHeight: '100vh' }}>
 
       {/* Nav */}
       <nav style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10, padding: '0 40px', display: 'flex', alignItems: 'center', height: 52 }}>
