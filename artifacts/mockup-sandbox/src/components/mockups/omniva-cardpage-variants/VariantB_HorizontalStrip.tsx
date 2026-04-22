@@ -44,7 +44,7 @@ export function VariantB_HorizontalStrip() {
 
       {/* ── Layout B service tiles + reviews/map combo on grey ── */}
       <div style={{ background: '#f5f5f7', padding: '60px 20px 60px' }}>
-        <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
 
           {/* Tile 2 — Website Designer */}
           <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
@@ -135,7 +135,7 @@ export function VariantB_HorizontalStrip() {
 
       {/* Reviews + Map combo on white background */}
       <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
-        <div style={{ maxWidth: 1020, margin: '0 auto' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
             <div style={{ padding: '52px 72px 48px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
