@@ -201,7 +201,7 @@ export default function LV7_Editorial() {
               <Icon />
               <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 6px', lineHeight: 1.2 }}>{title}</p>
               {items.map(item => (
-                <p key={item} style={{ fontSize: 11, color: '#6e6e73', margin: '0 0 3px', lineHeight: 1.45 }}>{item}</p>
+                <p key={item} style={{ fontSize: 11, color: '#2997ff', margin: '0 0 3px', lineHeight: 1.45 }}>{item}</p>
               ))}
               {/* "+" button */}
               <div style={{ position: 'absolute', bottom: 12, right: 12, width: 26, height: 26, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
