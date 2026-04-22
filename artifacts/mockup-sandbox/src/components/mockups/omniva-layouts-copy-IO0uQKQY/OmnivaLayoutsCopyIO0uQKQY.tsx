@@ -40,40 +40,64 @@ const timelineSteps = [
   { label: 'Measurement & Iteration',    body: 'Analytics, A/B testing, and ongoing performance review cycles.' },
 ];
 
-const IconMarketing = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="17" width="4" height="8" rx="1"/>
-    <rect x="9" y="12" width="4" height="13" rx="1"/>
-    <rect x="15" y="7" width="4" height="18" rx="1"/>
-    <rect x="21" y="3" width="4" height="22" rx="1"/>
-  </svg>
+const IllustrBrowser = () => (
+  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '10px 10px 6px', marginBottom: 4 }}>
+    <div style={{ background: '#fff', borderRadius: 6, border: '1px solid #e5e5ea', padding: '6px 8px 10px' }}>
+      <div style={{ fontSize: 8.5, color: '#8e8e93', background: '#f5f5f7', borderRadius: 4, padding: '2px 6px', display: 'inline-block', marginBottom: 6 }}>yoursite.com</div>
+      <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+        <div style={{ background: '#1d1d1f', borderRadius: 20, padding: '4px 10px', fontSize: 8, color: '#fff', fontWeight: 600 }}>Book Online</div>
+        <div style={{ flex: 1, height: 6, background: '#e5e5ea', borderRadius: 3 }} />
+      </div>
+      <div style={{ height: 5, background: '#e5e5ea', borderRadius: 3, marginTop: 6, width: '80%' }} />
+      <div style={{ height: 5, background: '#e5e5ea', borderRadius: 3, marginTop: 4, width: '60%' }} />
+    </div>
+  </div>
 );
-const IconAI = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="14" cy="14" r="5"/>
-    <path d="M14 3v4M14 21v4M3 14h4M21 14h4"/>
-    <path d="M6.22 6.22l2.83 2.83M18.95 18.95l2.83 2.83M21.78 6.22l-2.83 2.83M9.05 18.95l-2.83 2.83"/>
-  </svg>
+
+const IllustrChart = () => (
+  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '10px 10px 6px', marginBottom: 4 }}>
+    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 4, height: 52, paddingBottom: 4 }}>
+      {[20, 28, 22, 34, 26, 38, 30, 44, 32, 52].map((h, i) => (
+        <div key={i} style={{ flex: 1, height: h, borderRadius: 3, background: i === 9 ? '#c898e2' : '#d1d1d6' }} />
+      ))}
+    </div>
+  </div>
 );
-const IconDesign = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 24l4-1 14-14a2.83 2.83 0 00-4-4L4 19l-1 4z"/>
-    <path d="M17 7l4 4"/>
-  </svg>
+
+const IllustrAvatars = () => (
+  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '14px 12px', marginBottom: 4, display: 'flex', gap: 8 }}>
+    <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#7b5ea7,#a07bc8)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#fff' }}>OD</div>
+    <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#f09030,#f4b860)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#fff' }}>A</div>
+    <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#2997ff,#6ac4ff)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#fff' }}>M</div>
+  </div>
+);
+
+const IllustrWave = () => (
+  <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+    </svg>
+  </div>
 );
 
 const serviceCards = [
   {
-    label: 'DIGITAL MARKETING',
-    headline: 'AI-powered marketing that never sleeps.',
-    Icon: IconMarketing,
-    items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
+    label: 'WEBSITE DESIGNER',
+    headline: 'Websites that convert browsers into buyers.',
+    Illust: IllustrBrowser,
+    items: ['Custom website design', 'Mobile-first development', 'E-commerce \u0026 booking', 'Speed-optimized', 'SEO-ready from day one'],
   },
   {
-    label: 'GRAPHIC DESIGN',
+    label: 'INTERNET MARKETING',
+    headline: 'AI marketing that never sleeps.',
+    Illust: IllustrChart,
+    items: ['AI Voice Assistant (24/7 answering)', 'AI Receptionist \u0026 booking', 'Email marketing automation', 'Google My Business (Local SEO)', 'Reputation management'],
+  },
+  {
+    label: 'GRAPHIC DESIGNER',
     headline: 'A brand identity you\u2019re proud to show off.',
-    Icon: IconDesign,
-    items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
+    Illust: IllustrAvatars,
+    items: ['Logo design', 'Full brand identity system', 'Business cards \u0026 stationery', 'Brochures \u0026 flyers', 'Social media templates'],
   },
 ];
 
@@ -198,19 +222,30 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
         <aside style={{ flex: '0 0 300px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
           {/* Service category cards — screenshot style */}
-          {serviceCards.map(({ label, headline, Icon, items }) => (
-            <div key={label} style={{ background: '#fff', borderRadius: 18, padding: '18px 18px 20px', marginBottom: 10, border: '1px solid #e5e5ea' }}>
-              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#8e8e93', margin: '0 0 12px' }}>{label}</p>
-              <Icon />
-              <p style={{ fontSize: 15, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 14px', lineHeight: 1.25 }}>{headline}</p>
+          {serviceCards.map(({ label, headline, Illust, items }) => (
+            <div key={label} style={{ background: '#fff', borderRadius: 18, padding: '16px 16px 18px', marginBottom: 10, border: '1px solid #e5e5ea' }}>
+              <Illust />
+              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#8e8e93', margin: '10px 0 6px' }}>{label}</p>
+              <p style={{ fontSize: 15, fontWeight: 700, color: '#1d1d1f', margin: '0 0 12px', lineHeight: 1.25 }}>{headline}</p>
               {items.map((item, i) => (
-                <div key={item} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: i === 0 ? '1px solid #e5e5ea' : 'none', borderBottom: '1px solid #e5e5ea', padding: '8px 0' }}>
+                <div key={item} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: i === 0 ? '1px solid #e5e5ea' : 'none', borderBottom: '1px solid #e5e5ea', padding: '7px 0' }}>
                   <span style={{ fontSize: 12, color: '#1d1d1f', lineHeight: 1.4 }}>{item}</span>
                   <span style={{ fontSize: 14, color: '#c7c7cc', marginLeft: 8 }}>›</span>
                 </div>
               ))}
             </div>
           ))}
+
+          {/* AI Receptionist banner */}
+          <div style={{ borderRadius: 18, padding: '20px 20px 22px', background: 'linear-gradient(135deg, #c898e2 0%, #e8a0c0 50%, #f4b880 100%)', marginBottom: 10 }}>
+            <IllustrWave />
+            <p style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 8px', lineHeight: 1.2 }}>Your AI Receptionist answers every call.</p>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.85)', margin: '0 0 16px', lineHeight: 1.5 }}>Never miss a lead. Our AI Voice Assistant books appointments, answers FAQs, and qualifies callers \u2014 24 hours a day, 7 days a week.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}>
+              <div style={{ background: '#1d1d1f', borderRadius: 30, padding: '9px 18px', fontSize: 13, fontWeight: 600, color: '#fff', cursor: 'pointer' }}>See how it works</div>
+              <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', marginLeft: 4 }}>Free 14-day trial</span>
+            </div>
+          </div>
 
         </aside>
       </div>
