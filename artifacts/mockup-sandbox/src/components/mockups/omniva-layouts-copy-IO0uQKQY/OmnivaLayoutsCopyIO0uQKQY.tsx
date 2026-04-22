@@ -166,7 +166,6 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
 
       {/* Hero */}
       <section style={{ minHeight: 600, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
-        <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6e6e73', margin: '0 0 14px' }}>Santa Rosa, CA</p>
         <h1 style={{ fontSize: 'clamp(52px, 7vw, 88px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.0, color: '#1d1d1f', margin: '0 0 22px' }}>
           Built to rank.<br />Designed to convert.
         </h1>
