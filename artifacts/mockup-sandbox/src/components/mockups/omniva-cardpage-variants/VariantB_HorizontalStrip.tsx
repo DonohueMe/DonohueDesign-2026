@@ -76,7 +76,7 @@ export function VariantB_HorizontalStrip() {
           {/* Tile 2 — Website Designer */}
           <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
             <div style={{ flex: '0 0 420px' }}>
-              <TileHeader tint="#2997ff" icon={ICON_BROWSER} label="Website Designer" />
+              <TileHeader tint="#2997ff" icon={ICON_BROWSER} label="Website Design" />
               <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 Your website. Working harder than ever.
               </h2>
