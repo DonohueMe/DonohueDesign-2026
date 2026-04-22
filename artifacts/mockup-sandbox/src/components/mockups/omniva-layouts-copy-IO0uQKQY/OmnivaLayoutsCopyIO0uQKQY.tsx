@@ -333,38 +333,35 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
           ))}
 
           {/* AI Receptionist banner */}
-          <div style={{ borderRadius: 18, padding: '20px 20px 22px', background: 'linear-gradient(135deg, #c898e2 0%, #e8a0c0 50%, #f4b880 100%)', marginBottom: 10 }}>
-            <IllustrWave />
-            <p style={{ fontSize: 18, fontWeight: 700, color: '#fff', margin: '0 0 8px', lineHeight: 1.2 }}>Your AI Receptionist answers every call.</p>
-            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.85)', margin: '0 0 16px', lineHeight: 1.5 }}>Never miss a lead. Our AI Voice Assistant books appointments, answers FAQs, and qualifies callers \u2014 24 hours a day, 7 days a week.</p>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}>
-              <div style={{ background: '#1d1d1f', borderRadius: 30, padding: '9px 18px', fontSize: 13, fontWeight: 600, color: '#fff', cursor: 'pointer' }}>See how it works</div>
-              <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', marginLeft: 4 }}>Free 14-day trial</span>
-            </div>
+          <div style={{ borderRadius: 18, padding: '24px 22px 26px', background: 'linear-gradient(135deg, #c898e2 0%, #e8a0c0 50%, #f4b880 100%)', marginBottom: 60 }}>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', margin: '0 0 10px' }}>AI Voice Assistant</p>
+            <p style={{ fontSize: 28, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.0, letterSpacing: '-0.035em' }}>Every call.<br />Every time.</p>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.92)', margin: '0 0 18px', lineHeight: 1.5, fontWeight: 500 }}>Books jobs while you sleep. Qualifies leads while you work. Closes gaps you didn\u2019t know you had.</p>
+            <div style={{ background: '#1d1d1f', borderRadius: 30, padding: '11px 20px', fontSize: 13, fontWeight: 700, color: '#fff', cursor: 'pointer', display: 'inline-block' }}>Hear it live →</div>
           </div>
 
           {/* AI Receptionist — copy card */}
-          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #2997ff 0%, #5ac8fa 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column', gap: 0 }}>
-            <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', margin: '0 0 8px' }}>AI Receptionist</p>
-            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Never miss a call.</p>
-            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, margin: '0 0 18px' }}>Your AI Receptionist answers every inbound call, qualifies the lead, books the appointment, and follows up automatically \u2014 even at 2am.</p>
-            <div style={{ background: '#fff', borderRadius: 30, padding: '11px 0', fontSize: 13, fontWeight: 600, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Try it free</div>
+          <div style={{ borderRadius: 18, padding: '26px 22px 24px', background: 'linear-gradient(160deg, #2997ff 0%, #5ac8fa 100%)', marginBottom: 60 }}>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', margin: '0 0 10px' }}>AI Receptionist</p>
+            <p style={{ fontSize: 30, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 0.98, letterSpacing: '-0.04em' }}>No call.<br />No problem.</p>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.95)', lineHeight: 1.5, margin: '0 0 20px', fontWeight: 500 }}>Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.</p>
+            <div style={{ background: '#fff', borderRadius: 30, padding: '12px 0', fontSize: 13, fontWeight: 700, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Try it free →</div>
           </div>
 
           {/* AI Chat Bot — copy card */}
-          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #1c7ef0 0%, #28c9a8 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column', gap: 0 }}>
-            <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', margin: '0 0 8px' }}>AI Chat Bot</p>
-            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Instant answers. Always.</p>
-            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, margin: '0 0 18px' }}>Live on your site 24/7, your AI Chat Assistant answers questions, captures contact info, and hands warm leads straight to you.</p>
-            <div style={{ background: '#fff', borderRadius: 30, padding: '11px 0', fontSize: 13, fontWeight: 600, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Add to your site</div>
+          <div style={{ borderRadius: 18, padding: '26px 22px 24px', background: 'linear-gradient(160deg, #1c7ef0 0%, #28c9a8 100%)', marginBottom: 60 }}>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', margin: '0 0 10px' }}>AI Chat Assistant</p>
+            <p style={{ fontSize: 30, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 0.98, letterSpacing: '-0.04em' }}>Reply now.<br />Win now.</p>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.95)', lineHeight: 1.5, margin: '0 0 20px', fontWeight: 500 }}>Visitors get answers in seconds. You get hot leads in your inbox. Nobody bounces. Nobody waits.</p>
+            <div style={{ background: '#fff', borderRadius: 30, padding: '12px 0', fontSize: 13, fontWeight: 700, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Plug it in →</div>
           </div>
 
           {/* AI Automation — copy card */}
-          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #7b5ea7 0%, #2997ff 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column', gap: 0 }}>
-            <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', margin: '0 0 8px' }}>AI Automation</p>
-            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Work smarter. Not harder.</p>
-            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, margin: '0 0 18px' }}>Follow-ups, reminders, review requests, and lead nurture sequences \u2014 all running on autopilot so you can focus on doing the work.</p>
-            <div style={{ background: '#fff', borderRadius: 30, padding: '11px 0', fontSize: 13, fontWeight: 600, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Automate now</div>
+          <div style={{ borderRadius: 18, padding: '26px 22px 24px', background: 'linear-gradient(160deg, #7b5ea7 0%, #2997ff 100%)', marginBottom: 60 }}>
+            <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.85)', margin: '0 0 10px' }}>AI Automation</p>
+            <p style={{ fontSize: 30, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 0.98, letterSpacing: '-0.04em' }}>Set it.<br />Forget it.<br />Grow.</p>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.95)', lineHeight: 1.5, margin: '0 0 20px', fontWeight: 500 }}>Follow-ups send themselves. Reviews show up on their own. Leads get nurtured while you do the work.</p>
+            <div style={{ background: '#fff', borderRadius: 30, padding: '12px 0', fontSize: 13, fontWeight: 700, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Turn it on →</div>
           </div>
 
         </aside>
