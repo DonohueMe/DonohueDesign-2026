@@ -80,7 +80,7 @@ const serviceCards = [
   },
 ];
 
-export default function LV7_Editorial() {
+export default function OmnivaLayoutsCopyFQLwufQ0() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
 
@@ -132,31 +132,6 @@ export default function LV7_Editorial() {
                 ))}
               </div>
 
-              {/* How it works — shown inline in first section */}
-              {si === 0 && (
-                <div style={{ background: '#fff', borderRadius: 18, padding: '28px 32px', marginBottom: 40, border: '1px solid #e5e5ea' }}>
-                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.13em', color: '#8e8e93', margin: '0 0 6px' }}>How it works</p>
-                  <p style={{ fontSize: 20, fontWeight: 800, color: '#1d1d1f', margin: '0 0 20px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>Strategy first. Everything else follows.</p>
-                  {timelineSteps.map(({ label, body }, i) => (
-                    <div key={label}>
-                      {i > 0 && <div style={{ height: 1, background: '#e5e5ea' }} />}
-                      <div style={{ display: 'flex', gap: 14, padding: '13px 0' }}>
-                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg, #e8a0c8 0%, #c87aaa 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
-                          <span style={{ fontSize: 11, fontWeight: 800, color: '#fff' }}>{i + 1}</span>
-                        </div>
-                        <div style={{ flex: 1 }}>
-                          <p style={{ fontSize: 14, fontWeight: 700, color: '#1d1d1f', margin: '0 0 3px', lineHeight: 1.2 }}>{label}</p>
-                          <p style={{ fontSize: 13, color: '#6e6e73', margin: 0, lineHeight: 1.55 }}>{body}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                  <button style={{ marginTop: 12, background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '12px 24px', fontSize: 14, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
-                    Start with a free call
-                  </button>
-                </div>
-              )}
-
               {/* Portfolio sample — shown after first section */}
               {si === 0 && (
                 <div style={{ marginBottom: 56 }}>
@@ -199,6 +174,29 @@ export default function LV7_Editorial() {
 
         {/* Sidebar */}
         <aside style={{ flex: '0 0 200px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
+
+          {/* How it works — strategy card */}
+          <div style={{ background: '#fff', borderRadius: 18, padding: '18px 16px', marginBottom: 12, border: '1px solid #e5e5ea' }}>
+            <p style={{ fontSize: 9.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.13em', color: '#8e8e93', margin: '0 0 8px' }}>How it works</p>
+            <p style={{ fontSize: 16, fontWeight: 800, color: '#1d1d1f', margin: '0 0 16px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>Strategy first. Everything else follows.</p>
+            {timelineSteps.map(({ label, body }, i) => (
+              <div key={label}>
+                {i > 0 && <div style={{ height: 1, background: '#e5e5ea' }} />}
+                <div style={{ display: 'flex', gap: 10, padding: '11px 0' }}>
+                  <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'linear-gradient(135deg, #e8a0c8 0%, #c87aaa 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
+                    <span style={{ fontSize: 10, fontWeight: 800, color: '#fff' }}>{i + 1}</span>
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <p style={{ fontSize: 12, fontWeight: 700, color: '#1d1d1f', margin: '0 0 3px', lineHeight: 1.2 }}>{label}</p>
+                    <p style={{ fontSize: 11, color: '#6e6e73', margin: 0, lineHeight: 1.5 }}>{body}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <button style={{ marginTop: 8, width: '100%', background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '11px 0', fontSize: 13, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
+              Start with a free call
+            </button>
+          </div>
 
           {/* Service category cards — Apple style */}
           {serviceCards.map(({ title, Icon, items }) => (
