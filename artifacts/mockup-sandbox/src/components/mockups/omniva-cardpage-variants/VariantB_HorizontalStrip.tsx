@@ -106,28 +106,7 @@ export function VariantB_HorizontalStrip() {
               </p>
             </div>
             <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
-              {['Email Marketing Automation', 'Local SEO Services (GMB)'].map(item => (
-                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#000', fontSize: 22 }}>›</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tile 4 — Internet Marketing Service */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-            <div style={{ flex: '0 0 380px' }}>
-              <TileHeader tint="#2997ff" icon={ICON_SPARK} label="Internet Marketing Service" />
-              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                AI that answers, books, and converts — 24/7.
-              </h2>
-              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                Enterprise-grade automation tools built for small businesses — so you never miss a lead.
-              </p>
-            </div>
-            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
-              {['AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
+              {['Email Marketing Automation', 'Local SEO Services (GMB)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
                   <span style={{ color: '#000', fontSize: 22 }}>›</span>
