@@ -2,20 +2,13 @@ import React from 'react';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
-const services = [
-  { kicker: 'Website Designer', tint: '#2997ff', title: 'Working harder than ever.', copy: 'Strategic layouts, mobile-first, fast load times. Built around what your customers need.', items: ['Design & Strategy', 'UX/UI Design', 'Development'] },
-  { kicker: 'Digital Marketing', tint: '#34c759', title: 'Get found. Stay top of mind.', copy: 'Email and local SEO that put you in front of the right people at the right time.', items: ['Email Automation', 'Local SEO (GMB)'] },
-  { kicker: 'Internet Marketing', tint: '#c898e2', title: 'AI that books and converts.', copy: 'Enterprise-grade automation built for small businesses, so you never miss a lead.', items: ['AI Receptionist', 'AI Voice', 'AI Chat'] },
-  { kicker: 'Graphic Designer', tint: '#f09030', title: 'A brand as strong as you.', copy: 'Same colors, same feel, same level of quality across every touchpoint.', items: ['Logo', 'Email', 'Brochure', 'Presentation'] },
-];
-
 const reviews = [
   { name: 'Maria T.', location: 'Santa Rosa, CA', text: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
   { name: 'Derek H.', location: 'Petaluma, CA', text: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy was exactly what our shop needed.' },
   { name: 'Lisa M.', location: 'Healdsburg, CA', text: "The AI receptionist handles after-hours calls now. We haven't missed a lead in weeks. Worth every penny." },
 ];
 
-// VARIATION B — HORIZONTAL SERVICE STRIP: full-width hero, single bio block, 4-up service cards as a horizontal row, full-bleed reviews and map
+// VARIATION B — HORIZONTAL STRIP: Layout B's service tiles + Variant B's full-bleed reviews/map/CTA
 export function VariantB_HorizontalStrip() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff', minHeight: '100vh' }}>
@@ -32,7 +25,12 @@ export function VariantB_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        <p style={{ fontSize: 13, fontWeight: 600, color: '#1d1d1f', margin: '0 0 16px', opacity: 0.7, letterSpacing: '0.05em' }}>OMNIVA DESIGN</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 22 }}>
+          <svg width="17" height="17" viewBox="0 0 814 1000" fill="#1d1d1f">
+            <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.4 135.4-316.8 269.1-316.8 71 0 130.5 46.4 174.5 46.4 42.7 0 109.2-49.9 188.4-49.9 30.5.1 108.2 5.8 160.2 67.5z"/>
+          </svg>
+          <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Omniva Design</span>
+        </div>
         <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: '0 0 28px' }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
@@ -41,48 +39,117 @@ export function VariantB_HorizontalStrip() {
         </button>
       </section>
 
-      {/* Bio — single tall section, centered narrow column */}
-      <section style={{ padding: '80px 24px', background: '#fff' }}>
-        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2997ff', margin: '0 0 16px' }}>Website Designer · Santa Rosa, CA</p>
-          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#1d1d1f', margin: '0 0 24px' }}>
-            Strategy first. Beautiful design second. Both, always.
-          </h2>
-          <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
-            Most website designers jump straight into building. I start with strategy. Before I open a design tool, I want to know who your customers are and what you need them to do.
-          </p>
-          <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
-            Jim Donohue. 20+ years. Senior Product Designer at Wells Fargo and Deloitte. 15% lift in subscriptions. 22% jump in engagement. Design systems used across 90+ apps.
-          </p>
-        </div>
-      </section>
+      {/* ── Layout B service tiles — single column, large statement tiles ── */}
+      <div style={{ background: '#f5f5f7', padding: '60px 20px 60px' }}>
+        <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
 
-      {/* 4-up service strip */}
-      <section style={{ padding: '40px 24px 80px', background: '#f5f5f7' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#8e8e93', margin: '0 0 20px', textAlign: 'center' }}>What I do</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14 }}>
-            {services.map(({ kicker, tint, title, copy, items }) => (
-              <div key={kicker} style={{ background: '#fff', borderRadius: 18, padding: '26px 22px', display: 'flex', flexDirection: 'column' }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: tint, marginBottom: 16, opacity: 0.92 }} />
-                <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: tint, margin: '0 0 8px' }}>{kicker}</p>
-                <h3 style={{ fontSize: 19, fontWeight: 800, letterSpacing: '-0.025em', lineHeight: 1.2, color: '#1d1d1f', margin: '0 0 10px' }}>{title}</h3>
-                <p style={{ fontSize: 13, color: '#6e6e73', lineHeight: 1.55, margin: '0 0 16px', flex: 1 }}>{copy}</p>
-                <div style={{ borderTop: '1px solid #e5e5ea' }}>
-                  {items.map(item => (
-                    <div key={item} style={{ padding: '8px 0', borderBottom: '1px solid #f0f0f3', display: 'flex', justifyContent: 'space-between' }}>
-                      <span style={{ fontSize: 12, color: '#1d1d1f' }}>{item}</span>
-                      <span style={{ fontSize: 14, color: '#c7c7cc' }}>›</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+          {/* Tile 1 — Full-width h1 + bio */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '64px 72px', position: 'relative', overflow: 'hidden' }}>
+            <h1 style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '0 0 10px' }}>
+              Website Designer, Santa Rosa, CA
+            </h1>
+            <p style={{ fontSize: 14, fontWeight: 600, color: '#6e6e73', margin: '0 0 24px', lineHeight: 1.4 }}>
+              Website Designer in Santa Rosa, CA — Design, Strategy, and UX for Local Businesses
+            </p>
+            <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
+              Most website designers jump straight into building. I start with strategy.
+            </p>
+            <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
+              Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
+            </p>
+            <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
+              My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I've spent a good chunk of that time working as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used by thousands of people across dozens of applications. I led redesigns that drove real, measurable results. A 15% lift in subscriptions. A 22% increase in user engagement. Design systems adopted across 90+ apps.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Reviews — full-width quote slabs */}
+          {/* Tile 2 — Website Designer */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
+            <div style={{ flex: '0 0 420px' }}>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Website Designer</p>
+              <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                Your website. Working harder than ever.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
+              {['Website Design & Strategy', 'UX/UI Design', 'Website Development'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tile 3 — Digital Marketing — row-reverse */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
+            <div style={{ flex: '0 0 380px' }}>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Digital Marketing</p>
+              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                Get found. Stay top of mind.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Email campaigns and local SEO that put your business in front of the right people at the right time.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
+              {['Email Marketing Automation', 'Local SEO Services (GMB)'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tile 4 — Internet Marketing Service */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
+            <div style={{ flex: '0 0 380px' }}>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Internet Marketing Service</p>
+              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                AI that answers, books, and converts — 24/7.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Enterprise-grade automation tools built for small businesses — so you never miss a lead.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
+              {['AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tile 5 — Graphic Designer — row-reverse */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
+            <div style={{ flex: '0 0 380px' }}>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Graphic Designer</p>
+              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                A brand as strong as your business.
+              </h2>
+              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
+              </p>
+            </div>
+            <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
+              {['Email Design', 'Logo Design', 'Brochure & Flyer Design', 'Presentation Design'].map(item => (
+                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
+                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Reviews — full-width quote slabs (Variant B style) */}
       <section style={{ padding: '80px 24px', background: '#fff' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 36, justifyContent: 'center' }}>
@@ -122,7 +189,7 @@ export function VariantB_HorizontalStrip() {
         ].join(','),
       }}>
         <h2 style={{ fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 24px', lineHeight: 1.1 }}>
-          Ready to grow?
+          Ready to take your business to the next level?
         </h2>
         <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '14px 28px', fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer' }}>
           Start your project
