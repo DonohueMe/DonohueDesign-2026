@@ -262,42 +262,27 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
             </div>
           </div>
 
-          {/* AI Receptionist — stats card */}
-          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #2997ff 0%, #5ac8fa 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column' }}>
+          {/* AI Receptionist — copy card */}
+          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #2997ff 0%, #5ac8fa 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column', gap: 0 }}>
             <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', margin: '0 0 8px' }}>AI Receptionist</p>
-            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 18px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Never miss a call.</p>
-            {[['24/7', 'Call coverage'], ['< 2s', 'Answer time'], ['100%', 'Calls handled'], ['0', 'Missed leads']].map(([metric, desc], i, arr) => (
-              <div key={desc} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 10, paddingBottom: i < arr.length - 1 ? 10 : 18 }}>
-                <span style={{ fontSize: 20, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>{metric}</span>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)' }}>{desc}</span>
-              </div>
-            ))}
+            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Never miss a call.</p>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, margin: '0 0 18px' }}>Your AI Receptionist answers every inbound call, qualifies the lead, books the appointment, and follows up automatically \u2014 even at 2am.</p>
             <div style={{ background: '#fff', borderRadius: 30, padding: '11px 0', fontSize: 13, fontWeight: 600, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Try it free</div>
           </div>
 
-          {/* AI Chat Bot — stats card */}
-          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #1c7ef0 0%, #28c9a8 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column' }}>
+          {/* AI Chat Bot — copy card */}
+          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #1c7ef0 0%, #28c9a8 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column', gap: 0 }}>
             <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', margin: '0 0 8px' }}>AI Chat Bot</p>
-            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 18px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Instant answers. Always.</p>
-            {[['24/7', 'Active on your site'], ['< 1s', 'Response time'], ['100%', 'Questions handled'], ['3x', 'More conversions']].map(([metric, desc], i, arr) => (
-              <div key={desc} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 10, paddingBottom: i < arr.length - 1 ? 10 : 18 }}>
-                <span style={{ fontSize: 20, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>{metric}</span>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)' }}>{desc}</span>
-              </div>
-            ))}
+            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Instant answers. Always.</p>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, margin: '0 0 18px' }}>Live on your site 24/7, your AI Chat Assistant answers questions, captures contact info, and hands warm leads straight to you.</p>
             <div style={{ background: '#fff', borderRadius: 30, padding: '11px 0', fontSize: 13, fontWeight: 600, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Add to your site</div>
           </div>
 
-          {/* AI Automation — stats card */}
-          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #7b5ea7 0%, #2997ff 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column' }}>
+          {/* AI Automation — copy card */}
+          <div style={{ borderRadius: 18, padding: '22px 20px 20px', background: 'linear-gradient(160deg, #7b5ea7 0%, #2997ff 100%)', marginBottom: 10, display: 'flex', flexDirection: 'column', gap: 0 }}>
             <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)', margin: '0 0 8px' }}>AI Automation</p>
-            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 18px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Work smarter. Not harder.</p>
-            {[['10hrs+', 'Saved weekly'], ['100%', 'Follow-ups sent'], ['3x', 'More leads closed'], ['0', 'Missed tasks']].map(([metric, desc], i, arr) => (
-              <div key={desc} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 10, paddingBottom: i < arr.length - 1 ? 10 : 18 }}>
-                <span style={{ fontSize: 20, fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>{metric}</span>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)' }}>{desc}</span>
-              </div>
-            ))}
+            <p style={{ fontSize: 22, fontWeight: 800, color: '#fff', margin: '0 0 10px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Work smarter. Not harder.</p>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, margin: '0 0 18px' }}>Follow-ups, reminders, review requests, and lead nurture sequences \u2014 all running on autopilot so you can focus on doing the work.</p>
             <div style={{ background: '#fff', borderRadius: 30, padding: '11px 0', fontSize: 13, fontWeight: 600, color: '#1d1d1f', textAlign: 'center', cursor: 'pointer' }}>Automate now</div>
           </div>
 
