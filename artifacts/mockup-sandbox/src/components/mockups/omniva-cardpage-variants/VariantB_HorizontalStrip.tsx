@@ -43,7 +43,7 @@ export function VariantB_HorizontalStrip() {
       </section>
 
       {/* ── Layout B service tiles + reviews/map combo on grey ── */}
-      <div style={{ background: '#f5f5f7', padding: '60px 20px 60px' }}>
+      <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
 
           {/* Tile 2 — Website Designer */}
