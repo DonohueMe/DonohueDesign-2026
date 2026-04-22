@@ -30,7 +30,6 @@ export function VariantB_HorizontalStrip() {
       {/* Centered narrow bio intro — white background */}
       <section style={{ padding: '80px 24px', background: '#fff' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2997ff', margin: '0 0 16px' }}>Website Designer · Santa Rosa, CA</p>
           <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#1d1d1f', margin: '0 0 24px' }}>
             Strategy first. Beautiful design second. Both, always.
           </h2>
