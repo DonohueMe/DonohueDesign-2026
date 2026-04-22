@@ -115,8 +115,8 @@ export function VariantB_HorizontalStrip() {
             </div>
           </div>
 
-          {/* Tile 5 — Graphic Designer — row-reverse */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+          {/* Tile 5 — Graphic Designer */}
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
             <div style={{ flex: '0 0 380px' }}>
               <TileHeader tint="#2997ff" icon={ICON_PALETTE} label="Graphic Designer" />
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
@@ -126,7 +126,7 @@ export function VariantB_HorizontalStrip() {
                 Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
               </p>
             </div>
-            <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
+            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
               {['Email Design', 'Logo Design', 'Brochure & Flyer Design', 'Presentation Design'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
