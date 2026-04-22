@@ -40,6 +40,15 @@ const timelineSteps = [
   { label: 'Measurement & Iteration',    body: 'Analytics, A/B testing, and ongoing performance review cycles.' },
 ];
 
+const IconWeb = () => (
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="5" width="24" height="18" rx="2"/>
+    <path d="M2 10h24"/>
+    <circle cx="6.5" cy="7.5" r="0.8" fill="#1d1d1f"/>
+    <circle cx="10" cy="7.5" r="0.8" fill="#1d1d1f"/>
+    <circle cx="13.5" cy="7.5" r="0.8" fill="#1d1d1f"/>
+  </svg>
+);
 const IconMarketing = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="17" width="4" height="8" rx="1"/>
@@ -64,6 +73,12 @@ const IconDesign = () => (
 
 const serviceCards = [
   {
+    title: 'Website Design',
+    Icon: IconWeb,
+    description: 'Strategy-first websites built to generate leads, earn trust, and turn visitors into customers.',
+    items: ['Website Design \u0026 Strategy', 'UX/UI Design', 'Website Development'],
+  },
+  {
     title: 'Digital Marketing',
     Icon: IconMarketing,
     description: 'AI-powered campaigns, local SEO, and automated outreach \u2014 running around the clock to grow your business.',
@@ -72,7 +87,7 @@ const serviceCards = [
   {
     title: 'Graphic Design',
     Icon: IconDesign,
-    description: undefined,
+    description: 'Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.',
     items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
   },
 ];
