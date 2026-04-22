@@ -221,9 +221,6 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
                     {/* Fade-out at the bottom */}
                     <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.95))' }} />
                   </div>
-                  <p style={{ fontSize: 12, color: '#8e8e93', margin: '8px 0 0', lineHeight: 1.4 }}>
-                    Deloitte / BersinWorks \u2014 enterprise activity feed UX, information architecture, and HR platform design.
-                  </p>
                 </div>
               )}
             </React.Fragment>
