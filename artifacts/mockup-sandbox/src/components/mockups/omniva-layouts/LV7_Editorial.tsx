@@ -112,7 +112,7 @@ export default function LV7_Editorial() {
       </section>
 
       {/* Body */}
-      <div style={{ display: 'flex', gap: 52, padding: '60px 40px 80px', maxWidth: 1100, margin: '0 auto', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', gap: 52, padding: '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
 
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
