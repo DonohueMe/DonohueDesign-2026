@@ -158,10 +158,32 @@ const IllustrDigitalMarketing = () => {
 };
 
 const IllustrAvatars = () => (
-  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '14px 12px', marginBottom: 4, display: 'flex', gap: 8 }}>
-    <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#7b5ea7,#a07bc8)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#fff' }}>OD</div>
-    <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#f09030,#f4b860)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#fff' }}>A</div>
-    <div style={{ width: 44, height: 44, borderRadius: 12, background: 'linear-gradient(135deg,#2997ff,#6ac4ff)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#fff' }}>M</div>
+  <div style={{ background: 'linear-gradient(135deg, #fef0f6 0%, #f5f5f7 50%, #f3eeff 100%)', borderRadius: 10, padding: 10, marginBottom: 4, position: 'relative', overflow: 'hidden' }}>
+    <div style={{ background: '#fff', borderRadius: 7, boxShadow: '0 6px 18px rgba(20,20,40,0.08)', border: '1px solid rgba(0,0,0,0.04)', padding: 10 }}>
+      {/* Top: Logo mark + brand wordmark */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+        <div style={{ width: 28, height: 28, borderRadius: 7, background: 'linear-gradient(135deg, #7b5ea7 0%, #c898e2 50%, #f4a0b8 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 6px rgba(123,94,167,0.35)' }}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M4 20L12 4l8 16H4z" fill="#fff"/>
+          </svg>
+        </div>
+        <div style={{ flex: 1 }}>
+          <div style={{ height: 6, width: '70%', background: '#1d1d1f', borderRadius: 2, marginBottom: 3 }} />
+          <div style={{ height: 4, width: '45%', background: '#d1d1d6', borderRadius: 2 }} />
+        </div>
+      </div>
+      {/* Color palette swatches */}
+      <div style={{ display: 'flex', gap: 4, marginBottom: 8 }}>
+        {['#1d1d1f', '#7b5ea7', '#c898e2', '#f4a0b8', '#f09030'].map(c => (
+          <div key={c} style={{ flex: 1, height: 16, borderRadius: 4, background: c, boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.04)' }} />
+        ))}
+      </div>
+      {/* Type sample */}
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', borderTop: '1px solid #f0f0f3', paddingTop: 6 }}>
+        <span style={{ fontSize: 18, fontWeight: 800, color: '#1d1d1f', letterSpacing: '-0.04em', lineHeight: 1, fontFamily: SF }}>Aa</span>
+        <span style={{ fontSize: 7.5, color: '#8e8e93', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Brand kit</span>
+      </div>
+    </div>
   </div>
 );
 
