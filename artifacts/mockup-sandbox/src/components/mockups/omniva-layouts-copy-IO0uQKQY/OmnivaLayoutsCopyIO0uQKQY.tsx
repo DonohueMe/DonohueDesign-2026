@@ -97,7 +97,7 @@ const serviceCards = [
     label: 'GRAPHIC DESIGNER',
     headline: 'A brand identity you\u2019re proud to show off.',
     Illust: IllustrAvatars,
-    items: ['Logo design', 'Full brand identity system', 'Business cards \u0026 stationery', 'Brochures \u0026 flyers', 'Social media templates'],
+    items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
   },
 ];
 
