@@ -49,12 +49,9 @@ export function VariantB_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: '0 0 28px' }}>
+        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0 }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
-        <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '12px 24px', fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer' }}>
-          Get a free consultation
-        </button>
       </section>
 
       {/* Centered narrow bio intro — white background */}
