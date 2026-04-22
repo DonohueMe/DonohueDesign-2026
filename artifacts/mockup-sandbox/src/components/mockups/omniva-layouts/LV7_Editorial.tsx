@@ -157,8 +157,8 @@ export default function LV7_Editorial() {
                 </div>
               )}
 
-              {/* Portfolio sample — shown after first section */}
-              {si === 0 && (
+              {/* Portfolio sample — shown in User Experience section */}
+              {si === 1 && (
                 <div style={{ marginBottom: 56 }}>
                   <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 10 }}>
                     <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#8e8e93' }}>Client work</span>
