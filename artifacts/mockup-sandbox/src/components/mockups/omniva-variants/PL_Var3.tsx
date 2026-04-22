@@ -167,7 +167,7 @@ function StickyNav() {
         {OTHER_NAV_LINKS.map((link, i) => (
           <a key={link} href="#" style={{
             fontSize: 14, fontWeight: 500,
-            color: i === OTHER_NAV_LINKS.length - 1 ? '#a8b4d0' : 'rgba(255,255,255,0.88)',
+            color: '#ffffff',
             textDecoration: 'none',
             padding: '6px 14px',
             borderRadius: 980,
