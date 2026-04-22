@@ -81,13 +81,9 @@ function AppleLogo({ size = 17, fill = '#1d1d1f' }: { size?: number; fill?: stri
 }
 
 const WEB_DESIGN_SERVICES = [
-  'Website Design',
+  'Website Design & Strategy',
+  'UX/UI Design',
   'Website Development',
-  'Website Redesign',
-  'E-commerce Website Design',
-  'SEO-Optimized Website Design',
-  'UX/UI Design & Strategy',
-  'Website Maintenance',
 ];
 
 const OTHER_NAV_LINKS = ['Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
