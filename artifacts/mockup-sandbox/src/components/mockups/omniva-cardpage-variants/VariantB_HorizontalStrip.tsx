@@ -19,8 +19,8 @@ export function VariantB_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 820, margin: '0 0 28px' }}>
-          Website Designer, Santa Rosa, CA.<br />Beautiful websites.<br />Powered by smart marketing.
+        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: '0 0 28px' }}>
+          Beautiful websites.<br />Powered by smart marketing.
         </h1>
         <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '12px 24px', fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer' }}>
           Get a free consultation
@@ -30,9 +30,9 @@ export function VariantB_HorizontalStrip() {
       {/* Centered narrow bio intro — white background */}
       <section style={{ padding: '80px 24px', background: '#fff' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#1d1d1f', margin: '0 0 24px' }}>
-            Strategy first. Beautiful design second. Both, always.
-          </h2>
+          <h1 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '0 0 24px' }}>
+            Website Designer, Santa Rosa, CA
+          </h1>
           <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
             Most website designers jump straight into building. I start with strategy. Before I open a design tool, I want to know who your customers are and what you need them to do.
           </p>
