@@ -68,7 +68,7 @@ export function VariantB_HorizontalStrip() {
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
 
           {/* Tile 2 — Website Designer */}
-          <div style={{ background: '#eaf4ff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
             <div style={{ flex: '0 0 420px' }}>
               <IconBadge tint="#2997ff">{ICON_BROWSER}</IconBadge>
               <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Website Designer</p>
@@ -90,7 +90,7 @@ export function VariantB_HorizontalStrip() {
           </div>
 
           {/* Tile 3 — Digital Marketing — row-reverse */}
-          <div style={{ background: '#e8faee', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
             <div style={{ flex: '0 0 380px' }}>
               <IconBadge tint="#34c759">{ICON_ENVELOPE}</IconBadge>
               <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#34c759', margin: '0 0 16px' }}>Digital Marketing</p>
@@ -112,7 +112,7 @@ export function VariantB_HorizontalStrip() {
           </div>
 
           {/* Tile 4 — Internet Marketing Service */}
-          <div style={{ background: '#f3eaf9', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
             <div style={{ flex: '0 0 380px' }}>
               <IconBadge tint="#c898e2">{ICON_SPARK}</IconBadge>
               <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#c898e2', margin: '0 0 16px' }}>Internet Marketing Service</p>
@@ -134,7 +134,7 @@ export function VariantB_HorizontalStrip() {
           </div>
 
           {/* Tile 5 — Graphic Designer — row-reverse */}
-          <div style={{ background: '#fdf0e3', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
+          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
             <div style={{ flex: '0 0 380px' }}>
               <IconBadge tint="#f09030">{ICON_PALETTE}</IconBadge>
               <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#f09030', margin: '0 0 16px' }}>Graphic Designer</p>
