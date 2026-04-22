@@ -39,7 +39,7 @@ export function VariantB_HorizontalStrip() {
 
       {/* Full-bleed hero */}
       <section style={{
-        minHeight: 560, padding: '0 24px',
+        minHeight: 660, padding: '0 24px',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
         background: [
           'radial-gradient(ellipse at 12% 20%, rgba(90,170,255,0.90) 0%, transparent 45%)',
