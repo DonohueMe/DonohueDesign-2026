@@ -218,8 +218,6 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
                         style={{ width: '100%', display: 'block', objectFit: 'cover', objectPosition: 'top' }}
                       />
                     </div>
-                    {/* Fade-out at the bottom */}
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.95))' }} />
                   </div>
                 </div>
               )}
