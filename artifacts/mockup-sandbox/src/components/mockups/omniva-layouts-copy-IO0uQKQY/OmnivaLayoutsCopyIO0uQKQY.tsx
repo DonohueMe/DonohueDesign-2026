@@ -115,30 +115,47 @@ const IllustrBrowser = () => (
   </div>
 );
 
-const IllustrDigitalMarketing = () => (
-  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '10px 10px 8px', marginBottom: 4 }}>
-    <p style={{ fontSize: 8.5, fontWeight: 600, color: '#8e8e93', margin: '0 0 6px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Campaign overview</p>
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 5 }}>
-      {[
-        { dot: '#2997ff', label: 'Email', val: '4.2k', sub: 'opens' },
-        { dot: '#34c759', label: 'Local SEO', val: '#1', sub: 'ranking' },
-        { dot: '#c898e2', label: 'AI Voice', val: '24/7', sub: 'live' },
-        { dot: '#f09030', label: 'Automation', val: '3x', sub: 'leads' },
-      ].map(({ dot, label, val, sub }) => (
-        <div key={label} style={{ background: '#fff', borderRadius: 7, padding: '6px 8px', border: '1px solid #e5e5ea', display: 'flex', flexDirection: 'column', gap: 2 }}>
+const IllustrDigitalMarketing = () => {
+  const bars = [38, 56, 44, 72, 60, 88, 78];
+  return (
+    <div style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #f5f5f7 50%, #eef6ff 100%)', borderRadius: 10, padding: 10, marginBottom: 4, position: 'relative', overflow: 'hidden' }}>
+      <div style={{ background: '#fff', borderRadius: 7, boxShadow: '0 6px 18px rgba(20,20,40,0.08)', border: '1px solid rgba(0,0,0,0.04)', padding: '10px 10px 8px' }}>
+        {/* Header */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-            <div style={{ width: 6, height: 6, borderRadius: '50%', background: dot, flexShrink: 0 }} />
-            <span style={{ fontSize: 8.5, color: '#8e8e93' }}>{label}</span>
+            <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#34c759' }} />
+            <span style={{ fontSize: 7.5, color: '#8e8e93', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Campaign reach</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: 3 }}>
-            <span style={{ fontSize: 14, fontWeight: 800, color: '#1d1d1f', letterSpacing: '-0.02em' }}>{val}</span>
-            <span style={{ fontSize: 8, color: '#aeaeb2' }}>{sub}</span>
-          </div>
+          <span style={{ fontSize: 7.5, color: '#34c759', fontWeight: 700 }}>+24%</span>
         </div>
-      ))}
+        {/* Big metric */}
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 4, marginBottom: 6 }}>
+          <span style={{ fontSize: 18, fontWeight: 800, color: '#1d1d1f', letterSpacing: '-0.03em', lineHeight: 1 }}>12.4k</span>
+          <span style={{ fontSize: 8, color: '#8e8e93' }}>impressions / wk</span>
+        </div>
+        {/* Bar chart */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 3, height: 32, marginBottom: 5 }}>
+          {bars.map((h, i) => (
+            <div key={i} style={{ flex: 1, height: `${h}%`, borderRadius: 2, background: i === bars.length - 1 ? 'linear-gradient(180deg, #2997ff, #5ac8fa)' : '#e5e5ea' }} />
+          ))}
+        </div>
+        {/* Channel chips */}
+        <div style={{ display: 'flex', gap: 4 }}>
+          {[
+            { dot: '#2997ff', label: 'SEO' },
+            { dot: '#c898e2', label: 'Email' },
+            { dot: '#f09030', label: 'Ads' },
+          ].map(({ dot, label }) => (
+            <div key={label} style={{ flex: 1, background: '#f5f5f7', borderRadius: 4, padding: '3px 5px', display: 'flex', alignItems: 'center', gap: 3 }}>
+              <div style={{ width: 4, height: 4, borderRadius: '50%', background: dot, flexShrink: 0 }} />
+              <span style={{ fontSize: 7.5, color: '#3d3d3f', fontWeight: 600 }}>{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const IllustrAvatars = () => (
   <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '14px 12px', marginBottom: 4, display: 'flex', gap: 8 }}>
