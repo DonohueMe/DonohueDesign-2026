@@ -136,15 +136,12 @@ export default function OmnivaLayoutsCopyIO0uQKQY() {
       {/* Hero */}
       <section style={{ minHeight: 600, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
         <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6e6e73', margin: '0 0 14px' }}>Santa Rosa, CA</p>
-        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.0, color: '#1d1d1f', margin: '0 0 18px' }}>
-          Plug and stay.
+        <h1 style={{ fontSize: 'clamp(52px, 7vw, 88px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.0, color: '#1d1d1f', margin: '0 0 22px' }}>
+          Built to rank.<br />Designed to convert.
         </h1>
-        <p style={{ fontSize: 16, color: '#6e6e73', maxWidth: 380, lineHeight: 1.55, margin: '0 0 28px' }}>
-          Strategy-first web design and digital marketing for Santa Rosa businesses.
+        <p style={{ fontSize: 16, color: '#6e6e73', maxWidth: 400, lineHeight: 1.55, margin: 0 }}>
+          Strategy-first web design and AI-powered marketing for Santa Rosa businesses that are done playing small.
         </p>
-        <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '13px 26px', fontSize: 15, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
-          Start a project
-        </button>
       </section>
 
       {/* Body */}
