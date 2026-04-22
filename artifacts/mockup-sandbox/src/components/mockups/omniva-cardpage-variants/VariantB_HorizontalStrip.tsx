@@ -2,6 +2,27 @@ import React from 'react';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
+const ICON_BROWSER = (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.5" r="0.7" fill="white"/><circle cx="8.5" cy="6.5" r="0.7" fill="white"/></svg>
+);
+const ICON_ENVELOPE = (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+);
+const ICON_SPARK = (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2l1.6 6L20 9.5l-6.4 1.5L12 17l-1.6-6L4 9.5l6.4-1.5z"/><circle cx="18" cy="5" r="1.4" fill="white"/><circle cx="5" cy="18" r="1.2" fill="white"/></svg>
+);
+const ICON_PALETTE = (
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a9 9 0 0 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.6-1.4-.4-.4-.6-.9-.6-1.4 0-1.1.9-2 2-2H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="10.5" r="1" fill="white"/><circle cx="11" cy="7" r="1" fill="white"/><circle cx="15" cy="7.5" r="1" fill="white"/></svg>
+);
+
+function IconBadge({ tint, children }: { tint: string; children: React.ReactNode }) {
+  return (
+    <div style={{ width: 56, height: 56, borderRadius: 14, background: tint, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 22, boxShadow: `0 8px 24px ${tint}55` }}>
+      {children}
+    </div>
+  );
+}
+
 // VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
 export function VariantB_HorizontalStrip() {
   return (
@@ -47,8 +68,9 @@ export function VariantB_HorizontalStrip() {
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
 
           {/* Tile 2 — Website Designer */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
+          <div style={{ background: '#eaf4ff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
             <div style={{ flex: '0 0 420px' }}>
+              <IconBadge tint="#2997ff">{ICON_BROWSER}</IconBadge>
               <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Website Designer</p>
               <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 Your website. Working harder than ever.
@@ -68,9 +90,10 @@ export function VariantB_HorizontalStrip() {
           </div>
 
           {/* Tile 3 — Digital Marketing — row-reverse */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
+          <div style={{ background: '#e8faee', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Digital Marketing</p>
+              <IconBadge tint="#34c759">{ICON_ENVELOPE}</IconBadge>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#34c759', margin: '0 0 16px' }}>Digital Marketing</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 Get found. Stay top of mind.
               </h2>
@@ -82,16 +105,17 @@ export function VariantB_HorizontalStrip() {
               {['Email Marketing Automation', 'Local SEO Services (GMB)'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                  <span style={{ color: '#34c759', fontSize: 18 }}>›</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Tile 4 — Internet Marketing Service */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
+          <div style={{ background: '#f3eaf9', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Internet Marketing Service</p>
+              <IconBadge tint="#c898e2">{ICON_SPARK}</IconBadge>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#c898e2', margin: '0 0 16px' }}>Internet Marketing Service</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 AI that answers, books, and converts — 24/7.
               </h2>
@@ -103,16 +127,17 @@ export function VariantB_HorizontalStrip() {
               {['AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                  <span style={{ color: '#c898e2', fontSize: 18 }}>›</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Tile 5 — Graphic Designer — row-reverse */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
+          <div style={{ background: '#fdf0e3', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse' }}>
             <div style={{ flex: '0 0 380px' }}>
-              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: '0 0 16px' }}>Graphic Designer</p>
+              <IconBadge tint="#f09030">{ICON_PALETTE}</IconBadge>
+              <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#f09030', margin: '0 0 16px' }}>Graphic Designer</p>
               <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                 A brand as strong as your business.
               </h2>
@@ -124,7 +149,7 @@ export function VariantB_HorizontalStrip() {
               {['Email Design', 'Logo Design', 'Brochure & Flyer Design', 'Presentation Design'].map(item => (
                 <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#2997ff', fontSize: 18 }}>›</span>
+                  <span style={{ color: '#f09030', fontSize: 18 }}>›</span>
                 </div>
               ))}
             </div>
