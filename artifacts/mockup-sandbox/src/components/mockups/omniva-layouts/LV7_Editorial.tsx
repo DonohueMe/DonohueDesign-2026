@@ -236,7 +236,7 @@ export default function LV7_Editorial() {
             <p style={{ fontSize: 20, fontWeight: 800, color: '#1d1d1f', margin: '0 0 8px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Answers every call.<br />Around the clock.</p>
             <span style={{ fontSize: 12, color: '#1d1d1f', cursor: 'pointer' }}>Learn more ›</span>
             <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 16 }}>
-              <div style={{ width: 72, height: 72, borderRadius: 18, background: 'linear-gradient(145deg,#2c2c2e,#1a1a1c)', boxShadow: '0 16px 28px rgba(0,0,0,0.28)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 72, height: 72, borderRadius: 18, background: 'linear-gradient(145deg,#2c2c2e,#1a1a1c)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.07 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 11a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                 </svg>
