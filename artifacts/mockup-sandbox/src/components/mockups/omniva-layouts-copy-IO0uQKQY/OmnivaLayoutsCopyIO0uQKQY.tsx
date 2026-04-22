@@ -82,16 +82,36 @@ const timelineSteps = [
 ];
 
 const IllustrBrowser = () => (
-  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '10px 10px 6px', marginBottom: 4 }}>
-    <div style={{ background: '#fff', borderRadius: 6, border: '1px solid #e5e5ea', padding: '6px 8px 10px' }}>
-      <div style={{ fontSize: 8.5, color: '#8e8e93', background: '#f5f5f7', borderRadius: 4, padding: '2px 6px', display: 'inline-block', marginBottom: 6 }}>yoursite.com</div>
-      <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
-        <div style={{ background: '#1d1d1f', borderRadius: 20, padding: '4px 10px', fontSize: 8, color: '#fff', fontWeight: 600 }}>Book Online</div>
-        <div style={{ flex: 1, height: 6, background: '#e5e5ea', borderRadius: 3 }} />
+  <div style={{ background: 'linear-gradient(135deg, #eef2ff 0%, #f5f5f7 60%, #fef0f6 100%)', borderRadius: 10, padding: 10, marginBottom: 4, position: 'relative', overflow: 'hidden' }}>
+    {/* Mac window */}
+    <div style={{ background: '#fff', borderRadius: 7, boxShadow: '0 6px 18px rgba(20,20,40,0.10)', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.04)' }}>
+      {/* Title bar */}
+      <div style={{ background: '#f6f6f8', borderBottom: '1px solid #ececef', padding: '5px 8px', display: 'flex', alignItems: 'center', gap: 4 }}>
+        <div style={{ display: 'flex', gap: 3 }}>
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#ff5f57' }} />
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#febc2e' }} />
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#28c840' }} />
+        </div>
+        <div style={{ flex: 1, height: 8, background: '#fff', borderRadius: 3, border: '1px solid #ececef', marginLeft: 4 }} />
       </div>
-      <div style={{ height: 5, background: '#e5e5ea', borderRadius: 3, marginTop: 6, width: '80%' }} />
-      <div style={{ height: 5, background: '#e5e5ea', borderRadius: 3, marginTop: 4, width: '60%' }} />
+      {/* Hero preview */}
+      <div style={{ padding: '8px 10px 10px' }}>
+        <div style={{ height: 30, borderRadius: 5, background: 'linear-gradient(135deg, #2997ff 0%, #5ac8fa 60%, #c898e2 100%)', position: 'relative', overflow: 'hidden', marginBottom: 6 }}>
+          <div style={{ position: 'absolute', left: 6, top: 6, height: 4, width: 30, background: 'rgba(255,255,255,0.95)', borderRadius: 2 }} />
+          <div style={{ position: 'absolute', left: 6, top: 13, height: 3, width: 22, background: 'rgba(255,255,255,0.7)', borderRadius: 2 }} />
+          <div style={{ position: 'absolute', right: 6, bottom: 5, height: 8, width: 22, background: '#1d1d1f', borderRadius: 10 }} />
+        </div>
+        <div style={{ display: 'flex', gap: 4 }}>
+          <div style={{ flex: 1, height: 14, background: '#f5f5f7', borderRadius: 3 }} />
+          <div style={{ flex: 1, height: 14, background: '#f5f5f7', borderRadius: 3 }} />
+          <div style={{ flex: 1, height: 14, background: '#f5f5f7', borderRadius: 3 }} />
+        </div>
+      </div>
     </div>
+    {/* Cursor */}
+    <svg width="14" height="14" viewBox="0 0 24 24" style={{ position: 'absolute', right: 14, bottom: 12, filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.25))' }}>
+      <path d="M3 2l7 18 2.5-7.5L20 10z" fill="#1d1d1f" stroke="#fff" strokeWidth="1.2" strokeLinejoin="round"/>
+    </svg>
   </div>
 );
 
