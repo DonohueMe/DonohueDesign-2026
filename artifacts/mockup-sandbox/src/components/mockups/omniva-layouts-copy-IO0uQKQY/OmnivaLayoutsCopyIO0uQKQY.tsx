@@ -88,10 +88,10 @@ const serviceCards = [
     items: ['Custom website design', 'Mobile-first development', 'E-commerce \u0026 booking', 'Speed-optimized', 'SEO-ready from day one'],
   },
   {
-    label: 'INTERNET MARKETING',
+    label: 'DIGITAL MARKETING',
     headline: 'AI marketing that never sleeps.',
     Illust: IllustrChart,
-    items: ['AI Voice Assistant (24/7 answering)', 'AI Receptionist \u0026 booking', 'Email marketing automation', 'Google My Business (Local SEO)', 'Reputation management'],
+    items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
   },
   {
     label: 'GRAPHIC DESIGNER',
