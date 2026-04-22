@@ -86,7 +86,7 @@ const WEB_DESIGN_SERVICES = [
   'Website Development',
 ];
 
-const OTHER_NAV_LINKS = ['Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
+const OTHER_NAV_LINKS = ['Digital Marketing', 'Internet Marketing Service', 'Graphic Designer', 'Case Studies', 'Pricing', 'Contact us'];
 
 function StickyNav() {
   const [open, setOpen] = useState(false);
