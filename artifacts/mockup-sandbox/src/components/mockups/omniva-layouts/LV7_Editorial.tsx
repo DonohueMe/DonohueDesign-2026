@@ -198,7 +198,7 @@ export default function LV7_Editorial() {
         </main>
 
         {/* Sidebar */}
-        <aside style={{ flex: '0 0 200px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
+        <aside style={{ flex: '0 0 300px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
           {/* Service category cards — Apple style */}
           {serviceCards.map(({ title, Icon, items }) => (
