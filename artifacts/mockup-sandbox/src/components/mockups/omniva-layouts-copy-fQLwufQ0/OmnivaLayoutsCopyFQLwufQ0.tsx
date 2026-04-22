@@ -112,7 +112,7 @@ export default function OmnivaLayoutsCopyFQLwufQ0() {
       </section>
 
       {/* Body */}
-      <div style={{ display: 'flex', gap: 52, padding: '60px 40px 80px', maxWidth: 1100, margin: '0 auto', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', gap: 52, padding: '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
 
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
@@ -173,7 +173,7 @@ export default function OmnivaLayoutsCopyFQLwufQ0() {
         </main>
 
         {/* Sidebar */}
-        <aside style={{ flex: '0 0 200px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
+        <aside style={{ flex: '0 0 300px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
           {/* How it works — strategy card */}
           <div style={{ background: '#fff', borderRadius: 18, padding: '18px 16px', marginBottom: 12, border: '1px solid #e5e5ea' }}>
