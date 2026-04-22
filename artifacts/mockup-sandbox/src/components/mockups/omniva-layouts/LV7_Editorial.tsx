@@ -64,14 +64,12 @@ const IconDesign = () => (
 
 const serviceCards = [
   {
-    label: 'DIGITAL MARKETING',
-    headline: 'AI-powered marketing that never sleeps.',
+    title: 'Digital Marketing',
     Icon: IconMarketing,
     items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
   },
   {
-    label: 'GRAPHIC DESIGN',
-    headline: 'A brand identity you\u2019re proud to show off.',
+    title: 'Graphic Design',
     Icon: IconDesign,
     items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
   },
@@ -197,21 +195,18 @@ export default function LV7_Editorial() {
         {/* Sidebar */}
         <aside style={{ flex: '0 0 300px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
-          {/* Service category cards — screenshot style */}
-          {serviceCards.map(({ label, headline, Icon, items }) => (
-            <div key={label} style={{ background: '#fff', borderRadius: 18, padding: '18px 18px 20px', marginBottom: 10, border: '1px solid #e5e5ea' }}>
-              {/* Label */}
-              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#8e8e93', margin: '0 0 12px' }}>{label}</p>
-              {/* Icon + headline */}
+          {/* Service category cards — Apple style */}
+          {serviceCards.map(({ title, Icon, items }) => (
+            <div key={title} style={{ background: '#fff', borderRadius: 18, padding: '14px 14px 40px', marginBottom: 10, border: '1px solid #e5e5ea', position: 'relative' }}>
               <Icon />
-              <p style={{ fontSize: 15, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 14px', lineHeight: 1.25 }}>{headline}</p>
-              {/* Item rows */}
-              {items.map((item, i) => (
-                <div key={item} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: i === 0 ? '1px solid #e5e5ea' : 'none', borderBottom: '1px solid #e5e5ea', padding: '8px 0' }}>
-                  <span style={{ fontSize: 12, color: '#1d1d1f', lineHeight: 1.4 }}>{item}</span>
-                  <span style={{ fontSize: 14, color: '#c7c7cc', marginLeft: 8 }}>›</span>
-                </div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 6px', lineHeight: 1.2 }}>{title}</p>
+              {items.map(item => (
+                <p key={item} style={{ fontSize: 11, color: '#2997ff', margin: '0 0 3px', lineHeight: 1.45 }}>{item}</p>
               ))}
+              {/* "+" button */}
+              <div style={{ position: 'absolute', bottom: 12, right: 12, width: 26, height: 26, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                <span style={{ color: '#fff', fontSize: 18, lineHeight: 1, marginTop: -1 }}>+</span>
+              </div>
             </div>
           ))}
 
