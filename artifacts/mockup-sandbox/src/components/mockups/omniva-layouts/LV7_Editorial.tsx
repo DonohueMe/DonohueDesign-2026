@@ -66,12 +66,7 @@ const serviceCards = [
   {
     title: 'Digital Marketing',
     Icon: IconMarketing,
-    items: ['Email marketing automation', 'Local SEO Services (GMB)'],
-  },
-  {
-    title: 'Internet Marketing Service',
-    Icon: IconAI,
-    items: ['AI Receptionist', 'AI Voice Assistant, website', 'AI Chat Assistant, website'],
+    items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
   },
   {
     title: 'Graphic Design',
