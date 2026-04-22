@@ -137,7 +137,12 @@ export function VariantB_HorizontalStrip() {
             </div>
           </div>
 
-          {/* Tile 6 — Reviews + Map combined (Layout B) */}
+        </div>
+      </div>
+
+      {/* Reviews + Map combo on white background */}
+      <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
+        <div style={{ maxWidth: 1020, margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
             <div style={{ padding: '52px 72px 48px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
