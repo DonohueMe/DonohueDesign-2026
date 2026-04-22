@@ -2,13 +2,7 @@ import React from 'react';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
-const reviews = [
-  { name: 'Maria T.', location: 'Santa Rosa, CA', text: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
-  { name: 'Derek H.', location: 'Petaluma, CA', text: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy was exactly what our shop needed.' },
-  { name: 'Lisa M.', location: 'Healdsburg, CA', text: "The AI receptionist handles after-hours calls now. We haven't missed a lead in weeks. Worth every penny." },
-];
-
-// VARIATION B — HORIZONTAL STRIP: Layout B's service tiles + Variant B's full-bleed reviews/map/CTA
+// VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
 export function VariantB_HorizontalStrip() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff', minHeight: '100vh' }}>
@@ -39,28 +33,25 @@ export function VariantB_HorizontalStrip() {
         </button>
       </section>
 
-      {/* ── Layout B service tiles — single column, large statement tiles ── */}
+      {/* Centered narrow bio intro — white background */}
+      <section style={{ padding: '80px 24px', background: '#fff' }}>
+        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2997ff', margin: '0 0 16px' }}>Website Designer · Santa Rosa, CA</p>
+          <h2 style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.1, color: '#1d1d1f', margin: '0 0 24px' }}>
+            Strategy first. Beautiful design second. Both, always.
+          </h2>
+          <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
+            Most website designers jump straight into building. I start with strategy. Before I open a design tool, I want to know who your customers are and what you need them to do.
+          </p>
+          <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
+            Jim Donohue. 20+ years. Senior Product Designer at Wells Fargo and Deloitte. 15% lift in subscriptions. 22% jump in engagement. Design systems used across 90+ apps.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Layout B service tiles + reviews/map combo on grey ── */}
       <div style={{ background: '#f5f5f7', padding: '60px 20px 60px' }}>
         <div style={{ maxWidth: 1020, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
-
-          {/* Tile 1 — Full-width h1 + bio */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '64px 72px', position: 'relative', overflow: 'hidden' }}>
-            <h1 style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '0 0 10px' }}>
-              Website Designer, Santa Rosa, CA
-            </h1>
-            <p style={{ fontSize: 14, fontWeight: 600, color: '#6e6e73', margin: '0 0 24px', lineHeight: 1.4 }}>
-              Website Designer in Santa Rosa, CA — Design, Strategy, and UX for Local Businesses
-            </p>
-            <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
-              Most website designers jump straight into building. I start with strategy.
-            </p>
-            <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
-              Before I open a design tool, I want to know who your customers are, how they find you, and what you need them to do when they land on your site. That's the difference between a website that looks good and one that actually brings in business.
-            </p>
-            <p style={{ fontSize: 16, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
-              My name is Jim Donohue. I'm a website designer in Santa Rosa, CA with over 20 years of experience in design, UX/UI, and digital strategy. I've spent a good chunk of that time working as a Senior Product Designer at companies like Wells Fargo and Deloitte — building products used by thousands of people across dozens of applications. I led redesigns that drove real, measurable results. A 15% lift in subscriptions. A 22% increase in user engagement. Design systems adopted across 90+ apps.
-            </p>
-          </div>
 
           {/* Tile 2 — Website Designer */}
           <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center' }}>
@@ -146,57 +137,58 @@ export function VariantB_HorizontalStrip() {
             </div>
           </div>
 
+          {/* Tile 6 — Reviews + Map combined (Layout B) */}
+          <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
+            <div style={{ padding: '52px 72px 48px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
+                <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: 0 }}>Client Reviews</p>
+                <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
+                <span style={{ fontSize: 13, color: '#6e6e73' }}>5.0 · Google</span>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32 }}>
+                {[
+                  { name: 'Maria T.', location: 'Santa Rosa, CA', text: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
+                  { name: 'Derek H.', location: 'Petaluma, CA', text: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy Jim put together was exactly what our shop needed.' },
+                  { name: 'Lisa M.', location: 'Healdsburg, CA', text: "The AI receptionist handles after-hours calls now. We haven't missed a lead in weeks. Worth every penny." },
+                ].map(({ name, location, text }) => (
+                  <div key={name}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
+                      <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg, #5aaeff, #46dcc3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <span style={{ fontSize: 14, fontWeight: 700, color: '#fff' }}>{name[0]}</span>
+                      </div>
+                      <div>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: '#1d1d1f', margin: 0 }}>{name}</p>
+                        <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>{location}</p>
+                      </div>
+                      <div style={{ marginLeft: 'auto', display: 'flex', gap: 1 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 11 }}>★</span>)}</div>
+                    </div>
+                    <p style={{ fontSize: 15, color: '#3d3d3f', lineHeight: 1.6, margin: 0 }}>"{text}"</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{ padding: '0 72px 52px', position: 'relative' }}>
+              <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative' }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1"
+                  width="100%" height="360"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Omniva Design — Santa Rosa, CA"
+                />
+                <div style={{ position: 'absolute', bottom: 16, left: 16, background: '#fff', borderRadius: 14, padding: '10px 16px', boxShadow: '0 2px 16px rgba(0,0,0,0.14)' }}>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+                  <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* Reviews — full-width quote slabs (Variant B style) */}
-      <section style={{ padding: '80px 24px', background: '#fff' }}>
-        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 36, justifyContent: 'center' }}>
-            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2997ff', margin: 0 }}>Client Reviews</p>
-            <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 13 }}>★</span>)}</div>
-            <span style={{ fontSize: 13, color: '#6e6e73' }}>5.0 · Google</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
-            {reviews.map(({ name, location, text }) => (
-              <div key={name} style={{ borderLeft: '3px solid #2997ff', padding: '4px 0 4px 24px' }}>
-                <p style={{ fontSize: 22, color: '#1d1d1f', lineHeight: 1.45, fontWeight: 500, letterSpacing: '-0.015em', margin: '0 0 14px' }}>"{text}"</p>
-                <p style={{ fontSize: 14, color: '#6e6e73', margin: 0 }}><strong style={{ color: '#1d1d1f' }}>{name}</strong> · {location}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Full-bleed map + CTA */}
-      <section style={{ position: 'relative' }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1"
-          width="100%" height="380" style={{ border: 0, display: 'block' }} loading="lazy" title="Santa Rosa, CA"
-        />
-        <div style={{ position: 'absolute', top: 24, left: 24, background: '#fff', borderRadius: 14, padding: '16px 20px', boxShadow: '0 4px 20px rgba(0,0,0,0.14)', maxWidth: 280 }}>
-          <p style={{ fontSize: 14, fontWeight: 700, color: '#1d1d1f', margin: '0 0 4px' }}>Omniva Design</p>
-          <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
-        </div>
-      </section>
-
-      <section style={{
-        padding: '70px 24px', textAlign: 'center',
-        background: [
-          'radial-gradient(ellipse at 8% 30%, rgba(90,170,255,0.95) 0%, transparent 55%)',
-          'radial-gradient(ellipse at 92% 75%, rgba(70,220,195,0.90) 0%, transparent 55%)',
-          '#a8e8f5',
-        ].join(','),
-      }}>
-        <h2 style={{ fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 24px', lineHeight: 1.1 }}>
-          Ready to take your business to the next level?
-        </h2>
-        <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '14px 28px', fontSize: 15, fontWeight: 500, fontFamily: SF, cursor: 'pointer' }}>
-          Start your project
-        </button>
-      </section>
-
-      <footer style={{ background: '#f5f5f7', padding: '24px', borderTop: '1px solid #d2d2d7', textAlign: 'center' }}>
+      <footer style={{ background: '#f5f5f7', padding: '32px 24px', borderTop: '1px solid #d2d2d7', textAlign: 'center' }}>
         <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>© 2025 Omniva Design — Santa Rosa, CA</p>
       </footer>
     </div>
