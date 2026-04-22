@@ -85,7 +85,7 @@ const serviceCards = [
     label: 'WEBSITE DESIGNER',
     headline: 'Websites that convert browsers into buyers.',
     Illust: IllustrBrowser,
-    items: ['Custom website design', 'Mobile-first development', 'E-commerce \u0026 booking', 'Speed-optimized', 'SEO-ready from day one'],
+    items: ['Website Design \u0026 Strategy', 'UX/UI Design', 'Website Development'],
   },
   {
     label: 'DIGITAL MARKETING',
