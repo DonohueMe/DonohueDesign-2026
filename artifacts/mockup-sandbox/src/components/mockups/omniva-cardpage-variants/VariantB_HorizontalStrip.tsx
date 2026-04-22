@@ -55,7 +55,7 @@ export function VariantB_HorizontalStrip() {
       </section>
 
       {/* Centered narrow bio intro — white background */}
-      <section style={{ padding: '80px 24px', background: '#fff' }}>
+      <section style={{ padding: '60px 20px', background: '#fff' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '0 0 24px' }}>
             Website Designer, Santa Rosa, CA
