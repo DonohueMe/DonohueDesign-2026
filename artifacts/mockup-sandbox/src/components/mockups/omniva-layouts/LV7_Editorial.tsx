@@ -66,11 +66,13 @@ const serviceCards = [
   {
     title: 'Digital Marketing',
     Icon: IconMarketing,
+    description: 'AI-powered campaigns, local SEO, and automated outreach \u2014 running around the clock to grow your business.',
     items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
   },
   {
     title: 'Graphic Design',
     Icon: IconDesign,
+    description: undefined,
     items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
   },
 ];
@@ -195,17 +197,20 @@ export default function LV7_Editorial() {
         {/* Sidebar */}
         <aside style={{ flex: '0 0 300px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
-          {/* Service category cards — Apple style */}
-          {serviceCards.map(({ title, Icon, items }) => (
-            <div key={title} style={{ background: '#fff', borderRadius: 18, padding: '14px 14px 40px', marginBottom: 10, border: '1px solid #e5e5ea', position: 'relative' }}>
+          {/* Service category cards */}
+          {serviceCards.map(({ title, Icon, description, items }) => (
+            <div key={title} style={{ background: '#fff', borderRadius: 18, padding: '20px 18px 52px', marginBottom: 10, border: '1px solid #e5e5ea', position: 'relative' }}>
               <Icon />
-              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 6px', lineHeight: 1.2 }}>{title}</p>
+              <p style={{ fontSize: description ? 20 : 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 6px', lineHeight: 1.2 }}>{title}</p>
+              {description && (
+                <p style={{ fontSize: 13, color: '#6e6e73', margin: '0 0 10px', lineHeight: 1.55 }}>{description}</p>
+              )}
               {items.map(item => (
                 <p key={item} style={{ fontSize: 11, color: '#2997ff', margin: '0 0 3px', lineHeight: 1.45 }}>{item}</p>
               ))}
               {/* "+" button */}
-              <div style={{ position: 'absolute', bottom: 12, right: 12, width: 26, height: 26, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
-                <span style={{ color: '#fff', fontSize: 18, lineHeight: 1, marginTop: -1 }}>+</span>
+              <div style={{ position: 'absolute', bottom: 12, right: 12, width: 32, height: 32, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                <span style={{ color: '#fff', fontSize: 22, lineHeight: 1, marginTop: -1 }}>+</span>
               </div>
             </div>
           ))}
