@@ -232,6 +232,56 @@ export default function LV7_Editorial() {
 
         </aside>
       </div>
+
+      {/* AI Product Ads — Apple 3-up style */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, padding: '0 40px 80px', maxWidth: 1280, margin: '0 auto' }}>
+
+        {/* Card 1 — AI Receptionist — warm light */}
+        <div style={{ background: '#f2ede8', borderRadius: 24, padding: '36px 32px 0', overflow: 'hidden', minHeight: 360, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+          <p style={{ fontSize: 12, fontWeight: 600, color: '#6e6e73', margin: '0 0 14px', letterSpacing: '0.01em' }}>AI Receptionist</p>
+          <p style={{ fontSize: 30, fontWeight: 800, color: '#1d1d1f', margin: '0 0 14px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Answers every call.<br />Around the clock.</p>
+          <span style={{ fontSize: 14, color: '#1d1d1f', cursor: 'pointer' }}>Learn more ›</span>
+          <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 24 }}>
+            <div style={{ width: 110, height: 110, borderRadius: 28, background: 'linear-gradient(145deg,#2c2c2e,#1a1a1c)', boxShadow: '0 24px 40px rgba(0,0,0,0.28)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: -4 }}>
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.07 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 11a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2 — AI Chat Bot — blue */}
+        <div style={{ background: '#2997ff', borderRadius: 24, padding: '36px 32px 0', overflow: 'hidden', minHeight: 360, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+          <p style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', margin: '0 0 14px', letterSpacing: '0.01em' }}>AI Chat Assistant</p>
+          <p style={{ fontSize: 30, fontWeight: 800, color: '#fff', margin: '0 0 14px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Chat support.<br />Always on.</p>
+          <span style={{ fontSize: 14, color: '#fff', cursor: 'pointer', opacity: 0.9 }}>Learn more ›</span>
+          <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 24 }}>
+            <div style={{ width: 100, height: 100, borderRadius: '50%', border: '3px solid rgba(255,255,255,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}>
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 3 — AI Automation — dark */}
+        <div style={{ background: '#1d1d1f', borderRadius: 24, padding: '36px 32px 0', overflow: 'hidden', minHeight: 360, display: 'flex', flexDirection: 'column', position: 'relative' }}>
+          <p style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.55)', margin: '0 0 14px', letterSpacing: '0.01em' }}>AI Automation</p>
+          <p style={{ fontSize: 30, fontWeight: 800, color: '#fff', margin: '0 0 14px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Set it.<br />Forget it.<br />Grow.</p>
+          <span style={{ fontSize: 14, color: '#2997ff', cursor: 'pointer' }}>Learn more ›</span>
+          <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 24 }}>
+            <div style={{ position: 'relative', width: 120, height: 90, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 4 }}>
+              <div style={{ width: 88, height: 88, borderRadius: '50%', background: 'conic-gradient(from 0deg, #c898e2, #2997ff, #f4b880, #c898e2)', opacity: 0.85 }} />
+              <div style={{ position: 'absolute', width: 64, height: 64, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
