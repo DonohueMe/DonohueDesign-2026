@@ -54,11 +54,26 @@ const IllustrBrowser = () => (
   </div>
 );
 
-const IllustrChart = () => (
-  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '10px 10px 6px', marginBottom: 4 }}>
-    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 4, height: 52, paddingBottom: 4 }}>
-      {[20, 28, 22, 34, 26, 38, 30, 44, 32, 52].map((h, i) => (
-        <div key={i} style={{ flex: 1, height: h, borderRadius: 3, background: i === 9 ? '#c898e2' : '#d1d1d6' }} />
+const IllustrDigitalMarketing = () => (
+  <div style={{ background: '#f5f5f7', borderRadius: 10, padding: '10px 10px 8px', marginBottom: 4 }}>
+    <p style={{ fontSize: 8.5, fontWeight: 600, color: '#8e8e93', margin: '0 0 6px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Campaign overview</p>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 5 }}>
+      {[
+        { dot: '#2997ff', label: 'Email', val: '4.2k', sub: 'opens' },
+        { dot: '#34c759', label: 'Local SEO', val: '#1', sub: 'ranking' },
+        { dot: '#c898e2', label: 'AI Voice', val: '24/7', sub: 'live' },
+        { dot: '#f09030', label: 'Automation', val: '3x', sub: 'leads' },
+      ].map(({ dot, label, val, sub }) => (
+        <div key={label} style={{ background: '#fff', borderRadius: 7, padding: '6px 8px', border: '1px solid #e5e5ea', display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: dot, flexShrink: 0 }} />
+            <span style={{ fontSize: 8.5, color: '#8e8e93' }}>{label}</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 3 }}>
+            <span style={{ fontSize: 14, fontWeight: 800, color: '#1d1d1f', letterSpacing: '-0.02em' }}>{val}</span>
+            <span style={{ fontSize: 8, color: '#aeaeb2' }}>{sub}</span>
+          </div>
+        </div>
       ))}
     </div>
   </div>
@@ -90,7 +105,7 @@ const serviceCards = [
   {
     label: 'DIGITAL MARKETING',
     headline: 'AI marketing that never sleeps.',
-    Illust: IllustrChart,
+    Illust: IllustrDigitalMarketing,
     items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
   },
   {
