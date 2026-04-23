@@ -180,11 +180,11 @@ export function VariantK_HorizontalStrip() {
                 ctaBg: '#fff',
                 ctaColor: '#111',
               },
-            ].map(({ gradient, eyebrow, title, body, cta, ctaBg, ctaColor }) => (
+            ].map(({ gradient, eyebrow, title, body }) => (
               <div key={eyebrow} style={{
                 background: gradient,
                 borderRadius: 22,
-                padding: '26px 26px 24px',
+                padding: '26px 26px 28px',
                 position: 'relative',
                 overflow: 'hidden',
                 color: '#fff',
@@ -208,22 +208,9 @@ export function VariantK_HorizontalStrip() {
                   ))}
                 </h3>
 
-                <p style={{ fontSize: 13.5, lineHeight: 1.5, color: 'rgba(255,255,255,0.92)', margin: '0 0 22px' }}>
+                <p style={{ fontSize: 13.5, lineHeight: 1.5, color: 'rgba(255,255,255,0.92)', margin: 0 }}>
                   {body}
                 </p>
-
-                <a href="#" style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-                  background: ctaBg, color: ctaColor,
-                  fontSize: 13, fontWeight: 600,
-                  padding: '12px 22px',
-                  borderRadius: 999,
-                  textDecoration: 'none',
-                  width: '100%',
-                  boxSizing: 'border-box',
-                }}>
-                  {cta} <span aria-hidden>→</span>
-                </a>
               </div>
             ))}
           </aside>
