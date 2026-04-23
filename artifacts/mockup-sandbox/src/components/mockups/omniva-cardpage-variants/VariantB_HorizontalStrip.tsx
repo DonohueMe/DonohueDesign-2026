@@ -141,66 +141,70 @@ export function VariantK_HorizontalStrip() {
 
           </div>
 
-          {/* Right sidebar — 4 fun sticker-style ad cards, flush with top of first tile */}
-          <aside style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          {/* Right sidebar — dark editorial cards with oversized numerals */}
+          <aside style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
             {[
               {
-                bg: '#FFE2D1', accent: '#E8552B', ink: '#3a1a08',
-                eyebrow: 'AI Voice', title: 'Every call.\nEvery time.', cta: 'Hear it live',
-                widget: (
-                  <svg width="56" height="22" viewBox="0 0 56 22" aria-hidden>
-                    {[6,12,18,14,8,16,20,12,8,14,18,10].map((h,i) => (
-                      <rect key={i} x={i*5} y={(22-h)/2} width="3" height={h} rx="1.5" fill="#E8552B" />
-                    ))}
-                  </svg>
-                ),
+                num: '01', bg: '#0e1f33', accent: '#5ee2b8',
+                eyebrow: 'AI Receptionist',
+                title: 'Never miss a call again.',
+                body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
+                cta: 'Hear a demo',
               },
               {
-                bg: '#D6F2DE', accent: '#1E8E4A', ink: '#0e2a18',
-                eyebrow: 'AI Receptionist', title: 'No call.\nNo problem.', cta: 'Try it free',
-                widget: (
-                  <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden>
-                    <path d="M28 21l-3-2c-1-.6-2-.4-2.6.4l-1 1.3c-2-.7-4-2.7-4.7-4.7l1.3-1c.8-.6 1-1.6.4-2.6l-2-3c-.6-1-1.8-1.3-2.7-.7l-1.6 1c-.9.6-1.3 1.7-1 2.7 1.4 5 5.6 9.2 10.6 10.6 1 .3 2.1-.1 2.7-1l1-1.6c.6-.9.3-2.1-.7-2.7z" fill="#1E8E4A"/>
-                    <path d="M30 8c2 1 3 3 3 5" stroke="#1E8E4A" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                    <path d="M30 4c4 1 6 4 6 8" stroke="#1E8E4A" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                  </svg>
-                ),
+                num: '02', bg: '#1a1232', accent: '#7dd3fc',
+                eyebrow: 'Smart Websites',
+                title: 'Sites that earn their keep.',
+                body: 'Strategy-first design built to turn quiet visitors into paying customers.',
+                cta: 'See the work',
               },
               {
-                bg: '#D8E7FF', accent: '#1A6FFF', ink: '#0a1f4a',
-                eyebrow: 'AI Chat', title: 'Reply now.\nWin now.', cta: 'Plug it in',
-                widget: (
-                  <svg width="48" height="32" viewBox="0 0 48 32" aria-hidden>
-                    <path d="M4 4h32a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H18l-8 6v-6H4z" fill="#1A6FFF"/>
-                    <circle cx="14" cy="14" r="2.2" fill="#fff"/>
-                    <circle cx="22" cy="14" r="2.2" fill="#fff"/>
-                    <circle cx="30" cy="14" r="2.2" fill="#fff"/>
-                  </svg>
-                ),
+                num: '03', bg: '#0a0a0a', accent: '#ffb547',
+                eyebrow: 'Local SEO · GBP',
+                title: 'Own the map. Own the moment.',
+                body: 'Rank higher on Google Maps and capture every nearby search.',
+                cta: 'Get a scan',
               },
               {
-                bg: '#EADBFF', accent: '#7C3AED', ink: '#26104a',
-                eyebrow: 'AI Automation', title: 'Set it.\nForget it.', cta: 'Turn it on',
-                widget: (
-                  <svg width="44" height="32" viewBox="0 0 44 32" aria-hidden>
-                    <path d="M14 2l2.4 7.6L24 12l-7.6 2.4L14 22l-2.4-7.6L4 12l7.6-2.4z" fill="#7C3AED"/>
-                    <path d="M32 14l1.4 4.4L38 20l-4.6 1.6L32 26l-1.4-4.4L26 20l4.6-1.6z" fill="#7C3AED" opacity="0.55"/>
-                    <circle cx="38" cy="6" r="2" fill="#7C3AED"/>
-                  </svg>
-                ),
+                num: '04', bg: '#241723', accent: '#ff7aa8',
+                eyebrow: 'Presentation Design',
+                title: 'Decks that win the room.',
+                body: 'Investor-ready slides built around the story you are telling.',
+                cta: 'View samples',
               },
-            ].map(({ bg, accent, ink, eyebrow, title, cta, widget }) => (
-              <div key={eyebrow} style={{ background: bg, borderRadius: 20, padding: '20px 22px 18px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 12 }}>
-                  <span style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.14em', color: accent, background: '#fff', padding: '4px 8px', borderRadius: 999 }}>
-                    {eyebrow}
-                  </span>
-                  <div style={{ marginTop: -2 }}>{widget}</div>
-                </div>
-                <h3 style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.025em', color: ink, margin: '0 0 14px', lineHeight: 1.05, whiteSpace: 'pre-line' }}>
+            ].map(({ num, bg, accent, eyebrow, title, body, cta }) => (
+              <div key={num} style={{ background: bg, borderRadius: 18, padding: '26px 24px 22px', position: 'relative', overflow: 'hidden', color: '#fff' }}>
+                {/* Oversized faint numeral */}
+                <span aria-hidden style={{
+                  position: 'absolute', top: -18, right: -6,
+                  fontSize: 110, fontWeight: 800, letterSpacing: '-0.06em',
+                  lineHeight: 1, color: 'transparent',
+                  WebkitTextStroke: `1.5px ${accent}40`, fontVariantNumeric: 'tabular-nums',
+                  pointerEvents: 'none',
+                }}>{num}</span>
+
+                {/* Eyebrow chip */}
+                <span style={{
+                  display: 'inline-block', fontSize: 10, fontWeight: 700,
+                  textTransform: 'uppercase', letterSpacing: '0.16em',
+                  color: accent, marginBottom: 18, position: 'relative', zIndex: 1,
+                }}>
+                  <span style={{ display: 'inline-block', width: 18, height: 1, background: accent, verticalAlign: 'middle', marginRight: 8 }} />
+                  {eyebrow}
+                </span>
+
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#fff', position: 'relative', zIndex: 1 }}>
                   {title}
                 </h3>
-                <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 700, color: '#fff', background: ink, padding: '8px 14px', borderRadius: 999, textDecoration: 'none' }}>
+                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#b8b8c2', margin: '0 0 18px', position: 'relative', zIndex: 1 }}>
+                  {body}
+                </p>
+                <a href="#" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 6,
+                  fontSize: 12, fontWeight: 700, color: accent,
+                  textDecoration: 'none', borderBottom: `1px solid ${accent}`,
+                  paddingBottom: 2, position: 'relative', zIndex: 1,
+                }}>
                   {cta} <span aria-hidden>→</span>
                 </a>
               </div>
