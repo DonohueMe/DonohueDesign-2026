@@ -69,72 +69,143 @@ export function VariantK_HorizontalStrip() {
         </div>
       </section>
 
-      {/* ── Layout B service tiles + reviews/map combo on grey ── */}
+      {/* ── Layout B service tiles + right-side fun sticker sidebar ── */}
       <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 280px', gap: 24, alignItems: 'start' }}>
 
-          {/* Tile 2 — Website Designer */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-            <div style={{ flex: '0 0 420px' }}>
-              <TileHeader tint="#2997ff" icon={ICON_BROWSER} label="Website Design" />
-              <h2 style={{ fontSize: 40, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                Your website. Working harder than ever.
-              </h2>
-              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
-              </p>
+          {/* Left column: 3 service tiles */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
+
+            {/* Tile 2 — Website Designer */}
+            <div style={{ background: '#fff', borderRadius: 20, padding: '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 56, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+              <div style={{ flex: '0 0 360px' }}>
+                <TileHeader tint="#2997ff" icon={ICON_BROWSER} label="Website Design" />
+                <h2 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                  Your website. Working harder than ever.
+                </h2>
+                <p style={{ fontSize: 16, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                  A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
+                </p>
+              </div>
+              <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 40 }}>
+                {['Website Design & Strategy', 'UX/UI Design', 'Website Development'].map(item => (
+                  <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
+                    <span style={{ color: '#000', fontSize: 22 }}>›</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
-              {['Website Design & Strategy', 'UX/UI Design', 'Website Development'].map(item => (
-                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#000', fontSize: 22 }}>›</span>
-                </div>
-              ))}
+
+            {/* Tile 3 — Digital Marketing — row-reverse */}
+            <div style={{ background: '#fff', borderRadius: 20, padding: '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 56, alignItems: 'center', flexDirection: 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+              <div style={{ flex: '0 0 320px' }}>
+                <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label="Digital Marketing" />
+                <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                  Get found. Stay top of mind.
+                </h2>
+                <p style={{ fontSize: 16, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                  Email campaigns and local SEO that put your business in front of the right people at the right time.
+                </p>
+              </div>
+              <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 40 }}>
+                {['Email Marketing Automation', 'Local SEO Services (GMB)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
+                  <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
+                    <span style={{ color: '#000', fontSize: 22 }}>›</span>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Tile 5 — Graphic Designer */}
+            <div style={{ background: '#fff', borderRadius: 20, padding: '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 56, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+              <div style={{ flex: '0 0 320px' }}>
+                <TileHeader tint="#2997ff" icon={ICON_PALETTE} label="Graphic Designer" />
+                <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
+                  A brand as strong as your business.
+                </h2>
+                <p style={{ fontSize: 16, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                  Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
+                </p>
+              </div>
+              <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 40 }}>
+                {['Email Design', 'Logo Design', 'Brochure & Flyer Design', 'Presentation Design'].map(item => (
+                  <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
+                    <span style={{ color: '#000', fontSize: 22 }}>›</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
 
-          {/* Tile 3 — Digital Marketing — row-reverse */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', flexDirection: 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-            <div style={{ flex: '0 0 380px' }}>
-              <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label="Digital Marketing" />
-              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                Get found. Stay top of mind.
-              </h2>
-              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                Email campaigns and local SEO that put your business in front of the right people at the right time.
-              </p>
-            </div>
-            <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 60 }}>
-              {['Email Marketing Automation', 'Local SEO Services (GMB)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant'].map(item => (
-                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#000', fontSize: 22 }}>›</span>
+          {/* Right sidebar — 4 fun sticker-style ad cards, flush with top of first tile */}
+          <aside style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {[
+              {
+                bg: '#FFE2D1', accent: '#E8552B', ink: '#3a1a08',
+                eyebrow: 'AI Voice', title: 'Every call.\nEvery time.', cta: 'Hear it live',
+                widget: (
+                  <svg width="56" height="22" viewBox="0 0 56 22" aria-hidden>
+                    {[6,12,18,14,8,16,20,12,8,14,18,10].map((h,i) => (
+                      <rect key={i} x={i*5} y={(22-h)/2} width="3" height={h} rx="1.5" fill="#E8552B" />
+                    ))}
+                  </svg>
+                ),
+              },
+              {
+                bg: '#D6F2DE', accent: '#1E8E4A', ink: '#0e2a18',
+                eyebrow: 'AI Receptionist', title: 'No call.\nNo problem.', cta: 'Try it free',
+                widget: (
+                  <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden>
+                    <path d="M28 21l-3-2c-1-.6-2-.4-2.6.4l-1 1.3c-2-.7-4-2.7-4.7-4.7l1.3-1c.8-.6 1-1.6.4-2.6l-2-3c-.6-1-1.8-1.3-2.7-.7l-1.6 1c-.9.6-1.3 1.7-1 2.7 1.4 5 5.6 9.2 10.6 10.6 1 .3 2.1-.1 2.7-1l1-1.6c.6-.9.3-2.1-.7-2.7z" fill="#1E8E4A"/>
+                    <path d="M30 8c2 1 3 3 3 5" stroke="#1E8E4A" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                    <path d="M30 4c4 1 6 4 6 8" stroke="#1E8E4A" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                  </svg>
+                ),
+              },
+              {
+                bg: '#D8E7FF', accent: '#1A6FFF', ink: '#0a1f4a',
+                eyebrow: 'AI Chat', title: 'Reply now.\nWin now.', cta: 'Plug it in',
+                widget: (
+                  <svg width="48" height="32" viewBox="0 0 48 32" aria-hidden>
+                    <path d="M4 4h32a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H18l-8 6v-6H4z" fill="#1A6FFF"/>
+                    <circle cx="14" cy="14" r="2.2" fill="#fff"/>
+                    <circle cx="22" cy="14" r="2.2" fill="#fff"/>
+                    <circle cx="30" cy="14" r="2.2" fill="#fff"/>
+                  </svg>
+                ),
+              },
+              {
+                bg: '#EADBFF', accent: '#7C3AED', ink: '#26104a',
+                eyebrow: 'AI Automation', title: 'Set it.\nForget it.', cta: 'Turn it on',
+                widget: (
+                  <svg width="44" height="32" viewBox="0 0 44 32" aria-hidden>
+                    <path d="M14 2l2.4 7.6L24 12l-7.6 2.4L14 22l-2.4-7.6L4 12l7.6-2.4z" fill="#7C3AED"/>
+                    <path d="M32 14l1.4 4.4L38 20l-4.6 1.6L32 26l-1.4-4.4L26 20l4.6-1.6z" fill="#7C3AED" opacity="0.55"/>
+                    <circle cx="38" cy="6" r="2" fill="#7C3AED"/>
+                  </svg>
+                ),
+              },
+            ].map(({ bg, accent, ink, eyebrow, title, cta, widget }) => (
+              <div key={eyebrow} style={{ background: bg, borderRadius: 20, padding: '20px 22px 18px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 12 }}>
+                  <span style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.14em', color: accent, background: '#fff', padding: '4px 8px', borderRadius: 999 }}>
+                    {eyebrow}
+                  </span>
+                  <div style={{ marginTop: -2 }}>{widget}</div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tile 5 — Graphic Designer */}
-          <div style={{ background: '#fff', borderRadius: 20, padding: '52px 72px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 80, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-            <div style={{ flex: '0 0 380px' }}>
-              <TileHeader tint="#2997ff" icon={ICON_PALETTE} label="Graphic Designer" />
-              <h2 style={{ fontSize: 38, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                A brand as strong as your business.
-              </h2>
-              <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
-              </p>
-            </div>
-            <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 60 }}>
-              {['Email Design', 'Logo Design', 'Brochure & Flyer Design', 'Presentation Design'].map(item => (
-                <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: 16, color: '#1d1d1f' }}>{item}</span>
-                  <span style={{ color: '#000', fontSize: 22 }}>›</span>
-                </div>
-              ))}
-            </div>
-          </div>
+                <h3 style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.025em', color: ink, margin: '0 0 14px', lineHeight: 1.05, whiteSpace: 'pre-line' }}>
+                  {title}
+                </h3>
+                <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 700, color: '#fff', background: ink, padding: '8px 14px', borderRadius: 999, textDecoration: 'none' }}>
+                  {cta} <span aria-hidden>→</span>
+                </a>
+              </div>
+            ))}
+          </aside>
 
         </div>
       </div>
