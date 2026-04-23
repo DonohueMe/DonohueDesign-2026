@@ -148,7 +148,7 @@ export function VariantK_HorizontalStrip() {
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
             {[
               {
-                gradient: 'linear-gradient(45deg, #6ec7ff 0%, #a8e0ff 100%)',
+                gradient: 'linear-gradient(45deg, #5bb8ff 0%, #a8e0ff 100%)',
                 eyebrow: 'Local SEO · GBP',
                 title: ['Own the map.', 'Own the moment.'],
                 body: 'Rank higher on Google Maps and capture every nearby search before your competition does.',
@@ -160,7 +160,7 @@ export function VariantK_HorizontalStrip() {
                 ),
               },
               {
-                gradient: 'linear-gradient(45deg, #6ec7ff 0%, #a8e0ff 100%)',
+                gradient: 'linear-gradient(45deg, #5bb8ff 0%, #a8e0ff 100%)',
                 eyebrow: 'AI Receptionist',
                 title: ['No call.', 'No problem.'],
                 body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
@@ -174,7 +174,7 @@ export function VariantK_HorizontalStrip() {
                 ),
               },
               {
-                gradient: 'linear-gradient(45deg, #6ec7ff 0%, #a8e0ff 100%)',
+                gradient: 'linear-gradient(45deg, #5bb8ff 0%, #a8e0ff 100%)',
                 eyebrow: 'Smart Websites',
                 title: ['Sites that', 'earn their keep.'],
                 body: 'Strategy-first design built to turn quiet visitors into paying customers — not just pretty pixels.',
@@ -185,7 +185,7 @@ export function VariantK_HorizontalStrip() {
                 ),
               },
               {
-                gradient: 'linear-gradient(45deg, #6ec7ff 0%, #a8e0ff 100%)',
+                gradient: 'linear-gradient(45deg, #5bb8ff 0%, #a8e0ff 100%)',
                 eyebrow: 'Presentation Design',
                 title: ['Decks that', 'win the room.'],
                 body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
