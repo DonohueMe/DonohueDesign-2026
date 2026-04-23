@@ -177,6 +177,7 @@ export function VariantK_HorizontalStrip() {
                 overflow: 'hidden',
                 color: '#fff',
                 boxShadow: '0 8px 28px rgba(0,0,0,0.10)',
+                filter: 'brightness(0.9)',
               }}>
                 <div style={{
                   fontSize: 12, fontWeight: 700,
