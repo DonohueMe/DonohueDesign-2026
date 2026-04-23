@@ -220,7 +220,7 @@ export default function LV7_Editorial() {
               <Icon />
               <p style={{ fontSize: description ? 20 : 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 6px', lineHeight: 1.2 }}>{title}</p>
               {description && (
-                <p style={{ fontSize: 15, color: '#6e6e73', margin: '0 0 10px', lineHeight: 1.55 }}>{description}</p>
+                <p style={{ fontSize: 16, color: '#6e6e73', margin: '0 0 10px', lineHeight: 1.55 }}>{description}</p>
               )}
               {items.map(item => (
                 <p key={item} style={{ fontSize: 14, color: '#2997ff', margin: '0 0 3px', lineHeight: '22.3px' }}>{item}</p>
