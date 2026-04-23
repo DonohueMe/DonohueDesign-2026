@@ -179,7 +179,7 @@ export function VariantK_HorizontalStrip() {
                 boxShadow: '0 8px 28px rgba(0,0,0,0.10)',
               }}>
                 <div style={{
-                  fontSize: 10, fontWeight: 700,
+                  fontSize: 12, fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.16em',
                   color: 'rgba(255,255,255,0.85)',
                   marginBottom: 14,
