@@ -33,7 +33,7 @@ function TileHeader({ tint, icon, label }: { tint: string; icon: React.ReactNode
 }
 
 // VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
-export function VariantB_HorizontalStrip() {
+export function VariantK_HorizontalStrip() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff', minHeight: '100vh' }}>
 
