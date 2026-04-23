@@ -145,25 +145,25 @@ export function VariantK_HorizontalStrip() {
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
             {[
               {
-                gradient: '#2997ff',
+                gradient: '#2588e6',
                 eyebrow: 'Local SEO · GBP',
                 title: ['Own the map.', 'Own the moment.'],
                 body: 'Rank higher on Google Maps and capture every nearby search before your competition does.',
               },
               {
-                gradient: '#2997ff',
+                gradient: '#2588e6',
                 eyebrow: 'AI Receptionist',
                 title: ['No call.', 'No problem.'],
                 body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
               },
               {
-                gradient: '#2997ff',
+                gradient: '#2588e6',
                 eyebrow: 'Smart Websites',
                 title: ['Sites that', 'earn their keep.'],
                 body: 'Strategy-first design built to turn quiet visitors into paying customers — not just pretty pixels.',
               },
               {
-                gradient: '#2997ff',
+                gradient: '#2588e6',
                 eyebrow: 'Presentation Design',
                 title: ['Decks that', 'win the room.'],
                 body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
@@ -212,7 +212,7 @@ export function VariantK_HorizontalStrip() {
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
             <div style={{ padding: '52px 72px 48px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
-                <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: 0 }}>Client Reviews</p>
+                <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2588e6', margin: 0 }}>Client Reviews</p>
                 <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
                 <span style={{ fontSize: 13, color: '#6e6e73' }}>5.0 · Google</span>
               </div>
