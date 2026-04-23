@@ -145,25 +145,25 @@ export function VariantK_HorizontalStrip() {
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
             {[
               {
-                gradient: 'linear-gradient(180deg, #c5a8e0 0%, #e8aec4 100%)',
+                gradient: 'linear-gradient(160deg, #6dbbff 0%, #3f95ff 100%)',
                 eyebrow: 'Local SEO · GBP',
                 title: ['Own the map.', 'Own the moment.'],
                 body: 'Rank higher on Google Maps and capture every nearby search before your competition does.',
               },
               {
-                gradient: 'linear-gradient(180deg, #e8aec4 0%, #f5b5a3 100%)',
+                gradient: 'linear-gradient(160deg, #6dbbff 0%, #3f95ff 100%)',
                 eyebrow: 'AI Receptionist',
                 title: ['No call.', 'No problem.'],
                 body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
               },
               {
-                gradient: 'linear-gradient(180deg, #f5b5a3 0%, #f4c89a 100%)',
+                gradient: 'linear-gradient(160deg, #6dbbff 0%, #3f95ff 100%)',
                 eyebrow: 'Smart Websites',
                 title: ['Sites that', 'earn their keep.'],
                 body: 'Strategy-first design built to turn quiet visitors into paying customers — not just pretty pixels.',
               },
               {
-                gradient: 'linear-gradient(180deg, #f4c89a 0%, #f5d77a 100%)',
+                gradient: 'linear-gradient(160deg, #6dbbff 0%, #3f95ff 100%)',
                 eyebrow: 'Presentation Design',
                 title: ['Decks that', 'win the room.'],
                 body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
@@ -175,13 +175,13 @@ export function VariantK_HorizontalStrip() {
                 padding: '26px 26px 28px',
                 position: 'relative',
                 overflow: 'hidden',
-                color: '#1d1d1f',
-                boxShadow: '0 6px 22px rgba(0,0,0,0.06)',
+                color: '#fff',
+                boxShadow: '0 8px 28px rgba(0,0,0,0.10)',
               }}>
                 <div style={{
                   fontSize: 12, fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.16em',
-                  color: 'rgba(0,0,0,0.55)',
+                  color: 'rgba(255,255,255,0.9)',
                   marginBottom: 14,
                 }}>
                   {eyebrow}
@@ -189,14 +189,14 @@ export function VariantK_HorizontalStrip() {
 
                 <h3 style={{
                   fontSize: 30, fontWeight: 700, letterSpacing: '-0.035em',
-                  lineHeight: '36.5px', margin: '0 0 14px', color: '#1d1d1f',
+                  lineHeight: '36.5px', margin: '0 0 14px', color: '#fff',
                 }}>
                   {title.map((line, i) => (
                     <span key={i} style={{ display: 'block' }}>{line}</span>
                   ))}
                 </h3>
 
-                <p style={{ fontSize: 15.5, lineHeight: 1.5, color: 'rgba(0,0,0,0.65)', margin: 0 }}>
+                <p style={{ fontSize: 15.5, lineHeight: 1.5, color: 'rgba(255,255,255,0.95)', margin: 0 }}>
                   {body}
                 </p>
               </div>
