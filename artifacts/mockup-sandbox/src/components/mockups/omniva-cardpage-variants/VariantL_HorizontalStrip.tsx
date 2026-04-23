@@ -146,9 +146,9 @@ export function VariantK_HorizontalStrip() {
             {[
               {
                 gradient: 'linear-gradient(155deg, #f5c14a 0%, #ef8a52 55%, #e85a6b 100%)',
-                eyebrow: 'AI Voice Assistant',
-                title: ['Every call.', 'Every time.'],
-                body: 'Books jobs while you sleep. Qualifies leads while you work. Closes gaps you didn\u2019t know you had.',
+                eyebrow: 'Local SEO · GBP',
+                title: ['Own the map.', 'Own the moment.'],
+                body: 'Rank higher on Google Maps and capture every nearby search before your competition does.',
               },
               {
                 gradient: 'linear-gradient(160deg, #6dd6a3 0%, #3fb6a8 55%, #2f8fb8 100%)',
@@ -158,15 +158,15 @@ export function VariantK_HorizontalStrip() {
               },
               {
                 gradient: 'linear-gradient(165deg, #b06bff 0%, #7a5cf0 55%, #4a8bff 100%)',
-                eyebrow: 'Presentation Design',
-                title: ['Decks that', 'win the room.'],
-                body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
+                eyebrow: 'Smart Websites',
+                title: ['Sites that', 'earn their keep.'],
+                body: 'Strategy-first design built to turn quiet visitors into paying customers — not just pretty pixels.',
               },
               {
                 gradient: 'linear-gradient(155deg, #1f3a5f 0%, #2a5a8a 55%, #3aa3c4 100%)',
-                eyebrow: 'AI Automation',
-                title: ['Set it.', 'Forget it.', 'Grow.'],
-                body: 'Follow-ups send themselves. Reviews show up on their own. Leads get nurtured while you do the work.',
+                eyebrow: 'Presentation Design',
+                title: ['Decks that', 'win the room.'],
+                body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
               },
             ].map(({ gradient, eyebrow, title, body }) => (
               <div key={eyebrow} style={{
