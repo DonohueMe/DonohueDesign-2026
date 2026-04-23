@@ -41,24 +41,20 @@ const timelineSteps = [
 ];
 
 const IconWeb = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="4" width="28" height="22" rx="3" fill="#eaf4ff" stroke="#2997ff" strokeWidth="1.6"/>
-    <path d="M2 10h28" stroke="#2997ff" strokeWidth="1.6"/>
-    <circle cx="6" cy="7" r="0.9" fill="#ff6a1f"/>
-    <circle cx="9" cy="7" r="0.9" fill="#febc2e"/>
-    <circle cx="12" cy="7" r="0.9" fill="#28c840"/>
-    <rect x="6" y="14" width="9" height="3" rx="1.5" fill="#c898e2"/>
-    <rect x="6" y="19" width="14" height="3" rx="1.5" fill="#2997ff"/>
-    <rect x="17" y="14" width="9" height="8" rx="2" fill="#ff6a1f" opacity="0.85"/>
+  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="6" width="22" height="14" rx="1.5" />
+    <path d="M3 20h22" />
+    <path d="M11 24h6M14 20v4" />
+    <rect x="22" y="14" width="8" height="14" rx="1.5" />
+    <path d="M25.5 26.5h1" />
   </svg>
 );
 const IconMarketing = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 13v6l18 7V6L4 13z" fill="#ffd9c2" stroke="#ff6a1f" strokeWidth="1.6"/>
-    <path d="M4 13H2.5a1.5 1.5 0 0 0 0 3H4z" fill="#ff6a1f" stroke="#ff6a1f" strokeWidth="1.6"/>
-    <path d="M22 6l5-3v26l-5-3" fill="#2997ff" stroke="#1f78d1" strokeWidth="1.6"/>
-    <path d="M9 20l1.4 4.5a2 2 0 0 0 3.85-1.1L13.6 21" stroke="#ff6a1f" strokeWidth="1.6" fill="none"/>
-    <circle cx="29" cy="16" r="2" fill="#febc2e"/>
+  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 13v6l16 6V7L6 13z" />
+    <path d="M6 13H4.5a1.5 1.5 0 0 0 0 3H6" />
+    <path d="M11 20l1.4 4.5a2 2 0 0 0 3.85-1.1L15.6 21" />
+    <path d="M25 13s2 1.2 2 3-2 3-2 3" />
   </svg>
 );
 const IconAI = () => (
@@ -69,13 +65,10 @@ const IconAI = () => (
   </svg>
 );
 const IconDesign = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M16 3a13 13 0 1 0 0 26c1.8 0 3-1.2 3-2.7 0-.7-.3-1.35-.75-1.85-.45-.5-.75-1.15-.75-1.85 0-1.5 1.2-2.7 2.7-2.7H24A5 5 0 0 0 29 14.8 13 13 0 0 0 16 3z" fill="#fff5e8" stroke="#1d1d1f" strokeWidth="1.6"/>
-    <circle cx="9.5" cy="13.5" r="1.6" fill="#ff6a1f"/>
-    <circle cx="14.5" cy="8.5" r="1.6" fill="#febc2e"/>
-    <circle cx="20.5" cy="9.5" r="1.6" fill="#28c840"/>
-    <circle cx="24" cy="15" r="1.6" fill="#2997ff"/>
-    <circle cx="11" cy="20" r="1.6" fill="#c898e2"/>
+  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M5 28l4-1.2 16.5-16.5a2.83 2.83 0 0 0-4-4L5 22.8 4 28z" />
+    <path d="M19 8l4 4" />
+    <path d="M5 22.8L9 26.8" />
   </svg>
 );
 
