@@ -141,39 +141,39 @@ export function VariantK_HorizontalStrip() {
 
           </div>
 
-          {/* Right sidebar — dark editorial cards with oversized numerals */}
+          {/* Right sidebar — light editorial cards with oversized numerals */}
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
             {[
               {
-                num: '01', bg: '#0e1f33', accent: '#5ee2b8',
-                eyebrow: 'AI Receptionist',
-                title: 'Never miss a call again.',
-                body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
-                cta: 'Hear a demo',
-              },
-              {
-                num: '02', bg: '#1a1232', accent: '#7dd3fc',
-                eyebrow: 'Smart Websites',
-                title: 'Sites that earn their keep.',
-                body: 'Strategy-first design built to turn quiet visitors into paying customers.',
-                cta: 'See the work',
-              },
-              {
-                num: '03', bg: '#0a0a0a', accent: '#ffb547',
+                num: '01', bg: '#fff8ec', accent: '#d18a16',
                 eyebrow: 'Local SEO · GBP',
                 title: 'Own the map. Own the moment.',
                 body: 'Rank higher on Google Maps and capture every nearby search.',
                 cta: 'Get a scan',
               },
               {
-                num: '04', bg: '#241723', accent: '#ff7aa8',
+                num: '02', bg: '#f0fbf6', accent: '#1f9d6a',
+                eyebrow: 'AI Receptionist',
+                title: 'Never miss a call again.',
+                body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
+                cta: 'Hear a demo',
+              },
+              {
+                num: '03', bg: '#eef6ff', accent: '#1f6fd6',
+                eyebrow: 'Smart Websites',
+                title: 'Sites that earn their keep.',
+                body: 'Strategy-first design built to turn quiet visitors into paying customers.',
+                cta: 'See the work',
+              },
+              {
+                num: '04', bg: '#fdf1f6', accent: '#c43c75',
                 eyebrow: 'Presentation Design',
                 title: 'Decks that win the room.',
                 body: 'Investor-ready slides built around the story you are telling.',
                 cta: 'View samples',
               },
             ].map(({ num, bg, accent, eyebrow, title, body, cta }) => (
-              <div key={num} style={{ background: bg, borderRadius: 18, padding: '26px 24px 22px', position: 'relative', overflow: 'hidden', color: '#fff' }}>
+              <div key={num} style={{ background: bg, borderRadius: 18, padding: '26px 24px 22px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
                 {/* Oversized faint numeral */}
                 <span aria-hidden style={{
                   position: 'absolute', top: -18, right: -6,
@@ -183,7 +183,7 @@ export function VariantK_HorizontalStrip() {
                   pointerEvents: 'none',
                 }}>{num}</span>
 
-                {/* Eyebrow chip */}
+                {/* Eyebrow with leading rule */}
                 <span style={{
                   display: 'inline-block', fontSize: 10, fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.16em',
@@ -193,10 +193,10 @@ export function VariantK_HorizontalStrip() {
                   {eyebrow}
                 </span>
 
-                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#fff', position: 'relative', zIndex: 1 }}>
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f', position: 'relative', zIndex: 1 }}>
                   {title}
                 </h3>
-                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#b8b8c2', margin: '0 0 18px', position: 'relative', zIndex: 1 }}>
+                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#6e6e73', margin: '0 0 18px', position: 'relative', zIndex: 1 }}>
                   {body}
                 </p>
                 <a href="#" style={{
