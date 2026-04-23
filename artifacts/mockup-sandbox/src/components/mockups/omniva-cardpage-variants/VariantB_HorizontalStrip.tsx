@@ -141,72 +141,99 @@ export function VariantK_HorizontalStrip() {
 
           </div>
 
-          {/* Right sidebar — light editorial cards with oversized numerals */}
+          {/* Right sidebar — light icon-badge cards */}
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
             {[
               {
-                num: '01', bg: '#fff8ec', accent: '#d18a16',
+                bg: '#fff8ec', accent: '#d18a16',
                 eyebrow: 'Local SEO · GBP',
                 title: 'Own the map. Own the moment.',
                 body: 'Rank higher on Google Maps and capture every nearby search.',
                 cta: 'Get a scan',
+                icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                ),
               },
               {
-                num: '02', bg: '#f0fbf6', accent: '#1f9d6a',
+                bg: '#f0fbf6', accent: '#1f9d6a',
                 eyebrow: 'AI Receptionist',
                 title: 'Never miss a call again.',
                 body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
                 cta: 'Hear a demo',
+                icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                ),
               },
               {
-                num: '03', bg: '#eef6ff', accent: '#1f6fd6',
+                bg: '#eef6ff', accent: '#1f6fd6',
                 eyebrow: 'Smart Websites',
                 title: 'Sites that earn their keep.',
                 body: 'Strategy-first design built to turn quiet visitors into paying customers.',
                 cta: 'See the work',
+                icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <polyline points="8 6 3 12 8 18"/>
+                    <polyline points="16 6 21 12 16 18"/>
+                  </svg>
+                ),
               },
               {
-                num: '04', bg: '#fdf1f6', accent: '#c43c75',
+                bg: '#fdf1f6', accent: '#c43c75',
                 eyebrow: 'Presentation Design',
                 title: 'Decks that win the room.',
                 body: 'Investor-ready slides built around the story you are telling.',
                 cta: 'View samples',
+                icon: (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <rect x="3" y="4" width="18" height="13" rx="2"/>
+                    <path d="M8 21l4-4 4 4"/>
+                    <path d="M7 9h6"/>
+                    <path d="M7 12h10"/>
+                  </svg>
+                ),
               },
-            ].map(({ num, bg, accent, eyebrow, title, body, cta }) => (
-              <div key={num} style={{ background: bg, borderRadius: 18, padding: '26px 24px 22px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
-                {/* Oversized faint numeral */}
-                <span aria-hidden style={{
-                  position: 'absolute', top: -18, right: -6,
-                  fontSize: 110, fontWeight: 800, letterSpacing: '-0.06em',
-                  lineHeight: 1, color: 'transparent',
-                  WebkitTextStroke: `1.5px ${accent}40`, fontVariantNumeric: 'tabular-nums',
-                  pointerEvents: 'none',
-                }}>{num}</span>
+            ].map(({ bg, accent, eyebrow, title, body, cta, icon }) => (
+              <div key={eyebrow} style={{ background: bg, borderRadius: 18, padding: '26px 24px 22px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
+                {/* Icon badge + eyebrow */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                  <span style={{
+                    width: 34, height: 34, borderRadius: 10,
+                    background: '#fff', color: accent,
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    boxShadow: `0 1px 0 ${accent}25, inset 0 0 0 1px ${accent}25`,
+                  }}>
+                    {icon}
+                  </span>
+                  <span style={{
+                    fontSize: 10, fontWeight: 700,
+                    textTransform: 'uppercase', letterSpacing: '0.16em',
+                    color: accent,
+                  }}>
+                    {eyebrow}
+                  </span>
+                </div>
 
-                {/* Eyebrow with leading rule */}
-                <span style={{
-                  display: 'inline-block', fontSize: 10, fontWeight: 700,
-                  textTransform: 'uppercase', letterSpacing: '0.16em',
-                  color: accent, marginBottom: 18, position: 'relative', zIndex: 1,
-                }}>
-                  <span style={{ display: 'inline-block', width: 18, height: 1, background: accent, verticalAlign: 'middle', marginRight: 8 }} />
-                  {eyebrow}
-                </span>
-
-                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f', position: 'relative', zIndex: 1 }}>
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f' }}>
                   {title}
                 </h3>
-                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#6e6e73', margin: '0 0 18px', position: 'relative', zIndex: 1 }}>
+                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#6e6e73', margin: '0 0 16px' }}>
                   {body}
                 </p>
-                <a href="#" style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 6,
-                  fontSize: 12, fontWeight: 700, color: accent,
-                  textDecoration: 'none', borderBottom: `1px solid ${accent}`,
-                  paddingBottom: 2, position: 'relative', zIndex: 1,
-                }}>
-                  {cta} <span aria-hidden>→</span>
-                </a>
+
+                {/* Hairline + CTA row */}
+                <div style={{ borderTop: `1px solid ${accent}22`, paddingTop: 12, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <a href="#" style={{
+                    fontSize: 12, fontWeight: 700, color: accent,
+                    textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6,
+                  }}>
+                    {cta} <span aria-hidden>→</span>
+                  </a>
+                </div>
               </div>
             ))}
           </aside>
