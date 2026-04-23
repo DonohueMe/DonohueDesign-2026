@@ -142,84 +142,88 @@ export function VariantK_HorizontalStrip() {
           </div>
 
           {/* Right sidebar — light icon-badge cards */}
-          <aside style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+          <aside style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
             {[
               {
-                bg: '#fff8ec', accent: '#d18a16',
-                eyebrow: 'Local SEO · GBP',
-                title: 'Own the map. Own the moment.',
-                body: 'Rank higher on Google Maps and capture every nearby search.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/>
-                    <circle cx="12" cy="10" r="2.5"/>
-                  </svg>
-                ),
+                gradient: 'linear-gradient(150deg, #f6a3c8 0%, #f4b69b 55%, #f6c89a 100%)',
+                eyebrow: 'AI Voice Assistant',
+                title: ['Every call.', 'Every time.'],
+                body: 'Books jobs while you sleep. Qualifies leads while you work. Closes gaps you didn\u2019t know you had.',
+                cta: 'Hear it live',
+                ctaBg: '#111',
+                ctaColor: '#fff',
               },
               {
-                bg: '#f0fbf6', accent: '#1f9d6a',
+                gradient: 'linear-gradient(160deg, #5fb4ff 0%, #4aa3f5 60%, #4fb6ff 100%)',
                 eyebrow: 'AI Receptionist',
-                title: 'Never miss a call again.',
-                body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                ),
+                title: ['No call.', 'No problem.'],
+                body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
+                cta: 'Try it free',
+                ctaBg: '#fff',
+                ctaColor: '#111',
               },
               {
-                bg: '#eef6ff', accent: '#1f6fd6',
-                eyebrow: 'Smart Websites',
-                title: 'Sites that earn their keep.',
-                body: 'Strategy-first design built to turn quiet visitors into paying customers.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <polyline points="8 6 3 12 8 18"/>
-                    <polyline points="16 6 21 12 16 18"/>
-                  </svg>
-                ),
+                gradient: 'linear-gradient(165deg, #4f8cff 0%, #3da7d4 50%, #4fc8a8 100%)',
+                eyebrow: 'AI Chat Assistant',
+                title: ['Reply now.', 'Win now.'],
+                body: 'Visitors get answers in seconds. You get hot leads in your inbox. Nobody bounces. Nobody waits.',
+                cta: 'Plug it in',
+                ctaBg: '#fff',
+                ctaColor: '#111',
               },
               {
-                bg: '#fdf1f6', accent: '#c43c75',
-                eyebrow: 'Presentation Design',
-                title: 'Decks that win the room.',
-                body: 'Investor-ready slides built around the story you are telling.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <rect x="3" y="4" width="18" height="13" rx="2"/>
-                    <path d="M8 21l4-4 4 4"/>
-                    <path d="M7 9h6"/>
-                    <path d="M7 12h10"/>
-                  </svg>
-                ),
+                gradient: 'linear-gradient(155deg, #8a6df0 0%, #b16cd6 55%, #d27cc6 100%)',
+                eyebrow: 'AI Automation',
+                title: ['Set it.', 'Forget it.', 'Grow.'],
+                body: 'Follow-ups send themselves. Reviews show up on their own. Leads get nurtured while you do the work.',
+                cta: 'Turn it on',
+                ctaBg: '#fff',
+                ctaColor: '#111',
               },
-            ].map(({ bg, accent, eyebrow, title, body, icon }) => (
-              <div key={eyebrow} style={{ background: bg, borderRadius: 18, padding: '26px 24px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
-                {/* Icon badge + eyebrow */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                  <span style={{
-                    width: 34, height: 34, borderRadius: 10,
-                    background: '#fff', color: accent,
-                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: `0 1px 0 ${accent}25, inset 0 0 0 1px ${accent}25`,
-                  }}>
-                    {icon}
-                  </span>
-                  <span style={{
-                    fontSize: 10, fontWeight: 700,
-                    textTransform: 'uppercase', letterSpacing: '0.16em',
-                    color: accent,
-                  }}>
-                    {eyebrow}
-                  </span>
+            ].map(({ gradient, eyebrow, title, body, cta, ctaBg, ctaColor }) => (
+              <div key={eyebrow} style={{
+                background: gradient,
+                borderRadius: 22,
+                padding: '26px 26px 24px',
+                position: 'relative',
+                overflow: 'hidden',
+                color: '#fff',
+                boxShadow: '0 8px 28px rgba(0,0,0,0.10)',
+              }}>
+                <div style={{
+                  fontSize: 10, fontWeight: 700,
+                  textTransform: 'uppercase', letterSpacing: '0.16em',
+                  color: 'rgba(255,255,255,0.85)',
+                  marginBottom: 14,
+                }}>
+                  {eyebrow}
                 </div>
 
-                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f' }}>
-                  {title}
+                <h3 style={{
+                  fontSize: 30, fontWeight: 700, letterSpacing: '-0.035em',
+                  lineHeight: 1.05, margin: '0 0 14px', color: '#fff',
+                }}>
+                  {title.map((line, i) => (
+                    <span key={i} style={{ display: 'block' }}>{line}</span>
+                  ))}
                 </h3>
-                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#6e6e73', margin: 0 }}>
+
+                <p style={{ fontSize: 13.5, lineHeight: 1.5, color: 'rgba(255,255,255,0.92)', margin: '0 0 22px' }}>
                   {body}
                 </p>
+
+                <a href="#" style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                  background: ctaBg, color: ctaColor,
+                  fontSize: 13, fontWeight: 600,
+                  padding: '12px 22px',
+                  borderRadius: 999,
+                  textDecoration: 'none',
+                  width: '100%',
+                  boxSizing: 'border-box',
+                }}>
+                  {cta} <span aria-hidden>→</span>
+                </a>
               </div>
             ))}
           </aside>
