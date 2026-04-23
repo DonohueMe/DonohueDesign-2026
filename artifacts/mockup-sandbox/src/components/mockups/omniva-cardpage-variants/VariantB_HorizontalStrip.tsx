@@ -109,7 +109,7 @@ export function VariantK_HorizontalStrip() {
                 </p>
               </div>
               <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 40 }}>
-                {['Local SEO Services (GMB)', 'Email Marketing Automation', 'AI Receptionist'].map(item => (
+                {['Local SEO Services (GMB)', 'AI Receptionist', 'Email Marketing Automation'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                     <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
                     <span style={{ color: '#000', fontSize: 22 }}>›</span>
