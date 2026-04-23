@@ -51,10 +51,9 @@ const IconWeb = () => (
 );
 const IconMarketing = () => (
   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 13v6l16 6V7L6 13z" />
-    <path d="M6 13H4.5a1.5 1.5 0 0 0 0 3H6" />
-    <path d="M11 20l1.4 4.5a2 2 0 0 0 3.85-1.1L15.6 21" />
-    <path d="M25 13s2 1.2 2 3-2 3-2 3" />
+    <path d="M4 26 L13 17 L18 22 L29 9" />
+    <path d="M22 9 H29 V16" />
+    <path d="M4 29 H30" />
   </svg>
 );
 const IconAI = () => (
@@ -66,9 +65,11 @@ const IconAI = () => (
 );
 const IconDesign = () => (
   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 28l4-1.2 16.5-16.5a2.83 2.83 0 0 0-4-4L5 22.8 4 28z" />
-    <path d="M19 8l4 4" />
-    <path d="M5 22.8L9 26.8" />
+    <path d="M17 4a13 13 0 1 0 0 26c1.7 0 2.8-1.1 2.8-2.5 0-.65-.25-1.25-.7-1.7-.45-.45-.7-1.05-.7-1.7 0-1.4 1.1-2.5 2.5-2.5h2.6A5 5 0 0 0 28.5 16 13 13 0 0 0 17 4z" />
+    <circle cx="10.5" cy="14" r="1.4" />
+    <circle cx="15" cy="9" r="1.4" />
+    <circle cx="21" cy="10" r="1.4" />
+    <circle cx="24.5" cy="15" r="1.4" />
   </svg>
 );
 
