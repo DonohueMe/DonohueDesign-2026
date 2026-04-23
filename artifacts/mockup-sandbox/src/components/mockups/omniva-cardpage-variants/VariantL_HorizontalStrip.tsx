@@ -149,6 +149,12 @@ export function VariantK_HorizontalStrip() {
                 eyebrow: 'Local SEO · GBP',
                 title: ['Own the map.', 'Own the moment.'],
                 body: 'Rank higher on Google Maps and capture every nearby search before your competition does.',
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                ),
               },
               {
                 gradient: '#6ec7ff',
@@ -168,7 +174,7 @@ export function VariantK_HorizontalStrip() {
                 title: ['Decks that', 'win the room.'],
                 body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
               },
-            ].map(({ gradient, eyebrow, title, body }) => (
+            ].map(({ gradient, eyebrow, title, body, icon }: any) => (
               <div key={eyebrow} style={{
                 background: gradient,
                 borderRadius: 22,
@@ -179,12 +185,14 @@ export function VariantK_HorizontalStrip() {
                 boxShadow: '0 8px 28px rgba(0,0,0,0.10)',
               }}>
                 <div style={{
+                  display: 'flex', alignItems: 'center', gap: 8,
                   fontSize: 14, fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.16em',
                   color: 'rgba(255,255,255,0.9)',
                   marginBottom: 14,
                 }}>
-                  {eyebrow}
+                  {icon}
+                  <span>{eyebrow}</span>
                 </div>
 
                 <h3 style={{
