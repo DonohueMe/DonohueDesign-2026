@@ -42,19 +42,16 @@ const timelineSteps = [
 
 const IconWeb = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="5" width="24" height="18" rx="2"/>
-    <path d="M2 10h24"/>
-    <circle cx="6.5" cy="7.5" r="0.8" fill="#1d1d1f"/>
-    <circle cx="10" cy="7.5" r="0.8" fill="#1d1d1f"/>
-    <circle cx="13.5" cy="7.5" r="0.8" fill="#1d1d1f"/>
+    <circle cx="14" cy="14" r="11" />
+    <ellipse cx="14" cy="14" rx="5" ry="11" />
+    <path d="M3 14h22" />
   </svg>
 );
 const IconMarketing = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="17" width="4" height="8" rx="1"/>
-    <rect x="9" y="12" width="4" height="13" rx="1"/>
-    <rect x="15" y="7" width="4" height="18" rx="1"/>
-    <rect x="21" y="3" width="4" height="22" rx="1"/>
+    <path d="M4 11v6l16 6V5L4 11z" />
+    <path d="M4 11H2.5a1.5 1.5 0 0 0 0 3H4" />
+    <path d="M9 18.5l1.2 4a2 2 0 0 0 3.85-1l-.6-2.2" />
   </svg>
 );
 const IconAI = () => (
@@ -66,8 +63,11 @@ const IconAI = () => (
 );
 const IconDesign = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1d1d1f" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 24l4-1 14-14a2.83 2.83 0 00-4-4L4 19l-1 4z"/>
-    <path d="M17 7l4 4"/>
+    <path d="M14 3a11 11 0 1 0 0 22c1.5 0 2.5-1 2.5-2.3 0-.6-.25-1.15-.65-1.55-.4-.4-.65-.95-.65-1.55 0-1.3 1-2.3 2.3-2.3H21A4 4 0 0 0 25 13.4 11 11 0 0 0 14 3z" />
+    <circle cx="8.5" cy="12" r="1.2" fill="#1d1d1f" stroke="none" />
+    <circle cx="13" cy="8" r="1.2" fill="#1d1d1f" stroke="none" />
+    <circle cx="18.5" cy="9.5" r="1.2" fill="#1d1d1f" stroke="none" />
+    <circle cx="21" cy="14.5" r="1.2" fill="#1d1d1f" stroke="none" />
   </svg>
 );
 
