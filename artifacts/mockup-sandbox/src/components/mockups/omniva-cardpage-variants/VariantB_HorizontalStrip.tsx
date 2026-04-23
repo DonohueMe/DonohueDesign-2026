@@ -149,7 +149,6 @@ export function VariantK_HorizontalStrip() {
                 eyebrow: 'Local SEO · GBP',
                 title: 'Own the map. Own the moment.',
                 body: 'Rank higher on Google Maps and capture every nearby search.',
-                cta: 'Get a scan',
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/>
@@ -162,7 +161,6 @@ export function VariantK_HorizontalStrip() {
                 eyebrow: 'AI Receptionist',
                 title: 'Never miss a call again.',
                 body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
-                cta: 'Hear a demo',
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
@@ -174,7 +172,6 @@ export function VariantK_HorizontalStrip() {
                 eyebrow: 'Smart Websites',
                 title: 'Sites that earn their keep.',
                 body: 'Strategy-first design built to turn quiet visitors into paying customers.',
-                cta: 'See the work',
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <polyline points="8 6 3 12 8 18"/>
@@ -187,7 +184,6 @@ export function VariantK_HorizontalStrip() {
                 eyebrow: 'Presentation Design',
                 title: 'Decks that win the room.',
                 body: 'Investor-ready slides built around the story you are telling.',
-                cta: 'View samples',
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <rect x="3" y="4" width="18" height="13" rx="2"/>
@@ -197,8 +193,8 @@ export function VariantK_HorizontalStrip() {
                   </svg>
                 ),
               },
-            ].map(({ bg, accent, eyebrow, title, body, cta, icon }) => (
-              <div key={eyebrow} style={{ background: bg, borderRadius: 18, padding: '26px 24px 22px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
+            ].map(({ bg, accent, eyebrow, title, body, icon }) => (
+              <div key={eyebrow} style={{ background: bg, borderRadius: 18, padding: '26px 24px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
                 {/* Icon badge + eyebrow */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
                   <span style={{
@@ -221,19 +217,9 @@ export function VariantK_HorizontalStrip() {
                 <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f' }}>
                   {title}
                 </h3>
-                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#6e6e73', margin: '0 0 16px' }}>
+                <p style={{ fontSize: 13, lineHeight: 1.55, color: '#6e6e73', margin: 0 }}>
                   {body}
                 </p>
-
-                {/* Hairline + CTA row */}
-                <div style={{ borderTop: `1px solid ${accent}22`, paddingTop: 12, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <a href="#" style={{
-                    fontSize: 12, fontWeight: 700, color: accent,
-                    textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6,
-                  }}>
-                    {cta} <span aria-hidden>→</span>
-                  </a>
-                </div>
               </div>
             ))}
           </aside>
