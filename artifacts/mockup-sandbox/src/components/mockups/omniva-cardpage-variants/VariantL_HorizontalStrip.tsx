@@ -142,7 +142,7 @@ export function VariantK_HorizontalStrip() {
           </div>
 
           {/* Right sidebar — light icon-badge cards */}
-          <aside style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+          <aside style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
             {[
               {
                 gradient: 'linear-gradient(180deg, #2f5fd6 0%, #5b4fd9 100%)',
