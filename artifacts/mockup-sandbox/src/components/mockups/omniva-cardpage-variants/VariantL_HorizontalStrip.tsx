@@ -145,40 +145,28 @@ export function VariantK_HorizontalStrip() {
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
             {[
               {
-                gradient: 'linear-gradient(150deg, #f6a3c8 0%, #f4b69b 55%, #f6c89a 100%)',
+                gradient: 'linear-gradient(155deg, #f5c14a 0%, #ef8a52 55%, #e85a6b 100%)',
                 eyebrow: 'AI Voice Assistant',
                 title: ['Every call.', 'Every time.'],
                 body: 'Books jobs while you sleep. Qualifies leads while you work. Closes gaps you didn\u2019t know you had.',
-                cta: 'Hear it live',
-                ctaBg: '#111',
-                ctaColor: '#fff',
               },
               {
-                gradient: 'linear-gradient(160deg, #5fb4ff 0%, #4aa3f5 60%, #4fb6ff 100%)',
+                gradient: 'linear-gradient(160deg, #6dd6a3 0%, #3fb6a8 55%, #2f8fb8 100%)',
                 eyebrow: 'AI Receptionist',
                 title: ['No call.', 'No problem.'],
                 body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
-                cta: 'Try it free',
-                ctaBg: '#fff',
-                ctaColor: '#111',
               },
               {
-                gradient: 'linear-gradient(165deg, #4f8cff 0%, #3da7d4 50%, #4fc8a8 100%)',
-                eyebrow: 'AI Chat Assistant',
-                title: ['Reply now.', 'Win now.'],
-                body: 'Visitors get answers in seconds. You get hot leads in your inbox. Nobody bounces. Nobody waits.',
-                cta: 'Plug it in',
-                ctaBg: '#fff',
-                ctaColor: '#111',
+                gradient: 'linear-gradient(165deg, #b06bff 0%, #7a5cf0 55%, #4a8bff 100%)',
+                eyebrow: 'Presentation Design',
+                title: ['Decks that', 'win the room.'],
+                body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
               },
               {
-                gradient: 'linear-gradient(155deg, #8a6df0 0%, #b16cd6 55%, #d27cc6 100%)',
+                gradient: 'linear-gradient(155deg, #1f3a5f 0%, #2a5a8a 55%, #3aa3c4 100%)',
                 eyebrow: 'AI Automation',
                 title: ['Set it.', 'Forget it.', 'Grow.'],
                 body: 'Follow-ups send themselves. Reviews show up on their own. Leads get nurtured while you do the work.',
-                cta: 'Turn it on',
-                ctaBg: '#fff',
-                ctaColor: '#111',
               },
             ].map(({ gradient, eyebrow, title, body }) => (
               <div key={eyebrow} style={{
