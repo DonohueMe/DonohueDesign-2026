@@ -215,7 +215,7 @@ export function VariantK_HorizontalStrip() {
 
                 <h3 style={{
                   fontSize: 30, fontWeight: 700, letterSpacing: '-0.035em',
-                  lineHeight: '36.5px', margin: '0 0 14px', color: '#000',
+                  lineHeight: '37.5px', margin: '0 0 14px', color: '#000',
                 }}>
                   {title.map((line, i) => (
                     <span key={i} style={{ display: 'block' }}>{line}</span>
