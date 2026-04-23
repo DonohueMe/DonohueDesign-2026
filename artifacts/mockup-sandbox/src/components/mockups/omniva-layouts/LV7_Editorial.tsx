@@ -136,7 +136,7 @@ export default function LV7_Editorial() {
                 <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 0', lineHeight: 1.1 }}>
                   {h1}
                 </h2>
-                <p style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: 700, margin: '2px 0 180px', lineHeight: 1.15, ...(GRAD_WARM as any) }}>
+                <p style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: 700, margin: '2px 0 12px', lineHeight: 1.15, ...(GRAD_WARM as any) }}>
                   Strategy-Driven Design That Works
                 </p>
                 {BIO.map((para, pi) => (
