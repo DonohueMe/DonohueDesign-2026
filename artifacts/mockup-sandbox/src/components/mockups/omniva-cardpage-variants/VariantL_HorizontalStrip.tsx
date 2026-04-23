@@ -163,7 +163,10 @@ export function VariantK_HorizontalStrip() {
                 body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
                 icon: (
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" />
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    <circle cx="8.5" cy="10" r="0.6" fill="#fff" stroke="none" />
+                    <circle cx="12" cy="10" r="0.6" fill="#fff" stroke="none" />
+                    <circle cx="15.5" cy="10" r="0.6" fill="#fff" stroke="none" />
                   </svg>
                 ),
               },
@@ -174,8 +177,7 @@ export function VariantK_HorizontalStrip() {
                 body: 'Strategy-first design built to turn quiet visitors into paying customers — not just pretty pixels.',
                 icon: (
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <rect x="2" y="3" width="20" height="14" rx="2" />
-                    <path d="M8 21h8M12 17v4" />
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                   </svg>
                 ),
               },
@@ -186,8 +188,7 @@ export function VariantK_HorizontalStrip() {
                 body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
                 icon: (
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <rect x="3" y="3" width="18" height="14" rx="2" />
-                    <path d="M7 13l3-3 3 3 4-5M3 21h18" />
+                    <path d="M2 3h20M4 3v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3M9 21l3-4 3 4" />
                   </svg>
                 ),
               },
