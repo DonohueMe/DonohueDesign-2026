@@ -17,7 +17,7 @@ const ICON_PALETTE = (
 
 function IconBadge({ tint, children }: { tint: string; children: React.ReactNode }) {
   return (
-    <div style={{ width: 28, height: 28, borderRadius: 8, background: tint, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: `0 4px 12px ${tint}55` }}>
+    <div style={{ width: 28, height: 28, borderRadius: 8, background: tint, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
       {children}
     </div>
   );
