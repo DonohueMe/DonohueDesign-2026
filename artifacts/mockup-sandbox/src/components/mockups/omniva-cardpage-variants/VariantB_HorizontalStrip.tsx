@@ -69,6 +69,38 @@ export function VariantB_HorizontalStrip() {
         </div>
       </section>
 
+      {/* AI Tools sidebar section */}
+      <section style={{ padding: '40px 20px 60px', background: '#fff' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 28, flexWrap: 'wrap', gap: 12 }}>
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#2997ff', margin: '0 0 8px' }}>AI Tools</p>
+              <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.025em', color: '#000', margin: 0, lineHeight: 1.1 }}>Smart automations that work the night shift.</h2>
+            </div>
+            <a href="#" style={{ fontSize: 14, fontWeight: 600, color: '#2997ff', textDecoration: 'none' }}>See all tools  →</a>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+            {[
+              { num: '01', accent: '#ec5b8e', eyebrow: 'AI Voice Assistant', title: 'Every call. Every time.', body: 'Books jobs while you sleep. Qualifies leads while you work. Closes gaps you didn\u2019t know you had.', cta: 'Hear it live' },
+              { num: '02', accent: '#2997ff', eyebrow: 'AI Receptionist',     title: 'No call. No problem.',     body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',           cta: 'Try it free' },
+              { num: '03', accent: '#34c759', eyebrow: 'AI Chat Assistant',   title: 'Reply now. Win now.',      body: 'Visitors get answers in seconds. You get hot leads in your inbox. Nobody bounces. Nobody waits.',     cta: 'Plug it in' },
+              { num: '04', accent: '#a78bfa', eyebrow: 'AI Automation',       title: 'Set it. Forget it. Grow.', body: 'Follow-ups send themselves. Reviews show up on their own. Leads get nurtured while you do the work.',cta: 'Turn it on' },
+            ].map(({ num, accent, eyebrow, title, body, cta }) => (
+              <div key={num} style={{ background: '#fff', borderRadius: 16, padding: '22px 22px 20px 26px', border: '1px solid #e5e5ea', display: 'flex', flexDirection: 'column', gap: 12, position: 'relative', overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.03)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: 4, height: '100%', background: accent }} />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <p style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: accent, margin: 0 }}>{eyebrow}</p>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: '#9c9ca1', fontVariantNumeric: 'tabular-nums' }}>{num}</span>
+                </div>
+                <h3 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.02em', color: '#000', margin: 0, lineHeight: 1.15 }}>{title}</h3>
+                <p style={{ fontSize: 13, color: '#6e6e73', margin: 0, lineHeight: 1.55, flex: 1 }}>{body}</p>
+                <a href="#" style={{ fontSize: 13, fontWeight: 600, color: '#000', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 4 }}>{cta} <span style={{ color: accent }}>→</span></a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Layout B service tiles + reviews/map combo on grey ── */}
       <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 48 }}>
