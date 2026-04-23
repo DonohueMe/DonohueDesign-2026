@@ -70,7 +70,7 @@ export function VariantK_HorizontalStrip() {
       </section>
 
       {/* ── Layout B service tiles + right-side fun sticker sidebar ── */}
-      <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
+      <div style={{ background: '#fff', padding: '60px 20px 60px 70px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 300px', gap: 24, alignItems: 'start' }}>
 
           {/* Left column: 3 service tiles */}
