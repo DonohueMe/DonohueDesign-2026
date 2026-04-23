@@ -145,25 +145,25 @@ export function VariantK_HorizontalStrip() {
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
             {[
               {
-                gradient: 'linear-gradient(160deg, #86d4ff 0%, #58aeff 100%)',
+                gradient: '#2997ff',
                 eyebrow: 'Local SEO · GBP',
                 title: ['Own the map.', 'Own the moment.'],
                 body: 'Rank higher on Google Maps and capture every nearby search before your competition does.',
               },
               {
-                gradient: 'linear-gradient(160deg, #86d4ff 0%, #58aeff 100%)',
+                gradient: '#2997ff',
                 eyebrow: 'AI Receptionist',
                 title: ['No call.', 'No problem.'],
                 body: 'Answers in one ring. Books on the spot. Texts a confirmation before you finish your coffee.',
               },
               {
-                gradient: 'linear-gradient(160deg, #86d4ff 0%, #58aeff 100%)',
+                gradient: '#2997ff',
                 eyebrow: 'Smart Websites',
                 title: ['Sites that', 'earn their keep.'],
                 body: 'Strategy-first design built to turn quiet visitors into paying customers — not just pretty pixels.',
               },
               {
-                gradient: 'linear-gradient(160deg, #86d4ff 0%, #58aeff 100%)',
+                gradient: '#2997ff',
                 eyebrow: 'Presentation Design',
                 title: ['Decks that', 'win the room.'],
                 body: 'Investor-ready slides built around the story you are telling — designed to land the meeting and close it.',
