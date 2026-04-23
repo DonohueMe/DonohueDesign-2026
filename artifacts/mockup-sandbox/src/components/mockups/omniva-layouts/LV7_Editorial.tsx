@@ -140,7 +140,7 @@ export default function LV7_Editorial() {
                   Strategy-Driven Design That Works
                 </p>
                 {BIO.map((para, pi) => (
-                  <p key={pi} style={{ fontSize: 18, lineHeight: 1.75, margin: '0 0 12px', color: '#3d3d3f', ...(pi === 0 ? { fontWeight: 600, color: '#1d1d1f' } : {}) }}>
+                  <p key={pi} style={{ fontSize: 18, lineHeight: 1.75, margin: pi === 0 ? '0 0 22px' : '0 0 12px', color: '#3d3d3f', fontWeight: 400 }}>
                     {para}
                   </p>
                 ))}
