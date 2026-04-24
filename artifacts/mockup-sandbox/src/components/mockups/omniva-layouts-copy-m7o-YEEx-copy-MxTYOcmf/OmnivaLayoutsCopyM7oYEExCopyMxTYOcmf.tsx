@@ -168,24 +168,6 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
           />
         </svg>
 
-        {/* Gaussian noise overlay — preserves colors, adds film grain texture */}
-        <div aria-hidden style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN_GREY_URL,
-          backgroundSize: '260px 260px',
-          opacity: 0.85,
-          mixBlendMode: 'overlay',
-          pointerEvents: 'none',
-        }} />
-        <div aria-hidden style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN_GREY_URL,
-          backgroundSize: '160px 160px',
-          opacity: 0.55,
-          mixBlendMode: 'overlay',
-          pointerEvents: 'none',
-        }} />
-
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 1100, margin: '0 auto', width: '100%' }}>
           <h1 style={{ fontSize: 'clamp(48px, 7.4vw, 84px)', fontWeight: 800, letterSpacing: '-0.045em', lineHeight: 1.0, color: '#ffffff', margin: '0 0 18px' }}>
             Plug and stay.
