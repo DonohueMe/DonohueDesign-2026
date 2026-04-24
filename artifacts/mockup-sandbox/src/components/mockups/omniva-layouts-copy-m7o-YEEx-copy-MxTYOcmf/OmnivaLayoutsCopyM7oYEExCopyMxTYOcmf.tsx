@@ -155,11 +155,11 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
             fill="#3a1f5c"
             opacity="0.85"
           />
-          {/* Mid wave — exaggerated crest and dip for stronger sine rhythm */}
+          {/* Mid wave — distinctly brighter purple, exaggerated crest and dip */}
           <path
             d="M0,200 C200,-40 520,400 800,180 C1080,-40 1280,380 1440,170 L1440,400 L0,400 Z"
-            fill="#301850"
-            opacity="0.95"
+            fill="#6b3aa0"
+            opacity="1"
           />
           {/* Front wave — even bigger, deeper crest with a strong rising shoulder on the right */}
           <path
