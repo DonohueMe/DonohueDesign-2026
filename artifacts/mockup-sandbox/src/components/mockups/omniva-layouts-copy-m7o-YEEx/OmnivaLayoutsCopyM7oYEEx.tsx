@@ -47,9 +47,8 @@ const GRAIN_URL = `url("data:image/svg+xml;utf8,${GRAIN_SVG}")`;
 const GRAIN_GREY_SVG = encodeURIComponent(
   `<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'>
     <filter id='g'>
-      <feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/>
+      <feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/>
       <feColorMatrix type='matrix' values='0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0'/>
-      <feComponentTransfer><feFuncA type='linear' slope='1.6' intercept='-0.3'/></feComponentTransfer>
     </filter>
     <rect width='100%' height='100%' filter='url(#g)'/>
   </svg>`
@@ -176,7 +175,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_GREY_URL,
           backgroundSize: '280px 280px',
-          opacity: 1,
+          opacity: 0.95,
           mixBlendMode: 'overlay',
           pointerEvents: 'none',
         }} />
@@ -184,23 +183,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_GREY_URL,
           backgroundSize: '160px 160px',
-          opacity: 1,
-          mixBlendMode: 'overlay',
-          pointerEvents: 'none',
-        }} />
-        <div aria-hidden style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN_GREY_URL,
-          backgroundSize: '220px 220px',
-          opacity: 1,
-          mixBlendMode: 'hard-light',
-          pointerEvents: 'none',
-        }} />
-        <div aria-hidden style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN_GREY_URL,
-          backgroundSize: '120px 120px',
-          opacity: 0.85,
+          opacity: 0.7,
           mixBlendMode: 'overlay',
           pointerEvents: 'none',
         }} />
