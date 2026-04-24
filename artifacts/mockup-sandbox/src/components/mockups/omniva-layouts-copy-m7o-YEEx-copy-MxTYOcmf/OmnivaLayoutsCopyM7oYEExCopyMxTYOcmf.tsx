@@ -142,23 +142,34 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
         overflow: 'hidden',
         background: 'radial-gradient(ellipse 70% 60% at 50% 18%, #4a2670 0%, #2c1548 35%, #1a0a30 70%, #110621 100%)',
       }}>
-        {/* Wave hills layer — two soft purple hills at the bottom */}
+        {/* Wave hills layer — multiple soft curvy purple waves stacked at the bottom */}
         <svg
           aria-hidden
           viewBox="0 0 1440 400"
           preserveAspectRatio="none"
-          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '55%', pointerEvents: 'none' }}
+          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '70%', pointerEvents: 'none' }}
         >
-          {/* Back hill — mid purple, gentler curve */}
+          {/* Wave 1 — farthest back, wide gentle curve, lighter purple */}
           <path
-            d="M0,210 C220,150 460,260 720,225 C980,190 1220,250 1440,200 L1440,400 L0,400 Z"
-            fill="#3a1f5c"
+            d="M0,180 C160,90 360,260 600,170 C840,80 1080,250 1440,150 L1440,400 L0,400 Z"
+            fill="#5a3380"
+            opacity="0.55"
+          />
+          {/* Wave 2 — mid back, more dramatic dip-and-rise */}
+          <path
+            d="M0,240 C180,140 380,310 640,210 C900,110 1140,290 1440,200 L1440,400 L0,400 Z"
+            fill="#46286a"
             opacity="0.85"
           />
-          {/* Front hill — darker purple, lower-right rise */}
+          {/* Wave 3 — mid front, deeper curves */}
           <path
-            d="M0,310 C260,280 520,340 800,300 C1060,265 1240,330 1440,290 L1440,400 L0,400 Z"
-            fill="#26123e"
+            d="M0,300 C200,220 420,360 700,260 C980,160 1200,340 1440,270 L1440,400 L0,400 Z"
+            fill="#321852"
+          />
+          {/* Wave 4 — front, darkest, exaggerated rolling crest */}
+          <path
+            d="M0,350 C240,270 500,400 800,310 C1080,230 1280,370 1440,320 L1440,400 L0,400 Z"
+            fill="#1f0e36"
           />
         </svg>
 
