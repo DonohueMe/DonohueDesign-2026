@@ -166,7 +166,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_URL,
           backgroundSize: '180px 180px',
-          opacity: 0.45,
+          opacity: 0.55,
           mixBlendMode: 'screen',
           pointerEvents: 'none',
         }} />
@@ -175,7 +175,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_GREY_URL,
           backgroundSize: '280px 280px',
-          opacity: 0.95,
+          opacity: 1,
           mixBlendMode: 'overlay',
           pointerEvents: 'none',
         }} />
@@ -183,7 +183,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_GREY_URL,
           backgroundSize: '160px 160px',
-          opacity: 0.7,
+          opacity: 0.85,
           mixBlendMode: 'overlay',
           pointerEvents: 'none',
         }} />
