@@ -137,7 +137,7 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
       <section style={{
         position: 'relative',
         height: 600,
-        padding: '90px 48px 40px',
+        padding: '230px 48px 40px',
         display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', textAlign: 'center',
         overflow: 'hidden',
         background: 'radial-gradient(ellipse 70% 60% at 50% 18%, #4a2670 0%, #2c1548 35%, #1a0a30 70%, #110621 100%)',
