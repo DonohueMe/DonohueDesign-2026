@@ -18,16 +18,30 @@ const C = {
 };
 
 const HERO_BG = [
-  /* orange orb — left side, floating mid-frame */
-  'radial-gradient(ellipse 42% 58% at 10% 38%, rgba(242,105,0,0.95) 0%, rgba(180,55,0,0.35) 52%, transparent 75%)',
-  /* hot pink/magenta orb — center */
-  'radial-gradient(ellipse 40% 54% at 50% 32%, rgba(218,65,158,0.98) 0%, rgba(170,38,120,0.30) 52%, transparent 76%)',
+  /* warm orange/amber orb — left side */
+  'radial-gradient(ellipse 38% 70% at 8% 35%, rgba(255,150,30,0.95) 0%, rgba(220,90,10,0.45) 38%, transparent 70%)',
+  /* soft yellow-green hint — top center-left */
+  'radial-gradient(ellipse 22% 30% at 38% 8%, rgba(210,205,90,0.55) 0%, transparent 70%)',
+  /* large pink/magenta orb — center, soft and bloomy */
+  'radial-gradient(ellipse 46% 70% at 48% 38%, rgba(255,170,210,0.98) 0%, rgba(230,70,160,0.55) 28%, rgba(170,30,110,0.20) 55%, transparent 78%)',
   /* electric blue orb — right */
-  'radial-gradient(ellipse 38% 52% at 86% 30%, rgba(22,42,215,0.95) 0%, rgba(14,26,170,0.30) 52%, transparent 75%)',
-  /* teal hint — far upper-right */
-  'radial-gradient(ellipse 16% 22% at 100% 18%, rgba(30,185,152,0.70) 0%, transparent 68%)',
-  '#050505',
+  'radial-gradient(ellipse 36% 60% at 88% 32%, rgba(40,90,235,0.95) 0%, rgba(20,40,180,0.40) 42%, transparent 75%)',
+  /* pale blue highlight — far top-right */
+  'radial-gradient(ellipse 14% 18% at 100% 12%, rgba(180,210,250,0.75) 0%, transparent 70%)',
+  '#0a0a0a',
 ].join(',');
+
+/* Inline SVG film grain — heavy, monochrome, blended for noise texture */
+const GRAIN_SVG = encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'>
+    <filter id='n'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/>
+      <feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/>
+    </filter>
+    <rect width='100%' height='100%' filter='url(#n)'/>
+  </svg>`
+);
+const GRAIN_URL = `url("data:image/svg+xml;utf8,${GRAIN_SVG}")`;
 
 
 const BrandLogo = () => (
@@ -108,18 +122,45 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
         </div>
       </nav>
 
-      {/* Hero — untouched */}
-      <section style={{ minHeight: 340, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
-        <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.50)', margin: '0 0 14px' }}>Santa Rosa, CA</p>
-        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.0, color: '#ffffff', margin: '0 0 18px' }}>
-          Plug and stay.
-        </h1>
-        <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.60)', maxWidth: 380, lineHeight: 1.55, margin: '0 0 28px' }}>
-          Strategy-first web design and digital marketing for Santa Rosa businesses.
-        </p>
-        <button style={{ background: '#ffffff', color: '#0a0a0a', border: 'none', borderRadius: 980, padding: '13px 26px', fontSize: 15, fontWeight: 700, fontFamily: SF, cursor: 'pointer' }}>
-          Start a project
-        </button>
+      {/* Hero — bloomy color blobs + heavy film grain (screenshot match) */}
+      <section style={{ position: 'relative', minHeight: 460, background: HERO_BG, padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden' }}>
+        {/* Grain overlay — sits above color, below text */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN_URL,
+          backgroundSize: '320px 320px',
+          opacity: 0.85,
+          mixBlendMode: 'overlay',
+          pointerEvents: 'none',
+        }} />
+        {/* Second pass — soft luminance grain to add bite in dark areas */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN_URL,
+          backgroundSize: '320px 320px',
+          opacity: 0.35,
+          mixBlendMode: 'soft-light',
+          pointerEvents: 'none',
+        }} />
+        {/* Subtle bottom darkening for text legibility */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.35) 100%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1100, margin: '0 auto', width: '100%' }}>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', margin: '0 0 14px' }}>Santa Rosa, CA</p>
+          <h1 style={{ fontSize: 'clamp(48px, 7.4vw, 84px)', fontWeight: 800, letterSpacing: '-0.045em', lineHeight: 1.0, color: '#ffffff', margin: '0 0 18px', maxWidth: 760 }}>
+            Plug and stay.
+          </h1>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.85)', maxWidth: 460, lineHeight: 1.5, margin: '0 0 28px' }}>
+            Strategy-first web design and digital marketing for Santa Rosa businesses.
+          </p>
+          <button style={{ background: '#ffffff', color: '#0a0a0a', border: 'none', borderRadius: 980, padding: '13px 26px', fontSize: 15, fontWeight: 700, fontFamily: SF, cursor: 'pointer' }}>
+            Start a project
+          </button>
+        </div>
       </section>
 
       {/* Body — eggshell outer, white inner panels */}
