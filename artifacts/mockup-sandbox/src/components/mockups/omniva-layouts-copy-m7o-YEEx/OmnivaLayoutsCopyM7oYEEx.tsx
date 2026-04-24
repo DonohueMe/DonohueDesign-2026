@@ -123,7 +123,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
       </nav>
 
       {/* Hero — bloomy color blobs + heavy film grain (screenshot match) */}
-      <section style={{ position: 'relative', height: 600, background: HERO_BG, padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden' }}>
+      <section style={{ position: 'relative', height: 600, background: HERO_BG, padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', overflow: 'hidden' }}>
         {/* Grain overlay — sits above color, below text */}
         <div aria-hidden style={{
           position: 'absolute', inset: 0,
@@ -150,16 +150,12 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
         }} />
 
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 1100, margin: '0 auto', width: '100%' }}>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', margin: '0 0 14px' }}>Santa Rosa, CA</p>
-          <h1 style={{ fontSize: 'clamp(48px, 7.4vw, 84px)', fontWeight: 800, letterSpacing: '-0.045em', lineHeight: 1.0, color: '#ffffff', margin: '0 0 18px', maxWidth: 760 }}>
+          <h1 style={{ fontSize: 'clamp(48px, 7.4vw, 84px)', fontWeight: 800, letterSpacing: '-0.045em', lineHeight: 1.0, color: '#ffffff', margin: '0 0 18px' }}>
             Plug and stay.
           </h1>
-          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.85)', maxWidth: 460, lineHeight: 1.5, margin: '0 0 28px' }}>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.85)', maxWidth: 460, lineHeight: 1.5, margin: '0 auto' }}>
             Strategy-first web design and digital marketing for Santa Rosa businesses.
           </p>
-          <button style={{ background: '#ffffff', color: '#0a0a0a', border: 'none', borderRadius: 980, padding: '13px 26px', fontSize: 15, fontWeight: 700, fontFamily: SF, cursor: 'pointer' }}>
-            Start a project
-          </button>
         </div>
       </section>
 
