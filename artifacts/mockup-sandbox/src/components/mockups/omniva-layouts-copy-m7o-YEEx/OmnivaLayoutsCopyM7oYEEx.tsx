@@ -158,6 +158,15 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           mixBlendMode: 'screen',
           pointerEvents: 'none',
         }} />
+        {/* Fourth pass — extra fine speckle for added density */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN_URL,
+          backgroundSize: '140px 140px',
+          opacity: 0.55,
+          mixBlendMode: 'overlay',
+          pointerEvents: 'none',
+        }} />
         {/* Subtle bottom darkening for text legibility */}
         <div aria-hidden style={{
           position: 'absolute', inset: 0,
