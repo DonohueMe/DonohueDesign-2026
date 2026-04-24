@@ -195,24 +195,24 @@ export function VariantK_HorizontalStrip() {
                   </svg>
                 ),
               },
-            ].map(({ gradient, eyebrow, title, body, icon }: any) => (
+            ].map(({ eyebrow, title, body, icon }: any) => (
               <div key={eyebrow} style={{
-                background: gradient,
+                background: '#fff',
+                border: '1px solid #d2d2d7',
                 borderRadius: 22,
                 padding: '26px 26px 28px',
                 position: 'relative',
                 overflow: 'hidden',
-                color: '#fff',
-                boxShadow: '0 8px 28px rgba(0,0,0,0.10)',
+                color: '#1d1d1f',
               }}>
                 <div style={{
                   display: 'flex', alignItems: 'center', gap: 8,
                   fontSize: 14, fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.16em',
-                  color: 'rgba(255,255,255,0.9)',
+                  color: '#6e6e73',
                   marginBottom: 14,
                 }}>
-                  {icon}
+                  {React.cloneElement(icon, { stroke: '#1d1d1f' })}
                   <span>{eyebrow}</span>
                 </div>
 
@@ -225,7 +225,7 @@ export function VariantK_HorizontalStrip() {
                   ))}
                 </h3>
 
-                <p style={{ fontSize: 17.5, lineHeight: '25.25px', color: 'rgba(255,255,255,0.95)', margin: 0 }}>
+                <p style={{ fontSize: 17.5, lineHeight: '25.25px', color: '#6e6e73', margin: 0 }}>
                   {body}
                 </p>
               </div>
