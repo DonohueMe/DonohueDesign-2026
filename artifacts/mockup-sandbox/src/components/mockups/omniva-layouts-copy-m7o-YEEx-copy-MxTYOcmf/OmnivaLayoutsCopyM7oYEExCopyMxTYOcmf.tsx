@@ -155,6 +155,12 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
             fill="#3a1f5c"
             opacity="0.85"
           />
+          {/* Mid wave — offset crest, slightly different rhythm */}
+          <path
+            d="M0,200 C220,60 520,360 800,180 C1080,40 1280,300 1440,180 L1440,400 L0,400 Z"
+            fill="#301850"
+            opacity="0.95"
+          />
           {/* Front wave — even bigger, deeper crest with a strong rising shoulder on the right */}
           <path
             d="M0,260 C280,120 600,400 920,220 C1180,80 1320,360 1440,240 L1440,400 L0,400 Z"
