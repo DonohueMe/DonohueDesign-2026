@@ -147,7 +147,7 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
           aria-hidden
           viewBox="0 0 1440 400"
           preserveAspectRatio="none"
-          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '85%', pointerEvents: 'none' }}
+          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '45%', pointerEvents: 'none' }}
         >
           {/* Back wave — big sweeping crest rising from the left */}
           <path
@@ -155,9 +155,9 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
             fill="#3a1f5c"
             opacity="0.85"
           />
-          {/* Mid wave — offset crest, slightly different rhythm */}
+          {/* Mid wave — exaggerated crest and dip for stronger sine rhythm */}
           <path
-            d="M0,200 C220,60 520,360 800,180 C1080,40 1280,300 1440,180 L1440,400 L0,400 Z"
+            d="M0,200 C200,-40 520,400 800,180 C1080,-40 1280,380 1440,170 L1440,400 L0,400 Z"
             fill="#301850"
             opacity="0.95"
           />
