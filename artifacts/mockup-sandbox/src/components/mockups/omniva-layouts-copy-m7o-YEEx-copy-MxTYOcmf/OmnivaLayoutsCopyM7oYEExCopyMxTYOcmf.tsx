@@ -147,7 +147,7 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
           aria-hidden
           viewBox="0 0 1440 400"
           preserveAspectRatio="none"
-          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '45%', pointerEvents: 'none' }}
+          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '45%', pointerEvents: 'none', transform: 'translateY(100px)' }}
         >
           {/* Back wave — big sweeping crest rising from the left */}
           <path
