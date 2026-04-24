@@ -142,34 +142,23 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
         overflow: 'hidden',
         background: 'radial-gradient(ellipse 70% 60% at 50% 18%, #4a2670 0%, #2c1548 35%, #1a0a30 70%, #110621 100%)',
       }}>
-        {/* Wave hills layer — multiple soft curvy purple waves stacked at the bottom */}
+        {/* Wave hills layer — two large, dramatic curvy purple waves */}
         <svg
           aria-hidden
           viewBox="0 0 1440 400"
           preserveAspectRatio="none"
-          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '70%', pointerEvents: 'none' }}
+          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '85%', pointerEvents: 'none' }}
         >
-          {/* Wave 1 — farthest back, wide gentle curve, lighter purple */}
+          {/* Back wave — big sweeping crest rising from the left */}
           <path
-            d="M0,180 C160,90 360,260 600,170 C840,80 1080,250 1440,150 L1440,400 L0,400 Z"
-            fill="#5a3380"
-            opacity="0.55"
-          />
-          {/* Wave 2 — mid back, more dramatic dip-and-rise */}
-          <path
-            d="M0,240 C180,140 380,310 640,210 C900,110 1140,290 1440,200 L1440,400 L0,400 Z"
-            fill="#46286a"
+            d="M0,120 C260,-20 520,300 820,140 C1120,-20 1300,260 1440,120 L1440,400 L0,400 Z"
+            fill="#3a1f5c"
             opacity="0.85"
           />
-          {/* Wave 3 — mid front, deeper curves */}
+          {/* Front wave — even bigger, deeper crest with a strong rising shoulder on the right */}
           <path
-            d="M0,300 C200,220 420,360 700,260 C980,160 1200,340 1440,270 L1440,400 L0,400 Z"
-            fill="#321852"
-          />
-          {/* Wave 4 — front, darkest, exaggerated rolling crest */}
-          <path
-            d="M0,350 C240,270 500,400 800,310 C1080,230 1280,370 1440,320 L1440,400 L0,400 Z"
-            fill="#1f0e36"
+            d="M0,260 C280,120 600,400 920,220 C1180,80 1320,360 1440,240 L1440,400 L0,400 Z"
+            fill="#26123e"
           />
         </svg>
 
