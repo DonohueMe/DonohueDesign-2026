@@ -123,23 +123,39 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
       </nav>
 
       {/* Hero — bloomy color blobs + heavy film grain (screenshot match) */}
-      <section style={{ position: 'relative', height: 600, background: HERO_BG, padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', overflow: 'hidden' }}>
-        {/* Grain overlay — sits above color, below text */}
+      <section style={{ position: 'relative', height: 600, background: '#0a0a0a', padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', overflow: 'hidden' }}>
+        {/* Color blob layer — heavily gaussian-blurred for soft spot-light bloom */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: '-15%',
+          background: HERO_BG,
+          filter: 'blur(70px)',
+          pointerEvents: 'none',
+        }} />
+        {/* Grain overlay — primary, heavy */}
         <div aria-hidden style={{
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_URL,
-          backgroundSize: '320px 320px',
-          opacity: 0.85,
+          backgroundSize: '260px 260px',
+          opacity: 1,
           mixBlendMode: 'overlay',
           pointerEvents: 'none',
         }} />
-        {/* Second pass — soft luminance grain to add bite in dark areas */}
+        {/* Second pass — luminance grain for bite in dark areas */}
         <div aria-hidden style={{
           position: 'absolute', inset: 0,
           backgroundImage: GRAIN_URL,
-          backgroundSize: '320px 320px',
-          opacity: 0.35,
+          backgroundSize: '260px 260px',
+          opacity: 0.7,
           mixBlendMode: 'soft-light',
+          pointerEvents: 'none',
+        }} />
+        {/* Third pass — additive noise speckle on top */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN_URL,
+          backgroundSize: '180px 180px',
+          opacity: 0.45,
+          mixBlendMode: 'screen',
           pointerEvents: 'none',
         }} />
         {/* Subtle bottom darkening for text legibility */}
