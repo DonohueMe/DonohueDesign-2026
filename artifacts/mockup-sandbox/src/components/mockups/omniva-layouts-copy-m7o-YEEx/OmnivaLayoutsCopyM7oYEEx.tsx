@@ -43,6 +43,18 @@ const GRAIN_SVG = encodeURIComponent(
 );
 const GRAIN_URL = `url("data:image/svg+xml;utf8,${GRAIN_SVG}")`;
 
+/* Mid-grey noise (centered ~127) — kept neutral so overlay blend doesn't shift colors */
+const GRAIN_GREY_SVG = encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'>
+    <filter id='g'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/>
+      <feColorMatrix type='matrix' values='0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0'/>
+    </filter>
+    <rect width='100%' height='100%' filter='url(#g)'/>
+  </svg>`
+);
+const GRAIN_GREY_URL = `url("data:image/svg+xml;utf8,${GRAIN_GREY_SVG}")`;
+
 
 const BrandLogo = () => (
   <div style={{ display: 'flex', alignItems: 'stretch', borderRadius: 4, overflow: 'hidden', height: 28 }}>
@@ -156,6 +168,23 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
           backgroundSize: '180px 180px',
           opacity: 0.45,
           mixBlendMode: 'screen',
+          pointerEvents: 'none',
+        }} />
+        {/* Aggressive neutral-grey grain — heavy texture, color-preserving */}
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN_GREY_URL,
+          backgroundSize: '280px 280px',
+          opacity: 0.95,
+          mixBlendMode: 'overlay',
+          pointerEvents: 'none',
+        }} />
+        <div aria-hidden style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN_GREY_URL,
+          backgroundSize: '160px 160px',
+          opacity: 0.7,
+          mixBlendMode: 'overlay',
           pointerEvents: 'none',
         }} />
         {/* Subtle bottom darkening for text legibility */}
