@@ -123,7 +123,7 @@ export default function OmnivaLayoutsCopyM7oYEEx() {
       </nav>
 
       {/* Hero — bloomy color blobs + heavy film grain (screenshot match) */}
-      <section style={{ position: 'relative', minHeight: 460, background: HERO_BG, padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden' }}>
+      <section style={{ position: 'relative', height: 600, background: HERO_BG, padding: '90px 48px 40px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', overflow: 'hidden' }}>
         {/* Grain overlay — sits above color, below text */}
         <div aria-hidden style={{
           position: 'absolute', inset: 0,
