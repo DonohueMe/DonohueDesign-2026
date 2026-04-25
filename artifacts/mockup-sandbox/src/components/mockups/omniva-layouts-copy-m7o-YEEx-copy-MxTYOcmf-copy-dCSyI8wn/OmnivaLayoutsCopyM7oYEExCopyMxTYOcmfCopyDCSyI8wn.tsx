@@ -20,7 +20,7 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmfCopyDCSyI8wn() {
           aria-hidden
           viewBox="0 0 1440 400"
           preserveAspectRatio="none"
-          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '45%', pointerEvents: 'none', transform: 'rotate(20deg)', transformOrigin: 'center bottom' }}
+          style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '45%', pointerEvents: 'none', transform: 'rotate(-20deg)', transformOrigin: 'center bottom' }}
         >
           <path
             d="M0,120 C260,-20 520,300 820,140 C1120,-20 1300,260 1440,120 L1440,400 L0,400 Z"
