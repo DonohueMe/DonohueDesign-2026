@@ -101,7 +101,7 @@ export default function OmnivaLayoutsCopyLlhliO4x() {
       {/* Hero */}
       <section style={{ height: 600, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
         <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.5, color: '#1d1d1f', margin: '0 0 18px' }}>
-          Websites that hustle.<br />Even when you don't.
+          Websites that hustle.<br />AI that never sleeps.
         </h1>
       </section>
 
