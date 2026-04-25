@@ -59,10 +59,10 @@ export function VariantK_HorizontalStrip() {
           <h1 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '50px 0 24px' }}>
             Website Designer, Santa Rosa, CA
           </h1>
-          <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
+          <p style={{ fontSize: 18, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
             Most website designers jump straight into building. I start with strategy. Before I open a design tool, I want to know who your customers are and what you need them to do.
           </p>
-          <p style={{ fontSize: 17, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
+          <p style={{ fontSize: 18, color: '#3d3d3f', lineHeight: 1.65, margin: 0 }}>
             Jim Donohue. 20+ years. Senior Product Designer at Wells Fargo and Deloitte. 15% lift in subscriptions. 22% jump in engagement. Design systems used across 90+ apps.
           </p>
         </div>
