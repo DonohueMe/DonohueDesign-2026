@@ -23,10 +23,9 @@ function IconBadge({ tint, children }: { tint: string; children: React.ReactNode
   );
 }
 
-function TileHeader({ tint, icon, label, labelColor }: { tint: string; icon: React.ReactNode; label: string; labelColor?: string }) {
+function TileHeader({ tint, label, labelColor }: { tint: string; icon?: React.ReactNode; label: string; labelColor?: string }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-      <IconBadge tint={tint}>{icon}</IconBadge>
       <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: labelColor ?? tint, margin: 0 }}>{label}</p>
     </div>
   );
