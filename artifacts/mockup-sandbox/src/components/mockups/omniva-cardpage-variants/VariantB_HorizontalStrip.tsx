@@ -89,7 +89,7 @@ export function VariantK_HorizontalStrip() {
               <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 40 }}>
                 {['Website Design & Strategy', 'Smart Websites', 'Website Development'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
+                    <span style={{ fontSize: 18, color: '#1d1d1f' }}>{item}</span>
                     <span style={{ color: '#000', fontSize: 22 }}>›</span>
                   </div>
                 ))}
@@ -110,7 +110,7 @@ export function VariantK_HorizontalStrip() {
               <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 40 }}>
                 {['Local SEO Services (GMB)', 'AI Receptionist', 'Email Marketing Automation'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
+                    <span style={{ fontSize: 18, color: '#1d1d1f' }}>{item}</span>
                     <span style={{ color: '#000', fontSize: 22 }}>›</span>
                   </div>
                 ))}
@@ -131,7 +131,7 @@ export function VariantK_HorizontalStrip() {
               <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 40 }}>
                 {['Presentation Design', 'Email Design', 'Brochure & Flyer Design', 'Logo Design'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 15, color: '#1d1d1f' }}>{item}</span>
+                    <span style={{ fontSize: 18, color: '#1d1d1f' }}>{item}</span>
                     <span style={{ color: '#000', fontSize: 22 }}>›</span>
                   </div>
                 ))}
