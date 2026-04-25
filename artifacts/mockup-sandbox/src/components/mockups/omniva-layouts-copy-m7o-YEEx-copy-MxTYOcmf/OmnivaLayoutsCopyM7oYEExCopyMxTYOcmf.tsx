@@ -9,7 +9,7 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmf() {
       {/* Hero — deep purple gradient with soft wave hills */}
       <section style={{
         position: 'relative',
-        height: '100vh',
+        height: 600,
         padding: '175px 48px 40px',
         display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', textAlign: 'center',
         overflow: 'hidden',
