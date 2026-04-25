@@ -82,7 +82,7 @@ export function VariantK_HorizontalStrip() {
                 <h2 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   Your website. Working harder than ever.
                 </h2>
-                <p style={{ fontSize: 16, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
                   A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
                 </p>
               </div>
@@ -103,7 +103,7 @@ export function VariantK_HorizontalStrip() {
                 <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   Get found. Stay top of mind.
                 </h2>
-                <p style={{ fontSize: 16, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
                   Email campaigns and local SEO that put your business in front of the right people at the right time.
                 </p>
               </div>
@@ -124,7 +124,7 @@ export function VariantK_HorizontalStrip() {
                 <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   A brand as strong as your business.
                 </h2>
-                <p style={{ fontSize: 16, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
+                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
                   Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
                 </p>
               </div>
