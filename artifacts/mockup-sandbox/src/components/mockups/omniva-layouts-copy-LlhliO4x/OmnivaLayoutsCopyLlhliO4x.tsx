@@ -203,7 +203,7 @@ export default function OmnivaLayoutsCopyLlhliO4x() {
                 <p style={{ fontSize: 18, color: '#6e6e73', margin: '0 0 10px', lineHeight: 1.55 }}>{description}</p>
               )}
               {items.map(item => (
-                <p key={item} style={{ fontSize: 14, color: '#2997ff', margin: '0 0 3px', lineHeight: '22.3px' }}>{item}</p>
+                <p key={item} style={{ fontSize: 18, color: '#2997ff', margin: '0 0 3px', lineHeight: '28.6px' }}>{item}</p>
               ))}
             </div>
           ))}
