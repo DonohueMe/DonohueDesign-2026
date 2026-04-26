@@ -205,7 +205,7 @@ export function VariantK_HorizontalStrip() {
                     {icon}
                   </span>
                   <span style={{
-                    fontSize: 12, fontWeight: 700,
+                    fontSize: 14, fontWeight: 700,
                     textTransform: 'uppercase', letterSpacing: '0.16em',
                     color: accent,
                   }}>
