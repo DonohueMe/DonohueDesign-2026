@@ -1,6 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
+
+const WEB_DESIGN_SERVICES = ['Website Design & Strategy', 'UX/UI Design', 'Website Development'];
+const OTHER_NAV_LINKS = ['Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'Contact us'];
+
+function StickyNav() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ position: 'absolute', top: 36, left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
+      <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)', position: 'relative' }}>
+        <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+          <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
+            Website Designer
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d={open ? 'M1 5l4-4 4 4' : 'M1 1l4 4 4-4'} stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          {open && (
+            <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10 }}>
+              <div style={{ background: '#0d1535', borderRadius: 16, padding: '8px 0', minWidth: 240, boxShadow: '0 12px 40px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                {WEB_DESIGN_SERVICES.map((item, i) => (
+                  <a key={item} href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.85)', textDecoration: 'none', borderBottom: i < WEB_DESIGN_SERVICES.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.1s' }}
+                    onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
+                    onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+                    {item}<span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+        {OTHER_NAV_LINKS.map(link => (
+          <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#ffffff', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
+            onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+            onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+            {link}
+          </a>
+        ))}
+      </nav>
+    </div>
+  );
+}
 
 const ICON_BROWSER = (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg>
@@ -39,6 +80,7 @@ export function VariantK_HorizontalStrip() {
       {/* Full-bleed hero */}
       <section style={{
         minHeight: 660, padding: '0 24px',
+        position: 'relative',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
         background: [
           'radial-gradient(ellipse at 12% 20%, rgba(90,170,255,0.90) 0%, transparent 45%)',
@@ -48,6 +90,7 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
+        <StickyNav />
         <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0 }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
