@@ -113,12 +113,15 @@ export default function OmnivaLayoutsCopyLlhliO4x() {
           {sections.map(({ h1 }, si) => (
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56 }}>
-                <h2 style={{ fontSize: 'clamp(27px, 3.5vw, 35px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1d1d1f', margin: '0 0 0', lineHeight: 1.32 }}>
-                  {h1}
-                </h2>
-                <p style={{ fontSize: 'clamp(27px, 3.5vw, 35px)', fontWeight: 700, margin: '0 0 40px', lineHeight: 1.32, ...(GRAD_WARM as any), display: 'block' }}>
-                  Strategy-Driven Design That Works
-                </p>
+                <div style={{ fontSize: 'clamp(27px, 3.5vw, 35px)', lineHeight: 1.32, margin: '0 0 40px' }}>
+                  <h2 style={{ fontWeight: 800, letterSpacing: '-0.03em', color: '#1d1d1f', margin: 0, display: 'inline', fontSize: 'inherit', lineHeight: 'inherit' }}>
+                    {h1}
+                  </h2>
+                  {' '}
+                  <span style={{ fontWeight: 700, ...(GRAD_WARM as any) }}>
+                    Strategy-Driven Design That Works
+                  </span>
+                </div>
                 {BIO.map((para, pi) => (
                   <p key={pi} style={{ fontSize: 18, lineHeight: 1.75, margin: pi === 0 ? '0 0 22px' : '0 0 12px', color: '#3d3d3f', fontWeight: 400 }}>
                     {para}
