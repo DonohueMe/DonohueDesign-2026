@@ -111,7 +111,7 @@ export function VariantK_HorizontalStrip() {
   }, []);
 
   return (
-    <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff', minHeight: '100vh' }}>
+    <div style={{ fontFamily: SF, margin: '0 auto', padding: 0, background: '#fff', minHeight: '100vh', maxWidth: 1280 }}>
 
       <StickyBar visible={scrolled} />
 
