@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ddcLogo from '../../../assets/ddc-logo.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
 const WEB_DESIGN_SERVICES = ['Website Design & Strategy', 'UX/UI Design', 'Website Development'];
 const OTHER_NAV_LINKS = ['Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
 
-const LOGO_SRC = `${import.meta.env.BASE_URL}ddc-logo.png`;
-
 const Logo = ({ height = 40 }: { height?: number }) => (
-  <img src={LOGO_SRC} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain' }} />
+  <img src={ddcLogo} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain' }} />
 );
 
 function PillNav() {
@@ -51,13 +50,15 @@ function StickyBar({ visible }: { visible: boolean }) {
   return (
     <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 2000,
+      background: '#0d1535',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '12px 40px',
+      padding: '10px 40px',
       transform: visible ? 'translateY(0)' : 'translateY(-100%)',
-      transition: 'transform 0.25s ease',
+      transition: 'transform 0.3s ease',
       pointerEvents: visible ? 'auto' : 'none',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
     }}>
-      <Logo height={34} />
+      <Logo height={32} />
       <PillNav />
     </div>
   );
@@ -98,12 +99,13 @@ export function VariantK_HorizontalStrip() {
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const onScroll = () => {
-      const heroBottom = heroRef.current ? heroRef.current.getBoundingClientRect().bottom : 0;
-      setScrolled(heroBottom < 0);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    if (!heroRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setScrolled(!entry.isIntersecting),
+      { threshold: 0, rootMargin: '0px' }
+    );
+    observer.observe(heroRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
