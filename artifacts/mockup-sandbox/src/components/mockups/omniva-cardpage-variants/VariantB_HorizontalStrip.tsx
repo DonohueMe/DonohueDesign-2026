@@ -129,7 +129,7 @@ export function VariantK_HorizontalStrip() {
         ].join(','),
       }}>
         {/* Logo left + pill centered in hero */}
-        <div style={{ position: 'absolute', top: 35, left: 0, right: 0, display: 'flex', alignItems: 'center', zIndex: 100 }}>
+        <div style={{ position: 'absolute', top: 60, left: 0, right: 0, display: 'flex', alignItems: 'center', zIndex: 100 }}>
           <div style={{ paddingLeft: 50 }}>
             <Logo height={29} />
           </div>
