@@ -7,7 +7,7 @@ const WEB_DESIGN_SERVICES = ['Website Design & Strategy', 'UX/UI Design', 'Websi
 const OTHER_NAV_LINKS = ['Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
 
 const Logo = ({ height = 40 }: { height?: number }) => (
-  <img src={ddcLogo} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain', outline: '1px solid white' }} />
+  <img src={ddcLogo} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain', outline: '1px solid rgba(255,255,255,0.5)' }} />
 );
 
 function PillNav() {
