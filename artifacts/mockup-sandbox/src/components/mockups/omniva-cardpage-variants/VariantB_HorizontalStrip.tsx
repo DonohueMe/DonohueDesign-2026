@@ -49,7 +49,7 @@ function PillNav() {
 function StickyBar({ visible }: { visible: boolean }) {
   return (
     <div style={{
-      position: 'fixed', top: 25, left: 0, right: 0, zIndex: 2000,
+      position: 'fixed', top: 35, left: 0, right: 0, zIndex: 2000,
       background: '#0d1535',
       display: 'flex', alignItems: 'center',
       padding: '10px 40px',
