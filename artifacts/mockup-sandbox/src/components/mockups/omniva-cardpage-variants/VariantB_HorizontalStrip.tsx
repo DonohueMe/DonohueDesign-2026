@@ -145,7 +145,7 @@ export function VariantK_HorizontalStrip() {
       </section>
 
       {/* Centered narrow bio intro — white background */}
-      <section style={{ padding: '16px 170px', background: '#fff' }}>
+      <section style={{ padding: '16px 0', background: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '50px 0 24px' }}>
             Website Designer, Santa Rosa, CA
@@ -160,7 +160,7 @@ export function VariantK_HorizontalStrip() {
       </section>
 
       {/* ── Layout B service tiles + right-side fun sticker sidebar ── */}
-      <div style={{ background: '#fff', padding: '60px 20px 60px 70px' }}>
+      <div style={{ background: '#fff', padding: '60px 0' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 300px', gap: 74, alignItems: 'start' }}>
 
           {/* Left column: 3 service tiles */}
