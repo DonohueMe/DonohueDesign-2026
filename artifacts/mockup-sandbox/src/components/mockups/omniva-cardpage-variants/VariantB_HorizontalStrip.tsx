@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import ddcLogo from '../../../assets/ddc-logo.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
@@ -46,25 +46,6 @@ function PillNav() {
   );
 }
 
-function StickyBar({ visible }: { visible: boolean }) {
-  return (
-    <div style={{
-      position: 'fixed', top: 35, left: 0, right: 0, zIndex: 2000,
-      background: '#0d1535',
-      display: 'flex', alignItems: 'center',
-      padding: '10px 40px',
-      transform: visible ? 'translateY(0)' : 'translateY(-150%)',
-      transition: 'transform 0.3s ease',
-      pointerEvents: visible ? 'auto' : 'none',
-      boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
-    }}>
-      <Logo height={32} />
-      <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
-        <PillNav />
-      </div>
-    </div>
-  );
-}
 
 const ICON_BROWSER = (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg>
@@ -97,26 +78,11 @@ function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; lab
 
 // VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
 export function VariantK_HorizontalStrip() {
-  const [scrolled, setScrolled] = useState(false);
-  const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (!heroRef.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setScrolled(!entry.isIntersecting),
-      { threshold: 0, rootMargin: '0px' }
-    );
-    observer.observe(heroRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: '0 20px', background: '#fff', minHeight: '100vh' }}>
 
-      <StickyBar visible={scrolled} />
-
       {/* Full-bleed hero */}
-      <section ref={heroRef} style={{
+      <section style={{
         minHeight: 660, padding: 0,
         margin: '0 -20px',
         position: 'relative',
