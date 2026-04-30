@@ -8,7 +8,7 @@ const OTHER_NAV_LINKS = ['Digital Marketing', 'Graphic Designer', 'Case Studies'
 function StickyNav() {
   const [open, setOpen] = useState(false);
   return (
-    <header style={{ position: 'sticky', top: 0, zIndex: 1000, display: 'flex', justifyContent: 'center', padding: '20px 24px', background: 'radial-gradient(ellipse at 12% 200%, rgba(90,170,255,0.90) 0%, transparent 45%), radial-gradient(ellipse at 85% 200%, rgba(70,220,195,0.85) 0%, transparent 45%), #dff3ff' }}>
+    <header style={{ position: 'sticky', top: 0, zIndex: 1000, display: 'flex', justifyContent: 'center', padding: '10px 24px', background: '#0d1535' }}>
       <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)', position: 'relative' }}>
         <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
           <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
