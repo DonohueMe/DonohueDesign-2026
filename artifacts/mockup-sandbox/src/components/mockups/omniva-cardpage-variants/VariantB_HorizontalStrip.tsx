@@ -8,7 +8,7 @@ const OTHER_NAV_LINKS = ['Digital Marketing', 'Graphic Designer', 'Case Studies'
 function StickyNav() {
   const [open, setOpen] = useState(false);
   return (
-    <header style={{ position: 'sticky', top: 0, zIndex: 1000, display: 'flex', justifyContent: 'center', padding: '10px 24px', background: '#0d1535' }}>
+    <div style={{ position: 'absolute', top: 36, left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
       <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)', position: 'relative' }}>
         <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
           <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
@@ -39,7 +39,7 @@ function StickyNav() {
           </a>
         ))}
       </nav>
-    </header>
+    </div>
   );
 }
 
@@ -77,11 +77,10 @@ export function VariantK_HorizontalStrip() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff', minHeight: '100vh' }}>
 
-      <StickyNav />
-
       {/* Full-bleed hero */}
       <section style={{
-        minHeight: 600, padding: '0 24px',
+        minHeight: 660, padding: '0 24px',
+        position: 'relative',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
         background: [
           'radial-gradient(ellipse at 12% 20%, rgba(90,170,255,0.90) 0%, transparent 45%)',
@@ -91,6 +90,7 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
+        <StickyNav />
         <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0 }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
