@@ -51,7 +51,7 @@ function StickyBar({ visible }: { visible: boolean }) {
     <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 2000,
       background: '#0d1535',
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      display: 'flex', alignItems: 'center',
       padding: '10px 40px',
       transform: visible ? 'translateY(0)' : 'translateY(-100%)',
       transition: 'transform 0.3s ease',
@@ -59,7 +59,9 @@ function StickyBar({ visible }: { visible: boolean }) {
       boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
     }}>
       <Logo height={32} />
-      <PillNav />
+      <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+        <PillNav />
+      </div>
     </div>
   );
 }
