@@ -111,13 +111,14 @@ export function VariantK_HorizontalStrip() {
   }, []);
 
   return (
-    <div style={{ fontFamily: SF, margin: '0 auto', padding: 0, background: '#fff', minHeight: '100vh', maxWidth: 1280 }}>
+    <div style={{ fontFamily: SF, margin: 0, padding: '0 50px', background: '#fff', minHeight: '100vh' }}>
 
       <StickyBar visible={scrolled} />
 
       {/* Full-bleed hero */}
       <section ref={heroRef} style={{
-        minHeight: 660, padding: '0 24px',
+        minHeight: 660, padding: 0,
+        margin: '0 -50px',
         position: 'relative',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
         background: [
