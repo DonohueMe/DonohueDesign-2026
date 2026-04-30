@@ -52,11 +52,9 @@
 </head>
 <body>
 
-  <!-- HERO -->
-  <section style="min-height:660px;padding:0 24px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 12% 20%,rgba(90,170,255,.9) 0%,transparent 45%),radial-gradient(ellipse at 85% 15%,rgba(70,220,195,.85) 0%,transparent 45%),radial-gradient(ellipse at 50% 62%,rgba(100,195,250,.7) 0%,transparent 50%),radial-gradient(ellipse at 80% 85%,rgba(80,240,190,.8) 0%,transparent 40%),#dff3ff;">
-
-    <!-- NAV -->
-    <div style="position:absolute;top:36px;left:50%;transform:translateX(-50%);z-index:1000;">
+  <!-- STICKY NAV HEADER -->
+  <header style="position:sticky;top:0;z-index:1000;display:flex;justify-content:center;padding:24px 24px 0;">
+    <div>
       <nav x-data="{ open: false }" style="background:#0d1535;border-radius:980px;padding:0 28px;height:52px;display:flex;align-items:center;gap:4px;white-space:nowrap;box-shadow:0 4px 24px rgba(0,0,0,.22);position:relative;">
 
         <div style="position:relative;" @mouseenter="open=true" @mouseleave="open=false">
@@ -91,7 +89,10 @@
           onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='transparent'">Contact us</a>
       </nav>
     </div>
+  </header>
 
+  <!-- HERO -->
+  <section style="min-height:600px;padding:0 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 12% 20%,rgba(90,170,255,.9) 0%,transparent 45%),radial-gradient(ellipse at 85% 15%,rgba(70,220,195,.85) 0%,transparent 45%),radial-gradient(ellipse at 50% 62%,rgba(100,195,250,.7) 0%,transparent 50%),radial-gradient(ellipse at 80% 85%,rgba(80,240,190,.8) 0%,transparent 40%),#dff3ff;">
     <h1 style="font-size:clamp(48px,7vw,80px);font-weight:700;line-height:1.05;letter-spacing:-.04em;color:#000;max-width:740px;">
       Beautiful websites.<br />Powered by smart marketing.
     </h1>
