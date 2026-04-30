@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ddcLogo from '../../../assets/ddc-logo.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
@@ -46,15 +46,17 @@ function PillNav() {
   );
 }
 
-function StickyNav({ scrolled }: { scrolled: boolean }) {
+function StickyBar({ visible }: { visible: boolean }) {
   return (
     <div style={{
-      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 2000,
+      position: 'fixed', top: 35, left: 0, right: 0, zIndex: 2000,
+      background: '#0d1535',
       display: 'flex', alignItems: 'center',
-      padding: '14px 50px',
-      background: scrolled ? '#0d1535' : 'transparent',
-      transition: 'background 0.35s ease',
-      boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.3)' : 'none',
+      padding: '10px 40px',
+      transform: visible ? 'translateY(0)' : 'translateY(-150%)',
+      transition: 'transform 0.3s ease',
+      pointerEvents: visible ? 'auto' : 'none',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
     }}>
       <Logo height={32} />
       <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
@@ -96,20 +98,25 @@ function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; lab
 // VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
 export function VariantK_HorizontalStrip() {
   const [scrolled, setScrolled] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 560);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    if (!heroRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setScrolled(!entry.isIntersecting),
+      { threshold: 0, rootMargin: '0px' }
+    );
+    observer.observe(heroRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: '0 20px', background: '#fff', minHeight: '100vh' }}>
 
-      <StickyNav scrolled={scrolled} />
+      <StickyBar visible={scrolled} />
 
       {/* Full-bleed hero */}
-      <section style={{
+      <section ref={heroRef} style={{
         minHeight: 660, padding: 0,
         margin: '0 -20px',
         position: 'relative',
@@ -122,6 +129,16 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
+        {/* Logo left + pill centered in hero */}
+        <div style={{ position: 'absolute', top: 60, left: 0, right: 0, display: 'flex', alignItems: 'center', zIndex: 100 }}>
+          <div style={{ paddingLeft: 50 }}>
+            <Logo height={32} />
+          </div>
+          <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+            <PillNav />
+          </div>
+        </div>
+
         <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, marginTop: 100 }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
