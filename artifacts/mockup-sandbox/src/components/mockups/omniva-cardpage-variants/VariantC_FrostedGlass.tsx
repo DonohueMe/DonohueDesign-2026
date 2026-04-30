@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ddcLogo from '../../../assets/ddc-logo.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
@@ -46,15 +46,16 @@ function PillNav() {
   );
 }
 
-function StickyNav({ scrolled }: { scrolled: boolean }) {
+function FrostedNav() {
   return (
     <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 2000,
       display: 'flex', alignItems: 'center',
       padding: '14px 50px',
-      background: scrolled ? '#0d1535' : 'transparent',
-      transition: 'background 0.35s ease',
-      boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.3)' : 'none',
+      background: 'rgba(255,255,255,0.18)',
+      backdropFilter: 'blur(18px)',
+      WebkitBackdropFilter: 'blur(18px)',
+      borderBottom: '1px solid rgba(255,255,255,0.22)',
     }}>
       <Logo height={32} />
       <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
@@ -77,14 +78,6 @@ const ICON_PALETTE = (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a9 9 0 0 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.6-1.4-.4-.4-.6-.9-.6-1.4 0-1.1.9-2 2-2H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="10.5" r="1" fill="white"/><circle cx="11" cy="7" r="1" fill="white"/><circle cx="15" cy="7.5" r="1" fill="white"/></svg>
 );
 
-function IconBadge({ tint, children }: { tint: string; children: React.ReactNode }) {
-  return (
-    <div style={{ width: 28, height: 28, borderRadius: 8, background: tint, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-      {children}
-    </div>
-  );
-}
-
 function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; label: string }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
@@ -93,20 +86,11 @@ function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; lab
   );
 }
 
-// VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
-export function VariantK_HorizontalStrip() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 560);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
+export function VariantC_FrostedGlass() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: '0 20px', background: '#fff', minHeight: '100vh' }}>
 
-      <StickyNav scrolled={scrolled} />
+      <FrostedNav />
 
       {/* Full-bleed hero */}
       <section style={{
@@ -127,7 +111,7 @@ export function VariantK_HorizontalStrip() {
         </h1>
       </section>
 
-      {/* Centered narrow bio intro — white background */}
+      {/* Centered narrow bio intro */}
       <section style={{ padding: '16px 0', background: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '50px 0 24px' }}>
@@ -142,23 +126,15 @@ export function VariantK_HorizontalStrip() {
         </div>
       </section>
 
-      {/* ── Layout B service tiles + right-side fun sticker sidebar ── */}
+      {/* Service tiles + sidebar */}
       <div style={{ background: '#fff', padding: '60px 0' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 300px', gap: 74, alignItems: 'start' }}>
-
-          {/* Left column: 3 service tiles */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
-
-            {/* Tile 2 — Website Designer */}
             <div style={{ background: '#fff', borderRadius: 20, padding: '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 56, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: '0 0 360px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_BROWSER} label="Website Design" />
-                <h2 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                  Your website. Working harder than ever.
-                </h2>
-                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                  A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
-                </p>
+                <h2 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>Your website. Working harder than ever.</h2>
+                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal.</p>
               </div>
               <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 40 }}>
                 {['Website Design & Strategy', 'Smart Websites', 'Website Development'].map(item => (
@@ -169,17 +145,11 @@ export function VariantK_HorizontalStrip() {
                 ))}
               </div>
             </div>
-
-            {/* Tile 3 — Digital Marketing — row-reverse */}
             <div style={{ background: '#fff', borderRadius: 20, padding: '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 56, alignItems: 'center', flexDirection: 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: '0 0 320px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label="Digital Marketing" />
-                <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                  Get found. Stay top of mind.
-                </h2>
-                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                  Email campaigns and local SEO that put your business in front of the right people at the right time.
-                </p>
+                <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>Get found. Stay top of mind.</h2>
+                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>Email campaigns and local SEO that put your business in front of the right people at the right time.</p>
               </div>
               <div style={{ flex: 1, borderRight: '1px solid #e5e5ea', paddingRight: 40 }}>
                 {['Local SEO Services (GMB)', 'AI Receptionist', 'Email Marketing Automation'].map(item => (
@@ -190,17 +160,11 @@ export function VariantK_HorizontalStrip() {
                 ))}
               </div>
             </div>
-
-            {/* Tile 5 — Graphic Designer */}
             <div style={{ background: '#fff', borderRadius: 20, padding: '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: 56, alignItems: 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: '0 0 320px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_PALETTE} label="Graphic Designer" />
-                <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
-                  A brand as strong as your business.
-                </h2>
-                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
-                  Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
-                </p>
+                <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>A brand as strong as your business.</h2>
+                <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>Everything matches your website — same colors, same feel, same level of quality across every touchpoint.</p>
               </div>
               <div style={{ flex: 1, borderLeft: '1px solid #e5e5ea', paddingLeft: 40 }}>
                 {['Presentation Design', 'Email Design', 'Brochure & Flyer Design', 'Logo Design'].map(item => (
@@ -211,96 +175,29 @@ export function VariantK_HorizontalStrip() {
                 ))}
               </div>
             </div>
-
           </div>
 
-          {/* Right sidebar — light icon-badge cards */}
           <aside style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
             {[
-              {
-                bg: '#fff8ec', accent: '#d18a16',
-                eyebrow: 'Local SEO · GBP',
-                title: 'Own the map. Own the moment.',
-                body: 'Rank higher on Google Maps and capture every nearby search.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/>
-                    <circle cx="12" cy="10" r="2.5"/>
-                  </svg>
-                ),
-              },
-              {
-                bg: '#f0fbf6', accent: '#1f9d6a',
-                eyebrow: 'AI Receptionist',
-                title: 'Never miss a call again.',
-                body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                ),
-              },
-              {
-                bg: '#eef6ff', accent: '#1f6fd6',
-                eyebrow: 'Smart Websites',
-                title: 'Sites that earn their keep.',
-                body: 'Strategy-first design built to turn quiet visitors into paying customers.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <polyline points="8 6 3 12 8 18"/>
-                    <polyline points="16 6 21 12 16 18"/>
-                  </svg>
-                ),
-              },
-              {
-                bg: '#fdf1f6', accent: '#c43c75',
-                eyebrow: 'Presentation Design',
-                title: 'Decks that win the room.',
-                body: 'Investor-ready slides built around the story you are telling.',
-                icon: (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <rect x="3" y="4" width="18" height="13" rx="2"/>
-                    <path d="M8 21l4-4 4 4"/>
-                    <path d="M7 9h6"/>
-                    <path d="M7 12h10"/>
-                  </svg>
-                ),
-              },
+              { bg: '#fff8ec', accent: '#d18a16', eyebrow: 'Local SEO · GBP', title: 'Own the map. Own the moment.', body: 'Rank higher on Google Maps and capture every nearby search.', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> },
+              { bg: '#f0fbf6', accent: '#1f9d6a', eyebrow: 'AI Receptionist', title: 'Never miss a call again.', body: 'A 24/7 voice that books, qualifies, and confirms — in a single ring.', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> },
+              { bg: '#eef6ff', accent: '#1f6fd6', eyebrow: 'Smart Websites', title: 'Sites that earn their keep.', body: 'Strategy-first design built to turn quiet visitors into paying customers.', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg> },
+              { bg: '#fdf1f6', accent: '#c43c75', eyebrow: 'Presentation Design', title: 'Decks that win the room.', body: 'Investor-ready slides built around the story you are telling.', icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21l4-4 4 4"/><path d="M7 9h6"/><path d="M7 12h10"/></svg> },
             ].map(({ bg, accent, eyebrow, title, body, icon }) => (
               <div key={eyebrow} style={{ background: bg, borderRadius: 18, padding: '26px 24px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
-                {/* Icon badge + eyebrow */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                  <span style={{
-                    width: 34, height: 34, borderRadius: 10,
-                    background: '#fff', color: accent,
-                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: `0 1px 0 ${accent}25, inset 0 0 0 1px ${accent}25`,
-                  }}>
-                    {icon}
-                  </span>
-                  <span style={{
-                    fontSize: 14, fontWeight: 700,
-                    textTransform: 'uppercase', letterSpacing: '0.16em',
-                    color: accent,
-                  }}>
-                    {eyebrow}
-                  </span>
+                  <span style={{ width: 34, height: 34, borderRadius: 10, background: '#fff', color: accent, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', boxShadow: `0 1px 0 ${accent}25, inset 0 0 0 1px ${accent}25` }}>{icon}</span>
+                  <span style={{ fontSize: 14, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.16em', color: accent }}>{eyebrow}</span>
                 </div>
-
-                <h3 style={{ fontSize: 26, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f' }}>
-                  {title}
-                </h3>
-                <p style={{ fontSize: 17, lineHeight: '25px', color: '#6e6e73', margin: 0 }}>
-                  {body}
-                </p>
+                <h3 style={{ fontSize: 26, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f' }}>{title}</h3>
+                <p style={{ fontSize: 17, lineHeight: '25px', color: '#6e6e73', margin: 0 }}>{body}</p>
               </div>
             ))}
           </aside>
-
         </div>
       </div>
 
-      {/* Reviews + Map combo on white background */}
+      {/* Reviews + Map */}
       <div style={{ background: '#fff', padding: '60px 20px 60px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
@@ -332,16 +229,9 @@ export function VariantK_HorizontalStrip() {
                 ))}
               </div>
             </div>
-            <div style={{ padding: '0 72px 52px', position: 'relative' }}>
-              <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative' }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1"
-                  width="100%" height="360"
-                  style={{ border: 0, display: 'block' }}
-                  allowFullScreen loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Omniva Design — Santa Rosa, CA"
-                />
+            <div style={{ padding: '0 72px 52px' }}>
+              <div style={{ borderRadius: 14, overflow: 'hidden' }}>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1" width="100%" height="360" style={{ border: 0, display: 'block' }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Omniva Design — Santa Rosa, CA" />
                 <div style={{ position: 'absolute', bottom: 16, left: 16, background: '#fff', borderRadius: 14, padding: '10px 16px', boxShadow: '0 2px 16px rgba(0,0,0,0.14)' }}>
                   <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
                   <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
@@ -349,7 +239,6 @@ export function VariantK_HorizontalStrip() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 

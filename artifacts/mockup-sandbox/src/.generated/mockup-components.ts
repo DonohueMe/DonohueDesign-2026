@@ -8,6 +8,7 @@ export const modules: ModuleMap = {
   "./components/mockups/omniva-cardpage-variants/VariantB4_Pictograms.tsx": () => import("../components/mockups/omniva-cardpage-variants/VariantB4_Pictograms.tsx"),
   "./components/mockups/omniva-cardpage-variants/VariantB_HorizontalStrip.tsx": () => import("../components/mockups/omniva-cardpage-variants/VariantB_HorizontalStrip.tsx"),
   "./components/mockups/omniva-cardpage-variants/VariantC_Bento.tsx": () => import("../components/mockups/omniva-cardpage-variants/VariantC_Bento.tsx"),
+  "./components/mockups/omniva-cardpage-variants/VariantC_FrostedGlass.tsx": () => import("../components/mockups/omniva-cardpage-variants/VariantC_FrostedGlass.tsx"),
   "./components/mockups/omniva-cardpage-variants/VariantL_HorizontalStrip.tsx": () => import("../components/mockups/omniva-cardpage-variants/VariantL_HorizontalStrip.tsx"),
   "./components/mockups/omniva-layouts/LV1_TileGrid.tsx": () => import("../components/mockups/omniva-layouts/LV1_TileGrid.tsx"),
   "./components/mockups/omniva-layouts/LV2_ScanRows.tsx": () => import("../components/mockups/omniva-layouts/LV2_ScanRows.tsx"),
