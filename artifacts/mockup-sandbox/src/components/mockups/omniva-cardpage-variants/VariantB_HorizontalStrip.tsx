@@ -5,8 +5,10 @@ const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans
 const WEB_DESIGN_SERVICES = ['Website Design & Strategy', 'UX/UI Design', 'Website Development'];
 const OTHER_NAV_LINKS = ['Internet Marketing Service', 'Graphic Designer', 'Locations', 'Pricing', 'Contact us'];
 
+const LOGO_SRC = `${import.meta.env.BASE_URL}ddc-logo.png`;
+
 const Logo = ({ height = 40 }: { height?: number }) => (
-  <img src="/ddc-logo.png" alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain' }} />
+  <img src={LOGO_SRC} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain' }} />
 );
 
 function PillNav() {
@@ -49,23 +51,14 @@ function StickyBar({ visible }: { visible: boolean }) {
   return (
     <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 2000,
-      background: '#0d1535',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '0 40px', height: 64,
+      padding: '12px 40px',
       transform: visible ? 'translateY(0)' : 'translateY(-100%)',
       transition: 'transform 0.25s ease',
-      boxShadow: visible ? '0 4px 24px rgba(0,0,0,0.3)' : 'none',
+      pointerEvents: visible ? 'auto' : 'none',
     }}>
       <Logo height={34} />
-      <nav style={{ display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap' }}>
-        {['Website Designer', ...OTHER_NAV_LINKS].map(link => (
-          <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.88)', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
-            onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
-            onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
-            {link}
-          </a>
-        ))}
-      </nav>
+      <PillNav />
     </div>
   );
 }
@@ -132,7 +125,7 @@ export function VariantK_HorizontalStrip() {
         ].join(','),
       }}>
         {/* Logo + pill stacked in hero */}
-        <div style={{ position: 'absolute', top: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, zIndex: 100 }}>
+        <div style={{ position: 'absolute', top: 100, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, zIndex: 100 }}>
           <Logo height={44} />
           <PillNav />
         </div>
