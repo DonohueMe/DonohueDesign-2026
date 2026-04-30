@@ -132,7 +132,7 @@ export function VariantK_HorizontalStrip() {
           <PillNav />
         </div>
 
-        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0 }}>
+        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, marginTop: 100 }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
       </section>
