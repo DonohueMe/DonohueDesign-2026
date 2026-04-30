@@ -128,8 +128,8 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        {/* Logo + pill stacked in hero */}
-        <div style={{ position: 'absolute', top: 35, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 31, zIndex: 100 }}>
+        {/* Logo + pill side by side in hero */}
+        <div style={{ position: 'absolute', top: 35, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 24, zIndex: 100 }}>
           <Logo height={44} />
           <PillNav />
         </div>
