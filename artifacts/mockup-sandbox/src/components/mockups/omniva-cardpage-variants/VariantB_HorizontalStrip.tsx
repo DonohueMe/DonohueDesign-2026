@@ -128,10 +128,14 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        {/* Logo + pill side by side in hero */}
-        <div style={{ position: 'absolute', top: 35, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 24, zIndex: 100 }}>
-          <Logo height={44} />
-          <PillNav />
+        {/* Logo left + pill centered in hero */}
+        <div style={{ position: 'absolute', top: 35, left: 0, right: 0, display: 'flex', alignItems: 'center', zIndex: 100 }}>
+          <div style={{ paddingLeft: 50 }}>
+            <Logo height={22} />
+          </div>
+          <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+            <PillNav />
+          </div>
         </div>
 
         <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, marginTop: 100 }}>
