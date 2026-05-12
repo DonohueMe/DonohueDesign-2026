@@ -86,7 +86,7 @@ function IconBadge({ tint, children }: { tint: string; children: React.ReactNode
 function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; label: React.ReactNode }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-      <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: tint, margin: 0, lineHeight: '24px' }}>{label}</p>
+      <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: tint, margin: 0, lineHeight: '25px' }}>{label}</p>
     </div>
   );
 }
