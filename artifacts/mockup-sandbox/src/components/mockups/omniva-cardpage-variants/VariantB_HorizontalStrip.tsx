@@ -345,7 +345,7 @@ export function VariantK_HorizontalStrip() {
         </div>
       </div>
 
-      <footer style={{ background: '#2c2c2c', padding: '56px 40px 0', margin: '0 -20px', color: '#fff' }}>
+      <footer style={{ background: '#2c2c2c', padding: '56px 40px 32px', margin: '0 -20px', color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 32, paddingBottom: 36, borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
             <div>
@@ -368,7 +368,7 @@ export function VariantK_HorizontalStrip() {
               ))}
             </div>
           </div>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '20px 0 16px', textAlign: 'center' }}>© 2025 Donohue Design — Santa Rosa, CA</p>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '20px 0 16px', textAlign: 'center' }}>© 2026 Donohue Design — Santa Rosa, CA</p>
         </div>
       </footer>
     </div>
