@@ -117,23 +117,34 @@ export function VariantK_HorizontalStrip() {
         ].join(','),
       }}>
         {/* Logo left + pill centered in hero */}
-        <div style={{ position: 'absolute', top: isMobile ? 24 : 60, left: 0, right: 0, display: 'flex', alignItems: 'center', zIndex: 100 }}>
-          <div style={{ paddingLeft: isMobile ? 20 : 50 }}>
-            <Logo height={isMobile ? 160 : 200} />
-          </div>
-          {!isMobile && (
-            <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+        {isTablet ? (
+          <>
+            <div style={{ position: 'absolute', top: 24, left: 0, right: 0, display: 'flex', justifyContent: 'center', zIndex: 100 }}>
               <PillNav />
             </div>
-          )}
-          {isMobile && (
-            <button aria-label="Menu" style={{ marginLeft: 'auto', marginRight: 20, background: 'rgba(13,21,53,0.92)', border: 'none', borderRadius: 10, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, cursor: 'pointer' }}>
-              <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
-              <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
-              <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
-            </button>
-          )}
-        </div>
+            <div style={{ position: 'absolute', top: 96, left: 0, right: 0, display: 'flex', justifyContent: 'center', zIndex: 100 }}>
+              <Logo height={200} />
+            </div>
+          </>
+        ) : (
+          <div style={{ position: 'absolute', top: isMobile ? 24 : 24, left: 0, right: 0, display: 'flex', alignItems: 'flex-start', zIndex: 100 }}>
+            <div style={{ paddingLeft: isMobile ? 20 : 50 }}>
+              <Logo height={isMobile ? 160 : 200} />
+            </div>
+            {!isMobile && (
+              <div style={{ position: 'absolute', left: '50%', top: 0, transform: 'translateX(-50%)' }}>
+                <PillNav />
+              </div>
+            )}
+            {isMobile && (
+              <button aria-label="Menu" style={{ marginLeft: 'auto', marginRight: 20, background: 'rgba(13,21,53,0.92)', border: 'none', borderRadius: 10, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, cursor: 'pointer' }}>
+                <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
+                <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
+                <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
+              </button>
+            )}
+          </div>
+        )}
 
         <h1 style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, marginTop: isMobile ? 40 : 100, padding: `0 ${isMobile ? 20 : 0}px` }}>
           Beautiful websites.<br />Powered by smart marketing.
