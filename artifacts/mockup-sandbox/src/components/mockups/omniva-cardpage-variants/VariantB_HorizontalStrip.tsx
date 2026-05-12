@@ -319,7 +319,7 @@ export function VariantK_HorizontalStrip() {
       <div style={{ background: '#fff', padding: isMobile ? '0 16px 32px' : '20px 20px 60px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
-            <div style={{ padding: isMobile ? '28px 20px 24px' : '52px 72px 48px' }}>
+            <div style={{ padding: isMobile ? '28px 0 24px' : '52px 0 48px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
                 <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: 0 }}>Client Reviews</p>
                 <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
@@ -347,7 +347,7 @@ export function VariantK_HorizontalStrip() {
                 ))}
               </div>
             </div>
-            <div style={{ padding: isMobile ? '0 20px 24px' : '0 72px 52px', position: 'relative' }}>
+            <div style={{ padding: isMobile ? '0 0 24px' : '0 0 52px', position: 'relative' }}>
               <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative' }}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1"
