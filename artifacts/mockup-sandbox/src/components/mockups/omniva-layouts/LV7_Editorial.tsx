@@ -7,7 +7,7 @@ const NAV_DROPDOWNS: Record<string, string[]> = {
   'Digital Marketing': ['Local SEO (GMB)', 'Email Marketing', 'AI Receptionist'],
   'Graphic Designer': ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
 };
-const PLAIN_NAV_LINKS = ['Case Studies', 'Pricing', 'About', 'Contact us'];
+const PLAIN_NAV_LINKS = ['Case Studies', 'Pricing', 'About/Contact us'];
 
 function DropdownItem({ label, items }: { label: string; items: string[] }) {
   const [open, setOpen] = useState(false);
