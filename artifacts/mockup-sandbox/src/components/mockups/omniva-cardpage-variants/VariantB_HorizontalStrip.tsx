@@ -316,7 +316,7 @@ export function VariantK_HorizontalStrip() {
       </div>
 
       {/* Reviews + Map combo on white background */}
-      <div style={{ background: '#fff', padding: isMobile ? '12px 16px 32px' : '40px 20px 60px' }}>
+      <div style={{ background: '#fff', padding: isMobile ? '0 16px 32px' : '20px 20px 60px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
             <div style={{ padding: isMobile ? '28px 20px 24px' : '52px 72px 48px' }}>
