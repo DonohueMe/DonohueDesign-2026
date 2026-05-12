@@ -13,7 +13,7 @@ function DropdownItem({ label, items }: { label: string; items: string[] }) {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button style={{ fontSize: 14, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: 'inherit', display: 'flex', alignItems: 'center', transition: 'background 0.15s' }}>
+      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: 'inherit', display: 'flex', alignItems: 'center', transition: 'background 0.15s' }}>
         {label}
       </button>
       {open && (
@@ -40,7 +40,7 @@ function PillNav() {
         <DropdownItem key={label} label={label} items={items} />
       ))}
       {PLAIN_NAV_LINKS.map(link => (
-        <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#1d1d1f', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
+        <a key={link} href="#" style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
           onMouseEnter={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.06)')}
           onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
           {link}
