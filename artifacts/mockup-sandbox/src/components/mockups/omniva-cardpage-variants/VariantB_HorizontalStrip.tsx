@@ -20,7 +20,7 @@ function DropdownItem({ label, items }: { label: string; items: string[] }) {
     <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
         {label}
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+        <svg width="12" height="8" viewBox="0 0 10 6" fill="none">
           <path d={open ? 'M1 5l4-4 4 4' : 'M1 1l4 4 4-4'} stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
