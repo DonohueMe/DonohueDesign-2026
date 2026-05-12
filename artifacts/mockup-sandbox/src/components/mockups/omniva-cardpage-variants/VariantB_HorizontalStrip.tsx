@@ -376,7 +376,7 @@ export function VariantK_HorizontalStrip() {
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
             </div>
             <nav style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-              {['Website Design', 'Digital Marketing', 'Graphic Design', 'About', 'Contact'].map(link => (
+              {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
                 <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
               ))}
             </nav>
