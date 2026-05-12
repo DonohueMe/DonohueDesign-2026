@@ -119,7 +119,7 @@ export function VariantK_HorizontalStrip() {
         {/* Logo left + pill centered in hero */}
         <div style={{ position: 'absolute', top: isMobile ? 24 : 60, left: 0, right: 0, display: 'flex', alignItems: 'center', zIndex: 100 }}>
           <div style={{ paddingLeft: isMobile ? 20 : 50 }}>
-            <Logo height={isMobile ? 128 : 160} />
+            <Logo height={isMobile ? 160 : 200} />
           </div>
           {!isMobile && (
             <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
