@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ddcLogo from '../../../assets/donohue-logo-mark.png';
 
 function useBreakpoint() {
   const [w, setW] = useState(typeof window !== 'undefined' ? window.innerWidth : 1280);
@@ -19,10 +18,6 @@ const NAV_DROPDOWNS: Record<string, string[]> = {
   'Graphic Designer': ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
 };
 const PLAIN_NAV_LINKS = ['Pricing', 'About', 'Contact us'];
-
-const Logo = ({ height = 40 }: { height?: number }) => (
-  <img src={ddcLogo} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain', border: '1px solid rgba(255,255,255,0.50)', borderRadius: 4 }} />
-);
 
 function DropdownItem({ label, items }: { label: string; items: string[] }) {
   const [open, setOpen] = useState(false);
@@ -50,13 +45,13 @@ function DropdownItem({ label, items }: { label: string; items: string[] }) {
 
 function PillNav() {
   return (
-    <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)', position: 'relative' }}>
+    <nav style={{ background: 'transparent', padding: 0, height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap' }}>
       {Object.entries(NAV_DROPDOWNS).map(([label, items]) => (
         <DropdownItem key={label} label={label} items={items} />
       ))}
       {PLAIN_NAV_LINKS.map(link => (
-        <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#ffffff', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
-          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+        <a key={link} href="#" style={{ fontSize: 18, fontWeight: 500, color: '#ffffff', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
+          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.12)')}
           onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
           {link}
         </a>
@@ -102,6 +97,21 @@ export function VariantK_HorizontalStrip() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: `0 ${sidePad}px`, background: '#fff', minHeight: '100vh' }}>
 
+      {/* Fixed black header */}
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: '#000', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '0 40px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: 84 }}>
+        {!isMobile ? (
+          <PillNav />
+        ) : (
+          <button aria-label="Menu" style={{ position: 'absolute', right: 20, background: 'rgba(255,255,255,0.10)', border: 'none', borderRadius: 10, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, cursor: 'pointer' }}>
+            <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
+            <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
+            <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
+          </button>
+        )}
+      </header>
+      {/* Spacer to offset fixed header */}
+      <div style={{ height: 84, margin: `0 -${sidePad}px` }} />
+
       {/* Full-bleed hero */}
       <section style={{
         minHeight: isMobile ? 460 : 660, padding: 0,
@@ -116,37 +126,7 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        {/* Logo left + pill centered in hero */}
-        {isTablet ? (
-          <>
-            <div style={{ position: 'absolute', top: 24, left: 0, right: 0, display: 'flex', justifyContent: 'center', zIndex: 100 }}>
-              <PillNav />
-            </div>
-            <div style={{ position: 'absolute', top: 96, left: 0, right: 0, display: 'flex', justifyContent: 'center', zIndex: 100 }}>
-              <Logo height={200} />
-            </div>
-          </>
-        ) : (
-          <div style={{ position: 'absolute', top: isMobile ? 24 : 24, left: 0, right: 0, display: 'flex', alignItems: 'flex-start', zIndex: 100 }}>
-            <div style={{ paddingLeft: isMobile ? 20 : 50 }}>
-              <Logo height={isMobile ? 160 : 200} />
-            </div>
-            {!isMobile && (
-              <div style={{ position: 'absolute', left: '50%', top: 0, transform: 'translateX(-50%)' }}>
-                <PillNav />
-              </div>
-            )}
-            {isMobile && (
-              <button aria-label="Menu" style={{ marginLeft: 'auto', marginRight: 20, background: 'rgba(13,21,53,0.92)', border: 'none', borderRadius: 10, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, cursor: 'pointer' }}>
-                <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
-                <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
-                <span style={{ width: 18, height: 2, background: '#fff', borderRadius: 1 }} />
-              </button>
-            )}
-          </div>
-        )}
-
-        <h1 style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, marginTop: isMobile ? 40 : 100, padding: `0 ${isMobile ? 20 : 0}px` }}>
+        <h1 style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, padding: `0 ${isMobile ? 20 : 0}px` }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
       </section>
