@@ -319,7 +319,7 @@ export function VariantK_HorizontalStrip() {
       <div style={{ background: '#fff', padding: isMobile ? '0 16px 32px' : '20px 20px 60px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', position: 'relative' }}>
-            <div style={{ padding: isMobile ? '28px 0 24px' : '52px 0 48px' }}>
+            <div style={{ padding: isMobile ? '8px 0 24px' : '32px 0 48px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
                 <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#2997ff', margin: 0 }}>Client Reviews</p>
                 <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
