@@ -19,14 +19,14 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmfCopyAW4uSW() {
         <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
           {/* Beams — narrow vertical columns fanning from a focal point */}
           {[
-            { rotate: -22, color: 'rgba(255,180,90,0.80)',  right: '34%', w: 42, blur: 30 },
-            { rotate: -14, color: 'rgba(255,200,140,0.95)', right: '30%', w: 32, blur: 20 },
-            { rotate:  -7, color: 'rgba(255,210,170,1.00)', right: '26%', w: 28, blur: 14 },
-            { rotate:   0, color: 'rgba(255,245,220,1.00)', right: '23%', w: 22, blur: 10 },
-            { rotate:   6, color: 'rgba(255,160,90,0.98)',  right: '20%', w: 32, blur: 18 },
-            { rotate:  14, color: 'rgba(255,110,80,0.95)',  right: '16%', w: 44, blur: 24 },
-            { rotate:  22, color: 'rgba(240,90,140,0.92)',  right: '12%', w: 52, blur: 30 },
-            { rotate:  30, color: 'rgba(210,70,160,0.82)',  right:  '8%', w: 60, blur: 36 },
+            { rotate: -18, color: 'rgba(60,120,220,0.75)',  right: '36%', w: 50, blur: 36 },
+            { rotate: -10, color: 'rgba(80,160,255,0.90)',  right: '32%', w: 38, blur: 22 },
+            { rotate:  -3, color: 'rgba(180,220,255,1.00)', right: '28%', w: 24, blur: 12 },
+            { rotate:   2, color: 'rgba(255,250,235,1.00)', right: '25%', w: 20, blur: 9  },
+            { rotate:   8, color: 'rgba(255,200,140,0.98)', right: '22%', w: 30, blur: 16 },
+            { rotate:  16, color: 'rgba(255,150,80,0.95)',  right: '17%', w: 44, blur: 24 },
+            { rotate:  24, color: 'rgba(240,110,60,0.90)',  right: '12%', w: 56, blur: 32 },
+            { rotate:  32, color: 'rgba(200,70,50,0.78)',   right:  '7%', w: 70, blur: 40 },
           ].map((b, i) => (
             <div key={i} style={{
               position: 'absolute',
