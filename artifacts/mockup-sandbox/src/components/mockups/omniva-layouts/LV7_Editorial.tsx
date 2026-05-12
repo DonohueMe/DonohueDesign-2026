@@ -1,5 +1,6 @@
 import React from 'react';
 import portfolioImg from '../../../assets/deloitte.png';
+import logoMark from '../../../assets/donohue-logo-mark.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
@@ -98,18 +99,22 @@ export default function LV7_Editorial() {
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
 
-      {/* Nav */}
-      <nav style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10, padding: '0 40px', display: 'flex', alignItems: 'center', height: 52 }}>
-        <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: '-0.02em', color: '#1d1d1f' }}>Donohue Design</span>
-        <div style={{ marginLeft: 'auto', display: 'flex', gap: 24 }}>
+      {/* Fixed white header */}
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#fff', borderBottom: '1px solid #e5e5ea', padding: '0 40px', display: 'flex', alignItems: 'center', height: 64 }}>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img src={logoMark} alt="Donohue Design" style={{ height: 44, width: 'auto', display: 'block' }} />
+        </a>
+        <div style={{ marginLeft: 'auto', display: 'flex', gap: 24, alignItems: 'center' }}>
           {['Services', 'Work', 'About', 'Contact'].map(i => (
             <span key={i} style={{ fontSize: 13, color: '#3d3d3f', cursor: 'pointer' }}>{i}</span>
           ))}
+          <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '8px 16px', fontSize: 12, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
+            Get a quote
+          </button>
         </div>
-        <button style={{ marginLeft: 24, background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '7px 15px', fontSize: 12, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
-          Get a quote
-        </button>
-      </nav>
+      </header>
+      {/* Spacer to offset fixed header */}
+      <div style={{ height: 64 }} />
 
       {/* Hero */}
       <section style={{ minHeight: 340, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
