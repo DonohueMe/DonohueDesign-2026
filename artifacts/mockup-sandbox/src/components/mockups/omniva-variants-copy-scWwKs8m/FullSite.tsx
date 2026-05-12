@@ -65,7 +65,7 @@ function Nav() {
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <AppleLogo size={16}/>
-        <span style={{ fontSize: 17, fontWeight: 600, color: '#1d1d1f', letterSpacing: '-0.01em' }}>Omniva Design</span>
+        <span style={{ fontSize: 17, fontWeight: 600, color: '#1d1d1f', letterSpacing: '-0.01em' }}>Donohue Design</span>
       </div>
       <div style={{ display: 'flex', gap: 28 }}>
         {['Websites', 'Marketing', 'Branding', 'About', 'Contact'].map(l => (
@@ -94,7 +94,7 @@ function Hero() {
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 10 }}>
         <AppleLogo size={16}/>
-        <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Omniva Design</span>
+        <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Donohue Design</span>
       </div>
       <h1 style={{
         fontSize: 'clamp(32px, 4.5vw, 52px)', fontWeight: 700,
@@ -112,7 +112,7 @@ function Hero() {
         For your business website.
       </h2>
       <p style={{ fontSize: 14, color: '#3d3d3f', maxWidth: 500, lineHeight: 1.55, margin: '0 0 16px' }}>
-        Omniva Design builds stunning, conversion-focused websites and AI-powered marketing systems for local businesses in Sonoma County.
+        Donohue Design builds stunning, conversion-focused websites and AI-powered marketing systems for local businesses in Sonoma County.
       </p>
       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
         <button style={{
@@ -459,7 +459,7 @@ function TileSection() {
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 7, justifyContent: 'center', marginBottom: 20 }}>
             <AppleLogo size={20} color="rgba(255,255,255,0.7)"/>
-            <span style={{ fontSize: 16, fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>Omniva Design</span>
+            <span style={{ fontSize: 16, fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>Donohue Design</span>
           </div>
           <p style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 16px', lineHeight: 1.05, textShadow: '0 1px 4px rgba(0,0,0,0.1)' }}>
             Ready to grow your business?
@@ -501,7 +501,7 @@ function Footer() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 12 }}>
               <AppleLogo size={16}/>
-              <span style={{ fontSize: 16, fontWeight: 600, color: '#1d1d1f' }}>Omniva Design</span>
+              <span style={{ fontSize: 16, fontWeight: 600, color: '#1d1d1f' }}>Donohue Design</span>
             </div>
             <p style={{ fontSize: 13, color: '#6e6e73', lineHeight: 1.6, margin: '0 0 16px', maxWidth: 260 }}>
               Web design, AI marketing, and graphic design for local businesses in Sonoma County, CA.
@@ -522,7 +522,7 @@ function Footer() {
           ))}
         </div>
         <div style={{ borderTop: '1px solid #d2d2d7', paddingTop: 20, display: 'flex', justifyContent: 'space-between' }}>
-          <span style={{ fontSize: 12, color: '#6e6e73' }}>© 2025 Omniva Design. All rights reserved.</span>
+          <span style={{ fontSize: 12, color: '#6e6e73' }}>© 2025 Donohue Design. All rights reserved.</span>
           <div style={{ display: 'flex', gap: 20 }}>
             {['Privacy Policy', 'Terms of Service'].map(l => (
               <a key={l} href="#" style={{ fontSize: 12, color: '#6e6e73', textDecoration: 'none' }}>{l}</a>

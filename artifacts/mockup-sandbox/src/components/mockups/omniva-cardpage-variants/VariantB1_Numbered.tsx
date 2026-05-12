@@ -63,7 +63,7 @@ export function VariantB1_Numbered() {
 
       <ReviewsAndMap />
       <footer style={{ background: '#f5f5f7', padding: '32px 24px', borderTop: '1px solid #d2d2d7', textAlign: 'center' }}>
-        <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>© 2025 Omniva Design — Santa Rosa, CA</p>
+        <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>© 2025 Donohue Design — Santa Rosa, CA</p>
       </footer>
     </div>
   );
@@ -96,7 +96,7 @@ function ReviewsAndMap() {
             <div style={{ borderRadius: 14, overflow: 'hidden', position: 'relative' }}>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.9!2d-122.7749!3d38.4405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80840b4e0cda2d5d%3A0xdb0af8e4c6c14af5!2sSanta%20Rosa%2C%20CA!5e0!3m2!1sen!2sus!4v1" width="100%" height="360" style={{ border: 0, display: 'block' }} loading="lazy" title="Map" />
               <div style={{ position: 'absolute', bottom: 16, left: 16, background: '#fff', borderRadius: 14, padding: '10px 16px', boxShadow: '0 2px 16px rgba(0,0,0,0.14)' }}>
-                <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+                <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Donohue Design</p>
                 <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
               </div>
             </div>

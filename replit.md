@@ -26,9 +26,9 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
 
-## Omniva Design Project
+## Donohue Design Project
 
-**Client:** Jim Donohue — Omniva Design, Santa Rosa, CA (web design & digital marketing agency)
+**Client:** Jim Donohue — Donohue Design, Santa Rosa, CA (web design & digital marketing agency)
 
 **Canvas design sandbox:** `artifacts/mockup-sandbox` — all layout exploration lives here as React components. These are prototypes only, not the production site.
 

@@ -332,10 +332,10 @@ export function VariantK_HorizontalStrip() {
                   style={{ border: 0, display: 'block' }}
                   allowFullScreen loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Omniva Design — Santa Rosa, CA"
+                  title="Donohue Design — Santa Rosa, CA"
                 />
                 <div style={{ position: 'absolute', bottom: 16, left: 16, background: '#fff', borderRadius: 14, padding: '10px 16px', boxShadow: '0 2px 16px rgba(0,0,0,0.14)' }}>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Donohue Design</p>
                   <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
                 </div>
               </div>

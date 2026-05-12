@@ -100,7 +100,7 @@ export default function OmnivaLayoutsCopyUwYqRYfn() {
 
       {/* Nav */}
       <nav style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10, padding: '0 40px', display: 'flex', alignItems: 'center', height: 52 }}>
-        <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: '-0.02em', color: '#1d1d1f' }}>Omniva Design</span>
+        <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: '-0.02em', color: '#1d1d1f' }}>Donohue Design</span>
         <div style={{ marginLeft: 'auto', display: 'flex', gap: 24 }}>
           {['Services', 'Work', 'About', 'Contact'].map(i => (
             <span key={i} style={{ fontSize: 13, color: '#3d3d3f', cursor: 'pointer' }}>{i}</span>

@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Omniva Design"
+title = "Donohue Design"
 version = "1.0.0"
 id = "artifacts/omniva-design"
 router = "path"

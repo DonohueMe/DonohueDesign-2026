@@ -202,7 +202,7 @@ export function PL_Var3() {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 14 }}>
           <AppleLogo/>
-          <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Omniva Design</span>
+          <span style={{ fontSize: 15, fontWeight: 500, color: '#1d1d1f' }}>Donohue Design</span>
         </div>
         <h1 style={{
           fontSize: 'clamp(30px, 4.5vw, 52px)', fontWeight: 700,
@@ -367,7 +367,7 @@ export function PL_Var3() {
         <div style={{ maxWidth: 1440, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <AppleLogo size={13} fill="#6e6e73"/>
-            <span style={{ fontSize: 12, color: '#6e6e73' }}>© 2025 Omniva Design · Jim Donohue · Santa Rosa, CA</span>
+            <span style={{ fontSize: 12, color: '#6e6e73' }}>© 2025 Donohue Design · Jim Donohue · Santa Rosa, CA</span>
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
             {['Website Designer', 'Internet Marketing', 'Graphic Designer'].map(l => (

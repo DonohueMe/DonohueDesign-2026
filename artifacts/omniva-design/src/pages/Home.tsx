@@ -286,10 +286,10 @@ export default function Home() {
                   style={{ border: 0, display: 'block' }}
                   allowFullScreen loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Omniva Design — Santa Rosa, CA"
+                  title="Donohue Design — Santa Rosa, CA"
                 />
                 <div style={{ position: 'absolute', bottom: 16, left: 16, background: '#fff', borderRadius: 14, padding: '10px 16px', boxShadow: '0 2px 16px rgba(0,0,0,0.14)' }}>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Donohue Design</p>
                   <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
                 </div>
               </div>
@@ -302,7 +302,7 @@ export default function Home() {
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 32, paddingBottom: 36, borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
             <div>
-              <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Omniva Design</p>
+              <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Donohue Design</p>
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
             </div>
             <nav style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
@@ -321,7 +321,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '24px 0 0', textAlign: 'center' }}>© 2025 Omniva Design — Santa Rosa, CA</p>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '24px 0 0', textAlign: 'center' }}>© 2025 Donohue Design — Santa Rosa, CA</p>
         </div>
       </footer>
     </div>

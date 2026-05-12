@@ -30,7 +30,7 @@ export function VariantA_Magazine() {
           '#dff3ff',
         ].join(','),
       }}>
-        <p style={{ fontSize: 13, fontWeight: 600, color: '#1d1d1f', margin: '0 0 14px', opacity: 0.7 }}>Omniva Design · Santa Rosa, CA</p>
+        <p style={{ fontSize: 13, fontWeight: 600, color: '#1d1d1f', margin: '0 0 14px', opacity: 0.7 }}>Donohue Design · Santa Rosa, CA</p>
         <h1 style={{ fontSize: 'clamp(40px, 6vw, 64px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', margin: '0 0 22px' }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
@@ -83,7 +83,7 @@ export function VariantA_Magazine() {
               width="100%" height="220" style={{ border: 0, display: 'block' }} loading="lazy" title="Map"
             />
             <div style={{ padding: '14px 20px' }}>
-              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Omniva Design</p>
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#1d1d1f', margin: '0 0 2px' }}>Donohue Design</p>
               <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
             </div>
           </div>
@@ -125,7 +125,7 @@ export function VariantA_Magazine() {
       </div>
 
       <footer style={{ background: '#f5f5f7', padding: '24px', borderTop: '1px solid #d2d2d7', textAlign: 'center' }}>
-        <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>© 2025 Omniva Design — Santa Rosa, CA</p>
+        <p style={{ fontSize: 12, color: '#6e6e73', margin: 0 }}>© 2025 Donohue Design — Santa Rosa, CA</p>
       </footer>
     </div>
   );

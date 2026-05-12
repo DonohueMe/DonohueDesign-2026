@@ -70,7 +70,7 @@ export function HeroA_BottomAnchor() {
         {/* Subtle bottom fade to separate from body */}
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 120, background: 'linear-gradient(to bottom, transparent, rgba(245,238,248,0.6))' }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(29,29,31,0.50)', margin: '0 0 16px' }}>Omniva Design · Santa Rosa, CA</p>
+          <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(29,29,31,0.50)', margin: '0 0 16px' }}>Donohue Design · Santa Rosa, CA</p>
           <h1 style={{
             fontSize: 'clamp(52px, 7vw, 88px)', fontWeight: 800,
             lineHeight: 1.0, letterSpacing: '-0.05em',
@@ -131,7 +131,7 @@ export function HeroA_BottomAnchor() {
         <div style={{ maxWidth: 1440, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <AppleLogo size={13} fill="#6e6e73"/>
-            <span style={{ fontSize: 12, color: '#6e6e73' }}>\u00a9 2025 Omniva Design \u00b7 Jim Donohue \u00b7 Santa Rosa, CA</span>
+            <span style={{ fontSize: 12, color: '#6e6e73' }}>\u00a9 2025 Donohue Design \u00b7 Jim Donohue \u00b7 Santa Rosa, CA</span>
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
             {['Website Designer', 'Internet Marketing', 'Graphic Designer'].map(l => (

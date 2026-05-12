@@ -66,7 +66,7 @@ export function HeroB_TypeDominance() {
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 1440 }}>
           {/* Eyebrow */}
           <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#8e8e93', margin: '0 0 20px' }}>
-            Omniva Design &nbsp;·&nbsp; Santa Rosa, CA
+            Donohue Design &nbsp;·&nbsp; Santa Rosa, CA
           </p>
 
           {/* Giant headline — type fills the frame */}
@@ -138,7 +138,7 @@ export function HeroB_TypeDominance() {
         <div style={{ maxWidth: 1440, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <AppleLogo size={13} fill="#6e6e73"/>
-            <span style={{ fontSize: 12, color: '#6e6e73' }}>\u00a9 2025 Omniva Design \u00b7 Jim Donohue \u00b7 Santa Rosa, CA</span>
+            <span style={{ fontSize: 12, color: '#6e6e73' }}>\u00a9 2025 Donohue Design \u00b7 Jim Donohue \u00b7 Santa Rosa, CA</span>
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
             {['Website Designer', 'Internet Marketing', 'Graphic Designer'].map(l => (

@@ -85,7 +85,7 @@ export function HeroC_SplitField() {
           justifyContent: 'flex-end',
           padding: '120px 56px 60px',
         }}>
-          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.40)', margin: '0 0 16px' }}>Omniva Design</p>
+          <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.40)', margin: '0 0 16px' }}>Donohue Design</p>
           <h1 style={{ fontSize: 'clamp(40px, 5.5vw, 68px)', fontWeight: 800, lineHeight: 1.0, letterSpacing: '-0.045em', color: '#ffffff', margin: '0 0 20px' }}>
             in Santa<br />Rosa, CA.
           </h1>
@@ -149,7 +149,7 @@ export function HeroC_SplitField() {
         <div style={{ maxWidth: 1440, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <AppleLogo size={13} fill="#6e6e73"/>
-            <span style={{ fontSize: 12, color: '#6e6e73' }}>\u00a9 2025 Omniva Design \u00b7 Jim Donohue \u00b7 Santa Rosa, CA</span>
+            <span style={{ fontSize: 12, color: '#6e6e73' }}>\u00a9 2025 Donohue Design \u00b7 Jim Donohue \u00b7 Santa Rosa, CA</span>
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
             {['Website Designer', 'Internet Marketing', 'Graphic Designer'].map(l => (
