@@ -83,10 +83,10 @@ function IconBadge({ tint, children }: { tint: string; children: React.ReactNode
   );
 }
 
-function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; label: string }) {
+function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; label: React.ReactNode }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-      <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: tint, margin: 0 }}>{label}</p>
+      <p style={{ fontSize: 17, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: tint, margin: 0, lineHeight: 1.3 }}>{label}</p>
     </div>
   );
 }
@@ -188,7 +188,7 @@ export function VariantK_HorizontalStrip() {
             {/* Tile 3 — Digital Marketing — row-reverse */}
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: isMobile ? 24 : 56, alignItems: isMobile ? 'stretch' : 'center', flexDirection: isMobile ? 'column' : 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: isMobile ? '1 1 auto' : '0 0 320px' }}>
-                <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label="Digital Marketing, Santa Rosa, CA" />
+                <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label={<>Digital Marketing,<br />Santa Rosa, CA</>} />
                 <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   Get found. Stay top of mind.
                 </h2>
@@ -209,7 +209,7 @@ export function VariantK_HorizontalStrip() {
             {/* Tile 5 — Graphic Designer */}
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 24 : 56, alignItems: isMobile ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: isMobile ? '1 1 auto' : '0 0 320px' }}>
-                <TileHeader tint="#2997ff" icon={ICON_PALETTE} label="Graphic Designer, Santa Rosa, CA" />
+                <TileHeader tint="#2997ff" icon={ICON_PALETTE} label={<>Graphic Designer,<br />Santa Rosa, CA</>} />
                 <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   A brand as strong as your business.
                 </h2>
