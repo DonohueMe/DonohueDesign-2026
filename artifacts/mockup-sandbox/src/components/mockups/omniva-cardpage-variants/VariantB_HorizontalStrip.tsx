@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ddcLogo from '../../../assets/ddc-logo.png';
+import ddcLogo from '../../../assets/donohue-logo-mark.png';
 
 function useBreakpoint() {
   const [w, setW] = useState(typeof window !== 'undefined' ? window.innerWidth : 1280);
