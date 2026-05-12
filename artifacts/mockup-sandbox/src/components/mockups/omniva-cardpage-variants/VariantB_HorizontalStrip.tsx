@@ -3,39 +3,51 @@ import ddcLogo from '../../../assets/ddc-logo.png';
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
-const WEB_DESIGN_SERVICES = ['Website Design & Strategy', 'UX/UI Design', 'Website Development'];
-const OTHER_NAV_LINKS = ['Digital Marketing', 'Graphic Designer', 'Pricing', 'About', 'Contact us'];
+const NAV_DROPDOWNS: Record<string, string[]> = {
+  'Website Designer': ['Website Design & Strategy', 'UX/UI Design', 'Website Development'],
+  'Digital Marketing': ['Local SEO (GMB)', 'Email Marketing', 'AI Receptionist'],
+  'Graphic Designer': ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
+};
+const PLAIN_NAV_LINKS = ['Pricing', 'About', 'Contact us'];
 
 const Logo = ({ height = 40 }: { height?: number }) => (
   <img src={ddcLogo} alt="Donohue Design" style={{ height, display: 'block', objectFit: 'contain', border: '1px solid rgba(255,255,255,0.50)', borderRadius: 4 }} />
 );
 
-function PillNav() {
+function DropdownItem({ label, items }: { label: string; items: string[] }) {
   const [open, setOpen] = useState(false);
   return (
-    <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)', position: 'relative' }}>
-      <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-        <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
-          Website Designer
-          <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-            <path d={open ? 'M1 5l4-4 4 4' : 'M1 1l4 4 4-4'} stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        {open && (
-          <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10 }}>
-            <div style={{ background: '#0d1535', borderRadius: 16, padding: '8px 0', minWidth: 240, boxShadow: '0 12px 40px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.08)' }}>
-              {WEB_DESIGN_SERVICES.map((item, i) => (
-                <a key={item} href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.85)', textDecoration: 'none', borderBottom: i < WEB_DESIGN_SERVICES.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.1s' }}
-                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
-                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
-                  {item}<span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
-                </a>
-              ))}
-            </div>
+    <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
+        {label}
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+          <path d={open ? 'M1 5l4-4 4 4' : 'M1 1l4 4 4-4'} stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+      {open && (
+        <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10 }}>
+          <div style={{ background: '#0d1535', borderRadius: 16, padding: '8px 0', minWidth: 220, boxShadow: '0 12px 40px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.08)' }}>
+            {items.map((item, i) => (
+              <a key={item} href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.85)', textDecoration: 'none', borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.1s' }}
+                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
+                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+                {item}<span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
+              </a>
+            ))}
           </div>
-        )}
-      </div>
-      {OTHER_NAV_LINKS.map(link => (
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PillNav() {
+  return (
+    <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)', position: 'relative' }}>
+      {Object.entries(NAV_DROPDOWNS).map(([label, items]) => (
+        <DropdownItem key={label} label={label} items={items} />
+      ))}
+      {PLAIN_NAV_LINKS.map(link => (
         <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#ffffff', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
           onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
           onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
