@@ -199,8 +199,8 @@ export function VariantK_HorizontalStrip() {
               <div style={{ flex: 1, borderRight: isMobile ? 'none' : '1px solid #e5e5ea', borderTop: isMobile ? '1px solid #e5e5ea' : 'none', paddingRight: isMobile ? 0 : 40, paddingTop: isMobile ? 8 : 0 }}>
                 {['Local SEO Services (GMB)', 'AI Receptionist', 'Email Marketing Automation'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 18, color: '#1d1d1f' }}>{item}</span>
-                    <span style={{ color: '#000', fontSize: 22 }}>›</span>
+                    <a href="#" style={{ fontSize: 18, color: '#2997ff', textDecoration: 'none' }}>{item}</a>
+                    <span style={{ color: '#2997ff', fontSize: 22 }}>›</span>
                   </div>
                 ))}
               </div>
@@ -220,8 +220,8 @@ export function VariantK_HorizontalStrip() {
               <div style={{ flex: 1, borderLeft: isMobile ? 'none' : '1px solid #e5e5ea', borderTop: isMobile ? '1px solid #e5e5ea' : 'none', paddingLeft: isMobile ? 0 : 40, paddingTop: isMobile ? 8 : 0 }}>
                 {['Presentation Design', 'Email Design', 'Brochure & Flyer Design', 'Logo Design'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 18, color: '#1d1d1f' }}>{item}</span>
-                    <span style={{ color: '#000', fontSize: 22 }}>›</span>
+                    <a href="#" style={{ fontSize: 18, color: '#2997ff', textDecoration: 'none' }}>{item}</a>
+                    <span style={{ color: '#2997ff', fontSize: 22 }}>›</span>
                   </div>
                 ))}
               </div>
