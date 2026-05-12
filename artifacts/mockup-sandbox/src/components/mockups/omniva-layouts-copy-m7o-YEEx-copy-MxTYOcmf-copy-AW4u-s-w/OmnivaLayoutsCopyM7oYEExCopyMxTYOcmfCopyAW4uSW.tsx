@@ -15,51 +15,52 @@ export default function OmnivaLayoutsCopyM7oYEExCopyMxTYOcmfCopyAW4uSW() {
         overflow: 'hidden',
         background: '#0a0d1f',
       }}>
-        {/* Aurora light beams emanating from the right */}
+        {/* Aurora vertical light beams emanating from focal point on right */}
         <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-          {/* Glow halo origin */}
+          {/* Beams — narrow vertical columns fanning from a focal point */}
+          {[
+            { rotate: -22, color: 'rgba(80,150,255,0.85)',  right: '34%', w: 38, blur: 26 },
+            { rotate: -14, color: 'rgba(120,180,255,0.95)', right: '30%', w: 30, blur: 18 },
+            { rotate:  -7, color: 'rgba(255,200,160,0.95)', right: '26%', w: 28, blur: 14 },
+            { rotate:   0, color: 'rgba(255,255,235,1.00)', right: '23%', w: 22, blur: 10 },
+            { rotate:   6, color: 'rgba(255,150,90,0.95)',  right: '20%', w: 32, blur: 18 },
+            { rotate:  14, color: 'rgba(255,90,140,0.92)',  right: '16%', w: 42, blur: 24 },
+            { rotate:  22, color: 'rgba(220,70,180,0.85)',  right: '12%', w: 50, blur: 30 },
+            { rotate:  30, color: 'rgba(160,60,200,0.75)',  right:  '8%', w: 60, blur: 36 },
+          ].map((b, i) => (
+            <div key={i} style={{
+              position: 'absolute',
+              top: '50%', right: b.right,
+              width: b.w, height: '180%',
+              transformOrigin: '50% 50%',
+              transform: `translateY(-50%) rotate(${b.rotate}deg)`,
+              background: `linear-gradient(to bottom, transparent 0%, ${b.color} 48%, ${b.color} 52%, transparent 100%)`,
+              filter: `blur(${b.blur}px)`,
+              borderRadius: '50%',
+              mixBlendMode: 'screen',
+            }} />
+          ))}
+          {/* Bright glow core */}
           <div style={{
-            position: 'absolute', top: '50%', right: '18%', width: 520, height: 520,
+            position: 'absolute', top: '50%', right: '20%', width: 240, height: 240,
             transform: 'translateY(-50%)',
-            background: 'radial-gradient(circle, rgba(255,210,180,0.55) 0%, rgba(255,150,120,0.25) 25%, transparent 60%)',
-            filter: 'blur(20px)',
+            background: 'radial-gradient(circle, rgba(255,240,210,0.9) 0%, rgba(255,180,130,0.4) 25%, transparent 60%)',
+            filter: 'blur(18px)',
+            mixBlendMode: 'screen',
           }} />
-          {/* Orange beam */}
+          {/* Hot inner core */}
           <div style={{
-            position: 'absolute', top: '-10%', right: '24%', width: 110, height: '120%',
-            transform: 'rotate(8deg)',
-            background: 'linear-gradient(to bottom, transparent 0%, rgba(255,140,60,0.85) 40%, rgba(255,90,40,0.95) 55%, rgba(255,140,60,0.6) 75%, transparent 100%)',
-            filter: 'blur(38px)',
-            borderRadius: '50%',
+            position: 'absolute', top: '50%', right: '21%', width: 90, height: 90,
+            transform: 'translateY(-50%)',
+            background: 'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,230,200,0.6) 35%, transparent 70%)',
+            filter: 'blur(6px)',
+            mixBlendMode: 'screen',
           }} />
-          {/* Magenta/pink beam */}
+          {/* Subtle purple wash on far left */}
           <div style={{
-            position: 'absolute', top: '-15%', right: '12%', width: 130, height: '125%',
-            transform: 'rotate(-6deg)',
-            background: 'linear-gradient(to bottom, transparent 0%, rgba(255,80,160,0.75) 35%, rgba(220,60,180,0.9) 55%, rgba(160,60,200,0.6) 80%, transparent 100%)',
-            filter: 'blur(42px)',
-            borderRadius: '50%',
-          }} />
-          {/* Cyan/blue beam */}
-          <div style={{
-            position: 'absolute', top: '-8%', right: '32%', width: 95, height: '118%',
-            transform: 'rotate(4deg)',
-            background: 'linear-gradient(to bottom, transparent 0%, rgba(80,180,255,0.7) 38%, rgba(60,120,240,0.85) 58%, rgba(80,90,220,0.5) 80%, transparent 100%)',
-            filter: 'blur(44px)',
-            borderRadius: '50%',
-          }} />
-          {/* Soft purple wash on left */}
-          <div style={{
-            position: 'absolute', top: '20%', left: '-10%', width: 600, height: 600,
-            background: 'radial-gradient(circle, rgba(80,40,140,0.35) 0%, transparent 60%)',
+            position: 'absolute', top: '20%', left: '-15%', width: 600, height: 600,
+            background: 'radial-gradient(circle, rgba(80,40,140,0.30) 0%, transparent 60%)',
             filter: 'blur(40px)',
-          }} />
-          {/* Inner core highlight */}
-          <div style={{
-            position: 'absolute', top: '50%', right: '22%', width: 180, height: 180,
-            transform: 'translateY(-50%)',
-            background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(255,220,180,0.4) 30%, transparent 70%)',
-            filter: 'blur(8px)',
           }} />
         </div>
 
