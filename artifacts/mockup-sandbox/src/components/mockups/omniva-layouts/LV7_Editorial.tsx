@@ -1,6 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import portfolioImg from '../../../assets/deloitte.png';
-import logoMark from '../../../assets/donohue-logo-mark.png';
+import logoMark from '../../../assets/ddc-logo.png';
+
+const NAV_DROPDOWNS: Record<string, string[]> = {
+  'Website Designer': ['Website Design & Strategy', 'UX/UI Design', 'Website Development'],
+  'Digital Marketing': ['Local SEO (GMB)', 'Email Marketing', 'AI Receptionist'],
+  'Graphic Designer': ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
+};
+const PLAIN_NAV_LINKS = ['Pricing', 'About', 'Contact us'];
+
+function DropdownItem({ label, items }: { label: string; items: string[] }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <button style={{ fontSize: 14, fontWeight: 500, color: open ? '#fff' : 'rgba(255,255,255,0.88)', background: open ? 'rgba(255,255,255,0.12)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: 'inherit', display: 'flex', alignItems: 'center', transition: 'background 0.15s' }}>
+        {label}
+      </button>
+      {open && (
+        <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10, zIndex: 200 }}>
+          <div style={{ background: '#0d1535', borderRadius: 16, padding: '8px 0', minWidth: 220, boxShadow: '0 12px 40px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.08)' }}>
+            {items.map((item, i) => (
+              <a key={item} href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.85)', textDecoration: 'none', borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.1s' }}
+                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
+                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+                {item}<span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PillNav() {
+  return (
+    <nav style={{ background: '#0d1535', borderRadius: 980, padding: '0 28px', height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap', boxShadow: '0 4px 24px rgba(0,0,0,0.22)' }}>
+      {Object.entries(NAV_DROPDOWNS).map(([label, items]) => (
+        <DropdownItem key={label} label={label} items={items} />
+      ))}
+      {PLAIN_NAV_LINKS.map(link => (
+        <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#ffffff', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
+          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+          onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+          {link}
+        </a>
+      ))}
+    </nav>
+  );
+}
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
@@ -100,21 +148,16 @@ export default function LV7_Editorial() {
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
 
       {/* Fixed white header */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#fff', borderBottom: '1px solid #e5e5ea', padding: '0 40px', display: 'flex', alignItems: 'center', height: 64 }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#fff', borderBottom: '1px solid #e5e5ea', padding: '0 40px', display: 'flex', alignItems: 'center', height: 84 }}>
         <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img src={logoMark} alt="Donohue Design" style={{ height: 44, width: 'auto', display: 'block' }} />
+          <img src={logoMark} alt="Donohue Design" style={{ height: 56, width: 'auto', display: 'block' }} />
         </a>
-        <div style={{ marginLeft: 'auto', display: 'flex', gap: 24, alignItems: 'center' }}>
-          {['Services', 'Work', 'About', 'Contact'].map(i => (
-            <span key={i} style={{ fontSize: 13, color: '#3d3d3f', cursor: 'pointer' }}>{i}</span>
-          ))}
-          <button style={{ background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '8px 16px', fontSize: 12, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
-            Get a quote
-          </button>
+        <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+          <PillNav />
         </div>
       </header>
       {/* Spacer to offset fixed header */}
-      <div style={{ height: 64 }} />
+      <div style={{ height: 84 }} />
 
       {/* Hero */}
       <section style={{ minHeight: 340, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
