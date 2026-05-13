@@ -121,7 +121,7 @@ const BIO = [
 ];
 
 const sections = [
-  { h1: 'Website Design Santa Rosa' },
+  { h1: 'Website Designer Santa Rosa' },
   { h1: 'Smart Websites' },
   { h1: 'Website Development in Santa Rosa, CA.' },
 ];
