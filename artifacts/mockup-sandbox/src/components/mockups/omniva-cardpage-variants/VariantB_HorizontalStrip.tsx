@@ -371,7 +371,7 @@ export function VariantK_HorizontalStrip() {
       <div style={{ height: 26, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.4) 6px, rgba(0,0,0,0.4) 12px, rgba(0,0,0,0.6) 12px, rgba(0,0,0,0.6) 18px, rgba(0,0,0,0.8) 18px, rgba(0,0,0,0.8) 24px, #000 24px)', margin: `0 -${sidePad}px` }} />
       <footer style={{ background: '#000', padding: '48px 40px 48px', margin: `0 -${sidePad}px`, color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, paddingBottom: 28 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 24 : 32, paddingBottom: 28 }}>
             <div>
               <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Donohue Design</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', fontWeight: 500, margin: '0 0 4px' }}>Santa Rosa, CA</p>
