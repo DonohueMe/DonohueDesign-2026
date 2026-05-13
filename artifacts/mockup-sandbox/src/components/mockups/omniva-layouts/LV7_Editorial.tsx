@@ -74,7 +74,7 @@ const BIO = [
 
 const sections = [
   { h1: 'Website Designer in Santa Rosa, CA.' },
-  { h1: 'User experience and User interface (UI/UX) Designer in Santa Rosa, CA.' },
+  { h1: 'Smart Websites' },
   { h1: 'Website Development in Santa Rosa, CA.' },
 ];
 
