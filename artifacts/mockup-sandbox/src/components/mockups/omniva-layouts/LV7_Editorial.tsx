@@ -223,9 +223,9 @@ export default function LV7_Editorial() {
 
       {/* Hero */}
       <section style={{ background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 80px' }}>
-        <h1 style={{ fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.3, color: '#1d1d1f', margin: '0 0 18px' }}>
+        <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.13, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 18px' }}>
           Strategy first.<br />Results always.
-        </h1>
+        </p>
         <hr style={{ border: 'none', borderTop: '1px solid #fff', width: 100, margin: '40px 0 24px' }} />
         <p style={{ fontSize: 18, color: '#3d3d3f', fontWeight: 500, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
           Schedule your free consultation now.
