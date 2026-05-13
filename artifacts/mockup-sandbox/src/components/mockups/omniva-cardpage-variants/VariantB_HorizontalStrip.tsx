@@ -13,34 +13,68 @@ function useBreakpoint() {
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
-const NAV_DROPDOWNS: Record<string, string[]> = {
-  'Services': [
-    'Website Design & Strategy', 'UX/UI Design', 'Website Development',
-    'Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist',
-    'Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design',
-  ],
-};
 const PLAIN_NAV_LINKS = ['Case Studies', 'Pricing', 'About/Contact us'];
 
-function DropdownItem({ label, items }: { label: string; items: string[] }) {
+const SERVICES_CATEGORIES = [
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    ),
+    title: 'Website Designer',
+    links: ['Website Design & Strategy', 'UX/UI Design', 'Website Development'],
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+      </svg>
+    ),
+    title: 'Digital Marketing',
+    links: ['Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist'],
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3a9 9 0 0 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.6-1.4-.4-.4-.6-.9-.6-1.4 0-1.1.9-2 2-2H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/>
+        <circle cx="7.5" cy="10.5" r="1" fill="#1d1d1f" stroke="none"/><circle cx="11" cy="7" r="1" fill="#1d1d1f" stroke="none"/><circle cx="15" cy="7.5" r="1" fill="#1d1d1f" stroke="none"/>
+      </svg>
+    ),
+    title: 'Graphic Designer',
+    links: ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
+  },
+];
+
+function ServicesMegaMenu() {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 4, transition: 'background 0.15s' }}>
-        {label}
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ marginTop: 1, transition: 'transform 0.15s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
+        Services
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ marginTop: 1, transition: 'transform 0.2s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>
           <path d="M2 4l4 4 4-4" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
       {open && (
-        <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10 }}>
-          <div style={{ background: '#0d1535', borderRadius: 16, padding: '8px 0', minWidth: 220, boxShadow: '0 12px 40px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.08)' }}>
-            {items.map((item, i) => (
-              <a key={item} href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.85)', textDecoration: 'none', borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.1s' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
-                {item}<span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
-              </a>
+        <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 12, zIndex: 200 }}>
+          <div style={{ background: '#f2f2f7', borderRadius: 20, padding: '28px 0', width: 700, boxShadow: '0 8px 40px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.06)', display: 'flex' }}>
+            {SERVICES_CATEGORIES.map((cat, ci) => (
+              <div key={cat.title} style={{ flex: 1, padding: '0 28px', borderLeft: ci > 0 ? '1px solid #d1d1d6' : 'none' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
+                  {cat.icon}
+                  <span style={{ fontSize: 15, fontWeight: 700, color: '#1d1d1f', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{cat.title}</span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                  {cat.links.map(link => (
+                    <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#2997ff', textDecoration: 'none', padding: '8px 0', display: 'block', letterSpacing: '-0.01em', borderBottom: '1px solid rgba(0,0,0,0.07)', transition: 'opacity 0.1s' }}
+                      onMouseEnter={e => (e.currentTarget.style.opacity = '0.6')}
+                      onMouseLeave={e => (e.currentTarget.style.opacity = '1')}>
+                      {link}
+                    </a>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -52,9 +86,7 @@ function DropdownItem({ label, items }: { label: string; items: string[] }) {
 function PillNav() {
   return (
     <nav style={{ background: 'transparent', padding: 0, height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap' }}>
-      {Object.entries(NAV_DROPDOWNS).map(([label, items]) => (
-        <DropdownItem key={label} label={label} items={items} />
-      ))}
+      <ServicesMegaMenu />
       {PLAIN_NAV_LINKS.map(link => (
         <a key={link} href="#" style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
           onMouseEnter={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.06)')}
