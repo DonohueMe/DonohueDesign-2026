@@ -337,7 +337,7 @@ export function VariantK_HorizontalStrip() {
             ].map(({ bg, accent, eyebrow, title, body, icon }) => (
               <div key={eyebrow} style={{ background: bg, borderRadius: 18, padding: '26px 24px', position: 'relative', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)' }}>
                 {/* Icon badge + eyebrow */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
                   <span style={{
                     width: 34, height: 34, borderRadius: 10,
                     background: '#fff', color: accent,
