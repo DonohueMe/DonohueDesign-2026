@@ -48,8 +48,18 @@ const SERVICES_CATEGORIES = [
 
 function ServicesMegaMenu() {
   const [open, setOpen] = useState(false);
+  const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const show = () => {
+    if (timer.current) clearTimeout(timer.current);
+    setOpen(true);
+  };
+  const hide = () => {
+    timer.current = setTimeout(() => setOpen(false), 180);
+  };
+
   return (
-    <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+    <div style={{ position: 'relative' }} onMouseEnter={show} onMouseLeave={hide}>
       <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
         Services
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ marginTop: 1, transition: 'transform 0.2s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>
@@ -57,7 +67,7 @@ function ServicesMegaMenu() {
         </svg>
       </button>
       {open && (
-        <div style={{ position: 'fixed', top: 84, left: '50%', transform: 'translateX(-50%)', zIndex: 200 }}>
+        <div onMouseEnter={show} onMouseLeave={hide} style={{ position: 'fixed', top: 59, left: '50%', transform: 'translateX(-50%)', zIndex: 200 }}>
           <div style={{ background: '#f2f2f7', borderRadius: 20, padding: '28px 0', width: 700, boxShadow: '0 8px 40px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.06)', border: '1px solid #d1d1d6', display: 'flex' }}>
             {SERVICES_CATEGORIES.map((cat, ci) => (
               <div key={cat.title} style={{ flex: 1, padding: '0 28px', borderLeft: ci > 0 ? '1px solid #d1d1d6' : 'none' }}>
