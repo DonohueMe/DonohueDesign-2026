@@ -236,7 +236,7 @@ export default function LV7_Editorial() {
       </section>
 
       {/* Body */}
-      <div style={{ display: 'flex', gap: 52, padding: '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 32 : 52, padding: isMobile ? '40px 16px 60px' : '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
 
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
@@ -320,7 +320,7 @@ export default function LV7_Editorial() {
         </main>
 
         {/* Sidebar */}
-        <aside style={{ flex: '0 0 300px', position: 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
+        <aside style={{ flex: isMobile ? '1 1 auto' : '0 0 300px', width: isMobile ? '100%' : undefined, position: isMobile ? 'static' : 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
           {/* Service category cards */}
           {serviceCards.map(({ title, Icon, description, items }) => (
