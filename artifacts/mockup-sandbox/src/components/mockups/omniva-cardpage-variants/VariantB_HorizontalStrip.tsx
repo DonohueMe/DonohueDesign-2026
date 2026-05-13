@@ -139,7 +139,7 @@ function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; lab
 // VARIATION B — Hero + centered bio intro + Layout B service tiles + Layout B reviews/map combo tile
 export function VariantK_HorizontalStrip() {
   const { w, isMobile, isTablet } = useBreakpoint();
-  const showHamburger = w <= 1200;
+  const showHamburger = w < 900;
   const tileStack = isMobile || w < 1280;
   const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
