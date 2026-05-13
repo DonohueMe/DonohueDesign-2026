@@ -143,7 +143,7 @@ export function VariantK_HorizontalStrip() {
           <img src={logoMark} alt="Donohue Design" style={{ height: 37, width: 'auto', display: 'block' }} />
         </a>
         {!showHamburger ? (
-          <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <PillNav />
           </div>
         ) : (
