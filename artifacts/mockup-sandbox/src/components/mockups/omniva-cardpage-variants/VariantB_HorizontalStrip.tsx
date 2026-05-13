@@ -95,7 +95,7 @@ function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; lab
 export function VariantK_HorizontalStrip() {
   const { w, isMobile, isTablet } = useBreakpoint();
   const showHamburger = w <= 1200;
-  const sidePad = isMobile ? 16 : 20;
+  const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: `0 ${sidePad}px`, background: '#fff', minHeight: '100vh', overflowX: 'hidden' }}>
 
@@ -162,7 +162,7 @@ export function VariantK_HorizontalStrip() {
 
       {/* ── Layout B service tiles + right-side fun sticker sidebar ── */}
       <div style={{ background: '#fff', padding: isMobile ? '32px 0' : '60px 0' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: showHamburger ? '1fr' : '1fr 300px', gap: isMobile ? 32 : 74, alignItems: 'start' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile || isTablet ? '1fr' : '1fr 300px', gap: isMobile ? 32 : 74, alignItems: 'start' }}>
 
           {/* Left column: 3 service tiles */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
@@ -328,7 +328,7 @@ export function VariantK_HorizontalStrip() {
                 <div style={{ display: 'flex', gap: 2 }}>{[1,2,3,4,5].map(s => <span key={s} style={{ color: '#FFB800', fontSize: 14 }}>★</span>)}</div>
                 <span style={{ fontSize: 13, color: '#6e6e73' }}>5.0 · Google</span>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : showHamburger ? '1fr 1fr' : '1fr 1fr 1fr', gap: isMobile ? 24 : 32 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? '1fr 1fr' : '1fr 1fr 1fr', gap: isMobile ? 24 : 32 }}>
                 {[
                   { name: 'Maria T.', location: 'Santa Rosa, CA', text: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
                   { name: 'Derek H.', location: 'Petaluma, CA', text: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy Jim put together was exactly what our shop needed.' },
