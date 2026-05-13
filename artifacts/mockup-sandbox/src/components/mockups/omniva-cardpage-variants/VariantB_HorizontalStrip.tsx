@@ -97,7 +97,7 @@ export function VariantK_HorizontalStrip() {
   const showHamburger = w <= 1200;
   const sidePad = isMobile ? 16 : 20;
   return (
-    <div style={{ fontFamily: SF, margin: 0, padding: `0 ${sidePad}px`, background: '#fff', minHeight: '100vh' }}>
+    <div style={{ fontFamily: SF, margin: 0, padding: `0 ${sidePad}px`, background: '#fff', minHeight: '100vh', overflowX: 'hidden' }}>
 
       {/* Fixed white header */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: '#fff', padding: `0 ${sidePad}px`, display: 'flex', alignItems: 'center', height: 84 }}>
