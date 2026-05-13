@@ -127,7 +127,7 @@ const serviceCards = [
     title: 'Website Design',
     Icon: IconWeb,
     description: 'Strategy-first websites built to generate leads, earn trust, and turn visitors into customers.',
-    items: ['Website Design \u0026 Strategy', 'UX/UI Design', 'Website Development'],
+    items: ['Website Design & Strategy', 'Website Development'],
   },
   {
     title: 'Digital Marketing',
