@@ -384,15 +384,13 @@ export function VariantK_HorizontalStrip() {
                   <a key={name} href="#" aria-label={name} style={{ width: 56, height: 56, borderRadius: '50%', background: '#363636', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>{svg}</a>
                 ))}
               </div>
+              <p style={{ fontSize: 14, color: '#fff', margin: '16px 0 0' }}>©2026 Donohue Design</p>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-              <nav style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
-                  <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
-                ))}
-              </nav>
-            </div>
-            <p style={{ fontSize: 14, color: '#fff', margin: 0, paddingTop: 60, alignSelf: 'flex-start' }}>©2026 Donohue Design</p>
+            <nav style={{ display: 'flex', gap: 32, flexWrap: 'wrap', alignSelf: 'flex-start' }}>
+              {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
+                <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
+              ))}
+            </nav>
           </div>
         </div>
       </footer>
