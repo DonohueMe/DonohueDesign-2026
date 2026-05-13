@@ -369,7 +369,7 @@ export function VariantK_HorizontalStrip() {
       </div>
 
       <div style={{ height: 26, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.4) 6px, rgba(0,0,0,0.4) 12px, rgba(0,0,0,0.6) 12px, rgba(0,0,0,0.6) 18px, rgba(0,0,0,0.8) 18px, rgba(0,0,0,0.8) 24px, #000 24px)', margin: `0 -${sidePad}px` }} />
-      <footer style={{ background: '#000', padding: '48px 40px 48px', margin: `0 -${sidePad}px`, color: '#fff' }}>
+      <footer style={{ background: '#000', padding: isMobile ? '40px 20px 40px' : '48px 40px 48px', margin: `0 -${sidePad}px`, color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 24 : 32, paddingBottom: 28, textAlign: isMobile ? 'center' : 'left' }}>
             <div>
@@ -384,8 +384,9 @@ export function VariantK_HorizontalStrip() {
                   <a key={name} href="#" aria-label={name} style={{ width: 56, height: 56, borderRadius: '50%', background: '#363636', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>{svg}</a>
                 ))}
               </div>
-              <p style={{ fontSize: 14, color: '#fff', margin: '16px 0 0' }}>©2026 Donohue Design</p>
+              <p style={{ fontSize: 14, color: '#fff', margin: '20px 0 0' }}>©2026 Donohue Design</p>
             </div>
+            {isMobile && <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.15)', margin: '4px 0' }} />}
             <nav style={{ display: 'flex', columnGap: 32, rowGap: 16, flexWrap: 'wrap', alignSelf: 'flex-start', justifyContent: isMobile ? 'center' : 'flex-start' }}>
               {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
                 <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
