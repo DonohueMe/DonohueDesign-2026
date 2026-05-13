@@ -133,13 +133,13 @@ const serviceCards = [
     title: 'Digital Marketing',
     Icon: IconMarketing,
     description: 'AI-powered campaigns, local SEO, and automated outreach \u2014 running around the clock to grow your business.',
-    items: ['Email marketing automation', 'Local SEO (GBP)', 'AI Receptionist', 'AI Voice Assistant', 'AI Chat Assistant', 'Internet Marketing Service'],
+    items: ['Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist'],
   },
   {
     title: 'Graphic Design',
     Icon: IconDesign,
     description: 'Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.',
-    items: ['Email design', 'Logo design', 'Brochure \u0026 Flyer Design', 'Presentation Design'],
+    items: ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
   },
 ];
 
