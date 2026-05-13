@@ -370,7 +370,7 @@ export function VariantK_HorizontalStrip() {
 
       <footer style={{ background: '#2c2c2c', padding: '56px 40px 32px', margin: '0 -20px', color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 32, paddingBottom: 36, borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 32, paddingBottom: 36 }}>
             <div>
               <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Donohue Design</p>
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
