@@ -95,6 +95,7 @@ function TileHeader({ tint, label }: { tint: string; icon?: React.ReactNode; lab
 export function VariantK_HorizontalStrip() {
   const { w, isMobile, isTablet } = useBreakpoint();
   const showHamburger = w <= 1200;
+  const tileStack = isMobile || w < 1280;
   const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: `0 ${sidePad}px`, background: '#fff', minHeight: '100vh', overflowX: 'hidden' }}>
@@ -168,8 +169,8 @@ export function VariantK_HorizontalStrip() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 48, minWidth: 0 }}>
 
             {/* Tile 2 — Website Designer */}
-            <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 24 : 56, alignItems: isMobile ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-              <div style={{ flex: isMobile ? '1 1 auto' : '0 0 360px' }}>
+            <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: tileStack ? 'column' : 'row', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+              <div style={{ flex: tileStack ? '1 1 auto' : '0 0 360px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_BROWSER} label={<>Website Design<br /><span style={{color:'#b7b7b9'}}>Santa Rosa, CA</span></>} />
                 <h2 style={{ fontSize: 34, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   Your website. Working harder than ever.
@@ -178,7 +179,7 @@ export function VariantK_HorizontalStrip() {
                   A well-designed website isn't just attractive — it's strategic. Every layout choice, call-to-action, and navigation path should guide visitors toward a clear goal. In 2025, that means mobile-first design, fast load times, and content built around what your customers actually need — not what looks impressive in a portfolio.
                 </p>
               </div>
-              <div style={{ flex: 1, borderLeft: isMobile ? 'none' : '1px solid #e5e5ea', borderTop: isMobile ? '1px solid #e5e5ea' : 'none', paddingLeft: isMobile ? 0 : 40, paddingTop: isMobile ? 8 : 0 }}>
+              <div style={{ flex: 1, borderLeft: tileStack ? 'none' : '1px solid #e5e5ea', borderTop: tileStack ? '1px solid #e5e5ea' : 'none', paddingLeft: tileStack ? 0 : 40, paddingTop: tileStack ? 8 : 0 }}>
                 {['Website Design & Strategy', 'Smart Websites', 'Website Development'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                     <a href="#" style={{ fontSize: 18, color: '#2997ff', textDecoration: 'none' }}>{item}</a>
@@ -189,8 +190,8 @@ export function VariantK_HorizontalStrip() {
             </div>
 
             {/* Tile 3 — Digital Marketing — row-reverse */}
-            <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: isMobile ? 24 : 56, alignItems: isMobile ? 'stretch' : 'center', flexDirection: isMobile ? 'column' : 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-              <div style={{ flex: isMobile ? '1 1 auto' : '0 0 320px' }}>
+            <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', flexDirection: tileStack ? 'column' : 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+              <div style={{ flex: tileStack ? '1 1 auto' : '0 0 320px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label={<>Digital Marketing<br /><span style={{color:'#b7b7b9'}}>Santa Rosa, CA</span></>} />
                 <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   Get found. Stay top of mind.
@@ -199,7 +200,7 @@ export function VariantK_HorizontalStrip() {
                   Email campaigns and local SEO that put your business in front of the right people at the right time.
                 </p>
               </div>
-              <div style={{ flex: 1, borderRight: isMobile ? 'none' : '1px solid #e5e5ea', borderTop: isMobile ? '1px solid #e5e5ea' : 'none', paddingRight: isMobile ? 0 : 40, paddingTop: isMobile ? 8 : 0 }}>
+              <div style={{ flex: 1, borderRight: tileStack ? 'none' : '1px solid #e5e5ea', borderTop: tileStack ? '1px solid #e5e5ea' : 'none', paddingRight: tileStack ? 0 : 40, paddingTop: tileStack ? 8 : 0 }}>
                 {['Local SEO (Google My Business)', 'AI Receptionist', 'Email Marketing Automation'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                     <a href="#" style={{ fontSize: 18, color: '#2997ff', textDecoration: 'none' }}>{item}</a>
@@ -210,8 +211,8 @@ export function VariantK_HorizontalStrip() {
             </div>
 
             {/* Tile 5 — Graphic Designer */}
-            <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 24 : 56, alignItems: isMobile ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
-              <div style={{ flex: isMobile ? '1 1 auto' : '0 0 320px' }}>
+            <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: tileStack ? 'column' : 'row', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
+              <div style={{ flex: tileStack ? '1 1 auto' : '0 0 320px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_PALETTE} label={<>Graphic Designer<br /><span style={{color:'#b7b7b9'}}>Santa Rosa, CA</span></>} />
                 <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#000', margin: '0 0 20px' }}>
                   A brand as strong as your business.
@@ -220,7 +221,7 @@ export function VariantK_HorizontalStrip() {
                   Everything matches your website — same colors, same feel, same level of quality across every touchpoint.
                 </p>
               </div>
-              <div style={{ flex: 1, borderLeft: isMobile ? 'none' : '1px solid #e5e5ea', borderTop: isMobile ? '1px solid #e5e5ea' : 'none', paddingLeft: isMobile ? 0 : 40, paddingTop: isMobile ? 8 : 0 }}>
+              <div style={{ flex: 1, borderLeft: tileStack ? 'none' : '1px solid #e5e5ea', borderTop: tileStack ? '1px solid #e5e5ea' : 'none', paddingLeft: tileStack ? 0 : 40, paddingTop: tileStack ? 8 : 0 }}>
                 {['Presentation Design', 'Email Design', 'Brochure & Flyer Design', 'Logo Design'].map(item => (
                   <div key={item} style={{ borderBottom: '1px solid #e5e5ea', padding: '14px 0', display: 'flex', justifyContent: 'space-between' }}>
                     <a href="#" style={{ fontSize: 18, color: '#2997ff', textDecoration: 'none' }}>{item}</a>
