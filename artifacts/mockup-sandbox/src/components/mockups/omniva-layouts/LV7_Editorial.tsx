@@ -243,7 +243,7 @@ export default function LV7_Editorial() {
           {sections.map(({ h1 }, si) => (
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56 }}>
-                <h1 style={{ fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 40px', lineHeight: 1.36 }}>
+                <h1 style={{ fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 24px', lineHeight: 1.36 }}>
                   {h1}<br />
                   <span style={{ ...(GRAD_WARM as any) }}>Strategy-Driven Design That Works</span>
                 </h1>
