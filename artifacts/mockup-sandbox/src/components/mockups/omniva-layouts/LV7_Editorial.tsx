@@ -1,34 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import portfolioImg from '../../../assets/deloitte.png';
 import logoMark from '../../../assets/ddc-logo.png';
 
-const NAV_DROPDOWNS: Record<string, string[]> = {
-  'Website Designer': ['Website Design & Strategy', 'UX/UI Design', 'Website Development'],
-  'Digital Marketing': ['Local SEO (GMB)', 'Email Marketing', 'AI Receptionist'],
-  'Graphic Designer': ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
-};
+function useBreakpoint() {
+  const [w, setW] = useState(typeof window !== 'undefined' ? window.innerWidth : 1280);
+  useEffect(() => {
+    const onResize = () => setW(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  return { w, isMobile: w < 768, isTablet: w >= 768 && w < 1024, isDesktop: w >= 1024 };
+}
+
 const PLAIN_NAV_LINKS = ['Case Studies', 'Pricing', 'About/Contact us'];
 
-function DropdownItem({ label, items }: { label: string; items: string[] }) {
+const SERVICES_CATEGORIES = [
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    ),
+    title: 'Website Designer',
+    links: ['Website Design & Strategy', 'UX/UI Design', 'Website Development'],
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+      </svg>
+    ),
+    title: 'Digital Marketing',
+    links: ['Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist'],
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3a9 9 0 0 0 0 18c1.1 0 2-.9 2-2 0-.5-.2-1-.6-1.4-.4-.4-.6-.9-.6-1.4 0-1.1.9-2 2-2H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/>
+        <circle cx="7.5" cy="10.5" r="1" fill="#1d1d1f" stroke="none"/><circle cx="11" cy="7" r="1" fill="#1d1d1f" stroke="none"/><circle cx="15" cy="7.5" r="1" fill="#1d1d1f" stroke="none"/>
+      </svg>
+    ),
+    title: 'Graphic Designer',
+    links: ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
+  },
+];
+
+function ServicesMegaMenu() {
   const [open, setOpen] = useState(false);
+  const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const show = () => { if (timer.current) clearTimeout(timer.current); setOpen(true); };
+  const hide = () => { timer.current = setTimeout(() => setOpen(false), 180); };
   return (
-    <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: 'inherit', display: 'flex', alignItems: 'center', transition: 'background 0.15s' }}>
-        {label}
+    <div style={{ position: 'relative' }} onMouseEnter={show} onMouseLeave={hide}>
+      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? '#f2f2f7' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.15s' }}>
+        Services
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ marginTop: 1, transition: 'transform 0.2s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+          <path d="M2 4l4 4 4-4" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </button>
-      {open && (
-        <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10, zIndex: 200 }}>
-          <div style={{ background: '#0d1535', borderRadius: 16, padding: '8px 0', minWidth: 220, boxShadow: '0 12px 40px rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.08)' }}>
-            {items.map((item, i) => (
-              <a key={item} href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px', fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,0.85)', textDecoration: 'none', borderBottom: i < items.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none', transition: 'background 0.1s' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
-                {item}<span style={{ color: 'rgba(255,255,255,0.3)', fontSize: 16 }}>›</span>
-              </a>
-            ))}
-          </div>
+      <div onMouseEnter={show} onMouseLeave={hide} style={{ position: 'fixed', top: 84, left: '50%', transform: 'translateX(-50%)', zIndex: 200, visibility: open ? 'visible' : 'hidden', pointerEvents: open ? 'auto' : 'none' }}>
+        <div style={{ background: '#f2f2f7', borderRadius: 20, padding: '28px 0', width: 700, boxShadow: '0 8px 40px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.06)', display: 'flex' }}>
+          {SERVICES_CATEGORIES.map((cat, ci) => (
+            <div key={cat.title} style={{ flex: 1, padding: '0 28px', borderLeft: ci > 0 ? '1px solid #d1d1d6' : 'none' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
+                {cat.icon}
+                <span style={{ fontSize: 15, fontWeight: 700, color: '#1d1d1f', letterSpacing: '-0.02em', lineHeight: 1.2 }}>{cat.title}</span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                {cat.links.map(link => (
+                  <a key={link} href="#" style={{ fontSize: 14, fontWeight: 500, color: '#2997ff', textDecoration: 'none', padding: '8px 0', display: 'block', letterSpacing: '-0.01em', borderBottom: '1px solid rgba(0,0,0,0.07)', transition: 'opacity 0.1s' }}
+                    onMouseEnter={e => (e.currentTarget.style.opacity = '0.6')}
+                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}>
+                    {link}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -36,9 +86,7 @@ function DropdownItem({ label, items }: { label: string; items: string[] }) {
 function PillNav() {
   return (
     <nav style={{ background: 'transparent', padding: 0, height: 52, display: 'flex', alignItems: 'center', gap: 4, whiteSpace: 'nowrap' }}>
-      {Object.entries(NAV_DROPDOWNS).map(([label, items]) => (
-        <DropdownItem key={label} label={label} items={items} />
-      ))}
+      <ServicesMegaMenu />
       {PLAIN_NAV_LINKS.map(link => (
         <a key={link} href="#" style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', textDecoration: 'none', padding: '6px 14px', borderRadius: 980, transition: 'background 0.15s', letterSpacing: '-0.01em' }}
           onMouseEnter={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.06)')}
@@ -144,17 +192,31 @@ const serviceCards = [
 ];
 
 export default function LV7_Editorial() {
+  const { w, isMobile } = useBreakpoint();
+  const showHamburger = w < 768;
+  const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
 
       {/* Fixed white header */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#fff', borderBottom: '1px solid #e5e5ea', padding: '0 40px', display: 'flex', alignItems: 'center', height: 84 }}>
-        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img src={logoMark} alt="Donohue Design" style={{ height: 37, width: 'auto', display: 'block' }} />
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: '#fff', padding: `0 ${sidePad}px`, display: 'flex', alignItems: 'center', height: 84 }}>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginRight: 20 }}>
+          <img src={logoMark} alt="Donohue Design" style={{ height: 30, width: 'auto', display: 'block' }} />
         </a>
-        <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-          <PillNav />
-        </div>
+        {!showHamburger ? (
+          <>
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+              <PillNav />
+            </div>
+            <img src={logoMark} alt="" aria-hidden="true" style={{ height: 30, width: 'auto', visibility: 'hidden', flexShrink: 0 }} />
+          </>
+        ) : (
+          <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'transparent', border: 'none', width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 6, cursor: 'pointer', padding: '0 8px' }}>
+            <span style={{ width: 14, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+            <span style={{ width: 20, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+            <span style={{ width: 26, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+          </button>
+        )}
       </header>
       {/* Spacer to offset fixed header */}
       <div style={{ height: 84 }} />
