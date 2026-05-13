@@ -121,7 +121,7 @@ const BIO = [
 ];
 
 const sections = [
-  { h1: 'Website Designer in Santa Rosa, CA.' },
+  { h1: 'Website Design Santa Rosa' },
   { h1: 'Smart Websites' },
   { h1: 'Website Development in Santa Rosa, CA.' },
 ];
@@ -245,8 +245,7 @@ export default function LV7_Editorial() {
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56 }}>
                 <h1 style={{ fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 24px', lineHeight: 1.36 }}>
-                  {h1}<br />
-                  <span style={{ ...(GRAD_WARM as any) }}>Strategy-Driven Design That Works</span>
+                  {h1}
                 </h1>
                 {BIO.map((para, pi) => (
                   <p key={pi} style={{ fontSize: 18, lineHeight: 1.75, margin: pi === 0 ? '0 0 22px' : '0 0 12px', color: '#3d3d3f', fontWeight: 400 }}>
