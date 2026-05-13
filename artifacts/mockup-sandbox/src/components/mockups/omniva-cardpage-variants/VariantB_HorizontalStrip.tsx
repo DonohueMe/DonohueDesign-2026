@@ -368,8 +368,8 @@ export function VariantK_HorizontalStrip() {
         </div>
       </div>
 
-      <div style={{ height: 18, background: 'linear-gradient(to bottom, #fff 0px, #fff 2px, #cccccc 2px, #cccccc 4px, #999999 4px, #999999 6px, #666666 6px, #666666 8px, #444444 8px, #444444 10px, #333333 10px, #333333 12px, #2e2e2e 12px, #2e2e2e 14px, #2c2c2c 14px, #2c2c2c 18px)', margin: `0 -${sidePad}px` }} />
-      <footer style={{ background: '#2c2c2c', padding: '0 40px 32px', margin: `0 -${sidePad}px`, color: '#fff' }}>
+      <div style={{ height: 10, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 4px, rgba(0,0,0,0.6) 4px, rgba(0,0,0,0.6) 6px, rgba(0,0,0,0.8) 6px, rgba(0,0,0,0.8) 8px, #000 8px)', margin: `0 -${sidePad}px` }} />
+      <footer style={{ background: '#000', padding: '0 40px 32px', margin: `0 -${sidePad}px`, color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 32, paddingBottom: 36 }}>
             <div>
