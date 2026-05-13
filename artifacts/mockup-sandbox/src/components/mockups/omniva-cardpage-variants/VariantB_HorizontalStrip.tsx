@@ -109,10 +109,10 @@ export function VariantK_HorizontalStrip() {
             <PillNav />
           </div>
         ) : (
-          <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'transparent', border: 'none', width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 5, cursor: 'pointer', padding: '0 8px' }}>
-            <span style={{ width: 12, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
-            <span style={{ width: 17, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
-            <span style={{ width: 22, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+          <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'transparent', border: 'none', width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 6, cursor: 'pointer', padding: '0 8px' }}>
+            <span style={{ width: 14, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+            <span style={{ width: 20, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+            <span style={{ width: 26, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
           </button>
         )}
       </header>
