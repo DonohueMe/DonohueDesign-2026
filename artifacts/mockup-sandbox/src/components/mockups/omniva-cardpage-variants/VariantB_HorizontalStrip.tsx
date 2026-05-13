@@ -140,6 +140,12 @@ export function VariantK_HorizontalStrip() {
         <h1 style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, padding: `0 ${isMobile ? 20 : 0}px` }}>
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
+        <p style={{ fontSize: isMobile ? 16 : 18, color: '#3d3d3f', fontWeight: 500, margin: '28px 0 20px', letterSpacing: '-0.01em' }}>
+          Schedule your free consultation now
+        </p>
+        <a href="#" style={{ display: 'inline-block', background: '#000', color: '#fff', fontSize: 16, fontWeight: 600, letterSpacing: '-0.01em', padding: '14px 32px', borderRadius: 40, textDecoration: 'none' }}>
+          Get Started
+        </a>
       </section>
 
       {/* Centered narrow bio intro — white background */}
