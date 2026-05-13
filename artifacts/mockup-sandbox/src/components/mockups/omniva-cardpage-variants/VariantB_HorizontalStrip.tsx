@@ -171,7 +171,7 @@ export function VariantK_HorizontalStrip() {
 
       {/* Full-bleed hero */}
       <section style={{
-        padding: `80px 0 100px`,
+        padding: `80px 0 80px`,
         margin: `0 -${sidePad}px`,
         position: 'relative',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
