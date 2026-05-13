@@ -276,51 +276,6 @@ export default function LV7_Editorial() {
             </div>
           ))}
 
-          {/* AI Receptionist ad */}
-          <div style={{ background: '#f2ede8', borderRadius: 20, padding: '22px 20px 16px', minHeight: 220, display: 'flex', flexDirection: 'column', marginBottom: 20 }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: '#6e6e73', margin: '0 0 8px', letterSpacing: '0.01em' }}>AI Receptionist</p>
-            <p style={{ fontSize: 20, fontWeight: 800, color: '#1d1d1f', margin: '0 0 8px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Answers every call.<br />Around the clock.</p>
-            <span style={{ fontSize: 12, color: '#1d1d1f', cursor: 'pointer' }}>Learn more ›</span>
-            <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 16 }}>
-              <div style={{ width: 72, height: 72, borderRadius: 18, background: 'linear-gradient(145deg,#2c2c2e,#1a1a1c)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.07 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 11a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* AI Chat Bot ad */}
-          <div style={{ background: '#2997ff', borderRadius: 20, padding: '22px 20px 16px', minHeight: 220, display: 'flex', flexDirection: 'column', marginBottom: 20 }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.75)', margin: '0 0 8px', letterSpacing: '0.01em' }}>AI Chat Assistant</p>
-            <p style={{ fontSize: 20, fontWeight: 800, color: '#fff', margin: '0 0 8px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Chat support.<br />Always on.</p>
-            <span style={{ fontSize: 12, color: '#fff', cursor: 'pointer', opacity: 0.9 }}>Learn more ›</span>
-            <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 16 }}>
-              <div style={{ width: 68, height: 68, borderRadius: '50%', border: '2.5px solid rgba(255,255,255,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* AI Automation ad */}
-          <div style={{ background: '#1d1d1f', borderRadius: 20, padding: '22px 20px 16px', minHeight: 220, display: 'flex', flexDirection: 'column', marginBottom: 20 }}>
-            <p style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.55)', margin: '0 0 8px', letterSpacing: '0.01em' }}>AI Automation</p>
-            <p style={{ fontSize: 20, fontWeight: 800, color: '#fff', margin: '0 0 8px', lineHeight: 1.1, letterSpacing: '-0.03em' }}>Set it. Forget it. Grow.</p>
-            <span style={{ fontSize: 12, color: '#2997ff', cursor: 'pointer' }}>Learn more ›</span>
-            <div style={{ flex: 1, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', paddingTop: 16 }}>
-              <div style={{ position: 'relative', width: 80, height: 70, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 4 }}>
-                <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'conic-gradient(from 0deg, #c898e2, #2997ff, #f4b880, #c898e2)', opacity: 0.85 }} />
-                <div style={{ position: 'absolute', width: 46, height: 46, borderRadius: '50%', background: '#1d1d1f', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </aside>
       </div>
     </div>
