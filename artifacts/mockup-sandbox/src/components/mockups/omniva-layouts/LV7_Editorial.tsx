@@ -139,7 +139,7 @@ const serviceCards = [
     title: 'Graphic Design',
     Icon: IconDesign,
     description: 'Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.',
-    items: ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
+    items: ['Presentation Design', 'Email Design', 'Brochure & Flyer Design', 'Logo Design'],
   },
 ];
 
