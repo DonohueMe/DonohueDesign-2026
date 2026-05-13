@@ -390,7 +390,7 @@ export function VariantK_HorizontalStrip() {
                   <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
                 ))}
               </nav>
-              <p style={{ fontSize: 14, color: '#fff', margin: 0 }}>©2026 Donohue Design</p>
+              <p style={{ fontSize: 14, color: '#fff', margin: 0, alignSelf: 'center' }}>©2026 Donohue Design</p>
             </div>
           </div>
         </div>
