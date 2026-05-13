@@ -326,7 +326,7 @@ export default function LV7_Editorial() {
           {serviceCards.map(({ title, Icon, description, items }) => (
             <div key={title} style={{ background: '#fff', borderRadius: 18, padding: '20px 18px 24px', marginBottom: 40, border: '1px solid #e5e5ea', position: 'relative' }}>
               <Icon />
-              <p style={{ fontSize: description ? 20 : 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 10px', lineHeight: 1.2 }}>{title}</p>
+              <h4 style={{ fontSize: description ? 20 : 13, fontWeight: 700, color: '#1d1d1f', margin: '10px 0 10px', lineHeight: 1.2 }}>{title}</h4>
               {description && (
                 <p style={{ fontSize: 17, color: '#1d1d1f', margin: '0 0 10px', lineHeight: 1.55 }}>{description}</p>
               )}
