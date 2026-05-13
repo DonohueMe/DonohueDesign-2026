@@ -371,12 +371,12 @@ export function VariantK_HorizontalStrip() {
       <div style={{ height: 26, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.4) 6px, rgba(0,0,0,0.4) 12px, rgba(0,0,0,0.6) 12px, rgba(0,0,0,0.6) 18px, rgba(0,0,0,0.8) 18px, rgba(0,0,0,0.8) 24px, #000 24px)', margin: `0 -${sidePad}px` }} />
       <footer style={{ background: '#000', padding: '48px 40px 48px', margin: `0 -${sidePad}px`, color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 24 : 32, paddingBottom: 28 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 24 : 32, paddingBottom: 28, textAlign: isMobile ? 'center' : 'left' }}>
             <div>
               <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Donohue Design</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', fontWeight: 500, margin: '0 0 4px' }}>Santa Rosa, CA</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', fontWeight: 500, margin: '0 0 16px' }}>Serving Sonoma, Marin and Napa Counties</p>
-              <div style={{ display: 'flex', gap: 12 }}>
+              <div style={{ display: 'flex', gap: 12, justifyContent: isMobile ? 'center' : 'flex-start' }}>
                 {[
                   { name: 'LinkedIn', svg: <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93a1.74 1.74 0 0 0-1.62 1.83V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg> },
                   { name: 'Facebook', svg: <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5H15c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.4v6.9A10 10 0 0 0 22 12z"/></svg> },
@@ -386,7 +386,7 @@ export function VariantK_HorizontalStrip() {
               </div>
               <p style={{ fontSize: 14, color: '#fff', margin: '16px 0 0' }}>©2026 Donohue Design</p>
             </div>
-            <nav style={{ display: 'flex', columnGap: 32, rowGap: 16, flexWrap: 'wrap', alignSelf: 'flex-start' }}>
+            <nav style={{ display: 'flex', columnGap: 32, rowGap: 16, flexWrap: 'wrap', alignSelf: 'flex-start', justifyContent: isMobile ? 'center' : 'flex-start' }}>
               {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
                 <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
               ))}
