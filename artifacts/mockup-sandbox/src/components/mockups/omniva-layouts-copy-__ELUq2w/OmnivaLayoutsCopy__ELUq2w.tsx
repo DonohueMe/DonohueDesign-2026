@@ -191,7 +191,7 @@ const serviceCards = [
   },
 ];
 
-export default function LV7_Editorial() {
+export default function OmnivaLayoutsCopy__ELUq2w() {
   const { w, isMobile } = useBreakpoint();
   const showHamburger = w < 768;
   const sidebarStack = w < 1024;
@@ -255,6 +255,30 @@ export default function LV7_Editorial() {
                 ))}
               </div>
 
+              {/* How it works — shown inline in first section */}
+              {si === 0 && (
+                <div style={{ background: '#fff', borderRadius: 18, padding: '28px 32px', marginBottom: 40, border: '1px solid #e5e5ea' }}>
+                  <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.13em', color: '#8e8e93', margin: '0 0 6px' }}>How it works</p>
+                  <p style={{ fontSize: 20, fontWeight: 800, color: '#1d1d1f', margin: '0 0 20px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>Strategy first. Everything else follows.</p>
+                  {timelineSteps.map(({ label, body }, i) => (
+                    <div key={label}>
+                      {i > 0 && <div style={{ height: 1, background: '#e5e5ea' }} />}
+                      <div style={{ display: 'flex', gap: 14, padding: '13px 0' }}>
+                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg, #e8a0c8 0%, #c87aaa 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1 }}>
+                          <span style={{ fontSize: 11, fontWeight: 800, color: '#fff' }}>{i + 1}</span>
+                        </div>
+                        <div style={{ flex: 1 }}>
+                          <p style={{ fontSize: 14, fontWeight: 700, color: '#1d1d1f', margin: '0 0 3px', lineHeight: 1.2 }}>{label}</p>
+                          <p style={{ fontSize: 13, color: '#6e6e73', margin: 0, lineHeight: 1.55 }}>{body}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  <button style={{ marginTop: 12, background: '#1d1d1f', color: '#fff', border: 'none', borderRadius: 980, padding: '12px 24px', fontSize: 14, fontWeight: 600, fontFamily: SF, cursor: 'pointer' }}>
+                    Start with a free call
+                  </button>
+                </div>
+              )}
 
               {/* Portfolio sample — shown in User Experience section */}
               {si === 1 && (
