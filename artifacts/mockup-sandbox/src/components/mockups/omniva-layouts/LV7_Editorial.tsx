@@ -131,7 +131,7 @@ const sections: { h1: string; body?: string[] }[] = [
     ],
   },
   { h1: 'Smart Websites' },
-  { h1: 'Website Development in Santa Rosa, CA.' },
+  { h1: 'Website Development' },
 ];
 
 const timelineSteps = [
