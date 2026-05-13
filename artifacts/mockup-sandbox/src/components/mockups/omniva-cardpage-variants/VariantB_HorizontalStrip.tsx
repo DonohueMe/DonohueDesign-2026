@@ -221,7 +221,7 @@ export function VariantK_HorizontalStrip() {
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: tileStack ? 'column' : 'row', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: tileStack ? '1 1 auto' : '0 0 360px' }}>
                 <TileHeader tint="#2997ff" icon={ICON_BROWSER} label={<>Website Design<br /><span style={{color:'#b7b7b9'}}>Santa Rosa, CA</span></>} />
-                <h3 style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#1d1d1f', margin: '0 0 20px' }}>
+                <h3 style={{ fontSize: 26, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, color: '#1d1d1f', margin: '0 0 20px' }}>
                   Your website. Working harder than ever.
                 </h3>
                 <p style={{ fontSize: 18, color: '#6e6e73', lineHeight: 1.55, margin: 0 }}>
