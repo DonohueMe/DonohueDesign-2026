@@ -256,42 +256,6 @@ export default function LV7_Editorial() {
               </div>
 
 
-              {/* Portfolio sample — shown in User Experience section */}
-              {si === 1 && (
-                <div style={{ marginBottom: 56 }}>
-                  <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 10 }}>
-                    <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#8e8e93' }}>Client work</span>
-                    <span style={{ fontSize: 12, color: '#2997ff', cursor: 'pointer', fontWeight: 500 }}>View case study ›</span>
-                  </div>
-                  {/* Image clipped to show top portion — browser-in-browser feel */}
-                  <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid #e5e5ea', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', position: 'relative' }}>
-                    {/* Fake browser chrome */}
-                    <div style={{ background: '#f2f2f2', borderBottom: '1px solid #e0e0e0', padding: '8px 12px', display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <div style={{ display: 'flex', gap: 5 }}>
-                        {['#ff5f57','#febc2e','#28c840'].map(c => (
-                          <div key={c} style={{ width: 10, height: 10, borderRadius: '50%', background: c }} />
-                        ))}
-                      </div>
-                      <div style={{ flex: 1, background: '#fff', borderRadius: 4, padding: '3px 10px', fontSize: 11, color: '#8e8e93', border: '1px solid #e0e0e0' }}>
-                        bersinworks.deloitte.com
-                      </div>
-                    </div>
-                    {/* Clipped screenshot — shows top portion of the image */}
-                    <div style={{ height: 320, overflow: 'hidden' }}>
-                      <img
-                        src={portfolioImg}
-                        alt="Deloitte BersinWorks activity feed"
-                        style={{ width: '100%', display: 'block', objectFit: 'cover', objectPosition: 'top' }}
-                      />
-                    </div>
-                    {/* Fade-out at the bottom */}
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 80, background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.95))' }} />
-                  </div>
-                  <p style={{ fontSize: 12, color: '#8e8e93', margin: '8px 0 0', lineHeight: 1.4 }}>
-                    Deloitte / BersinWorks \u2014 enterprise activity feed UX, information architecture, and HR platform design.
-                  </p>
-                </div>
-              )}
             </React.Fragment>
           ))}
         </main>
