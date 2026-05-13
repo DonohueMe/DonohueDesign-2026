@@ -151,9 +151,13 @@ export function VariantK_HorizontalStrip() {
           <img src={logoMark} alt="Donohue Design" style={{ height: 37, width: 'auto', display: 'block' }} />
         </a>
         {!showHamburger ? (
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-            <PillNav />
-          </div>
+          <>
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+              <PillNav />
+            </div>
+            {/* invisible right counterweight so nav is truly centered */}
+            <img src={logoMark} alt="" aria-hidden="true" style={{ height: 37, width: 'auto', visibility: 'hidden', flexShrink: 0 }} />
+          </>
         ) : (
           <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'transparent', border: 'none', width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 6, cursor: 'pointer', padding: '0 8px' }}>
             <span style={{ width: 14, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
