@@ -183,7 +183,7 @@ export function VariantK_HorizontalStrip() {
           '#dff3ff',
         ].join(','),
       }}>
-        <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.18, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, padding: `0 ${isMobile ? 20 : 0}px` }}>
+        <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.04em', color: '#000', maxWidth: 740, margin: 0, padding: `0 ${isMobile ? 20 : 0}px` }}>
           Beautiful websites.<br />Powered by smart marketing.
         </p>
         <hr style={{ border: 'none', borderTop: '1px solid #fff', width: 100, margin: '40px 0 24px' }} />
