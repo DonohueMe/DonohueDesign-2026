@@ -372,7 +372,7 @@ export function VariantK_HorizontalStrip() {
       <footer style={{ background: '#000', padding: isMobile ? '40px 20px 40px' : '48px 40px 48px', margin: `0 -${sidePad}px`, color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 24 : 32, paddingBottom: 28, textAlign: isMobile ? 'center' : 'left' }}>
-            <div>
+            <div style={{ order: isMobile ? 1 : 0 }}>
               <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Donohue Design</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', fontWeight: 500, margin: '0 0 4px' }}>Santa Rosa, CA</p>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', fontWeight: 500, margin: '0 0 16px' }}>Serving Sonoma, Marin and Napa Counties</p>
@@ -386,8 +386,8 @@ export function VariantK_HorizontalStrip() {
               </div>
               <p style={{ fontSize: 14, color: '#fff', margin: '20px 0 0' }}>©2026 Donohue Design</p>
             </div>
-            {isMobile && <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.15)', margin: '4px 0' }} />}
-            <nav style={{ display: 'flex', columnGap: 32, rowGap: 16, flexWrap: 'wrap', alignSelf: 'flex-start', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+            {isMobile && <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.15)', margin: '4px 0', order: 2 }} />}
+            <nav style={{ display: 'flex', columnGap: 32, rowGap: 16, flexWrap: 'wrap', alignSelf: 'flex-start', justifyContent: isMobile ? 'center' : 'flex-start', order: isMobile ? -1 : 0 }}>
               {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
                 <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
               ))}
