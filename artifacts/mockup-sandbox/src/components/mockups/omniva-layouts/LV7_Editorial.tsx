@@ -194,6 +194,7 @@ const serviceCards = [
 export default function LV7_Editorial() {
   const { w, isMobile } = useBreakpoint();
   const showHamburger = w < 768;
+  const sidebarStack = w < 1024;
   const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
@@ -236,7 +237,7 @@ export default function LV7_Editorial() {
       </section>
 
       {/* Body */}
-      <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 32 : 52, padding: isMobile ? '40px 16px 60px' : '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', flexDirection: sidebarStack ? 'column' : 'row', gap: sidebarStack ? 32 : 52, padding: sidebarStack ? '40px 16px 60px' : '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
 
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
@@ -320,7 +321,7 @@ export default function LV7_Editorial() {
         </main>
 
         {/* Sidebar */}
-        <aside style={{ flex: isMobile ? '1 1 auto' : '0 0 300px', width: isMobile ? '100%' : undefined, position: isMobile ? 'static' : 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
+        <aside style={{ flex: sidebarStack ? '1 1 auto' : '0 0 300px', width: sidebarStack ? '100%' : undefined, position: sidebarStack ? 'static' : 'sticky', top: 24, display: 'flex', flexDirection: 'column', gap: 0 }}>
 
           {/* Service category cards */}
           {serviceCards.map(({ title, Icon, description, items }) => (
