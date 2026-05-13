@@ -331,7 +331,7 @@ export default function LV7_Editorial() {
                 <p style={{ fontSize: 17, color: '#6e6e73', margin: '0 0 10px', lineHeight: 1.55 }}>{description}</p>
               )}
               {items.map(item => (
-                <p key={item} style={{ fontSize: 17, color: '#2997ff', margin: '0 0 3px', lineHeight: '22.3px' }}>{item}</p>
+                <p key={item} style={{ fontSize: 17, color: '#2997ff', margin: '0 0 3px', lineHeight: '26.3px' }}>{item}</p>
               ))}
             </div>
           ))}
