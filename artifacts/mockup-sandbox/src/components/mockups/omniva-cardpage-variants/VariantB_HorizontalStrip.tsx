@@ -26,8 +26,11 @@ function DropdownItem({ label, items }: { label: string; items: string[] }) {
   const [open, setOpen] = useState(false);
   return (
     <div style={{ position: 'relative' }} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', transition: 'background 0.15s' }}>
+      <button style={{ fontSize: 18, fontWeight: 500, color: '#1d1d1f', background: open ? 'rgba(0,0,0,0.06)' : 'transparent', border: 'none', cursor: 'pointer', padding: '6px 14px', borderRadius: 980, letterSpacing: '-0.01em', fontFamily: SF, display: 'flex', alignItems: 'center', gap: 4, transition: 'background 0.15s' }}>
         {label}
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ marginTop: 1, transition: 'transform 0.15s', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+          <path d="M2 4l4 4 4-4" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </button>
       {open && (
         <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: 10 }}>
@@ -104,11 +107,11 @@ export function VariantK_HorizontalStrip() {
 
       {/* Fixed white header */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: '#fff', padding: `0 ${sidePad}px`, display: 'flex', alignItems: 'center', height: 84 }}>
-        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
           <img src={logoMark} alt="Donohue Design" style={{ height: 37, width: 'auto', display: 'block' }} />
         </a>
         {!showHamburger ? (
-          <div style={{ marginLeft: 'auto' }}>
+          <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
             <PillNav />
           </div>
         ) : (
