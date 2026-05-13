@@ -369,9 +369,9 @@ export function VariantK_HorizontalStrip() {
       </div>
 
       <div style={{ height: 10, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 4px, rgba(0,0,0,0.6) 4px, rgba(0,0,0,0.6) 6px, rgba(0,0,0,0.8) 6px, rgba(0,0,0,0.8) 8px, #000 8px)', margin: `0 -${sidePad}px` }} />
-      <footer style={{ background: '#000', padding: '0 40px 32px', margin: `0 -${sidePad}px`, color: '#fff' }}>
+      <footer style={{ background: '#000', padding: '32px 40px 32px', margin: `0 -${sidePad}px`, color: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 32, paddingBottom: 36 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 32, paddingBottom: 28 }}>
             <div>
               <p style={{ fontSize: 22, fontWeight: 700, color: '#fff', margin: '0 0 6px', letterSpacing: '-0.01em' }}>Donohue Design</p>
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', margin: 0 }}>Santa Rosa, CA · Serving Sonoma County</p>
@@ -390,7 +390,7 @@ export function VariantK_HorizontalStrip() {
               ))}
             </div>
           </div>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '20px 0 16px', textAlign: 'center' }}>©2026 Donohue Design</p>
+          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', margin: '0 0 0', textAlign: 'center' }}>©2026 Donohue Design</p>
         </div>
       </footer>
     </div>
