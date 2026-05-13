@@ -108,16 +108,11 @@ export function VariantK_HorizontalStrip() {
           <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
             <PillNav />
           </div>
-        ) : isMobile ? (
-          <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'rgba(0,0,0,0.06)', border: 'none', borderRadius: 10, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, cursor: 'pointer' }}>
-            <span style={{ width: 18, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
-            <span style={{ width: 18, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
-            <span style={{ width: 18, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
-          </button>
         ) : (
-          <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'transparent', border: 'none', width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 5, cursor: 'pointer' }}>
-            <span style={{ width: 22, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
-            <span style={{ width: 22, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+          <button aria-label="Menu" style={{ marginLeft: 'auto', background: 'transparent', border: 'none', width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 5, cursor: 'pointer', padding: '0 8px' }}>
+            <span style={{ width: 13, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+            <span style={{ width: 20, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
+            <span style={{ width: 20, height: 2, background: '#1d1d1f', borderRadius: 1 }} />
           </button>
         )}
       </header>
