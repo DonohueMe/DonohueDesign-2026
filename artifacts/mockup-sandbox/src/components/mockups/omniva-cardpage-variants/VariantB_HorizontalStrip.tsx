@@ -14,9 +14,11 @@ function useBreakpoint() {
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
 const NAV_DROPDOWNS: Record<string, string[]> = {
-  'Website Designer': ['Website Design & Strategy', 'UX/UI Design', 'Website Development'],
-  'Digital Marketing': ['Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist'],
-  'Graphic Designer': ['Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design'],
+  'Services': [
+    'Website Design & Strategy', 'UX/UI Design', 'Website Development',
+    'Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist',
+    'Logo Design', 'Brochure & Flyer Design', 'Presentation Design', 'Email Design',
+  ],
 };
 const PLAIN_NAV_LINKS = ['Case Studies', 'Pricing', 'About/Contact us'];
 
