@@ -133,7 +133,7 @@ const serviceCards = [
     title: 'Digital Marketing',
     Icon: IconMarketing,
     description: 'AI-powered campaigns, local SEO, and automated outreach \u2014 running around the clock to grow your business.',
-    items: ['Local SEO (Google My Business)', 'Email Marketing', 'AI Receptionist'],
+    items: ['Local SEO (Google My Business)', 'AI Receptionist', 'Email Marketing Automation'],
   },
   {
     title: 'Graphic Design',
