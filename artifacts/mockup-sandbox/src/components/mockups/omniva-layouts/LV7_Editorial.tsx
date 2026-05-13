@@ -148,7 +148,7 @@ export default function LV7_Editorial() {
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
 
       {/* Fixed white header */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#fff', borderBottom: '1px solid #e5e5ea', padding: '0 40px', display: 'flex', alignItems: 'center', height: 84 }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: '#fff', borderBottom: '1px solid #e5e5ea', padding: '0 40px', display: 'flex', alignItems: 'center', height: 134 }}>
         <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img src={logoMark} alt="Donohue Design" style={{ height: 37, width: 'auto', display: 'block' }} />
         </a>
@@ -157,7 +157,7 @@ export default function LV7_Editorial() {
         </div>
       </header>
       {/* Spacer to offset fixed header */}
-      <div style={{ height: 84 }} />
+      <div style={{ height: 134 }} />
 
       {/* Hero */}
       <section style={{ minHeight: 340, background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 60px' }}>
