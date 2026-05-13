@@ -165,7 +165,7 @@ export function VariantK_HorizontalStrip() {
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile || isTablet ? '1fr' : '1fr 300px', gap: isMobile ? 32 : 74, alignItems: 'start' }}>
 
           {/* Left column: 3 service tiles */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 48, minWidth: 0 }}>
 
             {/* Tile 2 — Website Designer */}
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 24 : 56, alignItems: isMobile ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
@@ -233,7 +233,7 @@ export function VariantK_HorizontalStrip() {
           </div>
 
           {/* Right sidebar — light icon-badge cards */}
-          <aside style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+          <aside style={{ display: 'flex', flexDirection: 'column', gap: 36, minWidth: 0 }}>
             {[
               {
                 bg: '#fff8ec', accent: '#d18a16',
