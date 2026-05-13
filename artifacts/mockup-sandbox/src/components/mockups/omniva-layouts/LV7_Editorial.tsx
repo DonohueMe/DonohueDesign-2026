@@ -120,8 +120,16 @@ const BIO = [
   'My name is Jim Donohue. I\u2019m a website designer in Santa Rosa, CA with over 20 years of experience in design, UI/UX, and digital strategy. I spent years as a Senior Product Designer at companies like Wells Fargo and Deloitte \u2014 building products used across dozens of applications and leading redesigns that drove measurable results. A 15% lift in subscriptions. A 22% jump in user engagement. Design systems adopted across 90+ apps.',
 ];
 
-const sections = [
+const sections: { h1: string; body?: string[] }[] = [
   { h1: 'Website Designer Santa Rosa' },
+  {
+    h1: 'Website Design and Strategy',
+    body: [
+      'Good design starts with a question: what do you need this website to do? Not how should it look — what should it accomplish.',
+      'Every page, every call-to-action, and every navigation path is a decision. I map those decisions to your business goals before a single pixel gets placed. The result is a site that isn\'t just attractive — it\'s built to convert.',
+      'From information architecture and content hierarchy to mobile performance and SEO structure, strategy is woven into every layer of the build.',
+    ],
+  },
   { h1: 'Smart Websites' },
   { h1: 'Website Development in Santa Rosa, CA.' },
 ];
@@ -241,13 +249,13 @@ export default function LV7_Editorial() {
 
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
-          {sections.map(({ h1 }, si) => (
+          {sections.map(({ h1, body: sectionBody }, si) => (
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56 }}>
                 <h1 style={{ fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 24px', lineHeight: 1.36 }}>
                   {h1}
                 </h1>
-                {BIO.map((para, pi) => (
+                {(sectionBody ?? BIO).map((para, pi) => (
                   <p key={pi} style={{ fontSize: 18, lineHeight: 1.75, margin: pi === 0 ? '0 0 22px' : '0 0 12px', color: '#3d3d3f', fontWeight: 400 }}>
                     {para}
                   </p>
