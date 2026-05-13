@@ -198,7 +198,7 @@ export function VariantK_HorizontalStrip() {
       {/* Centered narrow bio intro — white background */}
       <section style={{ padding: '16px 0', background: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', textAlign: 'center' }}>
-          <h1 style={{ fontSize: 'clamp(26px, 4.5vw, 46px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.17, color: '#1d1d1f', margin: '50px 0 24px' }}>
+          <h1 style={{ fontSize: 'clamp(26px, 4.5vw, 46px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.21, color: '#1d1d1f', margin: '50px 0 24px' }}>
             Website Designer, Santa Rosa, CA
           </h1>
           <p style={{ fontSize: 18, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
