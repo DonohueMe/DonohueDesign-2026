@@ -358,7 +358,7 @@ export function VariantK_HorizontalStrip() {
                 <h4 style={{ fontSize: 22, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 12px', color: '#1d1d1f' }}>
                   {title}
                 </h4>
-                <p style={{ fontSize: 17, lineHeight: '25px', color: '#6e6e73', margin: 0 }}>
+                <p style={{ fontSize: 17, lineHeight: '25px', color: '#1d1d1f', margin: 0 }}>
                   {body}
                 </p>
               </div>
