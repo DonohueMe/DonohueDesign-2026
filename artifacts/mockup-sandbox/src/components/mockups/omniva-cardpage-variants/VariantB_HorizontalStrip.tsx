@@ -66,7 +66,7 @@ function ServicesMegaMenu() {
           <path d="M2 4l4 4 4-4" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
-      <div onMouseEnter={show} onMouseLeave={hide} style={{ position: 'fixed', top: 85, left: '50%', transform: 'translateX(-50%)', zIndex: 200, visibility: open ? 'visible' : 'hidden', pointerEvents: open ? 'auto' : 'none' }}>
+      <div onMouseEnter={show} onMouseLeave={hide} style={{ position: 'fixed', top: 84, left: '50%', transform: 'translateX(-50%)', zIndex: 200, visibility: open ? 'visible' : 'hidden', pointerEvents: open ? 'auto' : 'none' }}>
           <div style={{ background: '#f2f2f7', borderRadius: 20, padding: '28px 0', width: 700, boxShadow: '0 8px 40px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.06)', display: 'flex' }}>
             {SERVICES_CATEGORIES.map((cat, ci) => (
               <div key={cat.title} style={{ flex: 1, padding: '0 28px', borderLeft: ci > 0 ? '1px solid #d1d1d6' : 'none' }}>
