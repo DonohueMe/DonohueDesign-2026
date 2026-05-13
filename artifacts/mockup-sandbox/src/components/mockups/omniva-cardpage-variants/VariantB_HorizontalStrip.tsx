@@ -141,7 +141,7 @@ export function VariantK_HorizontalStrip() {
           Beautiful websites.<br />Powered by smart marketing.
         </h1>
         <p style={{ fontSize: isMobile ? 16 : 18, color: '#3d3d3f', fontWeight: 500, margin: '64px 0 20px', letterSpacing: '-0.01em' }}>
-          Schedule your free consultation now
+          Schedule your free consultation now.
         </p>
         <a href="#" style={{ display: 'inline-block', background: '#000', color: '#fff', fontSize: 16, fontWeight: 600, letterSpacing: '-0.01em', padding: '14px 32px', borderRadius: 40, textDecoration: 'none' }}>
           Get Started
