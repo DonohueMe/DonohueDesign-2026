@@ -161,7 +161,7 @@ export default function LV7_Editorial() {
 
       {/* Hero */}
       <section style={{ background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 80px' }}>
-        <h1 style={{ fontSize: 'clamp(48px, 7vw, 80px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.13, color: '#1d1d1f', margin: '0 0 18px' }}>
+        <h1 style={{ fontSize: 'clamp(26px, 4.5vw, 46px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: '#1d1d1f', margin: '0 0 18px' }}>
           Strategy first.<br />Results always.
         </h1>
         <hr style={{ border: 'none', borderTop: '1px solid #fff', width: 100, margin: '40px 0 24px' }} />
