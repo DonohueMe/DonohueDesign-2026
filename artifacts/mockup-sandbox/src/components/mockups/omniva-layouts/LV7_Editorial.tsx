@@ -181,11 +181,9 @@ export default function LV7_Editorial() {
           {sections.map(({ h1 }, si) => (
             <React.Fragment key={si}>
               <div style={{ marginBottom: 56 }}>
-                <h1 style={{ fontSize: 'clamp(26px, 4.5vw, 46px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 0', lineHeight: 1.05 }}>
-                  {h1}
-                </h1>
-                <h1 style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: 700, margin: '8px 0 40px', lineHeight: 1.15, ...(GRAD_WARM as any), display: 'block' }}>
-                  Strategy-Driven Design That Works
+                <h1 style={{ fontSize: 'clamp(26px, 4.5vw, 46px)', fontWeight: 800, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 40px', lineHeight: 1.05 }}>
+                  {h1}<br />
+                  <span style={{ ...(GRAD_WARM as any) }}>Strategy-Driven Design That Works</span>
                 </h1>
                 {BIO.map((para, pi) => (
                   <p key={pi} style={{ fontSize: 18, lineHeight: 1.75, margin: pi === 0 ? '0 0 22px' : '0 0 12px', color: '#3d3d3f', fontWeight: 400 }}>
