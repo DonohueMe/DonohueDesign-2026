@@ -199,7 +199,7 @@ export function VariantK_HorizontalStrip() {
       <section style={{ padding: '16px 0', background: '#fff' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.36, color: '#1d1d1f', margin: '44px 0 24px' }}>
-            Website Designer, Santa Rosa, CA
+            Website Designer Santa Rosa CA
           </h1>
           <p style={{ fontSize: 18, color: '#3d3d3f', lineHeight: 1.65, margin: '0 0 14px' }}>
             Most website designers jump straight into building. I start with strategy. Before I open a design tool, I want to know who your customers are and what you need them to do.
@@ -220,7 +220,7 @@ export function VariantK_HorizontalStrip() {
             {/* Tile 2 — Website Designer */}
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: tileStack ? 'column' : 'row', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: tileStack ? '1 1 auto' : 3, minWidth: 0 }}>
-                <TileHeader tint="#2997ff" icon={ICON_BROWSER} label={<>Website Design<span style={{color:'#b7b7b9'}}>, Santa Rosa, CA</span></>} />
+                <TileHeader tint="#2997ff" icon={ICON_BROWSER} label={<>Website Design<span style={{color:'#b7b7b9'}}> Santa Rosa CA</span></>} />
                 <h3 style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: '37px', color: '#1d1d1f', margin: '0 0 20px' }}>
                   Your website. Working harder than ever.
                 </h3>
@@ -241,7 +241,7 @@ export function VariantK_HorizontalStrip() {
             {/* Tile 3 — Digital Marketing — row-reverse */}
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', flexDirection: tileStack ? 'column' : 'row-reverse', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: tileStack ? '1 1 auto' : 3, minWidth: 0 }}>
-                <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label={<>Digital Marketing<span style={{color:'#b7b7b9'}}>, Santa Rosa, CA</span></>} />
+                <TileHeader tint="#2997ff" icon={ICON_ENVELOPE} label={<>Digital Marketing<span style={{color:'#b7b7b9'}}> Santa Rosa CA</span></>} />
                 <h3 style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: '37px', color: '#1d1d1f', margin: '0 0 20px' }}>
                   Get found. Stay top of mind.
                 </h3>
@@ -262,7 +262,7 @@ export function VariantK_HorizontalStrip() {
             {/* Tile 5 — Graphic Designer */}
             <div style={{ background: '#fff', borderRadius: 20, padding: isMobile ? '28px 24px' : '44px 56px', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: tileStack ? 'column' : 'row', gap: tileStack ? 24 : 56, alignItems: tileStack ? 'stretch' : 'center', boxShadow: '0 12px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04)' }}>
               <div style={{ flex: tileStack ? '1 1 auto' : 3, minWidth: 0 }}>
-                <TileHeader tint="#2997ff" icon={ICON_PALETTE} label={<>Graphic Designer<span style={{color:'#b7b7b9'}}>, Santa Rosa, CA</span></>} />
+                <TileHeader tint="#2997ff" icon={ICON_PALETTE} label={<>Graphic Designer<span style={{color:'#b7b7b9'}}> Santa Rosa CA</span></>} />
                 <h3 style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.03em', lineHeight: '37px', color: '#1d1d1f', margin: '0 0 20px' }}>
                   A brand as strong as your business.
                 </h3>
