@@ -385,14 +385,14 @@ export function VariantK_HorizontalStrip() {
                 ))}
               </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               <nav style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                 {['Website Designer', 'Digital Marketing', 'Graphic Designer', 'Case Studies', 'Pricing', 'About/Contact us'].map(link => (
                   <a key={link} href="#" style={{ fontSize: 14, color: 'rgba(255,255,255,0.78)', textDecoration: 'none', fontWeight: 500 }}>{link}</a>
                 ))}
               </nav>
-              <p style={{ fontSize: 14, color: '#fff', margin: 0, marginTop: 50, alignSelf: 'center' }}>©2026 Donohue Design</p>
             </div>
+            <p style={{ fontSize: 14, color: '#fff', margin: 0, paddingTop: 60, alignSelf: 'flex-start' }}>©2026 Donohue Design</p>
           </div>
         </div>
       </footer>
