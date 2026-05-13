@@ -147,7 +147,7 @@ export function VariantK_HorizontalStrip() {
 
       {/* Fixed white header */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: '#fff', padding: `0 ${sidePad}px`, display: 'flex', alignItems: 'center', height: 84 }}>
-        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginRight: 25 }}>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginRight: 20 }}>
           <img src={logoMark} alt="Donohue Design" style={{ height: 30, width: 'auto', display: 'block' }} />
         </a>
         {!showHamburger ? (
