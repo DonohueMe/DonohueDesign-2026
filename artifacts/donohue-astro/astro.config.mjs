@@ -12,4 +12,9 @@ export default defineConfig({
     sitemap(),
     alpinejs(),
   ],
+  vite: {
+    server: {
+      allowedHosts: true,
+    },
+  },
 });
