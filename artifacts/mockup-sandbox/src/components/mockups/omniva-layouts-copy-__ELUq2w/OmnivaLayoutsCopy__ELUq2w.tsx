@@ -195,7 +195,7 @@ export default function OmnivaLayoutsCopy__ELUq2w() {
   const { w, isMobile } = useBreakpoint();
   const showHamburger = w < 840;
   const sidebarStack = w < 840;
-  const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
+  const sidePad = w < 840 ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
 

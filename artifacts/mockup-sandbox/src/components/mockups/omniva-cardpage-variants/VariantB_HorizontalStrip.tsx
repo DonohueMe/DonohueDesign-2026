@@ -141,7 +141,7 @@ export function VariantK_HorizontalStrip() {
   const { w, isMobile, isTablet } = useBreakpoint();
   const showHamburger = w < 840;
   const tileStack = isMobile || w < 1280;
-  const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
+  const sidePad = w < 840 ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: `0 ${sidePad}px`, background: '#fff', minHeight: '100vh', overflowX: 'hidden' }}>
 
