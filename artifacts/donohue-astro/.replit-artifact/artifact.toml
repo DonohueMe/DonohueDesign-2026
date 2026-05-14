@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/donohue-astro/"
+title = "Donohue Design — Astro Site"
+version = "1.0.0"
+id = "artifacts/donohue-astro"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/donohue-astro/" ]
+localPort = 4200
+
+[services.development]
+run = "pnpm --filter @workspace/donohue-astro run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/donohue-astro", "run", "build" ]
+publicDir = "artifacts/donohue-astro/dist"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "4200"
+ASTRO_BASE = "/donohue-astro/"

@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import { p } from '../utils/path';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digital Marketing Santa Rosa",
+  "description": "Local SEO, AI-powered outreach, and email marketing automation for Santa Rosa businesses.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Donohue Design",
+    "url": "https://donahuedesign.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Rosa",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": "Santa Rosa, CA",
+  "serviceType": "Digital Marketing"
+};
+
+const sidebarCards = [
+  {
+    title: 'Website Design',
+    description: 'Strategy-first websites built to generate leads, earn trust, and turn visitors into customers.',
+    items: ['Website Design & Strategy', 'Smart Websites', 'Website Development'],
+  },
+  {
+    title: 'Digital Marketing',
+    description: 'AI-powered campaigns, local SEO, and automated outreach \u2014 running around the clock to grow your business.',
+    items: ['Local SEO (Google My Business)', 'AI Receptionist', 'Email Marketing Automation'],
+  },
+  {
+    title: 'Graphic Design',
+    description: 'Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.',
+    items: ['Presentation Design', 'Email Design', 'Brochure & Flyer Design', 'Logo Design'],
+  },
+];
+
+const sections = [
+  {
+    id: 'intro',
+    heading: 'Digital Marketing Santa Rosa',
+    body: [
+      'Most small businesses in Santa Rosa leave customers on the table \u2014 not because their service is bad, but because nobody can find them online.',
+      'I build digital marketing systems that fix that. From optimizing your Google Business Profile and climbing local search rankings to automated email campaigns and AI-powered follow-up, everything I build is designed to bring in business consistently, not just occasionally.',
+    ],
+  },
+  {
+    id: 'seo',
+    heading: 'Local SEO & Google My Business',
+    body: [
+      'For local businesses, Google is the front door. I optimize your Google Business Profile, build local citations, and structure your website so Google understands exactly who you serve and where.',
+      'The result: your business shows up when Santa Rosa residents search for the services you offer \u2014 not your competitors three towns away.',
+    ],
+  },
+  {
+    id: 'ai',
+    heading: 'AI Receptionist',
+    body: [
+      'Never miss a lead again. An AI receptionist answers questions, books appointments, and qualifies leads around the clock \u2014 on your website, via text, or through your business line.',
+      'It works while you sleep, while you\u2019re with a client, and over every holiday weekend. Your competitors who rely on voicemail are losing leads to you.',
+    ],
+  },
+  {
+    id: 'email',
+    heading: 'Email Marketing Automation',
+    body: [
+      'Your email list is the one channel you own outright \u2014 no algorithm can take it away. I build automated sequences that nurture leads, re-engage past customers, and drive repeat business on autopilot.',
+      'From welcome sequences and post-project follow-ups to seasonal campaigns and referral programs, every email is mapped to a specific business outcome.',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Digital Marketing Santa Rosa | Donohue Design"
+  description="Local SEO, AI-powered outreach, and email marketing automation for Santa Rosa and Sonoma County businesses. Strategy-first digital marketing by Jim Donohue."
+  schema={schema}
+>
+
+  <Hero />
+
+  <!-- ═══ BODY: editorial + sidebar ═══ -->
+  <div style="display:flex;flex-wrap:wrap;gap:52px;padding:60px var(--side-pad) 80px;max-width:1280px;margin:0 auto;align-items:flex-start;">
+
+    <main style="flex:1 1 0;min-width:0;">
+      {sections.map((sec) => (
+        <section style="margin-bottom:56px;" id={sec.id}>
+          <h1 style="font-size:clamp(26px,2.8vw,36px);font-weight:800;letter-spacing:-0.04em;color:var(--clr-text);margin:0 0 24px;line-height:1.36;">
+            {sec.heading}
+          </h1>
+          {sec.body.map((para, i) => (
+            <p style={`font-size:18px;line-height:1.75;color:var(--clr-sub);font-weight:400;margin:${i === 0 ? '0 0 22px' : '0 0 12px'};`}>{para}</p>
+          ))}
+        </section>
+      ))}
+    </main>
+
+    <aside style="flex:0 0 300px;position:sticky;top:104px;display:flex;flex-direction:column;gap:0;">
+      {sidebarCards.map(card => (
+        <div style="background:#fff;border-radius:18px;padding:20px 18px 24px;margin-bottom:32px;border:1px solid var(--clr-border);">
+          <p style="font-size:20px;font-weight:700;color:var(--clr-text);margin:12px 0 10px;line-height:1.2;">{card.title}</p>
+          <p style="font-size:17px;color:var(--clr-text);margin:0 0 12px;line-height:1.55;">{card.description}</p>
+          {card.items.map(item => (
+            <p style="font-size:17px;color:var(--clr-link);margin:0 0 3px;line-height:26px;">{item}</p>
+          ))}
+        </div>
+      ))}
+      <a href={p('/about')} style="display:block;background:#110621;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 24px;border-radius:40px;text-decoration:none;text-align:center;transition:opacity 0.15s;"
+        onmouseenter="this.style.opacity='0.82'"
+        onmouseleave="this.style.opacity='1'"
+      >Free Consultation</a>
+    </aside>
+
+  </div>
+
+</BaseLayout>

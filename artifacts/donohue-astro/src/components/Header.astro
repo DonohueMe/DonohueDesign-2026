@@ -1,0 +1,159 @@
+---
+import { p, asset } from '../utils/path';
+
+const navLinks = [
+  { label: 'Case Studies',    href: p('/case-studies') },
+  { label: 'Pricing',         href: p('/pricing') },
+  { label: 'About / Contact', href: p('/about') },
+];
+
+const services = [
+  {
+    title: 'Website Designer',
+    links: [
+      { label: 'Website Design & Strategy', href: p('/website-designer-santa-rosa') },
+      { label: 'UX / UI Design',            href: p('/website-designer-santa-rosa#ux') },
+      { label: 'Website Development',        href: p('/website-designer-santa-rosa#dev') },
+    ],
+  },
+  {
+    title: 'Digital Marketing',
+    links: [
+      { label: 'Local SEO (Google My Business)', href: p('/digital-marketing-santa-rosa') },
+      { label: 'Email Marketing',                href: p('/digital-marketing-santa-rosa#email') },
+      { label: 'AI Receptionist',                href: p('/digital-marketing-santa-rosa#ai') },
+    ],
+  },
+  {
+    title: 'Graphic Designer',
+    links: [
+      { label: 'Logo Design',              href: p('/graphic-designer-santa-rosa') },
+      { label: 'Brochure & Flyer Design',  href: p('/graphic-designer-santa-rosa#print') },
+      { label: 'Presentation Design',      href: p('/graphic-designer-santa-rosa#slides') },
+      { label: 'Email Design',             href: p('/graphic-designer-santa-rosa#email') },
+    ],
+  },
+];
+
+const logoSrc = asset('/ddc-logo.png');
+const homeHref = p('/');
+---
+
+<header
+  style="position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;height:var(--header-h);border-bottom:1px solid var(--clr-border);"
+  x-data="{
+    menuOpen: false,
+    servOpen: false,
+    _t: null,
+    showServ() { clearTimeout(this._t); this.servOpen = true; },
+    hideServ() { this._t = setTimeout(() => { this.servOpen = false; }, 180); }
+  }"
+>
+  <div style="max-width:1280px;margin:0 auto;padding:0 var(--side-pad);display:flex;align-items:center;height:100%;">
+
+    <!-- Logo -->
+    <a href={homeHref} style="display:flex;align-items:center;text-decoration:none;flex-shrink:0;margin-right:20px;">
+      <img src={logoSrc} alt="Donohue Design" style="height:30px;width:auto;" />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="md:flex hidden flex-1 justify-center items-center gap-1" style="height:52px;">
+
+      <!-- Services mega-menu trigger -->
+      <div
+        style="position:relative;"
+        @mouseenter="showServ()"
+        @mouseleave="hideServ()"
+      >
+        <button
+          class="pill-link"
+          style="border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:5px;font-family:var(--font-sf);"
+          :style="servOpen ? 'background:var(--clr-surf)' : ''"
+          @mouseenter="showServ()"
+        >
+          Services
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" :style="servOpen ? 'transform:rotate(180deg)' : ''" style="transition:transform 0.2s;margin-top:1px;">
+            <path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Mega-menu panel -->
+        <div
+          x-show="servOpen"
+          x-transition:enter="transition ease-out duration-150"
+          x-transition:enter-start="opacity-0 -translate-y-1"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          @mouseenter="showServ()"
+          @mouseleave="hideServ()"
+          style="position:fixed;top:84px;left:50%;transform:translateX(-50%);z-index:200;"
+        >
+          <div style="background:var(--clr-surf);border-radius:20px;padding:28px 0;width:700px;box-shadow:0 8px 40px rgba(0,0,0,0.13),0 2px 8px rgba(0,0,0,0.06);display:flex;">
+            {services.map((cat, ci) => (
+              <div style={`flex:1;padding:0 28px;${ci > 0 ? 'border-left:1px solid #d1d1d6' : ''}`}>
+                <p style="font-size:15px;font-weight:700;color:var(--clr-text);letter-spacing:-0.02em;line-height:1.2;margin:0 0 16px;">{cat.title}</p>
+                <div style="display:flex;flex-direction:column;">
+                  {cat.links.map((lnk, li) => (
+                    <a
+                      href={lnk.href}
+                      style={`font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;${li < cat.links.length - 1 ? 'border-bottom:1px solid rgba(0,0,0,0.07)' : ''};transition:opacity 0.1s;`}
+                      onmouseenter="this.style.opacity='0.6'"
+                      onmouseleave="this.style.opacity='1'"
+                    >{lnk.label}</a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {navLinks.map(link => (
+        <a href={link.href} class="pill-link">{link.label}</a>
+      ))}
+    </nav>
+
+    <!-- Invisible spacer keeps logo centered on desktop -->
+    <img src={logoSrc} alt="" aria-hidden="true" class="md:block hidden" style="height:30px;width:auto;visibility:hidden;flex-shrink:0;" />
+
+    <!-- Hamburger (mobile only) -->
+    <button
+      class="md:hidden"
+      style="margin-left:auto;background:transparent;border:none;width:40px;height:40px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;cursor:pointer;padding:0 8px;"
+      aria-label="Open menu"
+      :aria-expanded="menuOpen"
+      @click="menuOpen = !menuOpen"
+    >
+      <span style="width:14px;height:2px;background:var(--clr-text);border-radius:1px;display:block;"></span>
+      <span style="width:20px;height:2px;background:var(--clr-text);border-radius:1px;display:block;"></span>
+      <span style="width:26px;height:2px;background:var(--clr-text);border-radius:1px;display:block;"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu drawer -->
+  <div
+    x-cloak
+    x-show="menuOpen"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 -translate-y-2"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 -translate-y-2"
+    @click.outside="menuOpen = false"
+    style="position:fixed;top:84px;left:0;right:0;background:#fff;border-bottom:1px solid var(--clr-border);padding:24px var(--side-pad) 32px;z-index:999;"
+  >
+    <nav style="display:flex;flex-direction:column;gap:0;">
+      <p style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--clr-meta);margin:0 0 12px;">Services</p>
+      {services.map(cat => cat.links.map(lnk => (
+        <a href={lnk.href} style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--clr-border);" @click="menuOpen = false">{lnk.label}</a>
+      )))}
+      <div style="height:16px;"></div>
+      {navLinks.map(link => (
+        <a href={link.href} style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--clr-border);" @click="menuOpen = false">{link.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<!-- Spacer to offset fixed header -->
+<div style="height:var(--header-h);"></div>

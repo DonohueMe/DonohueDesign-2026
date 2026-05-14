@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sf: -apple-system, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --clr-text:   #1d1d1f;
+  --clr-sub:    #3d3d3f;
+  --clr-meta:   #8e8e93;
+  --clr-link:   #2997ff;
+  --clr-border: #e5e5ea;
+  --clr-surf:   #f2f2f7;
+  --hero-bg: radial-gradient(ellipse 70% 60% at 50% 18%, #4a2670 0%, #2c1548 35%, #1a0a30 70%, #110621 100%);
+  --side-pad: 40px;
+  --header-h: 84px;
+}
+
+@media (max-width: 1023px) { :root { --side-pad: 32px; } }
+@media (max-width: 839px)  { :root { --side-pad: 16px; } }
+
+[x-cloak] { display: none !important; }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sf);
+  background: #fff;
+  color: var(--clr-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+img, svg { display: block; }
+
+.pill-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-text);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 980px;
+  transition: background 0.15s;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.pill-link:hover { background: rgba(0,0,0,0.06); }
+
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #1a0a30;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 14px 32px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.cta-btn:hover { opacity: 0.88; }
