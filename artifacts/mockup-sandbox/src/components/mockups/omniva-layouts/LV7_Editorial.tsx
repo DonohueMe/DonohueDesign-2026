@@ -226,17 +226,25 @@ export default function LV7_Editorial() {
       <div style={{ height: 84 }} />
 
       {/* Hero */}
-      <section style={{ background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 80px' }}>
-        <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 18px' }}>
-          Built on strategy.<br />Powered by AI.
-        </p>
-        <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.25)', width: 100, margin: '40px 0 24px' }} />
-        <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.70)', fontWeight: 500, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
-          Schedule your free consultation now.
-        </p>
-        <a href="#" style={{ display: 'inline-block', background: '#fff', color: '#1a0a30', fontSize: 16, fontWeight: 600, letterSpacing: '-0.01em', padding: '14px 32px', borderRadius: 40, textDecoration: 'none' }}>
-          Get Started
-        </a>
+      <section style={{ position: 'relative', overflow: 'hidden', background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 100px' }}>
+        {/* Wave hills layer */}
+        <svg aria-hidden viewBox="0 0 1440 400" preserveAspectRatio="none" style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100%', height: '45%', pointerEvents: 'none' }}>
+          <path d="M0,120 C260,-20 520,300 820,140 C1120,-20 1300,260 1440,120 L1440,400 L0,400 Z" fill="#3a1f5c" opacity="0.85" />
+          <path d="M0,200 C200,-40 520,400 800,180 C1080,-40 1280,380 1440,170 L1440,400 L0,400 Z" fill="#6b3aa0" opacity="1" />
+          <path d="M0,260 C280,120 600,400 920,220 C1180,80 1320,360 1440,240 L1440,400 L0,400 Z" fill="#26123e" />
+        </svg>
+        <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 18px' }}>
+            Built on strategy.<br />Powered by AI.
+          </p>
+          <hr style={{ border: 'none', borderTop: '1px solid #fff', width: 100, margin: '40px 0 24px' }} />
+          <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.70)', fontWeight: 500, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
+            Schedule your free consultation now.
+          </p>
+          <a href="#" style={{ display: 'inline-block', background: '#fff', color: '#1a0a30', fontSize: 16, fontWeight: 600, letterSpacing: '-0.01em', padding: '14px 32px', borderRadius: 40, textDecoration: 'none' }}>
+            Get Started
+          </a>
+        </div>
       </section>
 
       {/* Body */}
