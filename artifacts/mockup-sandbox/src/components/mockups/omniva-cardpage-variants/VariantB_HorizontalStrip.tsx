@@ -212,7 +212,7 @@ export function VariantK_HorizontalStrip() {
 
       {/* ── Layout B service tiles + right-side fun sticker sidebar ── */}
       <div style={{ background: '#fff', padding: isMobile ? '32px 0' : '60px 0' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile || isTablet ? '1fr' : '1fr 300px', gap: isMobile ? 32 : 74, alignItems: 'start' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: w < 840 ? '1fr' : '1fr 300px', gap: isMobile ? 32 : 74, alignItems: 'start' }}>
 
           {/* Left column: 3 service tiles */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 48, minWidth: 0 }}>

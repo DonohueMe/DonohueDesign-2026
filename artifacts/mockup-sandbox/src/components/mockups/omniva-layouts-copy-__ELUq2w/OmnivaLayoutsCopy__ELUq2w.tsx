@@ -194,7 +194,7 @@ const serviceCards = [
 export default function OmnivaLayoutsCopy__ELUq2w() {
   const { w, isMobile } = useBreakpoint();
   const showHamburger = w < 768;
-  const sidebarStack = w < 1024;
+  const sidebarStack = w < 840;
   const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
     <div style={{ fontFamily: SF, margin: 0, padding: 0, background: '#fff' }}>
