@@ -100,12 +100,7 @@ function PillNav() {
 
 const SF = '-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif';
 
-const HERO_BG = [
-  'radial-gradient(ellipse at 15% 30%, rgba(196,153,226,0.90) 0%, transparent 50%)',
-  'radial-gradient(ellipse at 85% 15%, rgba(255,185,120,0.85) 0%, transparent 50%)',
-  'radial-gradient(ellipse at 60% 70%, rgba(248,220,130,0.70) 0%, transparent 50%)',
-  '#f0eaf8',
-].join(',');
+const HERO_BG = 'radial-gradient(ellipse 70% 60% at 50% 18%, #4a2670 0%, #2c1548 35%, #1a0a30 70%, #110621 100%)';
 
 const GRAD_WARM: React.CSSProperties = {
   background: 'linear-gradient(135deg, #e8472a, #f07030, #f09030)',
@@ -232,14 +227,14 @@ export default function LV7_Editorial() {
 
       {/* Hero */}
       <section style={{ background: HERO_BG, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '80px 40px 80px' }}>
-        <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.04em', color: '#1d1d1f', margin: '0 0 18px' }}>
-          Strategy first.<br />Results always.
+        <p style={{ fontSize: 'clamp(36px, 7vw, 80px)', fontWeight: 700, lineHeight: 1.25, letterSpacing: '-0.04em', color: '#fff', margin: '0 0 18px' }}>
+          Built on strategy.<br />Powered by AI.
         </p>
-        <hr style={{ border: 'none', borderTop: '1px solid #fff', width: 100, margin: '40px 0 24px' }} />
-        <p style={{ fontSize: 18, color: '#3d3d3f', fontWeight: 500, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
+        <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.25)', width: 100, margin: '40px 0 24px' }} />
+        <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.70)', fontWeight: 500, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
           Schedule your free consultation now.
         </p>
-        <a href="#" style={{ display: 'inline-block', background: '#000', color: '#fff', fontSize: 16, fontWeight: 600, letterSpacing: '-0.01em', padding: '14px 32px', borderRadius: 40, textDecoration: 'none' }}>
+        <a href="#" style={{ display: 'inline-block', background: '#fff', color: '#1a0a30', fontSize: 16, fontWeight: 600, letterSpacing: '-0.01em', padding: '14px 32px', borderRadius: 40, textDecoration: 'none' }}>
           Get Started
         </a>
       </section>
