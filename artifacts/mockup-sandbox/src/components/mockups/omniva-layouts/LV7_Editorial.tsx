@@ -196,7 +196,7 @@ const serviceCards = [
 
 export default function LV7_Editorial() {
   const { w, isMobile } = useBreakpoint();
-  const showHamburger = w < 768;
+  const showHamburger = w < 840;
   const sidebarStack = w < 840;
   const sidePad = isMobile ? 16 : w < 1024 ? 32 : 40;
   return (
