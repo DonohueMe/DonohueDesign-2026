@@ -248,7 +248,7 @@ export default function LV7_Editorial() {
       </section>
 
       {/* Body */}
-      <div style={{ display: 'flex', flexDirection: sidebarStack ? 'column' : 'row', gap: sidebarStack ? 32 : 52, padding: sidebarStack ? '40px 16px 60px' : '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', flexDirection: sidebarStack ? 'column' : 'row', gap: sidebarStack ? 32 : 52, padding: sidebarStack ? `40px ${sidePad}px 60px` : '60px 40px 80px', maxWidth: 1280, margin: '0 auto', alignItems: 'flex-start' }}>
 
         {/* Main — three repeating editorial sections */}
         <main style={{ flex: '1 1 0', minWidth: 0 }}>
