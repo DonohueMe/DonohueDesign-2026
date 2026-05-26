@@ -1,7 +1,5 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-import alpinejs from '@astrojs/alpinejs';
 
 export default defineConfig({
   site: 'https://donahuedesign.com',
@@ -9,8 +7,6 @@ export default defineConfig({
   devToolbar: { enabled: false },
   integrations: [
     tailwind({ applyBaseStyles: false }),
-    sitemap(),
-    alpinejs(),
   ],
   vite: {
     server: {
