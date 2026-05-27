@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://donahuedesign.com/sitemap-index.xml
