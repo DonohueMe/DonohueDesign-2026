@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing Santa Rosa | Donohue Design</title>
+  <meta name="description" content="Local SEO, AI-powered outreach, and email marketing automation for Santa Rosa and Sonoma County businesses. Strategy-first digital marketing by Jim Donohue." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Digital Marketing Santa Rosa",
+    "description": "Local SEO, AI-powered outreach, and email marketing automation for Santa Rosa businesses.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Donohue Design",
+      "url": "https://donahuedesign.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Santa Rosa", "addressRegion": "CA", "addressCountry": "US" }
+    },
+    "areaServed": "Santa Rosa, CA",
+    "serviceType": "Digital Marketing"
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;height:var(--header-h);"
+  x-data="{menuOpen:false,servOpen:false,_t:null,showServ(){clearTimeout(this._t);this.servOpen=true;},hideServ(){this._t=setTimeout(()=>{this.servOpen=false;},180);}}">
+  <div style="max-width:1280px;margin:0 auto;padding:0 var(--side-pad);display:flex;align-items:center;height:100%;">
+
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0;margin-right:20px;">
+      <img src="ddc-logo.png" alt="Donohue Design" style="height:30px;width:auto;" />
+    </a>
+
+    <nav class="md:flex hidden flex-1 justify-center items-center" style="height:52px;gap:20px;">
+      <div style="position:relative;" @mouseenter="showServ()" @mouseleave="hideServ()">
+        <button class="pill-link" style="border:none;cursor:pointer;background:transparent;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''" @mouseenter="showServ()">
+          <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
+            Services
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" :style="servOpen?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </button>
+        <div x-cloak x-show="servOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" @mouseenter="showServ()" @mouseleave="hideServ()" style="position:fixed;top:84px;left:50%;transform:translateX(-50%);z-index:200;">
+          <div style="background:var(--clr-surf);border-radius:20px;padding:28px 0;width:700px;box-shadow:0 8px 40px rgba(0,0,0,0.13),0 2px 8px rgba(0,0,0,0.06);display:flex;">
+            <div style="flex:1;padding:0 28px;">
+              <p style="font-size:15px;font-weight:700;color:var(--clr-text);letter-spacing:-0.02em;line-height:1.2;margin:0 0 16px;">Website Designer</p>
+              <a href="website-designer-santa-rosa.html" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Website Design &amp; Strategy</a>
+              <a href="website-designer-santa-rosa.html#smart" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Smart Websites</a>
+              <a href="website-designer-santa-rosa.html#dev" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Website Development</a>
+            </div>
+            <div style="flex:1;padding:0 28px;border-left:1px solid #d1d1d6;">
+              <p style="font-size:15px;font-weight:700;color:var(--clr-text);letter-spacing:-0.02em;line-height:1.2;margin:0 0 16px;">Digital Marketing</p>
+              <a href="digital-marketing-santa-rosa.html" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Local SEO (Google My Business)</a>
+              <a href="digital-marketing-santa-rosa.html#email" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Email Marketing</a>
+              <a href="digital-marketing-santa-rosa.html#ai" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">AI Receptionist</a>
+            </div>
+            <div style="flex:1;padding:0 28px;border-left:1px solid #d1d1d6;">
+              <p style="font-size:15px;font-weight:700;color:var(--clr-text);letter-spacing:-0.02em;line-height:1.2;margin:0 0 16px;">Graphic Designer</p>
+              <a href="graphic-designer-santa-rosa.html" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Logo Design</a>
+              <a href="graphic-designer-santa-rosa.html#print" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Brochure &amp; Flyer Design</a>
+              <a href="graphic-designer-santa-rosa.html#slides" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;border-bottom:1px solid rgba(0,0,0,0.07);transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Presentation Design</a>
+              <a href="graphic-designer-santa-rosa.html#email" style="font-size:14px;font-weight:500;color:var(--clr-link);text-decoration:none;padding:8px 0;display:block;letter-spacing:-0.01em;transition:opacity 0.1s;" onmouseenter="this.style.opacity='0.6'" onmouseleave="this.style.opacity='1'">Email Design</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="case-studies.html" class="pill-link">Case Studies</a>
+      <a href="pricing.html" class="pill-link">Pricing</a>
+      <a href="about.html" class="pill-link">About / Contact</a>
+    </nav>
+
+    <img src="ddc-logo.png" alt="" aria-hidden="true" class="md:block hidden" style="height:30px;width:auto;visibility:hidden;flex-shrink:0;" />
+
+    <button class="md:hidden flex" style="margin-left:auto;background:transparent;border:none;width:40px;height:40px;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;cursor:pointer;padding:0 8px;" aria-label="Open menu" :aria-expanded="menuOpen" @click="menuOpen=!menuOpen">
+      <span style="width:14px;height:2px;background:var(--clr-text);border-radius:1px;display:block;"></span>
+      <span style="width:20px;height:2px;background:var(--clr-text);border-radius:1px;display:block;"></span>
+      <span style="width:26px;height:2px;background:var(--clr-text);border-radius:1px;display:block;"></span>
+    </button>
+  </div>
+
+  <div x-cloak x-show="menuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" @click.outside="menuOpen=false" style="position:fixed;top:84px;left:0;right:0;background:#fff;border-bottom:1px solid var(--clr-border);padding:16px var(--side-pad) 32px;z-index:999;max-height:calc(100vh - 84px);overflow-y:auto;">
+    <nav style="display:flex;flex-direction:column;">
+      <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
+        <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Website Designer</span>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div x-show="open" style="padding-bottom:8px;overflow:hidden;">
+          <a href="website-designer-santa-rosa.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Website Design &amp; Strategy</a>
+          <a href="website-designer-santa-rosa.html#smart" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Smart Websites</a>
+          <a href="website-designer-santa-rosa.html#dev" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Website Development</a>
+        </div>
+      </div>
+      <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
+        <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Digital Marketing</span>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div x-show="open" style="padding-bottom:8px;overflow:hidden;">
+          <a href="digital-marketing-santa-rosa.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Local SEO (Google My Business)</a>
+          <a href="digital-marketing-santa-rosa.html#email" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Marketing</a>
+          <a href="digital-marketing-santa-rosa.html#ai" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">AI Receptionist</a>
+        </div>
+      </div>
+      <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
+        <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Graphic Designer</span>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div x-show="open" style="padding-bottom:8px;overflow:hidden;">
+          <a href="graphic-designer-santa-rosa.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Logo Design</a>
+          <a href="graphic-designer-santa-rosa.html#print" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Brochure &amp; Flyer Design</a>
+          <a href="graphic-designer-santa-rosa.html#slides" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Presentation Design</a>
+          <a href="graphic-designer-santa-rosa.html#email" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Design</a>
+        </div>
+      </div>
+      <div style="height:8px;"></div>
+      <a href="case-studies.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Case Studies</a>
+      <a href="pricing.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Pricing</a>
+      <a href="about.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">About / Contact</a>
+    </nav>
+  </div>
+</header>
+<div style="height:var(--header-h);"></div>
+
+<!-- ═══ HERO ═══ -->
+<section style="position:relative;overflow:hidden;background:radial-gradient(ellipse at 15% 30%, rgba(196,153,226,0.90) 0%, transparent 50%),radial-gradient(ellipse at 85% 15%, rgba(255,185,120,0.85) 0%, transparent 50%),radial-gradient(ellipse at 60% 70%, rgba(248,220,130,0.70) 0%, transparent 50%),#f0eaf8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px 80px;">
+  <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
+    <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 18px;">Strategy first.<br />Results always.</p>
+    <hr style="border:none;border-top:1px solid rgba(0,0,0,0.15);width:100px;margin:40px 0 24px;" />
+    <p style="font-size:18px;color:#3d3d3f;font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+    <a href="about.html" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+  </div>
+</section>
+
+<!-- ═══ BODY: editorial + sidebar ═══ -->
+<div class="editorial-wrap">
+
+  <main style="flex:1 1 0;min-width:0;">
+
+    <section style="margin-bottom:56px;" id="intro">
+      <h1 style="font-size:clamp(26px,2.8vw,36px);font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 24px;line-height:1.36;">Digital Marketing Santa Rosa</h1>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 22px;">Most small businesses in Santa Rosa leave customers on the table — not because their service is bad, but because nobody can find them online.</p>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 12px;">I build digital marketing systems that fix that. From optimizing your Google Business Profile and climbing local search rankings to automated email campaigns and AI-powered follow-up, everything I build is designed to bring in business consistently, not just occasionally.</p>
+
+      <!-- How it works card -->
+      <div style="background:#fff;border-radius:18px;padding:28px 32px;margin-top:24px;border:1px solid #e5e5ea;">
+        <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.13em;color:#8e8e93;margin:0 0 6px;">How it works</p>
+        <p style="font-size:20px;font-weight:800;color:#1d1d1f;margin:0 0 20px;line-height:1.2;letter-spacing:-0.02em;">Strategy first. Everything else follows.</p>
+
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">1</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Purpose &amp; Goals</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">Lead generation, e-commerce, brand awareness — with measurable KPIs tied to business objectives.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">2</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Target Audience</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">User personas, journey mapping, pain points, and how real customers behave.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">3</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Content Strategy</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">What to create, how to organize it, tone of voice, and messaging hierarchy.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">4</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Information Architecture</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">Site structure, navigation, and page hierarchy so users find what they need.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">5</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Technical Strategy</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">Platform, hosting, performance, security, accessibility, and mobile-friendliness.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">6</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">SEO &amp; Discoverability</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">Keyword targeting, on-page optimization, and visibility in search and AI-powered results.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">7</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Conversion Optimization</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">CTAs, landing pages, and funnel design that turn visitors into customers.</p></div>
+        </div>
+        <div style="height:1px;background:#e5e5ea;"></div>
+        <div style="display:flex;gap:14px;padding:13px 0;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8a0c8 0%,#c87aaa 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><span style="font-size:11px;font-weight:800;color:#fff;">8</span></div>
+          <div style="flex:1;"><p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0 0 3px;line-height:1.2;">Measurement &amp; Iteration</p><p style="font-size:13px;color:#6e6e73;margin:0;line-height:1.55;">Analytics, A/B testing, and ongoing performance review cycles.</p></div>
+        </div>
+
+        <a href="about.html" style="display:inline-block;margin-top:12px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Start with a free call</a>
+      </div>
+    </section>
+
+    <section style="margin-bottom:56px;" id="seo">
+      <h2 style="font-size:clamp(26px,2.8vw,36px);font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 24px;line-height:1.36;">Local SEO &amp; Google My Business</h2>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 22px;">For local businesses, Google is the front door. I optimize your Google Business Profile, build local citations, and structure your website so Google understands exactly who you serve and where.</p>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 12px;">The result: your business shows up when Santa Rosa residents search for the services you offer — not your competitors three towns away.</p>
+    </section>
+
+    <section style="margin-bottom:56px;" id="ai">
+      <h2 style="font-size:clamp(26px,2.8vw,36px);font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 24px;line-height:1.36;">AI Receptionist</h2>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 22px;">Never miss a lead again. An AI receptionist answers questions, books appointments, and qualifies leads around the clock — on your website, via text, or through your business line.</p>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 12px;">It works while you sleep, while you're with a client, and over every holiday weekend. Your competitors who rely on voicemail are losing leads to you.</p>
+    </section>
+
+    <section style="margin-bottom:56px;" id="email">
+      <h2 style="font-size:clamp(26px,2.8vw,36px);font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 24px;line-height:1.36;">Email Marketing Automation</h2>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 22px;">Your email list is the one channel you own outright — no algorithm can take it away. I build automated sequences that nurture leads, re-engage past customers, and drive repeat business on autopilot.</p>
+      <p style="font-size:18px;line-height:1.75;color:#3d3d3f;font-weight:400;margin:0 0 12px;">From welcome sequences and post-project follow-ups to seasonal campaigns and referral programs, every email is mapped to a specific business outcome.</p>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="editorial-sidebar">
+
+    <div style="background:#fff;border-radius:18px;padding:20px 18px 24px;margin-bottom:40px;border:1px solid #e5e5ea;">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="6" width="22" height="14" rx="1.5"/><path d="M3 20h22"/><path d="M11 24h6M14 20v4"/><rect x="22" y="14" width="8" height="14" rx="1.5"/><path d="M25.5 26.5h1"/>
+      </svg>
+      <h4 style="font-size:20px;font-weight:700;color:#1d1d1f;margin:10px 0 10px;line-height:1.2;">Website Design</h4>
+      <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.55;">Strategy-first websites built to generate leads, earn trust, and turn visitors into customers.</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Website Design &amp; Strategy</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Smart Websites</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Website Development</p>
+    </div>
+
+    <div style="background:#fff;border-radius:18px;padding:20px 18px 24px;margin-bottom:40px;border:1px solid #e5e5ea;">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 26 L13 17 L18 22 L29 9"/><path d="M22 9 H29 V16"/><path d="M4 29 H30"/>
+      </svg>
+      <h4 style="font-size:20px;font-weight:700;color:#1d1d1f;margin:10px 0 10px;line-height:1.2;">Digital Marketing</h4>
+      <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.55;">AI-powered campaigns, local SEO, and automated outreach — running around the clock to grow your business.</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Local SEO (Google My Business)</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">AI Receptionist</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Email Marketing Automation</p>
+    </div>
+
+    <div style="background:#fff;border-radius:18px;padding:20px 18px 24px;margin-bottom:40px;border:1px solid #e5e5ea;">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#1d1d1f" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17 4a13 13 0 1 0 0 26c1.7 0 2.8-1.1 2.8-2.5 0-.65-.25-1.25-.7-1.7-.45-.45-.7-1.05-.7-1.7 0-1.4 1.1-2.5 2.5-2.5h2.6A5 5 0 0 0 28.5 16 13 13 0 0 0 17 4z"/><circle cx="10.5" cy="14" r="1.4"/><circle cx="15" cy="9" r="1.4"/><circle cx="21" cy="10" r="1.4"/><circle cx="24.5" cy="15" r="1.4"/>
+      </svg>
+      <h4 style="font-size:20px;font-weight:700;color:#1d1d1f;margin:10px 0 10px;line-height:1.2;">Graphic Design</h4>
+      <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.55;">Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Presentation Design</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Email Design</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Brochure &amp; Flyer Design</p>
+      <p style="font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;">Logo Design</p>
+    </div>
+
+    <a href="about.html" style="display:block;background:#1d1d1f;color:#fff;font-size:14px;font-weight:600;letter-spacing:-0.01em;padding:12px 24px;border-radius:40px;text-decoration:none;text-align:center;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Free Consultation</a>
+  </aside>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:#000;padding:48px var(--side-pad);color:#fff;font-family:var(--font-sf);">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div class="footer-grid">
+      <div>
+        <p style="font-size:22px;font-weight:700;color:#fff;margin:0 0 6px;letter-spacing:-0.01em;">Donohue Design</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 4px;">Santa Rosa, CA</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 20px;">Serving Sonoma, Marin &amp; Napa Counties</p>
+        <div style="display:flex;gap:12px;margin-bottom:20px;">
+          <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93a1.74 1.74 0 0 0-1.62 1.83V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5H15c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.4v6.9A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);margin:0;">&copy;2026 Donohue Design</p>
+      </div>
+      <nav style="display:flex;flex-wrap:wrap;column-gap:32px;row-gap:14px;align-self:flex-start;padding-top:4px;">
+        <a href="website-designer-santa-rosa.html" style="font-size:14px;color:rgba(255,255,255,0.78);text-decoration:none;font-weight:500;white-space:nowrap;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,0.78)'">Website Designer</a>
+        <a href="digital-marketing-santa-rosa.html" style="font-size:14px;color:rgba(255,255,255,0.78);text-decoration:none;font-weight:500;white-space:nowrap;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,0.78)'">Digital Marketing</a>
+        <a href="graphic-designer-santa-rosa.html" style="font-size:14px;color:rgba(255,255,255,0.78);text-decoration:none;font-weight:500;white-space:nowrap;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,0.78)'">Graphic Designer</a>
+        <a href="case-studies.html" style="font-size:14px;color:rgba(255,255,255,0.78);text-decoration:none;font-weight:500;white-space:nowrap;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,0.78)'">Case Studies</a>
+        <a href="pricing.html" style="font-size:14px;color:rgba(255,255,255,0.78);text-decoration:none;font-weight:500;white-space:nowrap;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,0.78)'">Pricing</a>
+        <a href="about.html" style="font-size:14px;color:rgba(255,255,255,0.78);text-decoration:none;font-weight:500;white-space:nowrap;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,0.78)'">About / Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
