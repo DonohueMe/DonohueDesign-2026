@@ -18,7 +18,8 @@
   --header-scroll-range: 140px;
   --header-scroll: 0;
   --hero-pad-top: 80px;
-  --hero-pad-bottom: 80px;
+  --hero-pad-bottom: 100px;
+  --post-hero-pad-top: 60px;
   --footer-step-h: 6px;
   --footer-pad-y: 48px;
   --footer-margin-top: 75px;
@@ -699,9 +700,6 @@ img, svg { display: block; }
   color: #1d1d1f;
   margin: 0;
 }
-.body-prose > .page-h1 {
-  margin-top: 44px;
-}
 .body-prose section > .page-h1:first-child {
   margin-top: 0;
 }
@@ -711,9 +709,20 @@ img, svg { display: block; }
   margin-bottom: var(--h1-body-gap) !important;
 }
 
+/* Hero → h1 gap: --hero-pad-bottom + --post-hero-pad-top (40px at md via --sidebar-card-gap) */
+.bio-intro {
+  padding: var(--post-hero-pad-top) 0 40px;
+  background: #fff;
+}
+@media (min-width: 840px) {
+  .bio-intro {
+    padding-top: var(--sidebar-card-gap);
+  }
+}
+
 /* Editorial page wrapper (display from .site-layout-with-sidebar) */
 .editorial-wrap {
-  padding: 60px var(--side-pad) 80px;
+  padding: var(--post-hero-pad-top) var(--side-pad) 80px;
   max-width: var(--page-max);
   margin: 0 auto;
 }
