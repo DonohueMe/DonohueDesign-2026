@@ -31,7 +31,7 @@
   --tile-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
   --promo-shadow-inset: 18px;
   --promo-hover-shadow: 0 14px 32px -14px rgba(0, 0, 0, 0.108), 0 6px 14px -10px rgba(0, 0, 0, 0.054);
-  --body-p-gap: 16px;
+  --body-p-gap: 18px;
   --h1-body-gap: 18px;
 }
 @media (max-width: 839px) { :root { --side-pad: 16px; } }
