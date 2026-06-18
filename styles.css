@@ -511,7 +511,7 @@ img, svg { display: block; }
   gap: var(--sidebar-card-gap);
   min-width: 0;
 }
-.site-sidebar h4 {
+.site-sidebar__inner > div h4 {
   font-size: 15px;
   color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
@@ -643,12 +643,13 @@ img, svg { display: block; }
   outline-offset: 3px;
 }
 .sidebar-promo-card h4 {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.15;
+  line-height: 27px;
   margin: 0 0 12px;
   color: #1d1d1f;
+  text-transform: none;
 }
 .sidebar-promo-card p {
   font-size: 17px;
@@ -846,17 +847,12 @@ footer:not(.site-footer) {
 }
 .footer-nav a,
 .footer-grid > nav a {
-  font-size: 14px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
-}
-.footer-nav a:nth-child(-n+4),
-.footer-grid > nav a:nth-child(-n+4) {
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  text-transform: none;
 }
 .footer-nav a:hover,
 .footer-grid > nav a:hover { color: #fff; }
