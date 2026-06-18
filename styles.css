@@ -18,7 +18,7 @@
   --header-scroll-range: 140px;
   --header-scroll: 0;
   --hero-pad-top: 80px;
-  --hero-pad-bottom: 100px;
+  --hero-pad-bottom: 70px;
   --post-hero-pad-top: var(--sidebar-card-gap);
   --footer-step-h: 6px;
   --footer-pad-y: 48px;
@@ -713,6 +713,28 @@ img, svg { display: block; }
 .bio-intro {
   padding: var(--post-hero-pad-top) 0 40px;
   background: #fff;
+}
+.bio-intro .body-prose h1 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.36;
+  color: #1d1d1f;
+  margin: 0;
+}
+.bio-intro .body-prose > p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #3d3d3f;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+}
+.bio-intro .body-prose hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  width: 80%;
+  margin: calc(64px * 2 / 3) auto 0;
 }
 
 /* Editorial page wrapper (display from .site-layout-with-sidebar) */
