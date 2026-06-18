@@ -19,7 +19,7 @@
   --header-scroll: 0;
   --hero-pad-top: 80px;
   --hero-pad-bottom: 100px;
-  --post-hero-pad-top: 60px;
+  --post-hero-pad-top: var(--sidebar-card-gap);
   --footer-step-h: 6px;
   --footer-pad-y: 48px;
   --footer-margin-top: 75px;
@@ -709,15 +709,10 @@ img, svg { display: block; }
   margin-bottom: var(--h1-body-gap) !important;
 }
 
-/* Hero → h1 gap: --hero-pad-bottom + --post-hero-pad-top (40px at md via --sidebar-card-gap) */
+/* Hero → h1 gap: --hero-pad-bottom + --post-hero-pad-top (40px) */
 .bio-intro {
   padding: var(--post-hero-pad-top) 0 40px;
   background: #fff;
-}
-@media (min-width: 840px) {
-  .bio-intro {
-    padding-top: var(--sidebar-card-gap);
-  }
 }
 
 /* Editorial page wrapper (display from .site-layout-with-sidebar) */
@@ -725,11 +720,6 @@ img, svg { display: block; }
   padding: var(--post-hero-pad-top) var(--side-pad) 80px;
   max-width: var(--page-max);
   margin: 0 auto;
-}
-@media (min-width: 840px) {
-  .editorial-wrap.site-layout-with-sidebar {
-    padding-top: var(--sidebar-card-gap);
-  }
 }
 
 /* Footer stepped top: 3px bands over white page, then solid black (donohuedesign.com) */
