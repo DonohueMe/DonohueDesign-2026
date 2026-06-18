@@ -42,14 +42,16 @@
         "founder": { "@type": "Person", "name": "Jim Donohue" },
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "1891 Bennett Meadows Ln",
           "addressLocality": "Santa Rosa",
           "addressRegion": "CA",
+          "postalCode": "95405",
           "addressCountry": "US"
         },
         "areaServed": ["Santa Rosa", "Sonoma County", "Marin County", "Napa County"],
-        "serviceType": ["Web Design", "Digital Marketing", "Graphic Design"],
+        "serviceType": ["Website Design", "Graphic Design", "Marketing Consultant", "Internet Marketing Service"],
         "sameAs": [
-          "https://www.linkedin.com/",
+          "https://www.linkedin.com/in/jimdonohue",
           "https://www.facebook.com/"
         ]
       },
@@ -168,7 +170,7 @@
 
       <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
         <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
-          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Website Designer</span>
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);">Website Designer</span>
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
@@ -180,7 +182,7 @@
 
       <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
         <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
-          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Graphic Designer</span>
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);">Graphic Designer</span>
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
@@ -193,7 +195,7 @@
 
       <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
         <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
-          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Marketing Consultant</span>
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);">Marketing Consultant</span>
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
@@ -205,7 +207,7 @@
 
       <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
         <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
-          <span style="font-size:18px;font-weight:500;color:var(--clr-text);letter-spacing:-0.01em;">Internet Marketing Service</span>
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);">Internet Marketing Service</span>
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
@@ -236,7 +238,7 @@
   </div>
 </section>
 
-<!-- ═══ BIO INTRO ═══ -->
+<!-- ═══ INTRO ═══ -->
 <section class="bio-intro">
   <div class="body-prose" style="max-width:1280px;margin:0 auto;text-align:center;padding:0 var(--side-pad);">
     <h1>Website Designer Santa Rosa, California</h1>
@@ -404,7 +406,7 @@
           <span style="width:34px;height:34px;border-radius:10px;background:#fff;color:#d18a16;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 0 #d18a1625,inset 0 0 0 1px #d18a1625;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
           </span>
-          <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#d18a16;">Local SEO · GBP</span>
+          <span style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#d18a16;">Local SEO · GBP</span>
         </div>
         <h4>Own the map. Own the moment.</h4>
         <p>Rank higher on Google Maps and capture every nearby search.</p>
@@ -417,7 +419,7 @@
           <span style="width:34px;height:34px;border-radius:10px;background:#fff;color:#1f9d6a;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 0 #1f9d6a25,inset 0 0 0 1px #1f9d6a25;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
           </span>
-          <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#1f9d6a;">AI Receptionist</span>
+          <span style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#1f9d6a;">AI Receptionist</span>
         </div>
         <h4>Never miss a call again.</h4>
         <p>A 24/7 voice that books, qualifies, and confirms — in a single ring.</p>
@@ -430,7 +432,7 @@
           <span style="width:34px;height:34px;border-radius:10px;background:#fff;color:#1f6fd6;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 0 #1f6fd625,inset 0 0 0 1px #1f6fd625;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 3 12 8 18M16 6l5 6-5 6"/></svg>
           </span>
-          <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#1f6fd6;">Smart Websites</span>
+          <span style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#1f6fd6;">Smart Websites</span>
         </div>
         <h4>Sites that earn their keep.</h4>
         <p>Strategy-first design built to turn quiet visitors into paying customers.</p>
@@ -443,7 +445,7 @@
           <span style="width:34px;height:34px;border-radius:10px;background:#fff;color:#c43c75;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 1px 0 #c43c7525,inset 0 0 0 1px #c43c7525;flex-shrink:0;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM8 21l4-4 4 4M7 9h6M7 12h10"/></svg>
           </span>
-          <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#c43c75;">Presentation Design</span>
+          <span style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#c43c75;">Presentation Design</span>
         </div>
         <h4>Decks that win the room.</h4>
         <p>Investor-ready slides built around the story you are telling.</p>
@@ -463,10 +465,10 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <p style="font-size:22px;font-weight:700;color:#fff;margin:0 0 6px;letter-spacing:-0.01em;">Donohue Design</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 4px;">Santa Rosa, CA</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 4px;">1891 Bennett Meadows Ln, Santa Rosa, CA 95405</p>
         <p style="font-size:14px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 20px;">Serving Sonoma, Marin &amp; Napa Counties</p>
         <div style="display:flex;gap:12px;margin-bottom:20px;">
-          <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+          <a href="https://www.linkedin.com/in/jimdonohue" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93a1.74 1.74 0 0 0-1.62 1.83V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
           </a>
           <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">

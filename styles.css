@@ -50,11 +50,11 @@ img, svg { display: block; }
 }
 .pill-link:hover { background: rgba(0,0,0,0.06); }
 
-.site-header-megamenu__heading,
-.site-header-megamenu__link {
-  font-size: 16px !important;
+.site-header-megamenu__heading {
+  font-size: 15px !important;
 }
 .site-header-megamenu__link {
+  font-size: 16px !important;
   white-space: nowrap;
 }
 .site-header-megamenu {
@@ -91,13 +91,17 @@ img, svg { display: block; }
 .site-header-megamenu__heading {
   font-size: 15px;
   font-weight: 700;
-  color: var(--clr-text);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   line-height: calc(1.2em + 5px);
   margin: 0 0 2px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.site-header-megamenu__heading span {
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: inherit;
 }
 .site-header-megamenu__icon {
   width: 28px;
@@ -123,6 +127,12 @@ img, svg { display: block; }
 .site-header-mobile button > span,
 .site-header-mobile > nav > a {
   font-size: 16px !important;
+}
+.site-header-mobile button > span {
+  font-size: 15px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em !important;
 }
 .site-header-mobile a {
   color: var(--clr-link) !important;
@@ -501,6 +511,15 @@ img, svg { display: block; }
   gap: var(--sidebar-card-gap);
   min-width: 0;
 }
+.site-sidebar h4 {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.site-sidebar__inner > div a {
+  letter-spacing: 0.08em;
+}
 @media (min-width: 840px) {
   .site-layout-with-sidebar {
     grid-template-columns: minmax(0, 1fr) 300px;
@@ -721,6 +740,7 @@ img, svg { display: block; }
   line-height: 1.36;
   color: #1d1d1f;
   margin: 0;
+  text-align: left;
 }
 .bio-intro .body-prose > p {
   font-size: 18px;
@@ -831,6 +851,12 @@ footer:not(.site-footer) {
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
+}
+.footer-nav a:nth-child(-n+4),
+.footer-grid > nav a:nth-child(-n+4) {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 .footer-nav a:hover,
 .footer-grid > nav a:hover { color: #fff; }
