@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <pattern id="mc-stars" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="14" r="0.7" fill="#ffffff" opacity="0.65"/>
+      <circle cx="28" cy="32" r="0.45" fill="#ffffff" opacity="0.42"/>
+      <circle cx="52" cy="18" r="0.55" fill="#ffffff" opacity="0.5"/>
+      <circle cx="74" cy="44" r="0.8" fill="#ffffff" opacity="0.58"/>
+      <circle cx="96" cy="22" r="0.5" fill="#ffffff" opacity="0.38"/>
+      <circle cx="18" cy="58" r="0.55" fill="#ffffff" opacity="0.46"/>
+      <circle cx="42" cy="78" r="0.4" fill="#a8c8ff" opacity="0.35"/>
+      <circle cx="68" cy="68" r="0.65" fill="#ffffff" opacity="0.52"/>
+      <circle cx="88" cy="92" r="0.45" fill="#ffffff" opacity="0.4"/>
+      <circle cx="14" cy="96" r="0.35" fill="#c0d8ff" opacity="0.32"/>
+      <circle cx="58" cy="6" r="0.4" fill="#ffffff" opacity="0.44"/>
+      <circle cx="104" cy="58" r="0.55" fill="#ffffff" opacity="0.48"/>
+    </pattern>
+    <pattern id="mc-stars-fine" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="8" r="0.3" fill="#ffffff" opacity="0.28"/>
+      <circle cx="34" cy="22" r="0.25" fill="#ffffff" opacity="0.22"/>
+      <circle cx="48" cy="44" r="0.35" fill="#ffffff" opacity="0.3"/>
+      <circle cx="8" cy="38" r="0.28" fill="#ffffff" opacity="0.24"/>
+      <circle cx="26" cy="52" r="0.22" fill="#ffffff" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="mc-beam-blue" gradientUnits="userSpaceOnUse" x1="1010" y1="900" x2="1060" y2="40">
+      <stop offset="0%" stop-color="#2080ff" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#60c0ff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#0048c8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mc-beam-violet" gradientUnits="userSpaceOnUse" x1="1080" y1="900" x2="1100" y2="30">
+      <stop offset="0%" stop-color="#8040ff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#c080ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#4020c0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mc-beam-white" gradientUnits="userSpaceOnUse" x1="1110" y1="900" x2="1125" y2="20">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="38%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#c0f0ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mc-beam-magenta" gradientUnits="userSpaceOnUse" x1="1160" y1="900" x2="1190" y2="50">
+      <stop offset="0%" stop-color="#e02888" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ff60b8" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#901858" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mc-beam-orange" gradientUnits="userSpaceOnUse" x1="1240" y1="900" x2="1290" y2="60">
+      <stop offset="0%" stop-color="#ff7810" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ffb860" stop-opacity="0.78"/>
+      <stop offset="100%" stop-color="#c84808" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="mc-nebula-core" cx="72%" cy="38%" r="42%">
+      <stop offset="0%" stop-color="#4080ff" stop-opacity="0.35"/>
+      <stop offset="35%" stop-color="#e02888" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#4020a0" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#060912" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mc-nebula-left" cx="18%" cy="72%" r="38%">
+      <stop offset="0%" stop-color="#5030c8" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#060912" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mc-nebula-tr" cx="88%" cy="12%" r="32%">
+      <stop offset="0%" stop-color="#ffb040" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#060912" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mc-galaxy" cx="38%" cy="55%" r="28%">
+      <stop offset="0%" stop-color="#304878" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#1a2848" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#060912" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mc-flare-core" cx="76%" cy="30%" r="12%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#d0f0ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#4080ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mc-flare-halo" cx="76%" cy="30%" r="26%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#60b0ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#2080ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mc-orb-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mc-nebula-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <filter id="mc-beam-blur" x="-60%" y="-40%" width="220%" height="180%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="mc-flare-blur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="mc-noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.22" intercept="-0.05"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- deep space base -->
+  <rect width="1440" height="900" fill="#060912"/>
+  <rect width="1440" height="900" fill="url(#mc-galaxy)"/>
+  <rect width="1440" height="900" fill="url(#mc-nebula-left)"/>
+  <rect width="1440" height="900" fill="url(#mc-nebula-tr)"/>
+
+  <!-- nebula clouds -->
+  <g filter="url(#mc-nebula-blur)">
+    <ellipse cx="1050" cy="320" rx="380" ry="280" fill="#2080ff" opacity="0.28"/>
+    <ellipse cx="1180" cy="260" rx="320" ry="220" fill="#e02888" opacity="0.22"/>
+    <ellipse cx="1280" cy="380" rx="260" ry="200" fill="#ff9020" opacity="0.18"/>
+    <ellipse cx="220" cy="620" rx="280" ry="180" fill="#5030c8" opacity="0.2"/>
+    <ellipse cx="480" cy="180" rx="200" ry="120" fill="#1a4080" opacity="0.18"/>
+  </g>
+
+  <rect width="1440" height="900" fill="url(#mc-nebula-core)"/>
+
+  <!-- star fields -->
+  <rect width="1440" height="900" fill="url(#mc-stars)" opacity="0.85"/>
+  <rect width="1440" height="900" fill="url(#mc-stars-fine)" opacity="0.55"/>
+
+  <!-- warp-speed light pillar (right) -->
+  <g filter="url(#mc-beam-blur)">
+    <line x1="1010" y1="920" x2="1055" y2="40" stroke="url(#mc-beam-blue)" stroke-width="140" stroke-linecap="round" opacity="0.75"/>
+    <line x1="1080" y1="920" x2="1100" y2="30" stroke="url(#mc-beam-violet)" stroke-width="95" stroke-linecap="round" opacity="0.68"/>
+    <line x1="1110" y1="920" x2="1125" y2="20" stroke="url(#mc-beam-white)" stroke-width="72" stroke-linecap="round" opacity="0.88"/>
+    <line x1="1160" y1="920" x2="1190" y2="50" stroke="url(#mc-beam-magenta)" stroke-width="105" stroke-linecap="round" opacity="0.72"/>
+    <line x1="1240" y1="920" x2="1290" y2="60" stroke="url(#mc-beam-orange)" stroke-width="145" stroke-linecap="round" opacity="0.65"/>
+  </g>
+
+  <!-- distant star / lens flare -->
+  <g filter="url(#mc-flare-blur)">
+    <ellipse cx="1095" cy="268" rx="140" ry="100" fill="url(#mc-flare-halo)" opacity="0.9"/>
+    <ellipse cx="1095" cy="268" rx="52" ry="38" fill="url(#mc-flare-core)" opacity="0.95"/>
+  </g>
+
+  <!-- planets / bright stars -->
+  <circle cx="1095" cy="268" r="6" fill="#ffffff" opacity="0.85"/>
+  <circle cx="180" cy="120" r="22" fill="url(#mc-orb-glow)" opacity="0.8"/>
+  <circle cx="180" cy="120" r="5" fill="#ffffff" opacity="0.55"/>
+  <circle cx="320" cy="680" r="14" fill="url(#mc-orb-glow)" opacity="0.65"/>
+  <circle cx="320" cy="680" r="3.5" fill="#ffffff" opacity="0.42"/>
+  <circle cx="1320" cy="140" r="18" fill="url(#mc-orb-glow)" opacity="0.7"/>
+  <circle cx="1320" cy="140" r="4.5" fill="#ffd080" opacity="0.55"/>
+  <circle cx="720" cy="780" r="10" fill="url(#mc-orb-glow)" opacity="0.5"/>
+  <circle cx="720" cy="780" r="2.5" fill="#ffffff" opacity="0.38"/>
+
+  <!-- sparkles -->
+  <path d="M420,95 l2,7 7,2 -7,2 -2,7 -2,-7 -7,-2 7,-2z" fill="#ffffff" opacity="0.88"/>
+  <path d="M860,520 l1.5,5 5,1.5 -5,1.5 -1.5,5 -1.5,-5 -5,-1.5 5,-1.5z" fill="#ffffff" opacity="0.72"/>
+  <path d="M580,180 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#ffffff" opacity="0.6"/>
+  <path d="M1240,420 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z" fill="#ffffff" opacity="0.55"/>
+
+  <rect width="1440" height="900" filter="url(#mc-noise)" opacity="0.15"/>
+</svg>

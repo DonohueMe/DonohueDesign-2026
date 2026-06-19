@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ld-wave-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0038a8"/>
+      <stop offset="100%" stop-color="#0078ff"/>
+    </linearGradient>
+    <linearGradient id="ld-wave-blue-bright" x1="0%" y1="100%" x2="85%" y2="0%">
+      <stop offset="0%" stop-color="#0050dd"/>
+      <stop offset="100%" stop-color="#20a0ff"/>
+    </linearGradient>
+    <linearGradient id="ld-wave-magenta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#901858"/>
+      <stop offset="50%" stop-color="#d02090"/>
+      <stop offset="100%" stop-color="#ff2890"/>
+    </linearGradient>
+    <linearGradient id="ld-wave-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c84808"/>
+      <stop offset="100%" stop-color="#ff9018"/>
+    </linearGradient>
+    <linearGradient id="ld-wave-orange-bright" x1="55%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7810"/>
+      <stop offset="100%" stop-color="#ffd050"/>
+    </linearGradient>
+    <radialGradient id="ld-spot-blue" cx="22%" cy="48%" r="38%">
+      <stop offset="0%" stop-color="#40a0ff" stop-opacity="0.82"/>
+      <stop offset="55%" stop-color="#0848e8" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#0038a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ld-spot-orange" cx="84%" cy="44%" r="40%">
+      <stop offset="0%" stop-color="#ffb040" stop-opacity="0.98"/>
+      <stop offset="42%" stop-color="#ff7810" stop-opacity="0.62"/>
+      <stop offset="100%" stop-color="#ff6010" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ld-spot-magenta" cx="52%" cy="46%" r="34%">
+      <stop offset="0%" stop-color="#ff4898" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e82888" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ld-glass-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="ld-glass-edge-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90c8ff" stop-opacity="0.85"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="ld-glass-edge-neutral" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="ld-glass-edge-orange" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffb860" stop-opacity="0.75"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="ld-panel-screen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="ld-mark-a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2080ff"/>
+      <stop offset="100%" stop-color="#60b0ff"/>
+    </linearGradient>
+    <linearGradient id="ld-mark-b" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e82888"/>
+      <stop offset="100%" stop-color="#ff9020"/>
+    </linearGradient>
+    <linearGradient id="ld-base-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2858c8"/>
+      <stop offset="38%" stop-color="#c02888"/>
+      <stop offset="72%" stop-color="#ff2890"/>
+      <stop offset="100%" stop-color="#ff9020"/>
+    </linearGradient>
+    <linearGradient id="ld-floor-glow" x1="0" y1="720" x2="1440" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2080ff" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#ff2890" stop-opacity="0.12"/>
+      <stop offset="72%" stop-color="#ff9018" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffd050" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="ld-aurora-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <filter id="ld-wave-blur" x="-12%" y="-12%" width="124%" height="124%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="ld-panel-glow-blue" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="-4" dy="0" stdDeviation="12" flood-color="#4090ff" flood-opacity="0.35"/>
+    </filter>
+    <filter id="ld-panel-glow-orange" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="4" dy="0" stdDeviation="14" flood-color="#ff9020" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="900" fill="url(#ld-base-sky)"/>
+  <rect width="1440" height="900" fill="url(#ld-spot-blue)"/>
+  <rect width="1440" height="900" fill="url(#ld-spot-magenta)"/>
+  <rect width="1440" height="900" fill="url(#ld-spot-orange)"/>
+
+  <g filter="url(#ld-aurora-blur)">
+    <ellipse cx="280" cy="420" rx="340" ry="260" fill="#2080ff" opacity="0.62"/>
+    <ellipse cx="720" cy="400" rx="380" ry="240" fill="#e82888" opacity="0.52"/>
+    <ellipse cx="1180" cy="390" rx="360" ry="280" fill="#ff9020" opacity="0.68"/>
+    <ellipse cx="980" cy="430" rx="280" ry="200" fill="#ffd050" opacity="0.42"/>
+  </g>
+
+  <g filter="url(#ld-wave-blur)">
+    <path d="M0,360 C220,180 480,520 720,280 C960,40 1200,420 1440,220 L1440,900 L0,900 Z" fill="url(#ld-wave-blue)" opacity="0.58"/>
+    <path d="M0,420 C180,260 460,560 700,340 C940,120 1180,480 1440,300 L1440,900 L0,900 Z" fill="url(#ld-wave-blue-bright)" opacity="0.72"/>
+    <path d="M0,470 C260,300 540,600 820,380 C1100,160 1320,520 1440,360 L1440,900 L0,900 Z" fill="url(#ld-wave-magenta)" opacity="0.78"/>
+    <path d="M0,520 C240,380 520,640 800,420 C1080,200 1300,560 1440,420 L1440,900 L0,900 Z" fill="#e02888" opacity="0.62"/>
+    <path d="M0,570 C280,430 580,680 880,460 C1180,240 1360,580 1440,480 L1440,900 L0,900 Z" fill="url(#ld-wave-orange)" opacity="0.82"/>
+    <path d="M0,620 C320,480 620,720 920,500 C1220,280 1380,620 1440,540 L1440,900 L0,900 Z" fill="url(#ld-wave-orange-bright)" opacity="0.88"/>
+  </g>
+
+  <rect y="700" width="1440" height="200" fill="url(#ld-floor-glow)" opacity="0.85"/>
+
+  <!-- left stack: square boards, cascade top-outward → bottom-inward -->
+  <g transform="translate(0, 8)">
+    <g transform="translate(233, 523) scale(1, 1.5) translate(-233, -523)">
+    <!-- back: concept sketch (highest) -->
+    <g transform="matrix(1,0,-0.1,0.88,28,252)" opacity="0.46">
+      <rect x="0" y="0" width="132" height="132" rx="11" fill="url(#ld-glass-fill)" stroke="url(#ld-glass-edge-neutral)" stroke-width="1.2"/>
+      <circle cx="66" cy="48" r="18" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.4" stroke-dasharray="4 3"/>
+      <path d="M56,66 L66,44 L76,66 Z" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.1"/>
+      <rect x="38" y="82" width="52" height="4" rx="2" fill="#ffffff" opacity="0.14"/>
+      <rect x="44" y="92" width="40" height="3" rx="1.5" fill="#ffffff" opacity="0.1"/>
+    </g>
+    <!-- middle: mark + wordmark -->
+    <g transform="matrix(1,0,-0.07,0.93,68,338)" opacity="0.62">
+      <rect x="0" y="0" width="168" height="168" rx="12" fill="url(#ld-glass-fill)" stroke="url(#ld-glass-edge-neutral)" stroke-width="1.3"/>
+      <rect x="9" y="9" width="150" height="150" rx="8" fill="url(#ld-panel-screen)"/>
+      <rect x="59" y="36" width="50" height="50" rx="10" fill="url(#ld-mark-a)" fill-opacity="0.55"/>
+      <path d="M73,56 L84,46 L95,56 L84,76 Z" fill="#ffffff" fill-opacity="0.45"/>
+      <rect x="38" y="102" width="92" height="5" rx="2.5" fill="#ffffff" opacity="0.36"/>
+      <rect x="46" y="114" width="76" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+    </g>
+    <!-- front: primary lockup (lowest, nearest center) -->
+    <g transform="matrix(1,0,-0.04,0.96,128,418)" filter="url(#ld-panel-glow-blue)">
+      <rect x="0" y="0" width="210" height="210" rx="14" fill="url(#ld-glass-fill)" stroke="url(#ld-glass-edge-blue)" stroke-width="1.6"/>
+      <rect x="8" y="8" width="194" height="194" rx="11" fill="url(#ld-panel-screen)"/>
+      <circle cx="20" cy="18" r="2.5" fill="#ff6058" opacity="0.7"/>
+      <circle cx="29" cy="18" r="2.5" fill="#ffbd2e" opacity="0.7"/>
+      <circle cx="38" cy="18" r="2.5" fill="#28c840" opacity="0.7"/>
+      <text x="14" y="34" fill="#ffffff" fill-opacity="0.28" font-family="system-ui,sans-serif" font-size="8" font-weight="600" letter-spacing="0.08em">PRIMARY</text>
+      <circle cx="105" cy="88" r="36" fill="url(#ld-mark-a)" fill-opacity="0.7"/>
+      <path d="M105,64 L120,80 L105,96 L90,80 Z" fill="#ffffff" fill-opacity="0.85"/>
+      <circle cx="105" cy="80" r="8" fill="url(#ld-mark-b)" fill-opacity="0.9"/>
+      <rect x="36" y="136" width="138" height="7" rx="3.5" fill="#ffffff" opacity="0.5"/>
+      <rect x="48" y="150" width="114" height="4" rx="2" fill="#ffffff" opacity="0.26"/>
+      <rect x="36" y="168" width="24" height="24" rx="5" fill="#2080ff" fill-opacity="0.65"/>
+      <rect x="66" y="168" width="24" height="24" rx="5" fill="#e82888" fill-opacity="0.65"/>
+      <rect x="96" y="168" width="24" height="24" rx="5" fill="#ff9020" fill-opacity="0.65"/>
+      <rect x="126" y="168" width="24" height="24" rx="5" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.2"/>
+      <text x="196" y="198" text-anchor="end" fill="#ffffff" fill-opacity="0.26" font-family="system-ui,sans-serif" font-size="9" font-weight="500">A</text>
+    </g>
+    </g>
+  </g>
+
+  <!-- right stack: fan outward, front highest near center -->
+  <g transform="translate(50, 88)">
+    <g transform="translate(1090, 370) scale(1, 1.5) translate(-1090, -370)">
+    <!-- back (lowest, outer edge) -->
+    <g transform="matrix(1,0,0.11,0.87,1288,478)" opacity="0.44" filter="url(#ld-panel-glow-orange)">
+      <rect x="0" y="0" width="124" height="124" rx="10" fill="url(#ld-glass-fill)" stroke="url(#ld-glass-edge-orange)" stroke-width="1.2" opacity="0.52"/>
+      <rect x="36" y="38" width="48" height="48" rx="7" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <rect x="32" y="96" width="56" height="3" rx="1.5" fill="#ffffff" opacity="0.12"/>
+    </g>
+    <!-- middle -->
+    <g transform="matrix(1,0,0.08,0.91,1148,372)" opacity="0.6">
+      <rect x="0" y="0" width="162" height="162" rx="12" fill="url(#ld-glass-fill)" stroke="url(#ld-glass-edge-neutral)" stroke-width="1.3"/>
+      <rect x="9" y="9" width="144" height="144" rx="8" fill="url(#ld-panel-screen)"/>
+      <rect x="56" y="34" width="50" height="50" rx="25" fill="url(#ld-mark-b)" fill-opacity="0.5"/>
+      <text x="81" y="66" text-anchor="middle" fill="#ffffff" fill-opacity="0.75" font-family="system-ui,sans-serif" font-size="20" font-weight="700">M</text>
+      <rect x="38" y="98" width="86" height="5" rx="2.5" fill="#ffffff" opacity="0.3"/>
+      <rect x="46" y="110" width="70" height="4" rx="2" fill="#ffffff" opacity="0.18"/>
+    </g>
+    <!-- front: horizontal lockup (highest on right) -->
+    <g transform="matrix(1,0,0.05,0.95,988,268)" filter="url(#ld-panel-glow-orange)">
+      <rect x="0" y="0" width="204" height="204" rx="14" fill="url(#ld-glass-fill)" stroke="url(#ld-glass-edge-orange)" stroke-width="1.6"/>
+      <rect x="8" y="8" width="188" height="188" rx="11" fill="url(#ld-panel-screen)"/>
+      <circle cx="20" cy="18" r="2.5" fill="#ff6058" opacity="0.7"/>
+      <circle cx="29" cy="18" r="2.5" fill="#ffbd2e" opacity="0.7"/>
+      <circle cx="38" cy="18" r="2.5" fill="#28c840" opacity="0.7"/>
+      <text x="14" y="34" fill="#ffffff" fill-opacity="0.28" font-family="system-ui,sans-serif" font-size="8" font-weight="600" letter-spacing="0.08em">LOCKUP</text>
+      <rect x="22" y="72" width="52" height="52" rx="11" fill="url(#ld-mark-b)" fill-opacity="0.65"/>
+      <path d="M34,98 C41,86 55,86 62,98 C69,110 55,120 48,108 C44,101 38,101 34,98 Z" fill="#ffffff" fill-opacity="0.8"/>
+      <rect x="84" y="78" width="96" height="7" rx="3.5" fill="#ffffff" opacity="0.5"/>
+      <rect x="84" y="92" width="78" height="4" rx="2" fill="#ffffff" opacity="0.28"/>
+      <rect x="84" y="104" width="84" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+      <rect x="22" y="138" width="160" height="1" fill="#ffffff" fill-opacity="0.12"/>
+      <rect x="22" y="150" width="44" height="44" rx="7" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.1"/>
+      <rect x="30" y="160" width="28" height="22" rx="3" fill="url(#ld-mark-a)" fill-opacity="0.4"/>
+      <rect x="74" y="150" width="108" height="44" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+      <rect x="84" y="162" width="88" height="4" rx="2" fill="#ffffff" opacity="0.26"/>
+      <rect x="84" y="174" width="68" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+      <text x="190" y="192" text-anchor="end" fill="#ffffff" fill-opacity="0.26" font-family="system-ui,sans-serif" font-size="9" font-weight="500">B</text>
+    </g>
+    </g>
+  </g>
+</svg>
