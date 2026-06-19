@@ -59,6 +59,7 @@ img, svg { display: block; }
   white-space: nowrap;
 }
 .site-header-megamenu {
+  position: relative;
   background: #fff;
   border-radius: 20px;
   padding: 43px 140px;
@@ -192,14 +193,23 @@ img, svg { display: block; }
   padding-bottom: var(--header-band-inset);
   pointer-events: auto;
 }
-.site-header-bar {
+.site-header-menu-zone {
   position: absolute;
   left: 50%;
   margin-top: var(--header-row-gap);
+  transform: translateX(-50%);
+  width: fit-content;
+  max-width: calc(100% - 160px);
+  z-index: 100;
+}
+.site-header-bar {
+  position: relative;
+  left: auto;
+  margin-top: 0;
   display: flex;
   align-items: center;
   width: fit-content;
-  max-width: calc(100% - 160px);
+  max-width: 100%;
   min-height: var(--header-bar-h);
   padding: 6px 24px;
   border-radius: 9999px !important;
@@ -208,7 +218,9 @@ img, svg { display: block; }
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
-  transform: translateX(-50%);
+  transform: none;
+  overflow: visible;
+  isolation: isolate;
 }
 .site-header-logo {
   position: relative;
@@ -251,28 +263,44 @@ img, svg { display: block; }
   height: var(--header-bar-h);
   gap: 10px;
 }
+.site-header-nav > .pill-link,
+.site-header-nav > .site-header-services {
+  position: relative;
+  z-index: 2;
+}
 .site-header-services {
   position: relative;
 }
-.site-header-dropdown {
-  position: fixed;
-  top: calc(var(--header-dropdown-top) + 10px);
-  left: var(--header-nav-center);
+/* Narrow bridge under Services only — spans the gap to the megamenu without blocking sibling links */
+.site-header-services::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
   transform: translateX(-50%);
-  z-index: 200;
+  width: 120px;
+  height: 16px;
+  pointer-events: auto;
+}
+.site-header-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
   pointer-events: none;
   margin-top: 0;
   padding-top: 0;
 }
-/* Invisible bridge from Services button to megamenu (covers gap while moving cursor down) */
+/* Catch cursor in gap above megamenu panel (narrow, centered on Services column) */
 .site-header-dropdown::before {
   content: '';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  top: -42px;
-  height: 42px;
+  width: 120px;
+  top: -16px;
+  height: 16px;
   pointer-events: auto;
 }
 @media (min-width: 840px) {
@@ -302,6 +330,8 @@ img, svg { display: block; }
 }
 /* Nav pill: gray bar, black links (megamenu dropdown unchanged) */
 .site-header-bar .pill-link {
+  display: inline-flex;
+  align-items: center;
   color: #1d1d1f;
 }
 .site-header-bar .pill-link:hover {
@@ -312,7 +342,7 @@ img, svg { display: block; }
 }
 .site-header-phone {
   position: relative;
-  z-index: 2;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
@@ -353,19 +383,29 @@ img, svg { display: block; }
     grid-row: 1;
     justify-self: start;
   }
-  .site-header-bar {
+  .site-header-menu-zone {
     position: relative;
     left: auto;
     grid-column: 1 / -1;
     grid-row: 1;
     justify-self: center;
     transform: none;
-    width: fit-content;
+    margin-top: var(--header-row-gap);
     max-width: min(
       calc(100% - 2 * (var(--header-phone-slot) + var(--header-nav-phone-gap))),
       calc(100% - 2 * (var(--header-logo-slot) + var(--header-nav-phone-gap)))
     );
-    z-index: 1;
+  }
+  .site-header-bar {
+    position: relative;
+    left: auto;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: auto;
+    transform: none;
+    width: fit-content;
+    max-width: 100%;
+    overflow: visible;
   }
   .site-header-phone {
     grid-column: 3;
@@ -411,6 +451,15 @@ img, svg { display: block; }
   .site-header-shell {
     max-width: 100%;
     overflow: hidden;
+  }
+  .site-header-menu-zone {
+    position: static;
+    transform: none;
+    order: 3;
+    margin-left: 0;
+    margin-top: 0;
+    max-width: none;
+    width: 100%;
   }
   .site-header-bar {
     position: static;
