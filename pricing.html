@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Pricing | Donohue Design" />
   <meta name="twitter:description" content="Transparent pricing for website design, marketing, and graphic design services from Donohue Design in Santa Rosa, California." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
-  <link rel="stylesheet" href="styles.css?v=header-services-bridge" />
+  <link rel="stylesheet" href="styles.css?v=hero-bg-fit-height" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -84,7 +84,7 @@
     <div class="site-header-menu-zone" @mouseleave="hideServ()">
     <div class="site-header-bar">
       <nav class="site-header-nav md:flex hidden">
-        <div class="site-header-services" @mouseenter="showServ()" @mouseleave="hideServ()">
+        <div class="site-header-services" @mouseenter="showServ()">
           <button type="button" class="pill-link" style="border:none;cursor:pointer;background:transparent;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
             <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
               Services

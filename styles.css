@@ -271,42 +271,23 @@ img, svg { display: block; }
 .site-header-services {
   position: relative;
 }
-/* Narrow bridge under Services only — spans the gap to the megamenu without blocking sibling links */
-.site-header-services::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 16px;
-  pointer-events: auto;
-}
 .site-header-dropdown {
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
   pointer-events: none;
   margin-top: 0;
-  padding-top: 0;
-}
-/* Catch cursor in gap above megamenu panel (narrow, centered on Services column) */
-.site-header-dropdown::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  top: -16px;
-  height: 16px;
-  pointer-events: auto;
+  /* Padding keeps the visual gap while the hit area stays continuous */
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 @media (min-width: 840px) {
   .site-header-dropdown {
     width: max-content;
     max-width: calc(100vw - 32px);
+    pointer-events: auto;
   }
   .site-header-megamenu {
     width: max-content;
@@ -419,6 +400,7 @@ img, svg { display: block; }
     order: 2;
     margin-left: auto;
     margin-right: var(--header-nav-phone-gap);
+    margin-top: var(--header-row-gap);
     min-height: 40px;
     padding: 0 6px;
   }
@@ -451,35 +433,34 @@ img, svg { display: block; }
   .site-header-shell {
     max-width: 100%;
     overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .site-header-menu-zone {
     position: static;
     transform: none;
     order: 3;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: var(--header-row-gap);
     max-width: none;
-    width: 100%;
+    width: auto;
+    flex: 0 0 auto;
   }
   .site-header-bar {
     position: static;
     transform: none;
-    order: 3;
     margin-left: 0;
     max-width: none;
+    width: auto;
     padding-left: 14px;
     padding-right: 14px;
-  }
-  .site-header-shell {
-    flex-wrap: wrap;
-    align-items: center;
   }
   .site-header-mobile {
     flex: 0 0 100%;
     width: 100%;
     max-width: 100%;
     min-width: 0;
-    order: 3;
+    order: 4;
     margin-top: 12px;
   }
 }
@@ -507,9 +488,11 @@ img, svg { display: block; }
 }
 @media (max-width: 355px) {
   .site-header-phone { display: none !important; }
-  .site-header-bar {
+  .site-header-menu-zone {
     order: 2;
     margin-left: auto;
+  }
+  .site-header-bar {
     margin-right: 0;
     padding: 6px 12px;
     width: auto;
@@ -541,6 +524,29 @@ img, svg { display: block; }
     radial-gradient(ellipse 110% 70% at 50% 108%, rgba(6, 3, 14, 0.98) 0%, transparent 58%),
     radial-gradient(ellipse 100% 55% at 50% -8%, rgba(8, 4, 16, 0.92) 0%, transparent 52%),
     #0a0612;
+}
+.site-hero--mesh-grain.site-hero--mesh-image .site-hero__mesh {
+  display: none;
+}
+.site-hero--mesh-grain .site-hero__mesh-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  background-image: var(--hero-art);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-width: 839px) {
+  /* Fit full art height on tall mobile heroes — crop sides, not bottom waves */
+  .site-hero--mesh-grain.site-hero--mesh-image .site-hero__mesh-art {
+    background-size: auto 100%;
+    background-position: center bottom;
+  }
 }
 .site-hero--mesh-grain .site-hero__grain {
   position: absolute;
@@ -794,6 +800,21 @@ img, svg { display: block; }
   object-fit: cover;
   object-position: center center;
 }
+@media (max-width: 839px) {
+  .site-hero--glass-stack .site-hero__glass-art img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    top: auto;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    max-width: none;
+    transform: translateX(-50%);
+    object-fit: unset;
+    object-position: unset;
+  }
+}
 .site-hero--glass-stack .site-hero__content {
   position: relative;
   z-index: 1;
@@ -803,12 +824,13 @@ img, svg { display: block; }
   max-width: 860px;
   padding: 0 20px;
 }
-/* Glass-stack — stretch bg art so crop never reveals dark vignette */
+/* Glass-stack — cover bg art (crop on mobile instead of stretch) */
 .site-hero--glass-stack.site-hero--glass-bg-flat {
   background: #ff9020;
 }
 .site-hero--glass-stack.site-hero--glass-bg-flat .site-hero__glass-art img {
-  object-fit: fill;
+  object-fit: cover;
+  object-position: center center;
 }
 /* Apple TV–style mesh gradient (bg only) */
 .site-hero--apple-tv {

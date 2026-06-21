@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=header-services-bridge" />
+  <link rel="stylesheet" href="styles.css?v=hero-bg-fit-height" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -92,7 +92,7 @@
     <div class="site-header-menu-zone" @mouseleave="hideServ()">
     <div class="site-header-bar">
       <nav class="site-header-nav md:flex hidden">
-        <div class="site-header-services" @mouseenter="showServ()" @mouseleave="hideServ()">
+        <div class="site-header-services" @mouseenter="showServ()">
           <button type="button" class="pill-link" style="border:none;cursor:pointer;background:transparent;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
             <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
               Services
