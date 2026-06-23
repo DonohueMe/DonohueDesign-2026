@@ -26,13 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
     var originalText = submitBtn ? submitBtn.textContent : '';
 
     var formData = new FormData(form);
+    var turnstileResponse = formData.get('cf-turnstile-response');
+    var turnstileWidget = form.querySelector('.cf-turnstile');
+
+    if (turnstileWidget && !turnstileResponse) {
+      showNotice('warning', 'Please complete the security check before sending.');
+      return;
+    }
+
     var payload = {
       name: formData.get('name'),
       email: formData.get('email'),
       phone: formData.get('phone') || '',
       subject: formData.get('subject'),
       message: formData.get('message'),
-      'cf-turnstile-response': formData.get('cf-turnstile-response')
+      'cf-turnstile-response': turnstileResponse || ''
     };
 
     if (submitBtn) {

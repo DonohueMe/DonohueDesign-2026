@@ -18,6 +18,9 @@
   --header-dropdown-top: calc(var(--header-top) + var(--header-row-gap) + var(--header-bar-h) + 1px);
   --header-scroll-range: 140px;
   --header-scroll: 0;
+  /* Nav link hover (rgba on white bar); phone pill uses opaque equivalent */
+  --header-link-hover: rgba(0, 0, 0, 0.06);
+  --header-pill-hover: color-mix(in srgb, #fff 94%, #000 6%);
   --hero-pad-top: 80px;
   --hero-pad-bottom: 70px;
   --post-hero-pad-top: var(--sidebar-card-gap);
@@ -249,10 +252,7 @@ img, svg { display: block; }
   }
   .site-header-phone {
     min-height: 40px;
-    padding: 0 6px;
-  }
-  .site-header-phone .pill-link {
-    padding: 6px 8px;
+    padding: 5px 22px;
   }
   .site-header-phone__text { display: none; }
 }
@@ -316,7 +316,7 @@ img, svg { display: block; }
   color: #1d1d1f;
 }
 .site-header-bar .pill-link:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background: var(--header-link-hover);
 }
 .site-header-bar .site-header-services svg path {
   stroke: #1d1d1f;
@@ -325,25 +325,49 @@ img, svg { display: block; }
   position: relative;
   z-index: 100;
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;
   flex-shrink: 0;
   margin-top: var(--header-row-gap);
   margin-left: auto;
   min-height: var(--header-bar-h);
-  padding: 6px 12px;
+  padding: 6px 22px;
   border-radius: 9999px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: #fff;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
+.site-header-phone::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 5px;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
+  border-radius: 9999px;
+  transition: background 0.15s;
+  pointer-events: none;
+}
+.site-header-phone:hover::after {
+  background: var(--header-link-hover);
+}
 .site-header-phone__link {
-  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
   align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  position: relative;
+  z-index: 1;
   gap: 8px;
+  padding: 0;
   color: #1d1d1f;
 }
+.site-header-phone .pill-link {
+  padding: 0;
+}
 .site-header-phone .pill-link:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background: transparent;
 }
 .site-header-phone__icon {
   width: 16px;
@@ -352,6 +376,7 @@ img, svg { display: block; }
 }
 .site-header-phone__text {
   line-height: 1;
+  white-space: nowrap;
 }
 @media (min-width: 840px) {
   .site-header-shell {
@@ -402,10 +427,7 @@ img, svg { display: block; }
     margin-right: var(--header-nav-phone-gap);
     margin-top: var(--header-row-gap);
     min-height: 40px;
-    padding: 0 6px;
-  }
-  .site-header-phone .pill-link {
-    padding: 6px 8px;
+    padding: 5px 22px;
   }
   .site-header-phone__text { display: none; }
 }
