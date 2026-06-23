@@ -22,7 +22,7 @@ npx wrangler login
 
 Edit `wrangler.toml`:
 
-- `CONTACT_FROM` — verified sender on your domain, e.g. `Donohue Design <contact@donohuedesign.com>`
+- `CONTACT_FROM` — verified sender on your domain, e.g. `Donohue Design <contact@donohue.tech>`
 - `CONTACT_TO` — inbox that receives submissions
 - `ALLOWED_ORIGINS` — comma-separated site origins (already includes `donohuedesign.com`)
 

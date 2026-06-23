@@ -4,8 +4,8 @@ compatibility_date = "2024-08-01"
 
 # Non-secret config — update to your verified Resend sender and inbox.
 [vars]
-CONTACT_FROM = "Donohue Design <contact@donohuedesign.com>"
-CONTACT_TO = "jim@donohuedesign.com"
+CONTACT_FROM = "Donohue Design <contact@donohue.tech>"
+CONTACT_TO = "jim@donohue.tech"
 ALLOWED_ORIGINS = "https://donohuedesign.com,https://www.donohuedesign.com"
 
 # Secrets (set via dashboard or `wrangler secret put`):
