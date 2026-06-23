@@ -1443,11 +1443,22 @@ img, svg { display: block; }
 
 .site-location-map {
   background: #fff;
-  padding: 0 var(--side-pad) 60px;
+  padding: 0 var(--side-pad) 30px;
+}
+.site-location-map + .site-footer {
+  margin-top: calc(var(--footer-margin-top) / 2);
 }
 .site-location-map__inner {
   max-width: var(--page-max);
   margin: 0 auto;
+}
+.site-location-map__title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.36;
+  color: #1d1d1f;
+  margin: 0 0 20px;
 }
 .site-location-map .contact-map {
   min-height: 280px;
