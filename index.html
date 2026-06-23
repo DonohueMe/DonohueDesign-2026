@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=home-map-heading" />
+  <link rel="stylesheet" href="styles.css?v=home-map-pad-bottom-10" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -227,6 +227,8 @@
     </div>
   </div>
 </header>
+
+<main class="site-page">
 <!-- ═══ HERO ═══ -->
 <section class="site-hero" style="position:relative;overflow:hidden;background:radial-gradient(ellipse at 12% 20%, rgba(90,170,255,0.90) 0%, transparent 45%),radial-gradient(ellipse at 85% 15%, rgba(70,220,195,0.85) 0%, transparent 45%),radial-gradient(ellipse at 50% 62%, rgba(100,195,250,0.70) 0%, transparent 50%),radial-gradient(ellipse at 80% 85%, rgba(80,240,190,0.80) 0%, transparent 40%),#dff3ff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
   <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
@@ -290,7 +292,7 @@
 </div>
 
 <!-- ═══ SERVICE TILES + SIDEBAR ═══ -->
-<div class="tiles-section" style="background:#fff;padding:48px 0 60px;">
+<div class="tiles-section" style="background:#fff;padding:48px 0 0;">
   <div class="tiles-outer site-layout-with-sidebar" style="max-width:1280px;margin:0 auto;padding:0 var(--side-pad);">
 
     <!-- Left: tiles -->
@@ -456,14 +458,14 @@
 
       </div>
     </aside>
+
   </div>
 </div>
 
-<!-- ═══ LOCATION MAP ═══ -->
-<section class="site-location-map" aria-label="Location">
-  <div class="site-location-map__inner">
-    <h2 class="site-location-map__title">Find Us on Google</h2>
-    <div class="contact-map">
+<div class="home-map-section">
+  <div class="home-map-section__container">
+    <h2 class="site-location-map__title">Serving Santa Rosa, Sonoma, Marin &amp; Napa Counties.</h2>
+    <div class="contact-map home-map-section__map">
       <iframe
         title="Donohue Design location map"
         src="https://maps.google.com/maps?q=1891+Bennett+Meadows+Ln,+Santa+Rosa,+CA+95405&amp;hl=en&amp;z=14&amp;output=embed"
@@ -473,7 +475,9 @@
       ></iframe>
     </div>
   </div>
-</section>
+</div>
+
+</main>
 
 <!-- ═══ FOOTER ═══ -->
 <footer class="site-footer">
