@@ -1441,6 +1441,26 @@ img, svg { display: block; }
   border: 0;
 }
 
+.site-location-map {
+  background: #fff;
+  padding: 0 var(--side-pad) 60px;
+}
+.site-location-map__inner {
+  max-width: var(--page-max);
+  margin: 0 auto;
+}
+.site-location-map .contact-map {
+  min-height: 280px;
+  aspect-ratio: 16 / 9;
+}
+@media (min-width: 840px) {
+  .site-location-map .contact-map {
+    min-height: 360px;
+    aspect-ratio: auto;
+    height: 360px;
+  }
+}
+
 /* FAQ accordion */
 .faq-accordion {
   display: flex;
