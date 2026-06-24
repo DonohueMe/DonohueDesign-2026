@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=case-studies-hero-random" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -229,71 +229,92 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero" style="position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 60% at 50% 18%, #4a2670 0%, #2c1548 35%, #1a0a30 70%, #110621 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
-  <svg aria-hidden="true" viewBox="0 0 1440 400" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:45%;pointer-events:none;">
-    <path d="M0,120 C260,-20 520,300 820,140 C1120,-20 1300,260 1440,120 L1440,400 L0,400 Z" fill="#3a1f5c" opacity="0.85"/>
-    <path d="M0,200 C200,-40 520,400 800,180 C1080,-40 1280,380 1440,170 L1440,400 L0,400 Z" fill="#6b3aa0"/>
-    <path d="M0,260 C280,120 600,400 920,220 C1180,80 1320,360 1440,240 L1440,400 L0,400 Z" fill="#26123e"/>
-  </svg>
-  <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
+<section class="site-hero site-hero--case-studies" aria-label="Case Studies">
+  <div class="site-hero__case-scene" aria-hidden="true"></div>
+  <div class="site-hero__case-sparks" aria-hidden="true"></div>
+  <div class="site-hero__case-vignette" aria-hidden="true"></div>
+  <div class="site-hero__grain" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+      <filter id="case-grain-coarse" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.35" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#case-grain-coarse)" />
+    </svg>
+  </div>
+  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+      <filter id="case-grain-fine" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.25" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#case-grain-fine)" />
+    </svg>
+  </div>
+  <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Strategy in action.<br />Results that last.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Real projects. Measurable outcomes.</p>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Real projects. Measurable outcomes.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 
-<!-- ═══ BODY: editorial + sidebar ═══ -->
-<div class="editorial-wrap site-layout-with-sidebar">
+      <!-- ═══ BODY: editorial + sidebar ═══ -->
+      <div class="editorial-wrap site-layout-with-sidebar">
 
-  <main class="site-layout-main body-prose" style="flex:1 1 0;min-width:0;--body-p-gap:18px;--h1-body-gap:12px;">
+        <main class="site-layout-main body-prose" style="flex:1 1 0;min-width:0;--body-p-gap:18px;--h1-body-gap:12px;">
 
-    <section style="margin-bottom:40px;">
-      <h1 style="font-size:34px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">Case Studies</h1>
-      <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Strategy-first design and marketing work — from enterprise product teams to local Sonoma County businesses. Each project starts with clear goals and ends with measurable results.</p>
-    </section>
+          <section style="margin-bottom:40px;">
+            <h1 style="font-size:34px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">Case Studies</h1>
+            <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Strategy-first design and marketing work — from enterprise product teams to local Sonoma County businesses. Each project starts with clear goals and ends with measurable results.</p>
+          </section>
 
-    <section class="case-studies-grid" style="margin-bottom:56px;">
+          <section class="case-studies-grid" style="margin-bottom:56px;">
 
-      <article class="case-study-card">
-        <p class="case-study-card__tag">Enterprise UX</p>
-        <h2 class="case-study-card__title">Financial services product redesign</h2>
-        <p class="case-study-card__stat">22% increase in user engagement</p>
-        <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Led a cross-functional redesign of a subscription management experience used across 90+ applications. Mapped user journeys, simplified navigation, and established a scalable design system — driving a measurable lift in engagement and adoption.</p>
-        <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Website design · UX strategy · Design systems</p>
-      </article>
+            <article class="case-study-card">
+              <p class="case-study-card__tag">Enterprise UX</p>
+              <h2 class="case-study-card__title">Financial services product redesign</h2>
+              <p class="case-study-card__stat">22% increase in user engagement</p>
+              <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Led a cross-functional redesign of a subscription management experience used across 90+ applications. Mapped user journeys, simplified navigation, and established a scalable design system — driving a measurable lift in engagement and adoption.</p>
+              <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Website design · UX strategy · Design systems</p>
+            </article>
 
-      <article class="case-study-card">
-        <p class="case-study-card__tag">Local business</p>
-        <h2 class="case-study-card__title">Sonoma County contractor website</h2>
-        <p class="case-study-card__stat">3× more contact form submissions</p>
-        <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Rebuilt a slow, outdated site with clear service pages, mobile-first layout, and conversion-focused CTAs. Structured content for local SEO and wired up analytics so the owner could see exactly which pages drove leads.</p>
-        <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Smart website · Local SEO · Lead generation</p>
-      </article>
+            <article class="case-study-card">
+              <p class="case-study-card__tag">Local business</p>
+              <h2 class="case-study-card__title">Sonoma County contractor website</h2>
+              <p class="case-study-card__stat">3× more contact form submissions</p>
+              <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Rebuilt a slow, outdated site with clear service pages, mobile-first layout, and conversion-focused CTAs. Structured content for local SEO and wired up analytics so the owner could see exactly which pages drove leads.</p>
+              <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Smart website · Local SEO · Lead generation</p>
+            </article>
 
-      <article class="case-study-card">
-        <p class="case-study-card__tag">Local SEO</p>
-        <h2 class="case-study-card__title">Google Business Profile optimization</h2>
-        <p class="case-study-card__stat">Page 1 map pack in 90 days</p>
-        <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Audited a Santa Rosa service business with strong reviews but weak visibility. Optimized GBP categories, photos, posts, and on-site NAP consistency — moving them from page three to the local map pack for their primary keywords.</p>
-        <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Google My Business · Citations · On-page SEO</p>
-      </article>
+            <article class="case-study-card">
+              <p class="case-study-card__tag">Local SEO</p>
+              <h2 class="case-study-card__title">Google Business Profile optimization</h2>
+              <p class="case-study-card__stat">Page 1 map pack in 90 days</p>
+              <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Audited a Santa Rosa service business with strong reviews but weak visibility. Optimized GBP categories, photos, posts, and on-site NAP consistency — moving them from page three to the local map pack for their primary keywords.</p>
+              <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Google My Business · Citations · On-page SEO</p>
+            </article>
 
-      <article class="case-study-card">
-        <p class="case-study-card__tag">Marketing automation</p>
-        <h2 class="case-study-card__title">Email nurture for professional services</h2>
-        <p class="case-study-card__stat">15% lift in consultation bookings</p>
-        <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Designed a branded email sequence for prospects who downloaded a lead magnet. Automated follow-ups, segmented by service interest, with clear CTAs back to the site — turning cold downloads into booked consultations.</p>
-        <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Email design · Automation · Conversion optimization</p>
-      </article>
+            <article class="case-study-card">
+              <p class="case-study-card__tag">Marketing automation</p>
+              <h2 class="case-study-card__title">Email nurture for professional services</h2>
+              <p class="case-study-card__stat">15% lift in consultation bookings</p>
+              <p style="font-size:16px;line-height:1.55;color:#3d3d3f;margin:0;">Designed a branded email sequence for prospects who downloaded a lead magnet. Automated follow-ups, segmented by service interest, with clear CTAs back to the site — turning cold downloads into booked consultations.</p>
+              <p style="font-size:14px;color:#6e6e73;margin:8px 0 0;">Email design · Automation · Conversion optimization</p>
+            </article>
 
-    </section>
+          </section>
 
-    <section style="margin-bottom:56px;">
-      <div style="background:#fff;border-radius:18px;padding:28px 32px;border:1px solid #e5e5ea;text-align:center;">
-        <p style="font-size:20px;font-weight:800;color:#1d1d1f;margin:0 0 12px;line-height:1.2;letter-spacing:-0.02em;">Want results like these?</p>
-        <p style="font-size:16px;line-height:1.5;color:#3d3d3f;margin:0 0 20px;">Start with a free strategy call. We'll talk about your goals, your customers, and what's actually working today.</p>
-        <a href="contact.html" style="display:inline-block;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Schedule a free call</a>
-      </div>
+          <section style="margin-bottom:56px;">
+            <div style="background:#fff;border-radius:18px;padding:28px 32px;border:1px solid #e5e5ea;text-align:center;">
+              <p style="font-size:20px;font-weight:800;color:#1d1d1f;margin:0 0 12px;line-height:1.2;letter-spacing:-0.02em;">Want results like these?</p>
+              <p style="font-size:16px;line-height:1.5;color:#3d3d3f;margin:0 0 20px;">Start with a free strategy call. We'll talk about your goals, your customers, and what's actually working today.</p>
+              <a href="contact.html" style="display:inline-block;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Schedule a free call</a>
+      
+    </div>
+  </div>
     </section>
 
   </main>

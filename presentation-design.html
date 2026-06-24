@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=graphic-wave-hero-v1" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -238,15 +238,124 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat" style="padding-left:40px;padding-right:40px;">
-  <div class="site-hero__glass-art" aria-hidden="true">
-    <img src="presentation-design-hero.svg?v=14" width="1440" height="900" alt="" decoding="async" fetchpriority="high" />
+<section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat site-hero--graphic-wave site-hero--presentation-design" style="padding-left:40px;padding-right:40px;">
+  <div class="site-hero__bff-waves" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="bfw-wave-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0038a8"/>
+          <stop offset="100%" stop-color="#0078ff"/>
+        </linearGradient>
+        <linearGradient id="bfw-wave-blue-bright" x1="0%" y1="100%" x2="85%" y2="0%">
+          <stop offset="0%" stop-color="#0050dd"/>
+          <stop offset="100%" stop-color="#20a0ff"/>
+        </linearGradient>
+        <linearGradient id="bfw-wave-magenta" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#901858"/>
+          <stop offset="50%" stop-color="#d02090"/>
+          <stop offset="100%" stop-color="#ff2890"/>
+        </linearGradient>
+        <linearGradient id="bfw-wave-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c84808"/>
+          <stop offset="100%" stop-color="#ff9018"/>
+        </linearGradient>
+        <linearGradient id="bfw-wave-orange-bright" x1="55%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ff7810"/>
+          <stop offset="100%" stop-color="#ffd050"/>
+        </linearGradient>
+        <radialGradient id="bfw-spot-blue" cx="22%" cy="48%" r="38%">
+          <stop offset="0%" stop-color="#40a0ff" stop-opacity="0.82"/>
+          <stop offset="55%" stop-color="#0848e8" stop-opacity="0.42"/>
+          <stop offset="100%" stop-color="#0038a8" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="bfw-spot-orange" cx="84%" cy="44%" r="40%">
+          <stop offset="0%" stop-color="#ffb040" stop-opacity="0.98"/>
+          <stop offset="42%" stop-color="#ff7810" stop-opacity="0.62"/>
+          <stop offset="100%" stop-color="#ff6010" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="bfw-spot-magenta" cx="52%" cy="46%" r="34%">
+          <stop offset="0%" stop-color="#ff4898" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#e82888" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="bfw-base-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#2858c8"/>
+          <stop offset="38%" stop-color="#c02888"/>
+          <stop offset="72%" stop-color="#ff2890"/>
+          <stop offset="100%" stop-color="#ff9020"/>
+        </linearGradient>
+        <linearGradient id="bfw-floor-glow" x1="0" y1="720" x2="1440" y2="820" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2080ff" stop-opacity="0"/>
+          <stop offset="35%" stop-color="#ff2890" stop-opacity="0.12"/>
+          <stop offset="72%" stop-color="#ff9018" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#ffd050" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="bfw-aurora-blur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="58"/>
+        </filter>
+        <filter id="bfw-wave-blur" x="-12%" y="-12%" width="124%" height="124%">
+          <feGaussianBlur stdDeviation="12"/>
+        </filter>
+      </defs>
+      <rect width="1440" height="900" fill="url(#bfw-base-sky)"/>
+      <rect width="1440" height="900" fill="url(#bfw-spot-blue)"/>
+      <rect width="1440" height="900" fill="url(#bfw-spot-magenta)"/>
+      <rect width="1440" height="900" fill="url(#bfw-spot-orange)"/>
+      <g filter="url(#bfw-aurora-blur)">
+        <ellipse cx="280" cy="420" rx="340" ry="260" fill="#2080ff" opacity="0.62"/>
+        <ellipse cx="720" cy="400" rx="380" ry="240" fill="#e82888" opacity="0.52"/>
+        <ellipse cx="1180" cy="390" rx="360" ry="280" fill="#ff9020" opacity="0.68"/>
+        <ellipse cx="980" cy="430" rx="280" ry="200" fill="#ffd050" opacity="0.42"/>
+      </g>
+      <g filter="url(#bfw-wave-blur)">
+        <path d="M0,360 C220,180 480,520 720,280 C960,40 1200,420 1440,220 L1440,900 L0,900 Z" fill="url(#bfw-wave-blue)" opacity="0.58"/>
+        <path d="M0,420 C180,260 460,560 700,340 C940,120 1180,480 1440,300 L1440,900 L0,900 Z" fill="url(#bfw-wave-blue-bright)" opacity="0.72"/>
+        <path d="M0,470 C260,300 540,600 820,380 C1100,160 1320,520 1440,360 L1440,900 L0,900 Z" fill="url(#bfw-wave-magenta)" opacity="0.78"/>
+        <path d="M0,520 C240,380 520,640 800,420 C1080,200 1300,560 1440,420 L1440,900 L0,900 Z" fill="#e02888" opacity="0.62"/>
+        <path d="M0,570 C280,430 580,680 880,460 C1180,240 1360,580 1440,480 L1440,900 L0,900 Z" fill="url(#bfw-wave-orange)" opacity="0.82"/>
+        <path d="M0,620 C320,480 620,720 920,500 C1220,280 1380,620 1440,540 L1440,900 L0,900 Z" fill="url(#bfw-wave-orange-bright)" opacity="0.88"/>
+      </g>
+      <rect y="700" width="1440" height="200" fill="url(#bfw-floor-glow)" opacity="0.85"/>
+    </svg>
+  </div>
+  <div class="site-hero__grain site-hero__grain--bff" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <filter id="bff-grain-coarse" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.35" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#bff-grain-coarse)" />
+    </svg>
+  </div>
+  <div class="site-hero__grain site-hero__grain--bff site-hero__grain--fine" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <filter id="bff-grain-fine" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.25" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#bff-grain-fine)" />
+    </svg>
+  </div>
+  <div class="site-hero__glass-art site-hero__glass-art--panels" aria-hidden="true">
+    <div class="site-hero__gd-tile site-hero__gd-tile--lt">
+      <img src="pres-tile-title.svg" alt="" width="240" height="135" decoding="async" />
+    </div>
+    <div class="site-hero__gd-tile site-hero__gd-tile--lb">
+      <img src="pres-tile-chart.svg" alt="" width="160" height="120" decoding="async" />
+    </div>
+    <div class="site-hero__gd-tile site-hero__gd-tile--rt">
+      <img src="pres-tile-hero.svg" alt="" width="252" height="142" decoding="async" />
+    </div>
+    <div class="site-hero__gd-tile site-hero__gd-tile--rb">
+      <img src="pres-tile-stack.svg" alt="" width="172" height="240" decoding="async" />
+    </div>
   </div>
   <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Built on strategy.<br />Powered by AI.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-    <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 

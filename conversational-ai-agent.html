@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=ai-bokeh-v2" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -238,7 +238,7 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--bokeh-emotions" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+<section class="site-hero site-hero--ai-bokeh site-hero--bokeh-emotions" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
   <div class="site-hero__bokeh-scene" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
@@ -261,39 +261,41 @@
         </filter>
         <linearGradient id="cai-bottom-black" x1="0" y1="280" x2="0" y2="560" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stop-color="#000" stop-opacity="0" />
-          <stop offset="55%" stop-color="#000" stop-opacity="0.85" />
+          <stop offset="50%" stop-color="#000" stop-opacity="0.72" />
           <stop offset="100%" stop-color="#000" stop-opacity="1" />
         </linearGradient>
       </defs>
 
       <rect width="1440" height="560" fill="#000" />
 
-      <g filter="url(#cai-bokeh-blur)">
+      <g class="site-hero__bokeh-orbs" filter="url(#cai-bokeh-blur)">
         <!-- orange / amber — upper left -->
-        <ellipse cx="200" cy="195" rx="310" ry="240" fill="#ff9020" opacity="0.92" />
-        <ellipse cx="130" cy="250" rx="220" ry="180" fill="#ffb040" opacity="0.75" />
+        <ellipse cx="200" cy="195" rx="310" ry="240" fill="#ff9020" opacity="0.98" />
+        <ellipse cx="130" cy="250" rx="220" ry="180" fill="#ffb840" opacity="0.82" />
         <!-- lime green — faint above center -->
-        <ellipse cx="600" cy="95" rx="260" ry="120" fill="#a8e850" opacity="0.42" />
+        <ellipse cx="600" cy="95" rx="260" ry="120" fill="#b8f060" opacity="0.52" />
         <!-- pink / magenta heart — center -->
-        <ellipse cx="560" cy="175" rx="155" ry="145" fill="#ff4898" opacity="0.95" />
-        <ellipse cx="720" cy="175" rx="155" ry="145" fill="#ff4898" opacity="0.95" />
-        <ellipse cx="640" cy="265" rx="280" ry="230" fill="#e82888" opacity="0.88" />
-        <ellipse cx="640" cy="220" rx="240" ry="200" fill="#ff60a8" opacity="0.78" />
+        <ellipse cx="560" cy="175" rx="155" ry="145" fill="#ff4898" opacity="1" />
+        <ellipse cx="720" cy="175" rx="155" ry="145" fill="#ff4898" opacity="1" />
+        <ellipse cx="640" cy="265" rx="280" ry="230" fill="#e81880" opacity="0.94" />
+        <ellipse cx="640" cy="220" rx="240" ry="200" fill="#ff68b0" opacity="0.88" />
         <!-- blue — upper right with bright core -->
-        <ellipse cx="1210" cy="210" rx="330" ry="270" fill="#0848e8" opacity="0.95" />
-        <ellipse cx="1240" cy="185" rx="200" ry="175" fill="#2080ff" opacity="0.88" />
+        <ellipse cx="1210" cy="210" rx="330" ry="270" fill="#0640e0" opacity="1" />
+        <ellipse cx="1240" cy="185" rx="200" ry="175" fill="#3090ff" opacity="0.95" />
       </g>
 
-      <g filter="url(#cai-bokeh-blur-soft)">
-        <circle cx="1250" cy="175" r="95" fill="#ffffff" opacity="0.72" />
-        <circle cx="1235" cy="190" r="55" fill="#ffffff" opacity="0.55" />
+      <g class="site-hero__bokeh-highlight" filter="url(#cai-bokeh-blur-soft)">
+        <circle cx="1250" cy="175" r="95" fill="#ffffff" opacity="0.82" />
+        <circle cx="1235" cy="190" r="55" fill="#ffffff" opacity="0.65" />
+        <circle cx="640" cy="210" r="72" fill="#ffffff" opacity="0.38" />
       </g>
 
       <rect width="1440" height="560" fill="url(#cai-bottom-black)" />
-      <rect width="1440" height="560" filter="url(#cai-noise-coarse)" opacity="0.38" />
-      <rect width="1440" height="560" filter="url(#cai-noise-fine)" opacity="0.26" />
+      <rect width="1440" height="560" filter="url(#cai-noise-coarse)" opacity="0.42" />
+      <rect width="1440" height="560" filter="url(#cai-noise-fine)" opacity="0.3" />
     </svg>
     <div class="site-hero__bokeh-stars" aria-hidden="true">
+      <div class="site-hero__bokeh-stars-rotate">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 436" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
         <pattern id="cai-cosmic-dust" width="80" height="80" patternUnits="userSpaceOnUse">
@@ -321,14 +323,14 @@
       <rect width="1024" height="436" fill="url(#cai-cosmic-dust)" opacity="0.9" />
 
       <!-- four-point sparkles -->
-      <path d="M234,48 l2,7 7,2 -7,2 -2,7 -2,-7 -7,-2 7,-2z" fill="#fff" opacity="0.92" />
-      <path d="M624,82 l1.5,5 5,1.5 -5,1.5 -1.5,5 -1.5,-5 -5,-1.5 5,-1.5z" fill="#fff" opacity="0.82" />
-      <path d="M786,198 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z" fill="#fff" opacity="0.74" />
-      <path d="M128,218 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.62" />
-      <path d="M878,128 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.56" />
-      <path d="M468,118 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.5" />
-      <path d="M948,42 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.48" />
-      <path d="M338,298 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.44" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--1" d="M234,48 l2,7 7,2 -7,2 -2,7 -2,-7 -7,-2 7,-2z" fill="#fff" opacity="0.92" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--2" d="M624,82 l1.5,5 5,1.5 -5,1.5 -1.5,5 -1.5,-5 -5,-1.5 5,-1.5z" fill="#fff" opacity="0.82" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--3" d="M786,198 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z" fill="#fff" opacity="0.74" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--4" d="M128,218 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.62" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--5" d="M878,128 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.56" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--6" d="M468,118 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.5" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--7" d="M948,42 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.48" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--8" d="M338,298 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.44" />
 
       <!-- comets -->
       <path d="M718,38 Q762,24 806,34" fill="none" stroke="url(#cai-comet-fade)" stroke-width="1.2" opacity="0.38" stroke-linecap="round" />
@@ -392,6 +394,7 @@
       <circle cx="58" cy="228" r="0.4" fill="#a0aec0" opacity="0.3" />
       <circle cx="998" cy="58" r="0.4" fill="#a0aec0" opacity="0.28" />
       </svg>
+      </div>
     </div>
     <div class="site-hero__bokeh-grain" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
@@ -412,11 +415,48 @@
       </svg>
     </div>
   </div>
-  <div class="site-hero__content" style="display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
+
+  <div class="site-hero__bokeh-orbit" aria-hidden="true"></div>
+  <div class="site-hero__bokeh-neural" aria-hidden="true">
+    <svg class="site-hero__bokeh-neural-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--1" x1="720" y1="190" x2="360" y2="100" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--2" x1="720" y1="190" x2="1080" y2="95" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--3" x1="720" y1="190" x2="170" y2="190" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--4" x1="720" y1="190" x2="1270" y2="180" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--5" x1="720" y1="190" x2="490" y2="245" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--6" x1="720" y1="190" x2="950" y2="235" />
+    </svg>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--hub"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--1"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--2"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--3"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--4"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--5"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--6"></span>
+    <span class="site-hero__bokeh-neural-signal site-hero__bokeh-neural-signal--1"></span>
+    <span class="site-hero__bokeh-neural-signal site-hero__bokeh-neural-signal--2"></span>
+    <span class="site-hero__bokeh-neural-signal site-hero__bokeh-neural-signal--3"></span>
+  </div>
+  <div class="site-hero__bokeh-twinkle" aria-hidden="true">
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--1"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--2"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--3"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--4"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--5"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--6"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--7"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--8"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--9"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--10"></span>
+  </div>
+  <div class="site-hero__bokeh-vignette" aria-hidden="true"></div>
+  <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">AI that listens.<br />Agents that convert.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Deploy a conversational agent trained on your business — answering questions and capturing leads around the clock.</p>
-    <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 

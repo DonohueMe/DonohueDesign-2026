@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=ai-bokeh-v3" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -238,149 +238,225 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--ai-glow" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
-  <div class="site-hero__ai-scene" aria-hidden="true">
+<section class="site-hero site-hero--ai-bokeh site-hero--bokeh-reception" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+  <div class="site-hero__bokeh-scene" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
-        <linearGradient id="ai-recv-wave-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#0038a8" />
-          <stop offset="100%" stop-color="#0078ff" />
-        </linearGradient>
-        <linearGradient id="ai-recv-wave-blue-bright" x1="0%" y1="100%" x2="80%" y2="0%">
-          <stop offset="0%" stop-color="#0050dd" />
-          <stop offset="100%" stop-color="#20a0ff" />
-        </linearGradient>
-        <linearGradient id="ai-recv-wave-magenta" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#901858" />
-          <stop offset="50%" stop-color="#d02090" />
-          <stop offset="100%" stop-color="#ff2890" />
-        </linearGradient>
-        <linearGradient id="ai-recv-wave-orange" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#c84808" />
-          <stop offset="100%" stop-color="#ff9018" />
-        </linearGradient>
-        <linearGradient id="ai-recv-wave-orange-bright" x1="60%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#ff7810" />
-          <stop offset="100%" stop-color="#ffd050" />
-        </linearGradient>
-        <linearGradient id="ai-recv-top-fade" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#030508" />
-          <stop offset="45%" stop-color="#050810" stop-opacity="0.55" />
-          <stop offset="100%" stop-color="#050810" stop-opacity="0" />
-        </linearGradient>
-        <filter id="ai-recv-wave-blur" x="-15%" y="-15%" width="130%" height="130%">
-          <feGaussianBlur stdDeviation="9.5" />
+        <filter id="air-bokeh-blur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="58" />
         </filter>
-        <filter id="ai-recv-noise-coarse" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.88" numOctaves="5" stitchTiles="stitch" result="noise" />
+        <filter id="air-bokeh-blur-soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="42" />
+        </filter>
+        <filter id="air-noise-coarse" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="5" stitchTiles="stitch" result="noise" />
           <feColorMatrix type="saturate" values="0" in="noise" result="mono" />
           <feComponentTransfer in="mono">
-            <feFuncA type="linear" slope="1.2" intercept="-0.15" />
+            <feFuncA type="linear" slope="1.15" intercept="-0.12" />
           </feComponentTransfer>
         </filter>
-        <filter id="ai-recv-noise-fine" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="1.65" numOctaves="4" stitchTiles="stitch" result="noise" />
+        <filter id="air-noise-fine" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="1.55" numOctaves="4" stitchTiles="stitch" result="noise" />
           <feColorMatrix type="saturate" values="0" in="noise" />
         </filter>
+        <linearGradient id="air-bottom-black" x1="0" y1="280" x2="0" y2="560" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#000" stop-opacity="0" />
+          <stop offset="50%" stop-color="#000" stop-opacity="0.72" />
+          <stop offset="100%" stop-color="#000" stop-opacity="1" />
+        </linearGradient>
       </defs>
 
-      <rect width="1440" height="560" fill="#050810" />
+      <rect width="1440" height="560" fill="#000" />
 
-      <g filter="url(#ai-recv-wave-blur)">
-      <!-- stacked waves — back to front -->
-      <path d="M0,280 C240,120 480,360 720,200 C960,40 1200,320 1440,160 L1440,560 L0,560 Z" fill="url(#ai-recv-wave-blue)" opacity="0.55" />
-      <path d="M0,340 C200,180 440,420 680,260 C920,100 1160,380 1440,220 L1440,560 L0,560 Z" fill="url(#ai-recv-wave-blue-bright)" opacity="0.72" />
-      <path d="M0,380 C280,220 520,460 800,300 C1080,140 1320,400 1440,280 L1440,560 L0,560 Z" fill="url(#ai-recv-wave-magenta)" opacity="0.78" />
-      <path d="M0,420 C220,300 480,520 760,360 C1040,200 1280,460 1440,340 L1440,560 L0,560 Z" fill="#e02888" opacity="0.65" />
-      <path d="M0,460 C260,340 540,540 820,380 C1100,220 1340,480 1440,380 L1440,560 L0,560 Z" fill="url(#ai-recv-wave-orange)" opacity="0.82" />
-      <path d="M0,500 C300,380 600,560 900,420 C1200,280 1380,500 1440,420 L1440,560 L0,560 Z" fill="url(#ai-recv-wave-orange-bright)" opacity="0.88" />
+      <g class="site-hero__bokeh-orbs" filter="url(#air-bokeh-blur)">
+        <!-- orange / amber — warm welcome, upper left -->
+        <ellipse cx="180" cy="210" rx="290" ry="230" fill="#ff9020" opacity="0.98" />
+        <ellipse cx="110" cy="260" rx="200" ry="170" fill="#ffb840" opacity="0.82" />
+        <!-- lime accent -->
+        <ellipse cx="520" cy="88" rx="240" ry="110" fill="#b8f060" opacity="0.48" />
+        <!-- reception core — cyan voice column + magenta base -->
+        <ellipse cx="720" cy="195" rx="200" ry="175" fill="#3090ff" opacity="0.96" />
+        <ellipse cx="720" cy="250" rx="250" ry="210" fill="#ff4898" opacity="0.92" />
+        <ellipse cx="720" cy="175" rx="140" ry="125" fill="#60c8ff" opacity="0.88" />
+        <ellipse cx="720" cy="290" rx="180" ry="150" fill="#e81880" opacity="0.78" />
+        <!-- blue — tech / always-on, upper right -->
+        <ellipse cx="1220" cy="200" rx="320" ry="260" fill="#0640e0" opacity="1" />
+        <ellipse cx="1250" cy="170" rx="190" ry="165" fill="#3090ff" opacity="0.95" />
       </g>
 
-      <rect width="1440" height="560" filter="url(#ai-recv-noise-coarse)" opacity="0.4" />
-      <rect width="1440" height="560" filter="url(#ai-recv-noise-fine)" opacity="0.28" />
+      <g class="site-hero__bokeh-highlight" filter="url(#air-bokeh-blur-soft)">
+        <circle cx="1250" cy="165" r="90" fill="#ffffff" opacity="0.82" />
+        <circle cx="1235" cy="180" r="52" fill="#ffffff" opacity="0.65" />
+        <circle cx="720" cy="195" r="68" fill="#ffffff" opacity="0.42" />
+      </g>
 
-      <rect width="1440" height="560" fill="url(#ai-recv-top-fade)" />
+      <rect width="1440" height="560" fill="url(#air-bottom-black)" />
+      <rect width="1440" height="560" filter="url(#air-noise-coarse)" opacity="0.42" />
+      <rect width="1440" height="560" filter="url(#air-noise-fine)" opacity="0.3" />
     </svg>
-    <div class="site-hero__ai-grain" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
-        <filter id="ai-recv-grain-coarse" x="-10%" y="-10%" width="120%" height="120%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.92" numOctaves="6" stitchTiles="stitch" result="noise" />
-          <feColorMatrix type="saturate" values="0" in="noise" />
-        </filter>
-        <rect width="100%" height="100%" filter="url(#ai-recv-grain-coarse)" />
-      </svg>
-    </div>
-    <div class="site-hero__ai-grain site-hero__ai-grain--fine" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
-        <filter id="ai-recv-grain-fine" x="-10%" y="-10%" width="120%" height="120%">
-          <feTurbulence type="fractalNoise" baseFrequency="1.8" numOctaves="5" stitchTiles="stitch" result="noise" />
-          <feColorMatrix type="saturate" values="0" in="noise" />
-        </filter>
-        <rect width="100%" height="100%" filter="url(#ai-recv-grain-fine)" />
-      </svg>
-    </div>
-  </div>
-  <div class="site-hero__ai-lasers" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<div class="site-hero__bokeh-stars" aria-hidden="true">
+      <div class="site-hero__bokeh-stars-rotate">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 436" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
-        <filter id="ai-recv-laser-glow" x="-80%" y="-80%" width="260%" height="260%">
-          <feGaussianBlur stdDeviation="4" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-        <linearGradient id="ai-recv-laser-blue" gradientUnits="userSpaceOnUse" x1="60" y1="560" x2="460" y2="95">
-          <stop offset="0%" stop-color="#20c8ff" stop-opacity="0" />
-          <stop offset="35%" stop-color="#60d8ff" stop-opacity="0.95" />
-          <stop offset="100%" stop-color="#0088ff" stop-opacity="0" />
-        </linearGradient>
-        <linearGradient id="ai-recv-laser-magenta" gradientUnits="userSpaceOnUse" x1="0" y1="500" x2="540" y2="135">
-          <stop offset="0%" stop-color="#ff48b0" stop-opacity="0" />
-          <stop offset="45%" stop-color="#ff2890" stop-opacity="0.9" />
-          <stop offset="100%" stop-color="#d02090" stop-opacity="0" />
-        </linearGradient>
-        <linearGradient id="ai-recv-laser-orange" gradientUnits="userSpaceOnUse" x1="1440" y1="540" x2="980" y2="95">
-          <stop offset="0%" stop-color="#ffd060" stop-opacity="0" />
-          <stop offset="40%" stop-color="#ff9018" stop-opacity="0.92" />
-          <stop offset="100%" stop-color="#ff6010" stop-opacity="0" />
-        </linearGradient>
-        <linearGradient id="ai-recv-laser-cyan" gradientUnits="userSpaceOnUse" x1="120" y1="560" x2="600" y2="210">
-          <stop offset="0%" stop-color="#00e8ff" stop-opacity="0" />
-          <stop offset="50%" stop-color="#80f0ff" stop-opacity="0.85" />
-          <stop offset="100%" stop-color="#0088ff" stop-opacity="0" />
-        </linearGradient>
-        <linearGradient id="ai-recv-laser-pink" gradientUnits="userSpaceOnUse" x1="1320" y1="460" x2="860" y2="145">
-          <stop offset="0%" stop-color="#ff60c0" stop-opacity="0" />
-          <stop offset="55%" stop-color="#ff2890" stop-opacity="0.75" />
-          <stop offset="100%" stop-color="#901858" stop-opacity="0" />
-        </linearGradient>
-        <linearGradient id="ai-recv-laser-orange-side" gradientUnits="userSpaceOnUse" x1="1380" y1="560" x2="900" y2="245">
-          <stop offset="0%" stop-color="#ffd060" stop-opacity="0" />
-          <stop offset="45%" stop-color="#ff9018" stop-opacity="0.88" />
-          <stop offset="100%" stop-color="#ff6010" stop-opacity="0" />
+        <pattern id="air-cosmic-dust" width="80" height="80" patternUnits="userSpaceOnUse">
+          <circle cx="6" cy="10" r="0.65" fill="#fff" opacity="0.55" />
+          <circle cx="22" cy="28" r="0.45" fill="#fff" opacity="0.38" />
+          <circle cx="38" cy="14" r="0.55" fill="#fff" opacity="0.48" />
+          <circle cx="54" cy="36" r="0.75" fill="#fff" opacity="0.58" />
+          <circle cx="68" cy="18" r="0.5" fill="#fff" opacity="0.42" />
+          <circle cx="14" cy="52" r="0.55" fill="#fff" opacity="0.46" />
+          <circle cx="30" cy="66" r="0.45" fill="#fff" opacity="0.4" />
+          <circle cx="58" cy="60" r="0.65" fill="#fff" opacity="0.5" />
+          <circle cx="74" cy="46" r="0.45" fill="#fff" opacity="0.36" />
+          <circle cx="46" cy="6" r="0.45" fill="#fff" opacity="0.42" />
+          <circle cx="72" cy="74" r="0.55" fill="#fff" opacity="0.44" />
+          <circle cx="10" cy="34" r="0.4" fill="#a0aec0" opacity="0.35" />
+          <circle cx="48" cy="48" r="0.35" fill="#a0aec0" opacity="0.3" />
+        </pattern>
+        <linearGradient id="air-comet-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+          <stop offset="100%" stop-color="#fff" stop-opacity="0.6" />
         </linearGradient>
       </defs>
-      <g filter="url(#ai-recv-laser-glow)" opacity="0.82">
-        <!-- left side -->
-        <line x1="60" y1="560" x2="460" y2="95" stroke="url(#ai-recv-laser-blue)" stroke-width="1.5" stroke-linecap="round" />
-        <line x1="60" y1="560" x2="460" y2="95" stroke="url(#ai-recv-laser-blue)" stroke-width="6" stroke-linecap="round" opacity="0.22" />
-        <line x1="0" y1="500" x2="540" y2="135" stroke="url(#ai-recv-laser-magenta)" stroke-width="1.5" stroke-linecap="round" />
-        <line x1="0" y1="500" x2="540" y2="135" stroke="url(#ai-recv-laser-magenta)" stroke-width="5" stroke-linecap="round" opacity="0.2" />
-        <line x1="120" y1="560" x2="600" y2="210" stroke="url(#ai-recv-laser-cyan)" stroke-width="1.25" stroke-linecap="round" opacity="0.75" />
-        <!-- right side -->
-        <line x1="1440" y1="540" x2="980" y2="95" stroke="url(#ai-recv-laser-orange)" stroke-width="1.5" stroke-linecap="round" />
-        <line x1="1440" y1="540" x2="980" y2="95" stroke="url(#ai-recv-laser-orange)" stroke-width="6" stroke-linecap="round" opacity="0.22" />
-        <line x1="1380" y1="560" x2="900" y2="245" stroke="url(#ai-recv-laser-orange-side)" stroke-width="1.25" stroke-linecap="round" opacity="0.7" />
-        <line x1="1320" y1="460" x2="860" y2="145" stroke="url(#ai-recv-laser-pink)" stroke-width="1.25" stroke-linecap="round" opacity="0.65" />
-      </g>
-    </svg>
+
+      <!-- star dust overlay -->
+      <rect width="1024" height="436" fill="url(#air-cosmic-dust)" opacity="0.9" />
+
+      <!-- four-point sparkles -->
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--1" d="M234,48 l2,7 7,2 -7,2 -2,7 -2,-7 -7,-2 7,-2z" fill="#fff" opacity="0.92" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--2" d="M624,82 l1.5,5 5,1.5 -5,1.5 -1.5,5 -1.5,-5 -5,-1.5 5,-1.5z" fill="#fff" opacity="0.82" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--3" d="M786,198 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z" fill="#fff" opacity="0.74" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--4" d="M128,218 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.62" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--5" d="M878,128 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.56" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--6" d="M468,118 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.5" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--7" d="M948,42 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.48" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--8" d="M338,298 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.44" />
+
+      <!-- comets -->
+      <path d="M718,38 Q762,24 806,34" fill="none" stroke="url(#air-comet-fade)" stroke-width="1.2" opacity="0.38" stroke-linecap="round" />
+      <circle cx="806" cy="34" r="1.5" fill="#fff" opacity="0.68" />
+      <path d="M198,168 Q158,188 128,208" fill="none" stroke="url(#air-comet-fade)" stroke-width="1" opacity="0.3" stroke-linecap="round" />
+      <circle cx="128" cy="208" r="1.2" fill="#fff" opacity="0.52" />
+      <path d="M592,298 Q632,284 672,294" fill="none" stroke="url(#air-comet-fade)" stroke-width="0.9" opacity="0.24" stroke-linecap="round" />
+      <circle cx="672" cy="294" r="1" fill="#fff" opacity="0.44" />
+      <path d="M908,82 Q938,68 968,76" fill="none" stroke="url(#air-comet-fade)" stroke-width="0.9" opacity="0.26" stroke-linecap="round" />
+      <circle cx="968" cy="76" r="1.1" fill="#fff" opacity="0.46" />
+
+      <!-- star field -->
+      <circle cx="48" cy="30" r="1.1" fill="#fff" opacity="0.9" />
+      <circle cx="108" cy="78" r="0.85" fill="#fff" opacity="0.7" />
+      <circle cx="168" cy="44" r="1" fill="#fff" opacity="0.86" />
+      <circle cx="298" cy="112" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="358" cy="34" r="0.95" fill="#fff" opacity="0.76" />
+      <circle cx="488" cy="82" r="1.2" fill="#fff" opacity="0.9" />
+      <circle cx="568" cy="142" r="0.65" fill="#fff" opacity="0.56" />
+      <circle cx="668" cy="36" r="0.95" fill="#fff" opacity="0.8" />
+      <circle cx="768" cy="152" r="0.85" fill="#fff" opacity="0.66" />
+      <circle cx="868" cy="28" r="1.05" fill="#fff" opacity="0.86" />
+      <circle cx="968" cy="128" r="0.75" fill="#fff" opacity="0.7" />
+      <circle cx="88" cy="178" r="0.95" fill="#fff" opacity="0.76" />
+      <circle cx="248" cy="218" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="388" cy="172" r="1.05" fill="#fff" opacity="0.86" />
+      <circle cx="528" cy="238" r="0.85" fill="#fff" opacity="0.7" />
+      <circle cx="648" cy="198" r="1.15" fill="#fff" opacity="0.8" />
+      <circle cx="768" cy="288" r="0.65" fill="#fff" opacity="0.56" />
+      <circle cx="888" cy="248" r="0.95" fill="#fff" opacity="0.76" />
+      <circle cx="988" cy="298" r="0.85" fill="#fff" opacity="0.66" />
+      <circle cx="38" cy="298" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="158" cy="318" r="1.05" fill="#fff" opacity="0.8" />
+      <circle cx="438" cy="308" r="0.65" fill="#fff" opacity="0.5" />
+      <circle cx="568" cy="328" r="0.95" fill="#fff" opacity="0.7" />
+      <circle cx="928" cy="268" r="0.85" fill="#fff" opacity="0.74" />
+      <circle cx="288" cy="62" r="0.55" fill="#fff" opacity="0.56" />
+      <circle cx="448" cy="132" r="0.65" fill="#fff" opacity="0.5" />
+      <circle cx="708" cy="102" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="828" cy="182" r="0.55" fill="#fff" opacity="0.46" />
+      <circle cx="988" cy="228" r="0.65" fill="#fff" opacity="0.5" />
+      <circle cx="348" cy="248" r="0.55" fill="#fff" opacity="0.46" />
+      <circle cx="648" cy="72" r="0.55" fill="#fff" opacity="0.5" />
+      <circle cx="798" cy="32" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="118" cy="112" r="0.45" fill="#fff" opacity="0.46" />
+      <circle cx="918" cy="102" r="0.55" fill="#fff" opacity="0.5" />
+      <circle cx="538" cy="162" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="188" cy="152" r="0.55" fill="#fff" opacity="0.5" />
+      <circle cx="708" cy="232" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="848" cy="112" r="0.45" fill="#fff" opacity="0.42" />
+      <circle cx="148" cy="68" r="0.45" fill="#fff" opacity="0.48" />
+      <circle cx="398" cy="48" r="0.55" fill="#fff" opacity="0.52" />
+      <circle cx="668" cy="132" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="968" cy="182" r="0.55" fill="#fff" opacity="0.46" />
+      <circle cx="268" cy="288" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="488" cy="198" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="748" cy="218" r="0.55" fill="#fff" opacity="0.44" />
+      <circle cx="618" cy="108" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="458" cy="82" r="0.4" fill="#a0aec0" opacity="0.32" />
+      <circle cx="818" cy="258" r="0.4" fill="#a0aec0" opacity="0.28" />
+      <circle cx="58" cy="228" r="0.4" fill="#a0aec0" opacity="0.3" />
+      <circle cx="998" cy="58" r="0.4" fill="#a0aec0" opacity="0.28" />
+      </svg>
+      </div>
+    </div>
+    <div class="site-hero__bokeh-grain" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
+        <filter id="air-grain-coarse" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="6" stitchTiles="stitch" result="noise" />
+          <feColorMatrix type="saturate" values="0" in="noise" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#air-grain-coarse)" />
+      </svg>
+    </div>
+    <div class="site-hero__bokeh-grain site-hero__bokeh-grain--fine" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
+        <filter id="air-grain-fine" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="1.75" numOctaves="5" stitchTiles="stitch" result="noise" />
+          <feColorMatrix type="saturate" values="0" in="noise" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#air-grain-fine)" />
+      </svg>
+    </div>
   </div>
-  <div class="site-hero__content" style="display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
+
+  <div class="site-hero__bokeh-neural" aria-hidden="true">
+    <svg class="site-hero__bokeh-neural-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--1" x1="720" y1="190" x2="360" y2="100" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--2" x1="720" y1="190" x2="1080" y2="95" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--3" x1="720" y1="190" x2="170" y2="190" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--4" x1="720" y1="190" x2="1270" y2="180" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--5" x1="720" y1="190" x2="490" y2="245" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--6" x1="720" y1="190" x2="950" y2="235" />
+    </svg>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--hub"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--1"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--2"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--3"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--4"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--5"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--6"></span>
+    <span class="site-hero__bokeh-neural-signal site-hero__bokeh-neural-signal--1"></span>
+    <span class="site-hero__bokeh-neural-signal site-hero__bokeh-neural-signal--2"></span>
+    <span class="site-hero__bokeh-neural-signal site-hero__bokeh-neural-signal--3"></span>
+  </div>
+  <div class="site-hero__bokeh-twinkle" aria-hidden="true">
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--1"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--2"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--3"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--4"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--5"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--6"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--7"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--8"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--9"></span>
+    <span class="site-hero__bokeh-twinkle-dot site-hero__bokeh-twinkle-dot--10"></span>
+  </div>
+  <div class="site-hero__bokeh-vignette" aria-hidden="true"></div>
+
+  <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Built on strategy.<br />Powered by AI.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-    <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 

@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Lead Generation Santa Rosa | Donohue Design" />
   <meta name="twitter:description" content="Lead generation systems for Santa Rosa and Sonoma County businesses. Capture, qualify, and follow up on prospects automatically — around the clock." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=mkt-green-v3" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -230,15 +230,37 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--marketing-beams" style="padding-left:40px;padding-right:40px;">
-  <div class="site-hero__marketing-art" aria-hidden="true">
-    <img src="marketing-consultant-hero.svg?v=3" width="1440" height="900" alt="" decoding="async" fetchpriority="high" />
+<section class="site-hero site-hero--mkt-green site-hero--mkt-leads" style="padding-left:40px;padding-right:40px;" aria-label="Lead Generation">
+  <div class="site-hero__mkt-scene" aria-hidden="true"></div>
+  <div class="site-hero__mkt-funnel" aria-hidden="true"></div>
+  <div class="site-hero__mkt-flow" aria-hidden="true"></div>
+  <div class="site-hero__mkt-hub-ring" aria-hidden="true"></div>
+  <div class="site-hero__mkt-vignette" aria-hidden="true"></div>
+  <div class="site-hero__grain" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+      <filter id="mkt-leads-grain-coarse" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.48" numOctaves="5" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.18" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#mkt-leads-grain-coarse)" />
+    </svg>
+  </div>
+  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+      <filter id="mkt-leads-grain-fine" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="2.05" numOctaves="4" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.12" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#mkt-leads-grain-fine)" />
+    </svg>
   </div>
   <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Leads on autopilot.<br />Capture. Qualify. Follow up.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-    <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 

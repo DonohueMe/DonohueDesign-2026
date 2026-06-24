@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=mesh-smart-brain-v1" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -238,8 +238,52 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--mesh-grain" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+<section class="site-hero site-hero--mesh-grain site-hero--mesh-smart" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
   <div class="site-hero__mesh" aria-hidden="true"></div>
+  <div class="site-hero__mesh-fx" aria-hidden="true">
+    <div class="site-hero__smart-reflex" aria-hidden="true">
+      <span class="site-hero__smart-reflex-btn"></span>
+      <span class="site-hero__smart-reflex-track"></span>
+      <span class="site-hero__smart-reflex-packet"></span>
+      <span class="site-hero__smart-reflex-target"></span>
+    </div>
+    <div class="site-hero__smart-reflex site-hero__smart-reflex--2" aria-hidden="true">
+      <span class="site-hero__smart-reflex-btn"></span>
+      <span class="site-hero__smart-reflex-track"></span>
+      <span class="site-hero__smart-reflex-packet"></span>
+      <span class="site-hero__smart-reflex-target"></span>
+    </div>
+    <div class="site-hero__smart-brain" aria-hidden="true">
+      <svg class="site-hero__smart-brain-svg" viewBox="0 0 160 140" aria-hidden="true">
+        <path class="site-hero__smart-brain-outline" d="M80,18 C52,18 34,38 30,62 C26,82 34,108 52,118 C62,124 72,126 80,124 C88,126 98,124 108,118 C126,108 134,82 130,62 C126,38 108,18 80,18 Z" fill="none" stroke="rgba(200,160,255,0.35)" stroke-width="1.5" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--1" d="M80,40 L52,58" fill="none" stroke="rgba(140,210,255,0.4)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--2" d="M80,40 L108,58" fill="none" stroke="rgba(255,104,176,0.4)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--3" d="M80,55 L48,78" fill="none" stroke="rgba(140,210,255,0.35)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--4" d="M80,55 L112,78" fill="none" stroke="rgba(255,176,64,0.35)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--5" d="M80,70 L80,100" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--6" d="M80,70 L58,95" fill="none" stroke="rgba(140,210,255,0.3)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--7" d="M80,70 L102,95" fill="none" stroke="rgba(255,104,176,0.3)" stroke-width="1" />
+      </svg>
+      <span class="site-hero__smart-core"></span>
+      <span class="site-hero__smart-synapse site-hero__smart-synapse--1"></span>
+      <span class="site-hero__smart-synapse site-hero__smart-synapse--2"></span>
+      <span class="site-hero__smart-synapse site-hero__smart-synapse--3"></span>
+      <span class="site-hero__smart-synapse site-hero__smart-synapse--4"></span>
+      <span class="site-hero__smart-memory site-hero__smart-memory--1"></span>
+      <span class="site-hero__smart-memory site-hero__smart-memory--2"></span>
+      <span class="site-hero__smart-memory site-hero__smart-memory--3"></span>
+      <span class="site-hero__smart-adapt"></span>
+    </div>
+    <div class="site-hero__smart-brain site-hero__smart-brain--sm" aria-hidden="true">
+      <svg class="site-hero__smart-brain-svg" viewBox="0 0 100 88" aria-hidden="true">
+        <path class="site-hero__smart-brain-outline" d="M50,12 C34,12 22,26 20,42 C18,54 24,68 36,74 C42,78 48,79 50,78 C52,79 58,78 64,74 C76,68 82,54 80,42 C78,26 66,12 50,12 Z" fill="none" stroke="rgba(200,160,255,0.3)" stroke-width="1.2" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--1" d="M50,28 L34,40" fill="none" stroke="rgba(140,210,255,0.35)" stroke-width="1" />
+        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--2" d="M50,28 L66,40" fill="none" stroke="rgba(255,104,176,0.35)" stroke-width="1" />
+      </svg>
+      <span class="site-hero__smart-core"></span>
+      <span class="site-hero__smart-adapt"></span>
+    </div>
+  </div>
   <div class="site-hero__grain" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <filter id="hero-grain-wd" x="-5%" y="-5%" width="110%" height="110%">
@@ -259,11 +303,13 @@
     </svg>
   </div>
   <div class="site-hero__vignette" aria-hidden="true"></div>
-  <div class="site-hero__content" style="display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
+  <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Built on strategy.<br />Powered by AI.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-    <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 

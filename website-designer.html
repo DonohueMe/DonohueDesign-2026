@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Website Designer Santa Rosa | Donohue Design" />
   <meta name="twitter:description" content="Strategy-first website design for Santa Rosa and Sonoma County businesses. Jim Donohue — 20+ years in UX/UI and digital strategy." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
-  <link rel="stylesheet" href="styles.css?v=sidebar-no-scroll" />
+  <link rel="stylesheet" href="styles.css?v=mesh-hero-v1" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -315,9 +315,16 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--mesh-grain site-hero--mesh-image" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+<section class="site-hero site-hero--mesh-grain site-hero--mesh-image site-hero--mesh-hub" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
   <div class="site-hero__mesh-art" style="--hero-art: url('website-designer-hero.svg?v=2')" aria-hidden="true"></div>
   <div class="site-hero__mesh" aria-hidden="true"></div>
+  <div class="site-hero__mesh-fx" aria-hidden="true">
+    <div class="site-hero__hub-window site-hero__hub-window--1"></div>
+    <div class="site-hero__hub-window site-hero__hub-window--2"></div>
+    <div class="site-hero__hub-window site-hero__hub-window--3"></div>
+    <div class="site-hero__hub-window site-hero__hub-window--4"></div>
+  </div>
+
   <div class="site-hero__grain" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <filter id="hero-grain-wd" x="-5%" y="-5%" width="110%" height="110%">
@@ -337,11 +344,13 @@
     </svg>
   </div>
   <div class="site-hero__vignette" aria-hidden="true"></div>
-  <div class="site-hero__content" style="display:flex;flex-direction:column;align-items:center;max-width:860px;padding:0 20px;">
+  <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Built on strategy.<br />Powered by AI.</p>
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
-    <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-    <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+        <div class="site-hero__sub">
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:40px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
+      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+    </div>
   </div>
 </section>
 
