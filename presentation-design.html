@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=graphic-wave-hero-v1" />
+  <link rel="stylesheet" href="styles.css?v=gd-mesh-hero-v2-nav1" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -103,7 +103,7 @@
     <div class="site-header-bar">
       <nav class="site-header-nav md:flex hidden">
         <div class="site-header-services" @mouseenter="showServ()">
-          <button type="button" class="pill-link" style="border:none;cursor:pointer;background:transparent;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
+          <button type="button" class="pill-link is-active-section" style="border:none;cursor:pointer;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
             <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
               Services
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none" :style="servOpen?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;">
@@ -142,7 +142,7 @@
             <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4a13 13 0 1 0 0 26c1.7 0 2.8-1.1 2.8-2.5 0-.65-.25-1.25-.7-1.7-.45-.45-.7-1.05-.7-1.7 0-1.4 1.1-2.5 2.5-2.5h2.6A5 5 0 0 0 28.5 16 13 13 0 0 0 17 4z"/><circle cx="10.5" cy="14" r="1.4"/><circle cx="15" cy="9" r="1.4"/><circle cx="21" cy="10" r="1.4"/><circle cx="24.5" cy="15" r="1.4"/></svg><span>Graphic Designer</span></p>
             <a href="logo-design.html" class="site-header-megamenu__link">Logo Design</a>
             <a href="brochure-flyer-design.html" class="site-header-megamenu__link">Brochure &amp; Flyer Design</a>
-            <a href="presentation-design.html" class="site-header-megamenu__link">Presentation Design</a>
+            <a href="presentation-design.html" class="site-header-megamenu__link" aria-current="page">Presentation Design</a>
             <a href="email-design.html" class="site-header-megamenu__link">Email Design</a>
           </div>
         </div>
@@ -200,7 +200,7 @@
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
           <a href="logo-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Logo Design</a>
           <a href="brochure-flyer-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Brochure &amp; Flyer Design</a>
-          <a href="presentation-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Presentation Design</a>
+          <a href="presentation-design.html" @click="menuOpen=false" aria-current="page" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Presentation Design</a>
           <a href="email-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Design</a>
         </div>
       </div>
@@ -238,116 +238,9 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat site-hero--graphic-wave site-hero--presentation-design" style="padding-left:40px;padding-right:40px;">
-  <div class="site-hero__bff-waves" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="bfw-wave-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#0038a8"/>
-          <stop offset="100%" stop-color="#0078ff"/>
-        </linearGradient>
-        <linearGradient id="bfw-wave-blue-bright" x1="0%" y1="100%" x2="85%" y2="0%">
-          <stop offset="0%" stop-color="#0050dd"/>
-          <stop offset="100%" stop-color="#20a0ff"/>
-        </linearGradient>
-        <linearGradient id="bfw-wave-magenta" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#901858"/>
-          <stop offset="50%" stop-color="#d02090"/>
-          <stop offset="100%" stop-color="#ff2890"/>
-        </linearGradient>
-        <linearGradient id="bfw-wave-orange" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#c84808"/>
-          <stop offset="100%" stop-color="#ff9018"/>
-        </linearGradient>
-        <linearGradient id="bfw-wave-orange-bright" x1="55%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#ff7810"/>
-          <stop offset="100%" stop-color="#ffd050"/>
-        </linearGradient>
-        <radialGradient id="bfw-spot-blue" cx="22%" cy="48%" r="38%">
-          <stop offset="0%" stop-color="#40a0ff" stop-opacity="0.82"/>
-          <stop offset="55%" stop-color="#0848e8" stop-opacity="0.42"/>
-          <stop offset="100%" stop-color="#0038a8" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="bfw-spot-orange" cx="84%" cy="44%" r="40%">
-          <stop offset="0%" stop-color="#ffb040" stop-opacity="0.98"/>
-          <stop offset="42%" stop-color="#ff7810" stop-opacity="0.62"/>
-          <stop offset="100%" stop-color="#ff6010" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="bfw-spot-magenta" cx="52%" cy="46%" r="34%">
-          <stop offset="0%" stop-color="#ff4898" stop-opacity="0.55"/>
-          <stop offset="100%" stop-color="#e82888" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="bfw-base-sky" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#2858c8"/>
-          <stop offset="38%" stop-color="#c02888"/>
-          <stop offset="72%" stop-color="#ff2890"/>
-          <stop offset="100%" stop-color="#ff9020"/>
-        </linearGradient>
-        <linearGradient id="bfw-floor-glow" x1="0" y1="720" x2="1440" y2="820" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#2080ff" stop-opacity="0"/>
-          <stop offset="35%" stop-color="#ff2890" stop-opacity="0.12"/>
-          <stop offset="72%" stop-color="#ff9018" stop-opacity="0.18"/>
-          <stop offset="100%" stop-color="#ffd050" stop-opacity="0"/>
-        </linearGradient>
-        <filter id="bfw-aurora-blur" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="58"/>
-        </filter>
-        <filter id="bfw-wave-blur" x="-12%" y="-12%" width="124%" height="124%">
-          <feGaussianBlur stdDeviation="12"/>
-        </filter>
-      </defs>
-      <rect width="1440" height="900" fill="url(#bfw-base-sky)"/>
-      <rect width="1440" height="900" fill="url(#bfw-spot-blue)"/>
-      <rect width="1440" height="900" fill="url(#bfw-spot-magenta)"/>
-      <rect width="1440" height="900" fill="url(#bfw-spot-orange)"/>
-      <g filter="url(#bfw-aurora-blur)">
-        <ellipse cx="280" cy="420" rx="340" ry="260" fill="#2080ff" opacity="0.62"/>
-        <ellipse cx="720" cy="400" rx="380" ry="240" fill="#e82888" opacity="0.52"/>
-        <ellipse cx="1180" cy="390" rx="360" ry="280" fill="#ff9020" opacity="0.68"/>
-        <ellipse cx="980" cy="430" rx="280" ry="200" fill="#ffd050" opacity="0.42"/>
-      </g>
-      <g filter="url(#bfw-wave-blur)">
-        <path d="M0,360 C220,180 480,520 720,280 C960,40 1200,420 1440,220 L1440,900 L0,900 Z" fill="url(#bfw-wave-blue)" opacity="0.58"/>
-        <path d="M0,420 C180,260 460,560 700,340 C940,120 1180,480 1440,300 L1440,900 L0,900 Z" fill="url(#bfw-wave-blue-bright)" opacity="0.72"/>
-        <path d="M0,470 C260,300 540,600 820,380 C1100,160 1320,520 1440,360 L1440,900 L0,900 Z" fill="url(#bfw-wave-magenta)" opacity="0.78"/>
-        <path d="M0,520 C240,380 520,640 800,420 C1080,200 1300,560 1440,420 L1440,900 L0,900 Z" fill="#e02888" opacity="0.62"/>
-        <path d="M0,570 C280,430 580,680 880,460 C1180,240 1360,580 1440,480 L1440,900 L0,900 Z" fill="url(#bfw-wave-orange)" opacity="0.82"/>
-        <path d="M0,620 C320,480 620,720 920,500 C1220,280 1380,620 1440,540 L1440,900 L0,900 Z" fill="url(#bfw-wave-orange-bright)" opacity="0.88"/>
-      </g>
-      <rect y="700" width="1440" height="200" fill="url(#bfw-floor-glow)" opacity="0.85"/>
-    </svg>
-  </div>
-  <div class="site-hero__grain site-hero__grain--bff" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="bff-grain-coarse" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.35" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#bff-grain-coarse)" />
-    </svg>
-  </div>
-  <div class="site-hero__grain site-hero__grain--bff site-hero__grain--fine" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="bff-grain-fine" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.25" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#bff-grain-fine)" />
-    </svg>
-  </div>
-  <div class="site-hero__glass-art site-hero__glass-art--panels" aria-hidden="true">
-    <div class="site-hero__gd-tile site-hero__gd-tile--lt">
-      <img src="pres-tile-title.svg" alt="" width="240" height="135" decoding="async" />
-    </div>
-    <div class="site-hero__gd-tile site-hero__gd-tile--lb">
-      <img src="pres-tile-chart.svg" alt="" width="160" height="120" decoding="async" />
-    </div>
-    <div class="site-hero__gd-tile site-hero__gd-tile--rt">
-      <img src="pres-tile-hero.svg" alt="" width="252" height="142" decoding="async" />
-    </div>
-    <div class="site-hero__gd-tile site-hero__gd-tile--rb">
-      <img src="pres-tile-stack.svg" alt="" width="172" height="240" decoding="async" />
-    </div>
+<section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat site-hero--presentation-design" style="padding-left:40px;padding-right:40px;">
+  <div class="site-hero__glass-art" aria-hidden="true">
+    <img src="images/presentation-design-hero.png?v=1" width="1400" height="668" alt="" decoding="async" fetchpriority="high" />
   </div>
   <div class="site-hero__content">
     <p style="font-size:clamp(36px,7vw,80px);font-weight:700;line-height:1.25;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;">Built on strategy.<br />Powered by AI.</p>

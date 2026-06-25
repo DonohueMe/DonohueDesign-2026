@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Contact | Donohue Design" />
   <meta name="twitter:description" content="Get in touch with Donohue Design in Santa Rosa. Schedule a free consultation for website design, marketing, and graphic design." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
-  <link rel="stylesheet" href="styles.css?v=contact-hero-stars-v4" />
+  <link rel="stylesheet" href="styles.css?v=contact-hero-bokeh-stars-v17" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -97,7 +97,7 @@
     <div class="site-header-bar">
       <nav class="site-header-nav md:flex hidden">
         <div class="site-header-services" @mouseenter="showServ()">
-          <button type="button" class="pill-link" style="border:none;cursor:pointer;background:transparent;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
+          <button type="button" class="pill-link" style="border:none;cursor:pointer;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:rgba(0,0,0,0.10)':''">
             <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
               Services
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none" :style="servOpen?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;">
@@ -109,7 +109,7 @@
         <a href="case-studies.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Case Studies</a>
         <a href="pricing.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Pricing</a>
         <a href="about.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">About</a>
-        <a href="contact.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Contact</a>
+        <a href="contact.html" class="pill-link" aria-current="page" @mouseenter="clearTimeout(_t);servOpen=false">Contact</a>
       </nav>
 
       <button type="button" class="site-header-menu-btn md:hidden flex" aria-label="Open menu" :aria-expanded="menuOpen" @click="menuOpen=!menuOpen">
@@ -226,15 +226,71 @@
       <a href="case-studies.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Case Studies</a>
       <a href="pricing.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Pricing</a>
       <a href="about.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">About</a>
-      <a href="contact.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Contact</a>
+      <a href="contact.html" aria-current="page" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 14px;border-bottom:1px solid transparent;display:block;background:var(--clr-surf);border-radius:10px;">Contact</a>
       </nav>
     </div>
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--cosmic" aria-label="Contact">
+<section class="site-hero site-hero--cosmic site-hero--ai-bokeh" aria-label="Contact">
   <div class="site-hero__cosmic-scene" aria-hidden="true"></div>
-  <div class="site-hero__cosmic-stars" aria-hidden="true"></div>
+  <div class="site-hero__bokeh-stars" aria-hidden="true">
+    <div class="site-hero__bokeh-stars-rotate">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <pattern id="cai-cosmic-dust" width="80" height="80" patternUnits="userSpaceOnUse">
+          <circle cx="6" cy="10" r="0.65" fill="#fff" opacity="0.55" />
+          <circle cx="38" cy="14" r="0.55" fill="#fff" opacity="0.48" />
+          <circle cx="68" cy="18" r="0.5" fill="#fff" opacity="0.42" />
+          <circle cx="30" cy="66" r="0.45" fill="#fff" opacity="0.4" />
+          <circle cx="58" cy="60" r="0.65" fill="#fff" opacity="0.5" />
+          <circle cx="10" cy="34" r="0.4" fill="#a0aec0" opacity="0.35" />
+        </pattern>
+        <linearGradient id="cai-comet-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+          <stop offset="100%" stop-color="#fff" stop-opacity="0.6" />
+        </linearGradient>
+      </defs>
+
+      <!-- star dust overlay -->
+      <rect width="1200" height="1200" fill="url(#cai-cosmic-dust)" opacity="0.9" />
+
+      <!-- four-point sparkles -->
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--1" d="M200,150 l2,7 7,2 -7,2 -2,7 -2,-7 -7,-2 7,-2z" fill="#fff" opacity="0.92" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--2" d="M700,120 l1.5,5 5,1.5 -5,1.5 -1.5,5 -1.5,-5 -5,-1.5 5,-1.5z" fill="#fff" opacity="0.82" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--3" d="M1050,300 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z" fill="#fff" opacity="0.74" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--4" d="M150,640 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.62" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--5" d="M950,650 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.56" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--6" d="M450,520 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.5" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--7" d="M1080,920 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.48" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--8" d="M360,960 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.44" />
+
+      <!-- comets -->
+      <path d="M820,80 Q864,66 908,76" fill="none" stroke="url(#cai-comet-fade)" stroke-width="1.2" opacity="0.38" stroke-linecap="round" />
+      <circle cx="908" cy="76" r="1.5" fill="#fff" opacity="0.68" />
+      <path d="M260,420 Q220,440 190,460" fill="none" stroke="url(#cai-comet-fade)" stroke-width="1" opacity="0.3" stroke-linecap="round" />
+      <circle cx="190" cy="460" r="1.2" fill="#fff" opacity="0.52" />
+      <path d="M680,820 Q720,806 760,816" fill="none" stroke="url(#cai-comet-fade)" stroke-width="0.9" opacity="0.24" stroke-linecap="round" />
+      <circle cx="760" cy="816" r="1" fill="#fff" opacity="0.44" />
+      <path d="M1000,1040 Q1030,1026 1060,1034" fill="none" stroke="url(#cai-comet-fade)" stroke-width="0.9" opacity="0.26" stroke-linecap="round" />
+      <circle cx="1060" cy="1034" r="1.1" fill="#fff" opacity="0.46" />
+
+      <!-- star field -->
+      <circle cx="60" cy="40" r="1.1" fill="#fff" opacity="0.9" />
+      <circle cx="980" cy="60" r="0.85" fill="#fff" opacity="0.66" />
+      <circle cx="640" cy="210" r="1.05" fill="#fff" opacity="0.8" />
+      <circle cx="260" cy="360" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="1160" cy="330" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="820" cy="540" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="540" cy="640" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="180" cy="760" r="0.85" fill="#fff" opacity="0.66" />
+      <circle cx="1100" cy="780" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="800" cy="960" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="200" cy="1080" r="0.95" fill="#fff" opacity="0.7" />
+      <circle cx="1140" cy="1060" r="0.85" fill="#fff" opacity="0.66" />
+    </svg>
+    </div>
+  </div>
   <div class="site-hero__content">
     <p class="hero-display hero-display--light">Contact</p>
   </div>

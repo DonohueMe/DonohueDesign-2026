@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=case-studies-hero-random" />
+  <link rel="stylesheet" href="styles.css?v=case-studies-hero-random-v7" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -94,7 +94,7 @@
     <div class="site-header-bar">
       <nav class="site-header-nav md:flex hidden">
         <div class="site-header-services" @mouseenter="showServ()">
-          <button type="button" class="pill-link" style="border:none;cursor:pointer;background:transparent;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
+          <button type="button" class="pill-link" style="border:none;cursor:pointer;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:rgba(0,0,0,0.10)':''">
             <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
               Services
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none" :style="servOpen?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;">
@@ -103,7 +103,7 @@
             </span>
           </button>
         </div>
-        <a href="case-studies.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Case Studies</a>
+        <a href="case-studies.html" class="pill-link" aria-current="page" @mouseenter="clearTimeout(_t);servOpen=false">Case Studies</a>
         <a href="pricing.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Pricing</a>
         <a href="about.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">About</a>
         <a href="contact.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Contact</a>
@@ -220,7 +220,7 @@
       </div>
 
       <div style="height:8px;"></div>
-      <a href="case-studies.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Case Studies</a>
+      <a href="case-studies.html" aria-current="page" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 14px;border-bottom:1px solid transparent;display:block;background:var(--clr-surf);border-radius:10px;">Case Studies</a>
       <a href="pricing.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Pricing</a>
       <a href="about.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">About</a>
       <a href="contact.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Contact</a>
