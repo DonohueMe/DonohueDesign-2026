@@ -585,6 +585,24 @@ img, svg { display: block; }
   position: relative;
   z-index: 2;
 }
+/* Website Designer pages: keep mesh background, remove foreground animations */
+.site-hero--mesh-strategy .site-hero__mesh-fx,
+.site-hero--mesh-smart .site-hero__mesh-fx,
+.site-hero--mesh-dev .site-hero__mesh-fx {
+  display: none;
+}
+/* Fast color-cycling applied to every hero (white text/buttons are unaffected by hue-rotate) */
+.site-hero {
+  animation: mesh-hue-cycle 8s linear infinite;
+}
+@keyframes mesh-hue-cycle {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
 /* Strategy — architect & blueprint metaphor */
 .site-hero--mesh-strategy .site-hero__strat-blueprint-grid {
   position: absolute;
