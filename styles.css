@@ -3965,7 +3965,7 @@ img, svg { display: block; }
 @media (max-width: 839px) {
   .hero-display,
   .site-hero__headline {
-    font-size: clamp(26px, 7.2vw, 48px);
+    font-size: clamp(32.5px, 9vw, 60px);
     line-height: 1.2;
     letter-spacing: -0.035em;
   }
