@@ -603,6 +603,18 @@ img, svg { display: block; }
     filter: hue-rotate(360deg);
   }
 }
+/* Marketing Consultant pages: cycle hero color green -> blue instead of full spectrum */
+.site-hero--mkt-green {
+  animation: mkt-green-blue 6s ease-in-out infinite alternate;
+}
+@keyframes mkt-green-blue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(85deg);
+  }
+}
 /* Strategy — architect & blueprint metaphor */
 .site-hero--mesh-strategy .site-hero__strat-blueprint-grid {
   position: absolute;
