@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Internet Marketing Service Santa Rosa | Donohue Design" />
   <meta name="twitter:description" content="AI-powered internet marketing for Santa Rosa and Sonoma County businesses. AI receptionists and conversational agents that answer, qualify, and follow up around the clock." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
-  <link rel="stylesheet" href="styles.css?v=hero-wide-headline-hm2-herohue1-h10b" />
+  <link rel="stylesheet" href="styles.css?v=hero-wide-headline-hm2-herohue1-h10b-bokeh1" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -315,27 +315,197 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--mesh-grain" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
-  <div class="site-hero__mesh" aria-hidden="true"></div>
-  <div class="site-hero__grain" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="hero-grain-ims" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.35" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#hero-grain-ims)" />
+<section class="site-hero site-hero--ai-bokeh site-hero--bokeh-emotions" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+  <div class="site-hero__bokeh-scene" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <filter id="cai-bokeh-blur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="58" />
+        </filter>
+        <filter id="cai-bokeh-blur-soft" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="42" />
+        </filter>
+        <filter id="cai-noise-coarse" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="5" stitchTiles="stitch" result="noise" />
+          <feColorMatrix type="saturate" values="0" in="noise" result="mono" />
+          <feComponentTransfer in="mono">
+            <feFuncA type="linear" slope="1.15" intercept="-0.12" />
+          </feComponentTransfer>
+        </filter>
+        <filter id="cai-noise-fine" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="1.55" numOctaves="4" stitchTiles="stitch" result="noise" />
+          <feColorMatrix type="saturate" values="0" in="noise" />
+        </filter>
+        <linearGradient id="cai-bottom-black" x1="0" y1="280" x2="0" y2="560" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#000" stop-opacity="0" />
+          <stop offset="50%" stop-color="#000" stop-opacity="0.72" />
+          <stop offset="100%" stop-color="#000" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+
+      <rect width="1440" height="560" fill="#000" />
+
+      <g class="site-hero__bokeh-orbs" filter="url(#cai-bokeh-blur)">
+        <!-- orange / amber — upper left -->
+        <ellipse cx="200" cy="195" rx="310" ry="240" fill="#ff9020" opacity="0.98" />
+        <ellipse cx="130" cy="250" rx="220" ry="180" fill="#ffb840" opacity="0.82" />
+        <!-- lime green — faint above center -->
+        <ellipse cx="600" cy="95" rx="260" ry="120" fill="#b8f060" opacity="0.52" />
+        <!-- blue heart — center -->
+        <ellipse cx="560" cy="175" rx="155" ry="145" fill="#3090ff" opacity="1" />
+        <ellipse cx="720" cy="175" rx="155" ry="145" fill="#3090ff" opacity="1" />
+        <ellipse cx="640" cy="265" rx="280" ry="230" fill="#0640e0" opacity="0.94" />
+        <ellipse cx="640" cy="220" rx="240" ry="200" fill="#60a8ff" opacity="0.88" />
+        <!-- pink / magenta — upper right with bright core -->
+        <ellipse cx="1210" cy="210" rx="330" ry="270" fill="#e81880" opacity="1" />
+        <ellipse cx="1240" cy="185" rx="200" ry="175" fill="#ff4898" opacity="0.95" />
+      </g>
+
+      <g class="site-hero__bokeh-highlight" filter="url(#cai-bokeh-blur-soft)">
+        <circle cx="1250" cy="175" r="95" fill="#ffffff" opacity="0.82" />
+        <circle cx="1235" cy="190" r="55" fill="#ffffff" opacity="0.65" />
+      </g>
+
+      <rect width="1440" height="560" fill="url(#cai-bottom-black)" />
+      <rect width="1440" height="560" filter="url(#cai-noise-coarse)" opacity="0.42" />
+      <rect width="1440" height="560" filter="url(#cai-noise-fine)" opacity="0.3" />
     </svg>
+    <div class="site-hero__bokeh-stars" aria-hidden="true">
+      <div class="site-hero__bokeh-stars-rotate">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 436" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <pattern id="cai-cosmic-dust" width="80" height="80" patternUnits="userSpaceOnUse">
+          <circle cx="6" cy="10" r="0.65" fill="#fff" opacity="0.55" />
+          <circle cx="22" cy="28" r="0.45" fill="#fff" opacity="0.38" />
+          <circle cx="38" cy="14" r="0.55" fill="#fff" opacity="0.48" />
+          <circle cx="54" cy="36" r="0.75" fill="#fff" opacity="0.58" />
+          <circle cx="68" cy="18" r="0.5" fill="#fff" opacity="0.42" />
+          <circle cx="14" cy="52" r="0.55" fill="#fff" opacity="0.46" />
+          <circle cx="30" cy="66" r="0.45" fill="#fff" opacity="0.4" />
+          <circle cx="58" cy="60" r="0.65" fill="#fff" opacity="0.5" />
+          <circle cx="74" cy="46" r="0.45" fill="#fff" opacity="0.36" />
+          <circle cx="46" cy="6" r="0.45" fill="#fff" opacity="0.42" />
+          <circle cx="72" cy="74" r="0.55" fill="#fff" opacity="0.44" />
+          <circle cx="10" cy="34" r="0.4" fill="#a0aec0" opacity="0.35" />
+          <circle cx="48" cy="48" r="0.35" fill="#a0aec0" opacity="0.3" />
+        </pattern>
+        <linearGradient id="cai-comet-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+          <stop offset="100%" stop-color="#fff" stop-opacity="0.6" />
+        </linearGradient>
+      </defs>
+
+      <!-- star dust overlay -->
+      <rect width="1024" height="436" fill="url(#cai-cosmic-dust)" opacity="0.9" />
+
+      <!-- four-point sparkles -->
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--1" d="M234,48 l2,7 7,2 -7,2 -2,7 -2,-7 -7,-2 7,-2z" fill="#fff" opacity="0.92" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--2" d="M624,82 l1.5,5 5,1.5 -5,1.5 -1.5,5 -1.5,-5 -5,-1.5 5,-1.5z" fill="#fff" opacity="0.82" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--3" d="M786,198 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z" fill="#fff" opacity="0.74" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--4" d="M128,218 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.62" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--5" d="M878,128 l1.5,4.5 4.5,1.5 -4.5,1.5 -1.5,4.5 -1.5,-4.5 -4.5,-1.5 4.5,-1.5z" fill="#fff" opacity="0.56" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--6" d="M468,118 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.5" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--7" d="M948,42 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.48" />
+      <path class="site-hero__bokeh-sparkle site-hero__bokeh-sparkle--8" d="M338,298 l1.5,4 4,1.5 -4,1.5 -1.5,4 -1.5,-4 -4,-1.5 4,-1.5z" fill="#fff" opacity="0.44" />
+
+      <!-- comets -->
+      <path d="M718,38 Q762,24 806,34" fill="none" stroke="url(#cai-comet-fade)" stroke-width="1.2" opacity="0.38" stroke-linecap="round" />
+      <circle cx="806" cy="34" r="1.5" fill="#fff" opacity="0.68" />
+      <path d="M198,168 Q158,188 128,208" fill="none" stroke="url(#cai-comet-fade)" stroke-width="1" opacity="0.3" stroke-linecap="round" />
+      <circle cx="128" cy="208" r="1.2" fill="#fff" opacity="0.52" />
+      <path d="M592,298 Q632,284 672,294" fill="none" stroke="url(#cai-comet-fade)" stroke-width="0.9" opacity="0.24" stroke-linecap="round" />
+      <circle cx="672" cy="294" r="1" fill="#fff" opacity="0.44" />
+      <path d="M908,82 Q938,68 968,76" fill="none" stroke="url(#cai-comet-fade)" stroke-width="0.9" opacity="0.26" stroke-linecap="round" />
+      <circle cx="968" cy="76" r="1.1" fill="#fff" opacity="0.46" />
+
+      <!-- star field -->
+      <circle cx="48" cy="30" r="1.1" fill="#fff" opacity="0.9" />
+      <circle cx="108" cy="78" r="0.85" fill="#fff" opacity="0.7" />
+      <circle cx="168" cy="44" r="1" fill="#fff" opacity="0.86" />
+      <circle cx="298" cy="112" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="358" cy="34" r="0.95" fill="#fff" opacity="0.76" />
+      <circle cx="488" cy="82" r="1.2" fill="#fff" opacity="0.9" />
+      <circle cx="568" cy="142" r="0.65" fill="#fff" opacity="0.56" />
+      <circle cx="668" cy="36" r="0.95" fill="#fff" opacity="0.8" />
+      <circle cx="768" cy="152" r="0.85" fill="#fff" opacity="0.66" />
+      <circle cx="868" cy="28" r="1.05" fill="#fff" opacity="0.86" />
+      <circle cx="968" cy="128" r="0.75" fill="#fff" opacity="0.7" />
+      <circle cx="88" cy="178" r="0.95" fill="#fff" opacity="0.76" />
+      <circle cx="248" cy="218" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="388" cy="172" r="1.05" fill="#fff" opacity="0.86" />
+      <circle cx="528" cy="238" r="0.85" fill="#fff" opacity="0.7" />
+      <circle cx="648" cy="198" r="1.15" fill="#fff" opacity="0.8" />
+      <circle cx="768" cy="288" r="0.65" fill="#fff" opacity="0.56" />
+      <circle cx="888" cy="248" r="0.95" fill="#fff" opacity="0.76" />
+      <circle cx="988" cy="298" r="0.85" fill="#fff" opacity="0.66" />
+      <circle cx="38" cy="298" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="158" cy="318" r="1.05" fill="#fff" opacity="0.8" />
+      <circle cx="438" cy="308" r="0.65" fill="#fff" opacity="0.5" />
+      <circle cx="568" cy="328" r="0.95" fill="#fff" opacity="0.7" />
+      <circle cx="928" cy="268" r="0.85" fill="#fff" opacity="0.74" />
+      <circle cx="288" cy="62" r="0.55" fill="#fff" opacity="0.56" />
+      <circle cx="448" cy="132" r="0.65" fill="#fff" opacity="0.5" />
+      <circle cx="708" cy="102" r="0.75" fill="#fff" opacity="0.6" />
+      <circle cx="828" cy="182" r="0.55" fill="#fff" opacity="0.46" />
+      <circle cx="988" cy="228" r="0.65" fill="#fff" opacity="0.5" />
+      <circle cx="348" cy="248" r="0.55" fill="#fff" opacity="0.46" />
+      <circle cx="648" cy="72" r="0.55" fill="#fff" opacity="0.5" />
+      <circle cx="798" cy="32" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="118" cy="112" r="0.45" fill="#fff" opacity="0.46" />
+      <circle cx="918" cy="102" r="0.55" fill="#fff" opacity="0.5" />
+      <circle cx="538" cy="162" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="188" cy="152" r="0.55" fill="#fff" opacity="0.5" />
+      <circle cx="708" cy="232" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="848" cy="112" r="0.45" fill="#fff" opacity="0.42" />
+      <circle cx="148" cy="68" r="0.45" fill="#fff" opacity="0.48" />
+      <circle cx="398" cy="48" r="0.55" fill="#fff" opacity="0.52" />
+      <circle cx="668" cy="132" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="968" cy="182" r="0.55" fill="#fff" opacity="0.46" />
+      <circle cx="268" cy="288" r="0.45" fill="#fff" opacity="0.4" />
+      <circle cx="488" cy="198" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="748" cy="218" r="0.55" fill="#fff" opacity="0.44" />
+      <circle cx="618" cy="108" r="0.45" fill="#fff" opacity="0.38" />
+      <circle cx="458" cy="82" r="0.4" fill="#a0aec0" opacity="0.32" />
+      <circle cx="818" cy="258" r="0.4" fill="#a0aec0" opacity="0.28" />
+      <circle cx="58" cy="228" r="0.4" fill="#a0aec0" opacity="0.3" />
+      <circle cx="998" cy="58" r="0.4" fill="#a0aec0" opacity="0.28" />
+      </svg>
+      </div>
+    </div>
+    <div class="site-hero__bokeh-grain" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
+        <filter id="cai-grain-coarse" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="6" stitchTiles="stitch" result="noise" />
+          <feColorMatrix type="saturate" values="0" in="noise" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#cai-grain-coarse)" />
+      </svg>
+    </div>
+    <div class="site-hero__bokeh-grain site-hero__bokeh-grain--fine" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
+        <filter id="cai-grain-fine" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="1.75" numOctaves="5" stitchTiles="stitch" result="noise" />
+          <feColorMatrix type="saturate" values="0" in="noise" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#cai-grain-fine)" />
+      </svg>
+    </div>
   </div>
-  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="hero-grain-ims-fine" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.25" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#hero-grain-ims-fine)" />
+
+  <div class="site-hero__bokeh-neural" aria-hidden="true">
+    <svg class="site-hero__bokeh-neural-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--1" x1="720" y1="190" x2="360" y2="100" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--2" x1="720" y1="190" x2="1080" y2="95" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--3" x1="720" y1="190" x2="170" y2="190" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--4" x1="720" y1="190" x2="1270" y2="180" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--5" x1="720" y1="190" x2="490" y2="245" />
+      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--6" x1="720" y1="190" x2="950" y2="235" />
     </svg>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--2"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--4"></span>
+    <span class="site-hero__bokeh-neural-node site-hero__bokeh-neural-node--6"></span>
   </div>
-  <div class="site-hero__vignette" aria-hidden="true"></div>
+  <div class="site-hero__bokeh-vignette" aria-hidden="true"></div>
   <div class="site-hero__content">
     <p class="site-hero__headline">Never miss a lead again.<br />AI that works while you sleep.</p>
         <div class="site-hero__sub">

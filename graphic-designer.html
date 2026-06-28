@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Graphic Designer Santa Rosa | Donohue Design" />
   <meta name="twitter:description" content="Professional graphic design for Santa Rosa and Sonoma County businesses. Logos, brochures, presentations, and email design that match your brand and your website." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
-  <link rel="stylesheet" href="styles.css?v=hero-wide-headline-hm2-herohue1-h10b" />
+  <link rel="stylesheet" href="styles.css?v=hero-wide-headline-hm2-herohue1-h10b-meshmatch1" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -315,10 +315,27 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat" style="padding-left:40px;padding-right:40px;">
-  <div class="site-hero__glass-art" aria-hidden="true">
-    <img src="logo-design-hero.svg?v=5" width="1440" height="900" alt="" decoding="async" fetchpriority="high" />
+<section class="site-hero site-hero--mesh-grain" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+  <div class="site-hero__mesh" aria-hidden="true"></div>
+  <div class="site-hero__grain" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <filter id="hero-grain-gd" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.35" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#hero-grain-gd)" />
+    </svg>
   </div>
+  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <filter id="hero-grain-gd-fine" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.25" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#hero-grain-gd-fine)" />
+    </svg>
+  </div>
+  <div class="site-hero__vignette" aria-hidden="true"></div>
   <div class="site-hero__content">
     <p class="site-hero__headline">A brand as strong<br />as your business.</p>
         <div class="site-hero__sub">
