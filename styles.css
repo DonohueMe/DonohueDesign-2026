@@ -2675,7 +2675,7 @@ img, svg { display: block; }
     linear-gradient(168deg, #000000 0%, #03060c 38%, #061018 72%, #0a1628 100%);
   margin-top: 0;
   padding-top: calc(var(--header-h) + var(--hero-pad-top));
-  padding-bottom: calc(var(--hero-pad-bottom) + 150px);
+  padding-bottom: calc(var(--hero-pad-bottom) + 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3141,6 +3141,18 @@ img, svg { display: block; }
   position: relative;
   z-index: 2;
 }
+/* Contact: vary only between dark blue and black (no full-spectrum hue cycle) */
+.site-hero--cosmic {
+  animation: none;
+}
+.site-hero--cosmic::before,
+.site-hero--cosmic .site-hero__cosmic-scene {
+  animation: cosmic-blue-black 6s ease-in-out infinite alternate;
+}
+@keyframes cosmic-blue-black {
+  0% { opacity: 1; }
+  100% { opacity: 0.12; }
+}
 /* Contact — rotate the star field as a centered square large enough that its
    inscribed circle always covers the hero, so no empty corners appear while
    rotating (stars stay everywhere, same size/shape) */
@@ -3476,7 +3488,7 @@ img, svg { display: block; }
   overflow: hidden;
   margin-top: 0;
   padding-top: calc(var(--header-h) + var(--hero-pad-top));
-  padding-bottom: calc(var(--hero-pad-bottom) + 150px);
+  padding-bottom: calc(var(--hero-pad-bottom) + 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
