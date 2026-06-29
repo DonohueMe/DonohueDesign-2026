@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Design | Donohue Design</title>
   <meta name="description" content="Professional email design for Santa Rosa and Sonoma County businesses. Campaign templates and newsletters that look sharp in every inbox and drive clicks." />
-  <link rel="canonical" href="https://donohuedesign.com/email-design.html" />
+  <link rel="canonical" href="https://donohuedesign.com/email-design" />
   <link rel="icon" href="ddc-logo-sm@4x.png" type="image/png" />
   <link rel="apple-touch-icon" href="ddc-logo@4x.png" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Donohue Design" />
   <meta property="og:title" content="Email Design | Donohue Design" />
   <meta property="og:description" content="Professional email design for Santa Rosa and Sonoma County businesses. Campaign templates and newsletters that look sharp in every inbox and drive clicks." />
-  <meta property="og:url" content="https://donohuedesign.com/email-design.html" />
+  <meta property="og:url" content="https://donohuedesign.com/email-design" />
   <meta property="og:image" content="https://donohuedesign.com/ddc-logo@4x.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Email Design | Donohue Design" />
@@ -56,25 +56,25 @@
       },
       {
         "@type": "WebPage",
-        "@id": "https://donohuedesign.com/email-design.html#webpage",
-        "url": "https://donohuedesign.com/email-design.html",
+        "@id": "https://donohuedesign.com/email-design#webpage",
+        "url": "https://donohuedesign.com/email-design",
         "name": "Email Design | Donohue Design",
         "description": "Professional email design for Santa Rosa and Sonoma County businesses.",
         "isPartOf": { "@id": "https://donohuedesign.com/#website" },
         "about": { "@id": "https://donohuedesign.com/#organization" },
-        "breadcrumb": { "@id": "https://donohuedesign.com/email-design.html#breadcrumb" }
+        "breadcrumb": { "@id": "https://donohuedesign.com/email-design#breadcrumb" }
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://donohuedesign.com/email-design.html#breadcrumb",
+        "@id": "https://donohuedesign.com/email-design#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://donohuedesign.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Email Design", "item": "https://donohuedesign.com/email-design.html" }
+          { "@type": "ListItem", "position": 2, "name": "Email Design", "item": "https://donohuedesign.com/email-design" }
         ]
       },
       {
         "@type": "Service",
-        "@id": "https://donohuedesign.com/email-design.html#service",
+        "@id": "https://donohuedesign.com/email-design#service",
         "name": "Email Design",
         "description": "Professional email design for Santa Rosa and Sonoma County businesses.",
         "serviceType": "Graphic Design",
@@ -100,7 +100,7 @@
   x-init="const range=140;const heroFade=72;const heroFadeLead=172;const sync=()=>{const y=window.scrollY;const p=Math.min(1,y/range);$el.style.setProperty('--header-scroll',p);const hero=document.querySelector('.site-hero');let bd=0;if(hero){const end=hero.offsetTop+hero.offsetHeight;bd=Math.min(1,Math.max(0,(y-(end-heroFadeLead))/heroFade));}else{bd=p;}$el.style.setProperty('--header-backdrop',bd);scrolled=p>0.85};sync();window.addEventListener('scroll',sync,{passive:true});window.addEventListener('resize',sync,{passive:true})">
   <div class="site-header-shell">
 
-    <a href="index.html" class="site-header-logo">
+    <a href="/" class="site-header-logo" aria-label="Donohue Design home">
       <img src="ddc-logo@4x.png?v=2" alt="Donohue Design" class="site-header-logo__full" />
       <img src="ddc-logo-sm@4x.png?v=2" alt="Donohue Design" class="site-header-logo__sm" />
     </a>
@@ -118,10 +118,10 @@
             </span>
           </button>
         </div>
-        <a href="case-studies.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Case Studies</a>
-        <a href="pricing.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Pricing</a>
-        <a href="about.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">About</a>
-        <a href="contact.html" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Contact</a>
+        <a href="/case-studies" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Case Studies</a>
+        <a href="/pricing" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Pricing</a>
+        <a href="/about" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">About</a>
+        <a href="/contact" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Contact</a>
       </nav>
 
       <button type="button" class="site-header-menu-btn md:hidden flex" aria-label="Open menu" :aria-expanded="menuOpen" @click="menuOpen=!menuOpen">
@@ -140,29 +140,29 @@
         <div class="site-header-megamenu__col">
           <div class="site-header-megamenu__group">
             <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="22" height="14" rx="1.5"/><path d="M3 20h22"/><path d="M11 24h6M14 20v4"/><rect x="22" y="14" width="8" height="14" rx="1.5"/><path d="M25.5 26.5h1"/></svg><span>Website Designer</span></p>
-            <a href="website-design-strategy.html" class="site-header-megamenu__link">Website Design &amp; Strategy</a>
-            <a href="smart-websites.html" class="site-header-megamenu__link">Smart Websites</a>
-            <a href="website-development.html" class="site-header-megamenu__link">Website Development</a>
+            <a href="/website-design-strategy" class="site-header-megamenu__link">Website Design &amp; Strategy</a>
+            <a href="/smart-websites" class="site-header-megamenu__link">Smart Websites</a>
+            <a href="/website-development" class="site-header-megamenu__link">Website Development</a>
           </div>
           <div class="site-header-megamenu__group">
             <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4a13 13 0 1 0 0 26c1.7 0 2.8-1.1 2.8-2.5 0-.65-.25-1.25-.7-1.7-.45-.45-.7-1.05-.7-1.7 0-1.4 1.1-2.5 2.5-2.5h2.6A5 5 0 0 0 28.5 16 13 13 0 0 0 17 4z"/><circle cx="10.5" cy="14" r="1.4"/><circle cx="15" cy="9" r="1.4"/><circle cx="21" cy="10" r="1.4"/><circle cx="24.5" cy="15" r="1.4"/></svg><span>Graphic Designer</span></p>
-            <a href="logo-design.html" class="site-header-megamenu__link">Logo Design</a>
-            <a href="brochure-flyer-design.html" class="site-header-megamenu__link">Brochure &amp; Flyer Design</a>
-            <a href="presentation-design.html" class="site-header-megamenu__link">Presentation Design</a>
-            <a href="email-design.html" class="site-header-megamenu__link" aria-current="page">Email Design</a>
+            <a href="/logo-design" class="site-header-megamenu__link">Logo Design</a>
+            <a href="/brochure-flyer-design" class="site-header-megamenu__link">Brochure &amp; Flyer Design</a>
+            <a href="/presentation-design" class="site-header-megamenu__link">Presentation Design</a>
+            <a href="/email-design" class="site-header-megamenu__link" aria-current="page">Email Design</a>
           </div>
         </div>
         <div class="site-header-megamenu__col">
           <div class="site-header-megamenu__group">
             <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 26 13 17 18 22 29 9"/><path d="M22 9h7v7"/><path d="M4 29h26"/></svg><span>Marketing Consultant</span></p>
-            <a href="local-seo.html" class="site-header-megamenu__link">Local SEO (Google My Business)</a>
-            <a href="email-marketing.html" class="site-header-megamenu__link">Email Marketing</a>
-            <a href="lead-generation.html" class="site-header-megamenu__link">Lead Generation</a>
+            <a href="/local-seo" class="site-header-megamenu__link">Local SEO (Google My Business)</a>
+            <a href="/email-marketing" class="site-header-megamenu__link">Email Marketing</a>
+            <a href="/lead-generation" class="site-header-megamenu__link">Lead Generation</a>
           </div>
           <div class="site-header-megamenu__group">
             <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4v3.5M17 26.5V31"/><path d="M6.5 10 9 12.5M25 25l2.5 2.5"/><path d="M4 17h3.5M26.5 17H31"/><path d="M6.5 24 9 21.5M25 9l2.5-2.5"/><rect x="10" y="13" width="14" height="12" rx="3"/><circle cx="14" cy="18.5" r="1.2"/><circle cx="20" cy="18.5" r="1.2"/><path d="M14.5 22h5"/></svg><span>Internet Marketing Service</span></p>
-            <a href="ai-receptionist.html" class="site-header-megamenu__link">AI Receptionist</a>
-            <a href="conversational-ai-agent.html" class="site-header-megamenu__link">Conversational AI Agent</a>
+            <a href="/ai-receptionist" class="site-header-megamenu__link">AI Receptionist</a>
+            <a href="/conversational-ai-agent" class="site-header-megamenu__link">Conversational AI Agent</a>
           </div>
         </div>
       </div>
@@ -192,9 +192,9 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
-          <a href="website-design-strategy.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Website Design &amp; Strategy</a>
-          <a href="smart-websites.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Smart Websites</a>
-          <a href="website-development.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Website Development</a>
+          <a href="/website-design-strategy" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Website Design &amp; Strategy</a>
+          <a href="/smart-websites" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Smart Websites</a>
+          <a href="/website-development" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Website Development</a>
         </div>
       </div>
 
@@ -204,10 +204,10 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
-          <a href="logo-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Logo Design</a>
-          <a href="brochure-flyer-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Brochure &amp; Flyer Design</a>
-          <a href="presentation-design.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Presentation Design</a>
-          <a href="email-design.html" @click="menuOpen=false" aria-current="page" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Design</a>
+          <a href="/logo-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Logo Design</a>
+          <a href="/brochure-flyer-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Brochure &amp; Flyer Design</a>
+          <a href="/presentation-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Presentation Design</a>
+          <a href="/email-design" @click="menuOpen=false" aria-current="page" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Design</a>
         </div>
       </div>
 
@@ -217,9 +217,9 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
-          <a href="local-seo.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Local SEO (Google My Business)</a>
-          <a href="email-marketing.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Marketing</a>
-          <a href="lead-generation.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Lead Generation</a>
+          <a href="/local-seo" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Local SEO (Google My Business)</a>
+          <a href="/email-marketing" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Marketing</a>
+          <a href="/lead-generation" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Lead Generation</a>
         </div>
       </div>
 
@@ -229,31 +229,29 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
-          <a href="ai-receptionist.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">AI Receptionist</a>
-          <a href="conversational-ai-agent.html" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Conversational AI Agent</a>
+          <a href="/ai-receptionist" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">AI Receptionist</a>
+          <a href="/conversational-ai-agent" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Conversational AI Agent</a>
         </div>
       </div>
 
       <div style="height:8px;"></div>
-      <a href="case-studies.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Case Studies</a>
-      <a href="pricing.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Pricing</a>
-      <a href="about.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">About</a>
-      <a href="contact.html" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Contact</a>
+      <a href="/case-studies" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Case Studies</a>
+      <a href="/pricing" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Pricing</a>
+      <a href="/about" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">About</a>
+      <a href="/contact" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Contact</a>
       </nav>
     </div>
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
 <section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat site-hero--email-design" style="padding-left:40px;padding-right:40px;">
-  <div class="site-hero__glass-art" aria-hidden="true">
-    <img src="images/email-design-hero.png?v=2" width="1400" height="668" alt="" decoding="async" fetchpriority="high" />
-  </div>
+  <div class="site-hero__glass-art" aria-hidden="true"></div>
   <div class="site-hero__content">
     <p class="site-hero__headline">Built for the inbox.<br />Designed to convert.</p>
         <div class="site-hero__sub">
             <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:21px 0 24px;" />
       <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-      <a href="contact.html" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+      <a href="/contact" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
     </div>
   </div>
 </section>
@@ -293,7 +291,7 @@
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Email works best as part of a consistent marketing system — website, social, print, and automation working toward the same message. I handle the design layer so your campaigns look cohesive from the inbox to the page people land on afterward.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Whether you need a single launch email or a template library your team can reuse for years, we'll build something you're proud to send.</p>
 
-      <a href="contact.html" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Start with a free call</a>
+      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Start with a free call</a>
     </section>
 
   </main>
@@ -308,9 +306,9 @@
       </svg>
       <h4 style="font-weight:700;margin:10px 0 10px;line-height:1.2;">Website Design</h4>
       <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.5;">Strategy-first websites built to generate leads, earn trust, and turn visitors into customers.</p>
-      <a href="website-design-strategy.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Website Design &amp; Strategy</a>
-      <a href="smart-websites.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Smart Websites</a>
-      <a href="website-development.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Website development</a>
+      <a href="/website-design-strategy" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Website Design &amp; Strategy</a>
+      <a href="/smart-websites" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Smart Websites</a>
+      <a href="/website-development" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Website development</a>
     </div>
 
     <div style="background:#fff;border-radius:18px;padding:20px 18px 24px;margin-bottom:40px;border:1px solid #e5e5ea;">
@@ -319,9 +317,9 @@
       </svg>
       <h4 style="font-weight:700;margin:10px 0 10px;line-height:1.2;">Marketing Consultant</h4>
       <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.5;">Local SEO, email campaigns, and lead generation that put your business in front of the right people at the right time.</p>
-      <a href="local-seo.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Local SEO (Google My Business)</a>
-      <a href="email-marketing.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Email Marketing</a>
-      <a href="lead-generation.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Lead Generation</a>
+      <a href="/local-seo" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Local SEO (Google My Business)</a>
+      <a href="/email-marketing" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Email Marketing</a>
+      <a href="/lead-generation" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Lead Generation</a>
     </div>
 
     <div style="background:#fff;border-radius:18px;padding:20px 18px 24px;margin-bottom:40px;border:1px solid #e5e5ea;">
@@ -330,13 +328,13 @@
       </svg>
       <h4 style="font-weight:700;margin:10px 0 10px;line-height:1.2;">Graphic Design</h4>
       <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.5;">Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.</p>
-      <a href="logo-design.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Logo Design</a>
-      <a href="brochure-flyer-design.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Brochure &amp; Flyer Design</a>
-      <a href="presentation-design.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Presentation Design</a>
-      <a href="email-design.html" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Email Design</a>
+      <a href="/logo-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Logo Design</a>
+      <a href="/brochure-flyer-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Brochure &amp; Flyer Design</a>
+      <a href="/presentation-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Presentation Design</a>
+      <a href="/email-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Email Design</a>
     </div>
 
-    <a href="contact.html" style="display:block;background:#1d1d1f;color:#fff;font-size:14px;font-weight:600;letter-spacing:-0.01em;padding:12px 24px;border-radius:40px;text-decoration:none;text-align:center;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Start with a free call</a>
+    <a href="/contact" style="display:block;background:#1d1d1f;color:#fff;font-size:14px;font-weight:600;letter-spacing:-0.01em;padding:12px 24px;border-radius:40px;text-decoration:none;text-align:center;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Start with a free call</a>
 
     </div>
   </aside>
@@ -364,14 +362,14 @@
         <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0;">&copy;2026 Donohue Design</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="website-designer.html">Website Designer</a>
-        <a href="marketing-consultant.html">Marketing Consultant</a>
-        <a href="graphic-designer.html">Graphic Designer</a>
-        <a href="internet-marketing-service.html">Internet Marketing Service</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="/website-designer">Website Designer</a>
+        <a href="/marketing-consultant">Marketing Consultant</a>
+        <a href="/graphic-designer">Graphic Designer</a>
+        <a href="/internet-marketing-service">Internet Marketing Service</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
       </nav>
     </div>
   </div>
