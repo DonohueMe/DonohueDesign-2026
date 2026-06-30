@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=ai-bokeh-v3-nav1-hm2-herohue1-h10b" />
+  <link rel="stylesheet" href="styles.css?v=anim-slow33" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -109,7 +109,7 @@
     <div class="site-header-bar">
       <nav class="site-header-nav md:flex hidden">
         <div class="site-header-services" @mouseenter="showServ()">
-          <button type="button" class="pill-link is-active-section" style="border:none;cursor:pointer;font-family:var(--font-sf);padding:6px 14px;" :style="servOpen?'background:var(--clr-surf)':''">
+          <button type="button" class="pill-link is-active-section" :class="{ 'is-open': servOpen }">
             <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
               Services
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none" :style="servOpen?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;">

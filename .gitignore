@@ -1,0 +1,10 @@
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+
+# Private local-only notes (never deploy)
+notes/
+
+# Worker secrets (never commit real keys)
+workers/contact-worker/.dev.vars
+**/.dev.vars
