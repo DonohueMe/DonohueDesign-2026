@@ -24,19 +24,20 @@
   --hero-pad-top: 80px;
   --hero-pad-bottom: 50px;
   --post-hero-pad-top: var(--sidebar-card-gap);
+  --editorial-pad-bottom: 60px;
   --footer-step-h: 6px;
   --footer-pad-y: 48px;
-  --footer-margin-top: 75px;
+  --footer-margin-top: 0;
   --sidebar-sticky-top: calc(var(--header-top) + var(--header-row-gap) + var(--header-bar-h) + var(--header-band-inset) + var(--sidebar-card-gap));
   --sidebar-sticky-bottom: 24px;
   --sidebar-sticky-max: calc(100vh - var(--sidebar-sticky-top) - var(--sidebar-sticky-bottom));
-  --sidebar-layout-gap: 52px;
+  --sidebar-layout-gap: 100px;
   --sidebar-card-gap: 40px;
   --tile-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
   --promo-shadow-inset: 18px;
   --promo-hover-shadow: 0 14px 32px -14px rgba(0, 0, 0, 0.108), 0 6px 14px -10px rgba(0, 0, 0, 0.054);
   --body-p-gap: 18px;
-  --h1-body-gap: 18px;
+  --h1-body-gap: 25px;
 }
 @media (max-width: 839px) { :root { --side-pad: 16px; } }
 
@@ -4108,20 +4109,23 @@ img, svg { display: block; }
   letter-spacing: -0.04em;
   line-height: 1.36;
   color: #1d1d1f;
-  margin: 0;
+  margin: 0 0 var(--h1-body-gap);
 }
 .body-prose section > .page-h1:first-child {
   margin-top: 0;
 }
 .body-prose section > h1,
 .body-prose > h1,
-.body-prose > .page-h1 {
+.body-prose > .page-h1,
+.site-layout-main > section > h1:first-child,
+.pricing-page > .page-h1,
+.contact-page > h1:first-child {
   margin-bottom: var(--h1-body-gap) !important;
 }
 
 /* Hero → h1 gap: --hero-pad-bottom + --post-hero-pad-top (40px) */
 .bio-intro {
-  padding: var(--post-hero-pad-top) 0 40px;
+  padding: var(--post-hero-pad-top) 0 20px;
   background: #fff;
 }
 .bio-intro .body-prose h1 {
@@ -4851,6 +4855,21 @@ img, svg { display: block; }
   line-height: 1.55;
   color: var(--clr-sub);
 }
+.service-teaser__body > ul {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--clr-sub);
+  margin: 0 0 12px;
+  padding-left: 1.25em;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.service-teaser__body > ul li {
+  margin-bottom: 6px;
+}
+.service-teaser__body > ul li:last-child {
+  margin-bottom: 0;
+}
 .service-teaser__more {
   display: inline-block;
   font-size: 15px;
@@ -4865,7 +4884,7 @@ img, svg { display: block; }
 
 /* Editorial page wrapper (display from .site-layout-with-sidebar) */
 .editorial-wrap {
-  padding: var(--post-hero-pad-top) var(--side-pad) 80px;
+  padding: var(--post-hero-pad-top) var(--side-pad) var(--editorial-pad-bottom);
   max-width: var(--page-max);
   margin: 0 auto;
 }
