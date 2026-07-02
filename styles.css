@@ -8,6 +8,7 @@
   --clr-border: #e5e5ea;
   --clr-surf:   #f2f2f7;
   --side-pad:   40px;
+  --home-outer-gap: 48px;
   --page-max:   1280px;
   --header-top: 16px;
   --header-row-gap: 20px;
@@ -3918,6 +3919,7 @@ img, svg { display: block; }
 /* Tile section outer wrapper */
 @media (min-width: 840px) {
   .tiles-section { padding-top: var(--sidebar-card-gap) !important; }
+  .tiles-section--home { padding-top: var(--home-outer-gap) !important; }
 }
 
 .tile-inner { display: flex; flex-direction: column; gap: 24px; }
@@ -4027,6 +4029,32 @@ img, svg { display: block; }
 }
 
 /* Reviews: 1-up @ mobile, 2-up @840px, 3-up @1400px */
+.home-page-inner {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0 var(--side-pad);
+}
+.home-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  width: 100%;
+  margin: 0;
+}
+.home-divider--top {
+  margin-top: calc(var(--home-outer-gap) * 2);
+  margin-bottom: 48px;
+}
+.home-divider--bottom {
+  margin-top: 32px;
+  margin-bottom: var(--home-outer-gap);
+}
+.reviews-section {
+  background: #fff;
+}
+.tiles-section--home {
+  background: #fff;
+  padding-top: var(--home-outer-gap) !important;
+}
 .reviews-block { min-width: 0; }
 .reviews-grid {
   display: grid;
@@ -4125,7 +4153,7 @@ img, svg { display: block; }
 
 /* Hero → h1 gap: --hero-pad-bottom + --post-hero-pad-top (40px) */
 .bio-intro {
-  padding: var(--post-hero-pad-top) 0 20px;
+  padding: var(--post-hero-pad-top) 0 0;
   background: #fff;
 }
 .bio-intro .body-prose h1 {
@@ -4145,11 +4173,26 @@ img, svg { display: block; }
   margin: 0;
   text-align: left;
 }
-.bio-intro .body-prose hr {
-  border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.18);
-  width: 80%;
-  margin: calc(64px * 2 / 3) auto 0;
+.bio-intro .body-prose > :not(:first-child):not(hr) {
+  margin-top: 18px;
+}
+.bio-intro .body-prose > ul {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #3d3d3f;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 1.25em;
+  list-style-type: disc;
+  list-style-position: outside;
+  text-align: left;
+}
+.bio-intro .body-prose > ul > li + li {
+  margin-top: 8px;
+}
+.bio-intro .body-prose > .bio-intro__tagline {
+  display: block;
+  margin-top: 18px;
 }
 
 .about-intro {
