@@ -1,3 +1,4 @@
+# Strip .html — canonical URLs have no extension
 /about.html /about 301
 /contact.html /contact 301
 /pricing.html /pricing 301
@@ -19,3 +20,25 @@
 /ai-receptionist.html /ai-receptionist 301
 /conversational-ai-agent.html /conversational-ai-agent 301
 /index.html / 301
+
+# Trailing slashes — 301 to canonical (no slash)
+/about/ /about 301
+/contact/ /contact 301
+/pricing/ /pricing 301
+/case-studies/ /case-studies 301
+/website-designer/ /website-designer 301
+/website-design-strategy/ /website-design-strategy 301
+/smart-websites/ /smart-websites 301
+/website-development/ /website-development 301
+/marketing-consultant/ /marketing-consultant 301
+/local-seo/ /local-seo 301
+/email-marketing/ /email-marketing 301
+/lead-generation/ /lead-generation 301
+/graphic-designer/ /graphic-designer 301
+/logo-design/ /logo-design 301
+/brochure-flyer-design/ /brochure-flyer-design 301
+/presentation-design/ /presentation-design 301
+/email-design/ /email-design 301
+/internet-marketing-service/ /internet-marketing-service 301
+/ai-receptionist/ /ai-receptionist 301
+/conversational-ai-agent/ /conversational-ai-agent 301
