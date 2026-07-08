@@ -6,13 +6,6 @@
     "enabled": true
   },
   "assets": {
-    "directory": ".",
-    "exclude": [
-      "workers/**",
-      "notes/**",
-      ".git/**",
-      "**/node_modules/**",
-      ".wrangler/**"
-    ]
+    "directory": "."
   }
 }
