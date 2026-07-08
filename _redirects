@@ -13,7 +13,9 @@
 /lead-generation.html /lead-generation 301
 /graphic-designer.html /graphic-designer 301
 /logo-design.html /logo-design 301
-/brochure-flyer-design.html /brochure-flyer-design 301
+/brochure-flyer-design.html /brochure-design 301
+/brochure-design.html /brochure-design 301
+/flyer-design.html /flyer-design 301
 /presentation-design.html /presentation-design 301
 /email-design.html /email-design 301
 /internet-marketing-service.html /internet-marketing-service 301
@@ -36,7 +38,10 @@
 /lead-generation/ /lead-generation 301
 /graphic-designer/ /graphic-designer 301
 /logo-design/ /logo-design 301
-/brochure-flyer-design/ /brochure-flyer-design 301
+/brochure-flyer-design/ /brochure-design 301
+/brochure-flyer-design /brochure-design 301
+/brochure-design/ /brochure-design 301
+/flyer-design/ /flyer-design 301
 /presentation-design/ /presentation-design 301
 /email-design/ /email-design 301
 /internet-marketing-service/ /internet-marketing-service 301

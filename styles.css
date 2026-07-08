@@ -25,7 +25,7 @@
   --hero-pad-top: 80px;
   --hero-pad-bottom: 50px;
   --post-hero-pad-top: var(--sidebar-card-gap);
-  --editorial-pad-bottom: 60px;
+  --editorial-pad-bottom: 100px;
   --footer-step-h: 6px;
   --footer-pad-y: 48px;
   --footer-margin-top: 0;
@@ -4495,7 +4495,7 @@ img, svg { display: block; }
 
 .home-map-section {
   margin: 70px 0 0;
-  padding-bottom: 10px;
+  padding-bottom: var(--editorial-pad-bottom);
   background: #fff;
 }
 .home-map-section__container {

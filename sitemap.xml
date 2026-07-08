@@ -91,7 +91,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://donohuedesign.com/brochure-flyer-design</loc>
+    <loc>https://donohuedesign.com/brochure-design</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://donohuedesign.com/flyer-design</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
