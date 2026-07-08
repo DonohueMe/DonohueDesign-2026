@@ -7,5 +7,9 @@
   },
   "assets": {
     "directory": "."
-  }
+  },
+  "routes": [
+    { "pattern": "donohuedesign.com", "custom_domain": true },
+    { "pattern": "www.donohuedesign.com", "custom_domain": true }
+  ]
 }
