@@ -224,7 +224,8 @@
           <div class="site-header-megamenu__group">
             <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4a13 13 0 1 0 0 26c1.7 0 2.8-1.1 2.8-2.5 0-.65-.25-1.25-.7-1.7-.45-.45-.7-1.05-.7-1.7 0-1.4 1.1-2.5 2.5-2.5h2.6A5 5 0 0 0 28.5 16 13 13 0 0 0 17 4z"/><circle cx="10.5" cy="14" r="1.4"/><circle cx="15" cy="9" r="1.4"/><circle cx="21" cy="10" r="1.4"/><circle cx="24.5" cy="15" r="1.4"/></svg><span>Graphic Designer</span></p>
             <a href="/logo-design" class="site-header-megamenu__link">Logo Design</a>
-            <a href="/brochure-flyer-design" class="site-header-megamenu__link">Brochure &amp; Flyer Design</a>
+            <a href="/brochure-design" class="site-header-megamenu__link">Brochure Design</a>
+            <a href="/flyer-design" class="site-header-megamenu__link">Flyer Design</a>
             <a href="/presentation-design" class="site-header-megamenu__link">Presentation Design</a>
             <a href="/email-design" class="site-header-megamenu__link">Email Design</a>
           </div>
@@ -282,7 +283,8 @@
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
           <a href="/logo-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Logo Design</a>
-          <a href="/brochure-flyer-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Brochure &amp; Flyer Design</a>
+          <a href="/brochure-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Brochure Design</a>
+          <a href="/flyer-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Flyer Design</a>
           <a href="/presentation-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Presentation Design</a>
           <a href="/email-design" @click="menuOpen=false" style="display:block;font-size:16px;color:var(--clr-sub);text-decoration:none;padding:9px 0 9px 20px;">Email Design</a>
         </div>
@@ -389,19 +391,37 @@
 
       <article class="service-teaser">
         <div class="service-teaser__body">
-          <h3 class="service-teaser__title"><a href="/brochure-flyer-design">Brochure &amp; flyer design</a></h3>
-          <p>A good brochure does one thing well. It puts the right info in someone's hands at the right moment — a trade show, a local event near Railroad Square, a stack on your front counter. These are touchpoints that earn their keep long after you print them.</p>
-          <p>I design every brochure and flyer from scratch. No templates. Your piece starts with your goals, your audience, and what you need the reader to do next. That's the strategy part most people skip — a flyer that looks nice but buries the phone number isn't doing its job.</p>
-          <p>Here's what brochure and flyer design typically covers:</p>
+          <h3 class="service-teaser__title"><a href="/brochure-design">Brochure design</a></h3>
+          <p>A good brochure does one thing well. It puts the right info in someone's hands at the right moment — a trade show, a stack on your front counter, a welcome packet for new clients. These are touchpoints that earn their keep long after you print them.</p>
+          <p>Brochures do heavier lifting than a single sheet. They fold. They hold more. A tri-fold sitting in your lobby is a quiet salesperson working while you sleep. I design every brochure from scratch — no templates. Your piece starts with your goals, your audience, and what you need the reader to do next.</p>
+          <p>Here's what brochure design typically covers:</p>
           <ul>
             <li>Layout and visual hierarchy built around one clear call to action</li>
             <li>Copy editing and content flow so nothing feels cluttered</li>
             <li>Print-ready files in the exact specs your printer needs</li>
             <li>Digital versions sized for email or social sharing</li>
           </ul>
-          <p>I've spent close to three decades designing print and digital materials for clients across Marin, San Francisco, the East Bay, and the Peninsula. Santa Rosa businesses hand out a lot of paper — tasting rooms, farmers markets, downtown storefronts — and I've seen what works and what ends up in the recycling bin. The difference is almost always structure, not decoration.</p>
-          <p>And the design has to match your brand: colors, fonts, tone. Every piece you put out there either builds trust or chips away at it. Your brochure and flyer design page walks through my process in detail.</p>
-          <a href="/brochure-flyer-design" class="service-teaser__more">Learn about brochure &amp; flyer design<span aria-hidden="true"> →</span></a>
+          <p>I've spent close to three decades designing print materials for clients across Marin, San Francisco, the East Bay, and the Peninsula. Santa Rosa businesses — tasting rooms, medical offices, real estate agents — rely on brochures that feel polished and last longer than a quick handout.</p>
+          <p>And the design has to match your brand: colors, fonts, tone. Every piece you put out there either builds trust or chips away at it. Your brochure design page walks through my process in detail.</p>
+          <a href="/brochure-design" class="service-teaser__more">Learn about brochure design<span aria-hidden="true"> →</span></a>
+        </div>
+      </article>
+
+      <article class="service-teaser">
+        <div class="service-teaser__body">
+          <h3 class="service-teaser__title"><a href="/flyer-design">Flyer design</a></h3>
+          <p>A flyer is a single sheet built for speed — handed out at a farmers market near Railroad Square, tacked to a community board, slipped under a windshield wiper. One message, one action, done. Grand opening. Seasonal sale. Weekend event. Flyers work when you need volume and a tight deadline.</p>
+          <p>That's the strategy part most people skip — a flyer that looks nice but buries the phone number isn't doing its job. I design every flyer from scratch with one clear call to action front and center. No templates. No cluttered layouts fighting for attention.</p>
+          <p>Here's what flyer design typically covers:</p>
+          <ul>
+            <li>Bold visual hierarchy — headline, offer, call to action, in that order</li>
+            <li>Copy tightened so every word earns its keep on a single page</li>
+            <li>Print-ready files sized for your exact run quantity and paper stock</li>
+            <li>Digital versions for email blast or social sharing</li>
+          </ul>
+          <p>Santa Rosa businesses hand out a lot of paper — tasting rooms, farmers markets, downtown storefronts — and I've seen what works and what ends up in the recycling bin. The difference is almost always structure, not decoration.</p>
+          <p>Not sure if you need a flyer or a brochure? Common problem. I'll sort it out in the first conversation. Your flyer design page walks through the full process.</p>
+          <a href="/flyer-design" class="service-teaser__more">Learn about flyer design<span aria-hidden="true"> →</span></a>
         </div>
       </article>
 
@@ -495,7 +515,7 @@
             </button>
           </h3>
           <div class="faq-item__panel" x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1">
-            <p>A logo typically takes 2–4 weeks. Brochures and presentations vary by page count and revision rounds. Timelines move faster when content and feedback are ready on schedule. I'll give you a clear deadline at the start.</p>
+            <p>A logo typically takes 2–4 weeks. Brochures, flyers, and presentations vary by page count and revision rounds. Timelines move faster when content and feedback are ready on schedule. I'll give you a clear deadline at the start.</p>
           </div>
         </div>
 
@@ -538,7 +558,8 @@
       <h4 style="font-weight:700;margin:10px 0 10px;line-height:1.2;">Graphic Designer</h4>
       <p style="font-size:17px;color:#1d1d1f;margin:0 0 10px;line-height:1.5;">Logos, brand systems, and marketing materials that make your business look like the professional operation it already is.</p>
       <a href="/logo-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Logo Design</a>
-      <a href="/brochure-flyer-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Brochure &amp; Flyer Design</a>
+      <a href="/brochure-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Brochure Design</a>
+      <a href="/flyer-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Flyer Design</a>
       <a href="/presentation-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Presentation Design</a>
       <a href="/email-design" style="display:block;font-size:17px;color:#2997ff;margin:0 0 3px;line-height:26px;text-decoration:none;">Email Design</a>
     </div>

@@ -298,8 +298,27 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--glass-stack site-hero--glass-bg-flat site-hero--logo-design" style="padding-left:40px;padding-right:40px;">
-  <div class="site-hero__glass-art" aria-hidden="true"></div>
+<section class="site-hero site-hero--mesh-grain" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
+  <div class="site-hero__mesh" aria-hidden="true"></div>
+  <div class="site-hero__grain" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <filter id="hero-grain-gd" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.35" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#hero-grain-gd)" />
+    </svg>
+  </div>
+  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <filter id="hero-grain-gd-fine" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.25" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#hero-grain-gd-fine)" />
+    </svg>
+  </div>
+  <div class="site-hero__vignette" aria-hidden="true"></div>
   <div class="site-hero__content">
     <p class="site-hero__headline">A mark worth<br />remembering.</p>
         <div class="site-hero__sub">
