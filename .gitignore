@@ -11,3 +11,4 @@ workers/contact-worker/.dev.vars
 
 # Wrangler local state
 .wrangler/
+node_modules/
