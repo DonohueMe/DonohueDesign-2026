@@ -8,3 +8,6 @@ notes/
 # Worker secrets (never commit real keys)
 workers/contact-worker/.dev.vars
 **/.dev.vars
+
+# Wrangler local state
+.wrangler/
