@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies 3 | Wells Fargo Search Discovery | Donohue Design</title>
+  <meta name="description" content="Case study: UX discovery for a search component on Wells Fargo Pioneer Design System, copied from the original Donohue UX case study." />
+  <link rel="canonical" href="https://donohuedesign.com/case-studies-3" />
+  <link rel="icon" href="ddc-logo-sm-4x.png" type="image/png" />
+  <link rel="apple-touch-icon" href="ddc-logo-4x.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Donohue Design" />
+  <meta property="og:title" content="Case Studies 3 | Wells Fargo Search Discovery | Donohue Design" />
+  <meta property="og:description" content="UX discovery case study: evaluating the need for a search component across 90+ Wells Fargo Commercial Bank applications." />
+  <meta property="og:url" content="https://donohuedesign.com/case-studies-3" />
+  <meta property="og:image" content="https://donohuedesign.com/images/case-studies-3/WF-Search-Hero@4x.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Studies 3 | Wells Fargo Search Discovery | Donohue Design" />
+  <meta name="twitter:description" content="UX discovery case study: evaluating the need for a search component across 90+ Wells Fargo Commercial Bank applications." />
+  <meta name="twitter:image" content="https://donohuedesign.com/images/case-studies-3/WF-Search-Hero@4x.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css?v=anim-slow63" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+<header class="site-header"
+  :class="{ 'is-scrolled': scrolled }"
+  x-data="{menuOpen:false,servOpen:false,scrolled:false,_t:null,showServ(){clearTimeout(this._t);this.servOpen=true;},hideServ(){this._t=setTimeout(()=>{this.servOpen=false;},450);}}"
+  x-init="const range=140;const heroFade=72;const heroFadeLead=172;const sync=()=>{const y=window.scrollY;const p=Math.min(1,y/range);$el.style.setProperty('--header-scroll',p);const hero=document.querySelector('.site-hero');let bd=0;if(hero){const end=hero.offsetTop+hero.offsetHeight;bd=Math.min(1,Math.max(0,(y-(end-heroFadeLead))/heroFade));}else{bd=p;}$el.style.setProperty('--header-backdrop',bd);scrolled=p>0.85};sync();window.addEventListener('scroll',sync,{passive:true});window.addEventListener('resize',sync,{passive:true})">
+  <div class="site-header-shell">
+    <a href="/" class="site-header-logo" aria-label="Donohue Design home">
+      <img src="ddc-logo-4x.png" alt="Donohue Design" class="site-header-logo__full" />
+      <img src="ddc-logo-sm-4x.png" alt="Donohue Design" class="site-header-logo__sm" />
+    </a>
+    <div class="site-header-menu-zone" @mouseleave="hideServ()">
+      <div class="site-header-bar">
+        <nav class="site-header-nav md:flex hidden">
+          <div class="site-header-services" @mouseenter="showServ()">
+            <button type="button" class="pill-link" :class="{ 'is-open': servOpen }">
+              <span style="display:inline-flex;flex-direction:row;align-items:center;gap:6px;line-height:1;">
+                Services
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none" :style="servOpen?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </div>
+          <a href="/case-studies" class="pill-link" aria-current="page" @mouseenter="clearTimeout(_t);servOpen=false">Case Studies</a>
+          <a href="/pricing" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Pricing</a>
+          <a href="/about" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">About</a>
+          <a href="/contact" class="pill-link" @mouseenter="clearTimeout(_t);servOpen=false">Contact</a>
+        </nav>
+        <button type="button" class="site-header-menu-btn md:hidden flex" aria-label="Open menu" :aria-expanded="menuOpen" @click="menuOpen=!menuOpen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="site-header-dropdown hidden md:block" x-cloak x-show="servOpen" @mouseenter="showServ()" @mouseleave="hideServ()">
+        <div class="site-header-megamenu" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+          <div class="site-header-megamenu__col">
+            <div class="site-header-megamenu__group">
+              <p class="site-header-megamenu__heading"><span>Website Designer</span></p>
+              <a href="/website-design-strategy" class="site-header-megamenu__link">Website Design &amp; Strategy</a>
+              <a href="/smart-websites" class="site-header-megamenu__link">Smart Websites</a>
+              <a href="/website-development" class="site-header-megamenu__link">Website Development</a>
+            </div>
+            <div class="site-header-megamenu__group">
+              <p class="site-header-megamenu__heading"><span>Graphic Designer</span></p>
+              <a href="/logo-design" class="site-header-megamenu__link">Logo Design</a>
+              <a href="/brochure-design" class="site-header-megamenu__link">Brochure Design</a>
+              <a href="/flyer-design" class="site-header-megamenu__link">Flyer Design</a>
+              <a href="/presentation-design" class="site-header-megamenu__link">Presentation Design</a>
+              <a href="/email-design" class="site-header-megamenu__link">Email Design</a>
+            </div>
+          </div>
+          <div class="site-header-megamenu__col">
+            <div class="site-header-megamenu__group">
+              <p class="site-header-megamenu__heading"><span>Marketing Consultant</span></p>
+              <a href="/local-seo" class="site-header-megamenu__link">Local SEO (Google My Business)</a>
+              <a href="/email-marketing" class="site-header-megamenu__link">Email Marketing</a>
+              <a href="/lead-generation" class="site-header-megamenu__link">Lead Generation</a>
+            </div>
+            <div class="site-header-megamenu__group">
+              <p class="site-header-megamenu__heading"><span>Internet Marketing Service</span></p>
+              <a href="/ai-receptionist" class="site-header-megamenu__link">AI Receptionist</a>
+              <a href="/conversational-ai-agent" class="site-header-megamenu__link">Conversational AI Agent</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-header-phone">
+      <a href="tel:+17075958060" class="site-header-phone__link pill-link" aria-label="Call (707) 595 8060">
+        <svg class="site-header-phone__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="site-header-phone__text">(707) 595 8060</span>
+      </a>
+    </div>
+    <div class="site-header-mobile md:hidden" x-cloak x-show="menuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" @click.outside="menuOpen=false">
+      <nav style="display:flex;flex-direction:column;">
+        <a href="/case-studies" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Case Studies</a>
+        <a href="/pricing" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Pricing</a>
+        <a href="/about" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">About</a>
+        <a href="/contact" @click="menuOpen=false" style="font-size:18px;font-weight:500;color:var(--clr-text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--clr-border);display:block;">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="site-hero site-hero--case-studies" aria-label="Case Study">
+  <div class="site-hero__case-scene" aria-hidden="true"></div>
+  <div class="site-hero__case-sparks" aria-hidden="true"></div>
+  <div class="site-hero__case-vignette" aria-hidden="true"></div>
+  <div class="site-hero__content">
+    <p class="site-hero__headline">Case Study:<br />UX discovery</p>
+    <div class="site-hero__sub">
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:21px 0 24px;" />
+      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Conduct a UX discovery to evaluate the need for a search component</p>
+    </div>
+  </div>
+</section>
+
+<div class="editorial-wrap">
+  <main class="case-study body-prose">
+
+    <header class="case-study__intro">
+      <p class="case-study__eyebrow">Donohue UX - Case Study Search Discovery</p>
+      <h1>Case Study: UX discovery</h1>
+      <p class="case-study__lede">Conduct a UX discovery to evaluate the need for a search component.</p>
+    </header>
+
+    <figure class="case-study__hero-fig">
+      <img src="images/case-studies-3/WF-Search-Hero@4x.png" alt="Wells Fargo search discovery hero graphic" width="3002" height="1465" loading="eager" />
+    </figure>
+
+    <section class="case-study__section">
+      <h2>About Pioneer Design System</h2>
+      <ul>
+        <li>The Pioneer Design System is a react framework that serves 90+ applications within Wells Fargo, Commercial Bank</li>
+        <li>We are a team of three designers and are supported by product, producer, engineering, accessibility and content teams</li>
+        <li>We work (Agile) in two week sprints with daily check-ins and weekly design reviews</li>
+      </ul>
+    </section>
+
+    <section class="case-study__section case-study__star">
+      <h2>Quick Summary</h2>
+      <div class="case-study__star-grid">
+        <article>
+          <h3>Situation</h3>
+          <p>Our development partners have the bandwidth to build a search component, and our internal research suggests it could offer substantial value to our customers</p>
+        </article>
+        <article>
+          <h3>Task</h3>
+          <p>Should our team commit resources to developing a search component, considering its potential impact and benefits?</p>
+        </article>
+        <article>
+          <h3>Action</h3>
+          <ul>
+            <li>Discovery, Sprint 1: Define the problem, review internal research, interview stakeholders, and document use cases and recommendations</li>
+            <li>Exploration, Sprint 2: Conduct comparative and competitive analysis, and create wireframes for key use cases</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Result</h3>
+          <ul>
+            <li>Our team agreed that adding a search feature would be highly beneficial for both our design partners and customers</li>
+            <li>We've put together a set of recommendations for the next steps, along with wireframe examples that follow best practices</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <dl class="case-study__meta" aria-label="Project details">
+      <div><dt>Client</dt><dd>Wells Fargo, San Francisco CA</dd></div>
+      <div><dt>My role</dt><dd>Senior Product Designer</dd></div>
+      <div><dt>Team</dt><dd>Pioneer Design System. Used by 90+ applications within the commercial bank.</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+      <div><dt>Date</dt><dd>2023</dd></div>
+    </dl>
+
+    <section class="case-study__section">
+      <h2>About a UX Discovery</h2>
+      <p>Discovery covers the Discover and Define stage of the double-diamond model. In the Discover stage, lines of inquiry diverge as a team explores the problem space. In the Define stage, the team aligns on an evidence-based problem statement and on a vision for the future.</p>
+      <figure class="case-study__figure">
+        <img src="images/case-studies-3/double-diamond_desktop.jpg" alt="Double diamond model showing discover, define, develop and deliver" width="1600" height="900" loading="lazy" />
+      </figure>
+      <p class="case-study__note">Nielsen Norman Group: Discovery Definition<br />NN Group</p>
+    </section>
+
+    <section class="case-study__section">
+      <p class="case-study__sprint-label">Sprint 1: Discover &amp; Define - 10 day deliverable</p>
+      <h2>During this sprint, I aim to address the following questions</h2>
+      <ul>
+        <li>Is the absence of a search component a genuine issue for our users, or are we addressing a problem that may not exist?</li>
+        <li>With over 90 applications within the commercial bank, what are the known use cases?</li>
+        <li>What do our stakeholders think?</li>
+        <li>What problems do we need to overcome?</li>
+        <li>Is our team aligned on the objective?</li>
+      </ul>
+
+      <h3>Problem statement</h3>
+      <p class="case-study__callout">Our customers do not have the ability to search within any of our apps.</p>
+
+      <h3>Internal UX research</h3>
+      <p>I reached out to our UX research team to check for any prior research. Here are their key takeaways.</p>
+      <ul>
+        <li>Not all applications (or users) are impacted to the same degree</li>
+        <li>Administration, on-boarding, dashboard &amp; reporting and customer support have probably the greatest need</li>
+        <li>Task-oriented users: Users who visit the site with a specific task in mind have expressed disappointment when they can't efficiently complete their task without a search function</li>
+      </ul>
+    </section>
+
+    <section class="case-study__section">
+      <h2>With over 90 applications within the commercial bank, what are the known use cases?</h2>
+      <p>I spoke with our Pioneer team's product owner to identify key use cases and determine which apps would benefit most from a search feature. After reviewing each app, here are my findings.</p>
+      <ul>
+        <li>Negative perception: Lack of search functionality might be seen as outdated or less user-friendly, potentially contributing to an overall negative perception of the bank</li>
+        <li>Global search has been one of the most requested new features</li>
+        <li>Administration - search for a user (post login)</li>
+        <li>Reports &amp; Insights (Dashboards) - business intelligence and data visualization</li>
+        <li>Onboarding - during the process of integrating a new customer, there should be a quick way for them to find the information they need</li>
+        <li>Help and technical support</li>
+        <li>Inline search - search inside a data table or a user flow</li>
+      </ul>
+    </section>
+
+    <section class="case-study__section">
+      <h2>What do our stakeholders think?</h2>
+      <p>I interviewed our Pioneer team partners, including developers, content strategists, accessibility experts, app team designers and product owners from outside our immediate team. Below is a summary, but for complete details, please refer to the diagram.</p>
+      <figure class="case-study__figure">
+        <img src="images/case-studies-3/WF-Search-Discovery-Stakeholder-interviews.png" alt="Stakeholder interview diagram with comments from design, development, content, accessibility and product partners" width="2400" height="1600" loading="lazy" />
+        <figcaption>Stakeholder interview - all comments</figcaption>
+      </figure>
+      <div class="case-study__cards">
+        <article>
+          <h3>App team design manager</h3>
+          <p>Offer the user two distinct pathways for search.</p>
+          <ul>
+            <li>Go directly to a result</li>
+            <li>Go to a landing page, then filter and sort or create a new search</li>
+          </ul>
+        </article>
+        <article>
+          <h3>App team designers</h3>
+          <p>Pre-search filtering (scoped search) - Is this something we can offer? I believe it would be really useful, since our customers are power users</p>
+        </article>
+        <article>
+          <h3>Development/technology leader</h3>
+          <p>We've been aware of the need for search functionality, but it's only now that we have the capability to move forward with development</p>
+        </article>
+        <article>
+          <h3>Strategy/Content</h3>
+          <p>Metadata - Will each journey (app) team be responsible for tagging content, removing duplicates, and ensuring proper schema markup?</p>
+        </article>
+        <article>
+          <h3>Accessibility</h3>
+          <p>Screen readers - we need to make sure we continue to support screen readers and tag content appropriately</p>
+        </article>
+        <article>
+          <h3>App product owners</h3>
+          <p>We suggest a simple off the shelf solution</p>
+        </article>
+      </div>
+
+      <h3>Search flow</h3>
+      <p>As a result of my discussions with partners, I determined that we need two search flows: one for navigating directly to a result and another for a landing page with multiple results.</p>
+      <figure class="case-study__figure case-study__figure--dark">
+        <img src="images/case-studies-3/WF-Search-Discovery-Search-Model@4x.png" alt="Search model showing direct-result and landing-page search paths" width="3134" height="1090" loading="lazy" />
+      </figure>
+
+      <h3>Revision of the problem statement</h3>
+      <p>Our customers need to quickly and confidently search for content in order to...</p>
+      <ul>
+        <li>Be more productive</li>
+        <li>Reduce friction</li>
+        <li>Increase engagement</li>
+        <li>Decrease support calls</li>
+        <li>Onboard faster</li>
+      </ul>
+    </section>
+
+    <section class="case-study__section">
+      <h2>Partner recommendations</h2>
+      <h3>General</h3>
+      <ul>
+        <li>Minimum viable product (MVP): Start with a light implementation (administration/search for a user), then add increased functionality over time (global search)</li>
+        <li>Global search: Suggest we implement a Google pattern because our customers are already familiar with that functionality</li>
+        <li>Ability for the user to go to a direct search result or landing page</li>
+        <li>Search should be able to access data from older databases</li>
+      </ul>
+      <h3>Content - Metadata</h3>
+      <ul>
+        <li>Users should be able to search across all content types</li>
+        <li>We must define the search categories</li>
+        <li>Optimize content for keywords</li>
+        <li>Ensure content is properly structured using standard HTML tags to mark up headings, paragraphs, lists, and other content elements</li>
+        <li>Descriptive URLs that include keywords related to the page's content</li>
+        <li>Remove duplicate content</li>
+        <li>Add descriptive meta information; title tags and meta descriptions to each page</li>
+      </ul>
+      <h3>Once search functionality is added to your app, each team should:</h3>
+      <ul>
+        <li>Ensure content is properly tagged and organized for easy indexing</li>
+        <li>Test search performance and relevance regularly</li>
+        <li>Monitor and resolve any duplicate or inaccurate results</li>
+        <li>Continuously update metadata and schema to maintain search quality</li>
+        <li>Conduct user research: Gain insights into how users are searching on your app and identify any issues that need to be addressed</li>
+        <li>Continuous Monitoring: Regularly monitor and gather user feedback even after implementing improvements. This ongoing process helps maintain the quality of the search functionality and address any emerging issues</li>
+      </ul>
+      <h3>Open questions</h3>
+      <ul>
+        <li>Will each team will maintain their own database?</li>
+        <li>Will the scope of search be limited to specific pages, sections of the site, or will it include all content?</li>
+        <li>Integration with existing systems: Should app teams be able to access data from other databases?</li>
+        <li>Will there be a impact on website speed or the need for additional server resources?</li>
+      </ul>
+    </section>
+
+    <section class="case-study__section">
+      <h2>In conclusion, here are answers to the questions posed at the start of this sprint</h2>
+      <dl class="case-study__qa">
+        <div>
+          <dt>Is the absence of a search feature a genuine issue for our users, or are we addressing a problem that may not exist?</dt>
+          <dd>The lack of a search component does affect the usability of our apps, however not all apps or users are affected to the same degree</dd>
+        </div>
+        <div>
+          <dt>With over 90 applications within the commercial bank, what are the known use cases?</dt>
+          <dd>Global search, administration, on-boarding, reports &amp; insights, help and support, account lookup, inline search (search within a data table or flow)</dd>
+        </div>
+        <div>
+          <dt>What do our stakeholders think?</dt>
+          <dd>Full approval to move forward with reservations from our content partners</dd>
+        </div>
+        <div>
+          <dt>What problems do we need to overcome?</dt>
+          <dd>Do we have sufficient resources for to streamline our metadata?</dd>
+        </div>
+        <div>
+          <dt>Is our team aligned on the objective?</dt>
+          <dd>We are aligned, and I will create sketches of some examples during the second sprint.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="case-study__section">
+      <p class="case-study__sprint-label">Sprint 2: Develop - 10 day deliverable</p>
+      <h2>Deliveries for this sprint</h2>
+      <p>Now that our team is aligned on the recommendations for developing a search component, I will take the following actions in this sprint:</p>
+      <ul>
+        <li>What are search best practices?</li>
+        <li>How have our competitors solved this problem?</li>
+        <li>And, I will wireframe two common flows frequently used at the bank</li>
+      </ul>
+
+      <h3>Search best practice</h3>
+      <ul>
+        <li>Use autocomplete (keyword suggestions)</li>
+        <li>Differentiate between a typed query and the suggested (autocompleted) term</li>
+        <li>The user should have the option to either go directly to a search result or navigate to a landing page where they can filter and sort the results</li>
+        <li>When the user chooses to narrow the search (scope or filter) state the scope on the results page</li>
+        <li>Scoped search while valuable, can cause issues if users forget to reset the filter to "ALL" for subsequent searches</li>
+        <li>Global search - utilize a full search box positioned in the header to allow users to search across all content</li>
+        <li>Show a diverse set of results by including a scope in search suggestions</li>
+        <li>Correct for typos - automatically detect and suggest corrections for misspelled words in a user's search query</li>
+      </ul>
+      <figure class="case-study__figure case-study__figure--dark">
+        <img src="images/case-studies-3/WF-Search-Definitions@4x.png" alt="Search definitions examples for autocomplete, scoped search and filtering" width="2400" height="1800" loading="lazy" />
+        <figcaption>Search definitions</figcaption>
+      </figure>
+
+      <h3>The competitive landscape</h3>
+      <p>I conducted a competitive analysis to identify which search features are commonly used. I focused on other financial products and SaaS (Software as a Service) applications.</p>
+      <ul>
+        <li>Scoped search (limiting a search to a specific type of content) is rarely used. This observation suggests that scoped search often leads to complications for users</li>
+        <li>Provide users with a straightforward search option that directs them to a landing page where they can further refine their search through filtering</li>
+      </ul>
+      <figure class="case-study__figure">
+        <img src="images/case-studies-3/WF-Search-Competitive-Landscape.png" alt="Competitive landscape chart of search features across financial and SaaS products" width="2000" height="1400" loading="lazy" />
+        <figcaption>Search features, Competitive landscape</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-study__section">
+      <h2>Wireframe exploration - search for account number in a user flow</h2>
+      <figure class="case-study__figure">
+        <img src="images/case-studies-3/WF-Inline-Search-Wireframe@4x.png" alt="Wireframe exploration for searching by account number within a user flow" width="2400" height="1800" loading="lazy" />
+      </figure>
+
+      <h2>Wireframe exploration - gobal search</h2>
+      <figure class="case-study__figure">
+        <img src="images/case-studies-3/WF-Global-Search-Wireframe@4x.png" alt="Wireframe exploration for global search" width="2400" height="1800" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="case-study__section">
+      <h2>Conclusion</h2>
+      <p>Based on my UX discovery, the Pioneer team has agreed that developing a search component would provide significant value for both our design partners and customers.</p>
+      <p>However, the main challenge to success lies in ensuring that the metadata is properly tagged.</p>
+    </section>
+
+    <section class="case-study__section case-study__update">
+      <h2>2025 update</h2>
+      <p>I continue to stay informed on search best practices and keep up with any new developments in the field.</p>
+      <h3>Additional best practices for autocomplete</h3>
+      <ul>
+        <li>Show suggestions on focus to make users notice, for example related to recent searches, trending searches</li>
+        <li>Limit suggestions to about ten</li>
+        <li>Show scoped keyword suggestions - ratings, products, support, etc</li>
+        <li>Show the number of matches for each scope</li>
+      </ul>
+      <h3>Autocomplete is much more than keyword suggestions</h3>
+      <ul>
+        <li>Reassures users they are on the right path</li>
+        <li>Corrects for mispellings</li>
+        <li>Categorizes or scopes the results</li>
+        <li>Use type-ahead suggestions for appending</li>
+      </ul>
+      <h3>Landing page and filtering</h3>
+      <ul>
+        <li>When filters appear in the sidebar they cause layout shifts so users have to refocus everytime they use a filter</li>
+        <li>Decouple filtering from the results</li>
+      </ul>
+      <h3>User behavior</h3>
+      <ul>
+        <li>Display user filter choices at top of the page</li>
+        <li>Users dont explore results sequentially - pinball pattern, f-pattern, z-pattern</li>
+        <li>They form an impression of "all results" based on the top 10 suggestions</li>
+        <li>Results near the top have 10-20% chance of a click and a 40-80% chance of being seen</li>
+        <li>Top search result gets around 30% of clicks</li>
+        <li>Top 3 search results get around 60% of all clicks</li>
+        <li>Scoped results get results faster, but users overlook it or get lost</li>
+        <li>Visited search results should be marked appropriately</li>
+        <li>Users often navigate autocomplete results with a keyboard</li>
+        <li>Users rarely select exactly one filter</li>
+      </ul>
+      <p class="case-study__note">Source: Vitaly Friedman</p>
+    </section>
+
+    <section class="case-study__section">
+      <h2>Examples</h2>
+      <div class="case-study__wire-grid">
+        <figure>
+          <img src="images/case-studies-3/british-museum.png" alt="British Museum search example" width="1200" height="800" loading="lazy" />
+          <figcaption>British Museum - Go directly to a result or all results</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/bad-metadata.png" alt="Example of poor metadata in search results" width="1200" height="800" loading="lazy" />
+          <figcaption>Example of poor metadata</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/Scoped-categories.png" alt="Scoped search categories example" width="1200" height="800" loading="lazy" />
+          <figcaption>Shows results within Scope/categories</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/adidas.png" alt="Search result counts within categories" width="1200" height="800" loading="lazy" />
+          <figcaption>Shows the number of results within Scope/categories</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/lloyds-1.png" alt="Lloyds autocomplete and scoped search example" width="1200" height="800" loading="lazy" />
+          <figcaption>LLoyds autocomplete and scoped</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/lloyds-2.png" alt="Lloyds autocomplete scoped search second example" width="1200" height="800" loading="lazy" />
+          <figcaption>LLoyds autocomplete and scoped</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/crutchfield-1.png" alt="Landing page results clustered under tabs" width="1200" height="800" loading="lazy" />
+          <figcaption>landing page - results clustered under tabs - tile 6 up or view all</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/crutchfield-2.png" alt="Landing page with filters applied" width="1200" height="800" loading="lazy" />
+          <figcaption>landing page with filters applied</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/google-trending.png" alt="Google trending suggestions on focus" width="1200" height="800" loading="lazy" />
+          <figcaption>Show suggestions on focus</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/google-related.png" alt="Google related suggestions on focus" width="1200" height="800" loading="lazy" />
+          <figcaption>Show suggestions on focus</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/understood-1.png" alt="Navigational query example" width="1200" height="800" loading="lazy" />
+          <figcaption>navigational query</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/understood-2.png" alt="Navigational query second example" width="1200" height="800" loading="lazy" />
+          <figcaption>navigational query</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/amazon-1.png" alt="Amazon scoped search example one" width="1200" height="800" loading="lazy" />
+          <figcaption>Scoped search</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/amazon-2.png" alt="Amazon scoped search example two" width="1200" height="800" loading="lazy" />
+          <figcaption>Scoped search</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/amazon-3.png" alt="Amazon scoped search example three" width="1200" height="800" loading="lazy" />
+          <figcaption>Scoped search</figcaption>
+        </figure>
+        <figure>
+          <img src="images/case-studies-3/amazon-4.png" alt="Amazon scoped search example four" width="1200" height="800" loading="lazy" />
+          <figcaption>Scoped search</figcaption>
+        </figure>
+      </div>
+      <p class="case-study__note">Avoid infinite scrool - accessability issues and users get lost</p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__steps" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="site-footer__inner">
+    <div class="site-footer__container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p style="font-size:22px;font-weight:700;color:#fff;margin:0 0 6px;letter-spacing:-0.01em;">Donohue Design</p>
+          <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 4px;">1891 Bennett Meadows Ln, Santa Rosa, CA 95405</p>
+          <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 20px;">Serving Sonoma, Marin &amp; Napa Counties</p>
+          <div style="display:flex;gap:12px;margin-bottom:20px;">
+            <a href="https://www.linkedin.com/in/jimdonohue" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93a1.74 1.74 0 0 0-1.62 1.83V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/donohuedesign/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5H15c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.4v6.9A10 10 0 0 0 22 12z"/></svg>
+            </a>
+          </div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0;">&copy;2026 Donohue Design</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="/website-designer">Website Designer</a>
+          <a href="/marketing-consultant">Marketing Consultant</a>
+          <a href="/graphic-designer">Graphic Designer</a>
+          <a href="/internet-marketing-service">Internet Marketing Service</a>
+          <a href="/case-studies">Case Studies</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

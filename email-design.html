@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=anim-slow41" />
+  <link rel="stylesheet" href="styles.css?v=anim-slow69" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -280,7 +280,55 @@
 <!-- ═══ BODY: editorial + sidebar ═══ -->
 <div class="editorial-wrap site-layout-with-sidebar">
 
-  <main class="site-layout-main body-prose" style="flex:1 1 0;min-width:0;--body-p-gap:18px;--h1-body-gap:25px;">
+  <main class="site-layout-main body-prose" style="flex:1 1 0;min-width:0;--body-p-gap:18px;--h1-body-gap:25px;" x-data="{
+    portfolioLightbox: false,
+    portfolioSlide: 0,
+    portfolioSlides: [
+      {
+        src: 'images/apple-email-1-lg.webp',
+        alt: 'Apple email design',
+        width: 4460,
+        height: 11206,
+        captionTitle: 'About',
+        caption: [
+          'In June 2007, while working at Apple, I was responsible for designing email campaigns, coinciding with the launch of the first iPhone. The excitement around the company was palpable, and I recall Steve Jobs personally making last-minute preparations with several of the exhibits.',
+          'As the art director, I worked on two key campaigns, focusing on iPod music and games.'
+        ]
+      },
+      {
+        src: 'images/SuccessFactors-1-lg.webp',
+        alt: 'SuccessFactors email design',
+        width: 5640,
+        height: 9600,
+        captionTitle: 'About',
+        caption: [
+          'I held a three-year contract designing email campaigns for SuccessFactors in Foster City, CA, where I delivered some of my most creative and impactful work.',
+          'These projects not only highlighted my ability to innovate but also paved the way for opportunities to work on email campaigns for Apple, Trend Micro, HP, and other leading companies.'
+        ]
+      },
+      {
+        src: 'images/SuccessFactors-2-lg.webp',
+        alt: 'SuccessFactors email design',
+        width: 766,
+        height: 1065,
+        captionTitle: 'About',
+        caption: [
+          'I held a three-year contract designing email campaigns for SuccessFactors in Foster City, CA, where I delivered some of my most creative and impactful work.',
+          'These projects not only highlighted my ability to innovate but also paved the way for opportunities to work on email campaigns for Apple, Trend Micro, HP, and other leading companies.'
+        ]
+      }
+    ],
+    openPortfolioLightbox(index = 0) {
+      this.portfolioSlide = index;
+      this.portfolioLightbox = true;
+    },
+    prevPortfolioSlide() {
+      this.portfolioSlide = (this.portfolioSlide - 1 + this.portfolioSlides.length) % this.portfolioSlides.length;
+    },
+    nextPortfolioSlide() {
+      this.portfolioSlide = (this.portfolioSlide + 1) % this.portfolioSlides.length;
+    }
+  }">
 
     <section style="margin-bottom:56px;" id="intro">
       <h1 style="font-size:34px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">Email Design in Santa Rosa, CA</h1>
@@ -293,11 +341,19 @@
         <li style="margin-bottom:8px;">Fewer unsubscribes because your emails look like they belong in the inbox, not the spam folder</li>
         <li>Consistent branding across every touchpoint, so customers recognize you before reading a word</li>
       </ul>
+      <div class="body-image-lightbox__standalone body-image-lightbox__standalone--side-caption">
+        <figure class="body-image-lightbox__figure body-image-lightbox__figure--email-65">
+          <button type="button" class="body-image-lightbox__thumb" @click="openPortfolioLightbox(0)" aria-label="View Apple email design, full size">
+            <img src="images/apple-email-1-sm.webp" alt="Apple email design" width="2230" height="1730" loading="lazy" />
+          </button>
+        </figure>
+        <p class="body-image-lightbox__side-caption">Apple email design</p>
+      </div>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">I see this pattern constantly with local businesses around Old Courthouse Square and the McDonald District. They invest in a great website, a solid logo, strong local SEO — then send emails that look nothing like their brand. That disconnect costs trust. It costs clicks.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Professional email design closes that gap. Your emails match your website. Your colors, fonts, and voice stay consistent. When a customer opens your message on their phone during lunch, they know it's you before they read the first line.</p>
     </section>
 
-    <section style="margin-bottom:56px;" id="mobile-first">
+    <section style="margin-bottom:28px;" id="mobile-first">
       <h2 style="font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">Mobile-first is not optional</h2>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">More than half of all emails open on mobile, and that number keeps climbing. If your design breaks on a phone screen, you've already lost most of your audience.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Every email I build is mobile-first. Fast load times. Clean structure. Buttons big enough to tap without zooming. Desktop looks great too — but mobile comes first because that's where your customers are.</p>
@@ -305,6 +361,14 @@
     </section>
 
     <section style="margin-bottom:56px;" id="process">
+      <div class="body-image-lightbox__standalone body-image-lightbox__standalone--side-caption">
+        <figure class="body-image-lightbox__figure body-image-lightbox__figure--email-65 body-image-lightbox__figure--email-pad-20">
+          <button type="button" class="body-image-lightbox__thumb" @click="openPortfolioLightbox(1)" aria-label="View SuccessFactors email design, full size">
+            <img src="images/SuccessFactors-1-sm.webp" alt="SuccessFactors email design" width="1825" height="1730" loading="lazy" />
+          </button>
+        </figure>
+        <p class="body-image-lightbox__side-caption">SuccessFactors email design</p>
+      </div>
       <h2 style="font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">The design process, from brief to inbox</h2>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Most people think email design starts with picking colors. It doesn't. It starts with one question: what does this email need to do? Drive bookings? Announce a product? Bring back customers who haven't visited your Bennett Valley shop in six months? Every design decision flows from that answer.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">How it moves:</p>
@@ -320,7 +384,7 @@
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">A few days, not weeks. You work with me the whole time.</p>
     </section>
 
-    <section style="margin-bottom:56px;" id="seasonal">
+    <section style="margin-bottom:28px;" id="seasonal">
       <h2 style="font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">Seasonal templates built for wine country cycles</h2>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Santa Rosa businesses don't run on a generic calendar. Your busy season might hit during crush in September or peak when tourists flood the SOFA Arts District every summer. Your email design has to match that rhythm, not fight it.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">I build templates around the cycles your business actually lives through — not a cookie-cutter "spring sale" layout ripped from a stock platform.</p>
@@ -338,6 +402,14 @@
     </section>
 
     <section style="margin-bottom:56px;" id="testing">
+      <div class="body-image-lightbox__standalone body-image-lightbox__standalone--side-caption">
+        <figure class="body-image-lightbox__figure body-image-lightbox__figure--email-65 body-image-lightbox__figure--email-pad-20">
+          <button type="button" class="body-image-lightbox__thumb" @click="openPortfolioLightbox(2)" aria-label="View SuccessFactors email design, full size">
+            <img src="images/SuccessFactors-2-sm.webp" alt="SuccessFactors email design" width="2332" height="1722" loading="lazy" />
+          </button>
+        </figure>
+        <p class="body-image-lightbox__side-caption">SuccessFactors email design</p>
+      </div>
       <h2 style="font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">Mobile rendering and cross-client testing before anything ships</h2>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Here's what I tell every client. Your email might look perfect on your laptop. But over 60% of people open on their phone first. If it breaks on mobile, they delete it. Gone in two seconds.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">That's why I test every email across real devices and real clients before anything goes out. Not a quick preview. Actual rendering tests.</p>
@@ -379,6 +451,65 @@
     <section style="margin-bottom:56px;" id="faq">
       <h2 style="font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">FAQs</h2>
     </section>
+
+    <template x-teleport="body">
+    <div
+      class="body-image-lightbox__overlay"
+      x-show="portfolioLightbox"
+      x-cloak
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      @keydown.escape.window="portfolioLightbox = false"
+      @keydown.arrow-left.window="portfolioLightbox && prevPortfolioSlide()"
+      @keydown.arrow-right.window="portfolioLightbox && nextPortfolioSlide()"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="portfolioSlides[portfolioSlide].alt"
+    >
+      <button type="button" class="body-image-lightbox__backdrop" @click="portfolioLightbox = false" aria-label="Close"></button>
+      <figure class="body-image-lightbox__panel">
+        <button type="button" class="body-image-lightbox__close" @click="portfolioLightbox = false" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6 L18 18" />
+            <path d="M18 6 L6 18" />
+          </svg>
+        </button>
+        <div class="body-image-lightbox__stage" aria-live="polite">
+          <div class="body-image-lightbox__header-space" aria-hidden="true"></div>
+          <figure class="body-image-lightbox__carousel">
+            <div class="body-image-lightbox__image-wrap">
+              <button type="button" class="body-image-lightbox__nav body-image-lightbox__nav--prev" @click.stop="prevPortfolioSlide()" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 6 L9 12 L15 18" />
+                </svg>
+              </button>
+              <img
+                :src="portfolioSlides[portfolioSlide].src"
+                :alt="portfolioSlides[portfolioSlide].alt"
+                :width="portfolioSlides[portfolioSlide].width"
+                :height="portfolioSlides[portfolioSlide].height"
+              />
+              <button type="button" class="body-image-lightbox__nav body-image-lightbox__nav--next" @click.stop="nextPortfolioSlide()" aria-label="Next image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 6 L15 12 L9 18" />
+                </svg>
+              </button>
+            </div>
+            <figcaption class="body-image-lightbox__carousel-caption">
+              <p class="body-image-lightbox__carousel-caption-title"><strong x-text="portfolioSlides[portfolioSlide].captionTitle"></strong></p>
+              <template x-for="(paragraph, index) in portfolioSlides[portfolioSlide].caption" :key="portfolioSlide + '-' + index">
+                <p x-text="paragraph"></p>
+              </template>
+            </figcaption>
+          </figure>
+        </div>
+      </figure>
+    </div>
+    </template>
 
   </main>
 

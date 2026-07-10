@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 420" role="img" aria-labelledby="search-flow-title">
+  <title id="search-flow-title">Search flow — landing page vs. direct result</title>
+  <rect width="1024" height="420" fill="#000"/>
+
+  <!-- Path labels -->
+  <text x="48" y="118" fill="#fff" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700">1</text>
+  <text x="48" y="278" fill="#fff" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700">2</text>
+
+  <!-- Path 1 arrow into landing page -->
+  <line x1="78" y1="110" x2="250" y2="110" stroke="#fff" stroke-width="2"/>
+  <polygon points="250,110 236,103 236,117" fill="#fff"/>
+
+  <!-- Path 2 arrow into direct result -->
+  <line x1="78" y1="270" x2="250" y2="270" stroke="#fff" stroke-width="2"/>
+  <polygon points="250,270 236,263 236,277" fill="#fff"/>
+
+  <!-- Landing page box -->
+  <rect x="260" y="62" width="420" height="96" rx="4" fill="#fff"/>
+  <text x="470" y="100" text-anchor="middle" fill="#000" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="600">Landing page:</text>
+  <text x="470" y="130" text-anchor="middle" fill="#000" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="600">Filtering or new search</text>
+
+  <!-- Loop arrow on landing page (new search) -->
+  <path d="M680 110 C760 110, 760 40, 680 40 C620 40, 600 70, 600 90" fill="none" stroke="#fff" stroke-width="2"/>
+  <polygon points="600,90 592,76 608,76" fill="#fff"/>
+
+  <!-- Vertical arrow: landing page → direct result -->
+  <line x1="470" y1="158" x2="470" y2="228" stroke="#fff" stroke-width="2"/>
+  <polygon points="470,228 463,214 477,214" fill="#fff"/>
+
+  <!-- Direct result box -->
+  <rect x="340" y="232" width="260" height="76" rx="4" fill="#fff"/>
+  <text x="470" y="278" text-anchor="middle" fill="#000" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="600">Direct result</text>
+
+  <!-- Exit arrow from direct result -->
+  <line x1="600" y1="270" x2="780" y2="270" stroke="#fff" stroke-width="2"/>
+  <polygon points="780,270 766,263 766,277" fill="#fff"/>
+</svg>
