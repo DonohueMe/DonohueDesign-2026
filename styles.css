@@ -5383,6 +5383,65 @@ img, svg { display: block; }
   line-height: 1.5;
   font-weight: 400;
 }
+
+/* Individual gray content boxes (hub pages) */
+.body-section-box {
+  margin-bottom: 24px;
+  padding: 32px 28px 28px;
+  background: #f9f9fb;
+  border-radius: 22px;
+}
+@media (min-width: 840px) {
+  .body-section-box {
+    padding: 36px 36px 32px;
+  }
+}
+.body-section-box:last-child {
+  margin-bottom: 56px;
+}
+.body-section-box .service-teaser__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+}
+.body-section-box .service-teaser__title-row .service-teaser__title {
+  margin: 0;
+  color: #1d1d1f;
+}
+.body-section-box .service-teaser__title-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  color: #1d1d1f;
+}
+.body-section-box .service-teaser__title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.23;
+  margin: 0 0 20px;
+  color: #1d1d1f;
+}
+.body-section-box .service-teaser__body > p,
+.body-section-box .service-teaser__body > ul {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #3d3d3f;
+}
+.body-section-box .service-teaser__body > p {
+  margin: 0 0 18px;
+}
+.body-section-box .service-teaser__body > ul {
+  margin: 0 0 18px;
+  padding-left: 1.25em;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.body-section-box .service-teaser__body > ul li {
+  margin-bottom: 8px;
+}
+
 .service-teaser__button {
   display: inline-flex;
   align-items: center;
