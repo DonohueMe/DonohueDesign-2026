@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Contact | Donohue Design" />
   <meta name="twitter:description" content="Get in touch with Donohue Design in Santa Rosa. Schedule a free consultation for website design, marketing, and graphic design." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo-4x.png" />
-  <link rel="stylesheet" href="styles.css?v=contact-book9" />
+  <link rel="stylesheet" href="styles.css?v=contact-book10" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <link rel="preconnect" href="https://calendly.com" />
   <link rel="preconnect" href="https://assets.calendly.com" />
@@ -347,9 +347,8 @@
           <div class="contact-calendly" aria-label="Schedule a consultation">
             <div
               class="calendly-inline-widget"
-              data-url="https://calendly.com/james-donohuedesign/45min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff"
-              data-resize="true"
-              style="min-width:320px;height:630px;"
+              data-url="https://calendly.com/james-donohuedesign/45min?hide_event_type_details=1&hide_gdpr_banner=1"
+              style="min-width:320px;height:700px;"
             ></div>
           </div>
         </div>
@@ -414,6 +413,15 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.25 6.5 1.75 1.75 0 0 1 6.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93a1.74 1.74 0 0 0-1.62 1.83V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
           </span>
           <a class="contact-info-link" href="https://www.linkedin.com/in/jimdonohue" target="_blank" rel="noopener noreferrer">View my LinkedIn profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+
+        <div class="contact-info-divider" aria-hidden="true"></div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5H15c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.4v6.9A10 10 0 0 0 22 12z"/></svg>
+          </span>
+          <a class="contact-info-link" href="https://www.facebook.com/donohuedesign/" target="_blank" rel="noopener noreferrer">View on Facebook <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
 
         <div class="contact-info-divider" aria-hidden="true"></div>
@@ -487,20 +495,6 @@
 </footer>
 
 <script src="contact-form.js"></script>
-<script>
-  (function () {
-    var widget = document.querySelector('.contact-calendly .calendly-inline-widget');
-    if (!widget) return;
-    var url = widget.getAttribute('data-url') || '';
-    var host = location.hostname;
-    var embedDomain = (host === 'localhost' || host === '127.0.0.1' || host === '::1')
-      ? 'donohuedesign.com'
-      : location.host;
-    if (url.indexOf('embed_domain=') === -1) {
-      widget.setAttribute('data-url', url + '&embed_domain=' + encodeURIComponent(embedDomain) + '&embed_type=Inline');
-    }
-  })();
-</script>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
   (function () {
