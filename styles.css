@@ -4746,7 +4746,7 @@ img, svg { display: block; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 @media (min-width: 840px) {
   .contact-grid {
@@ -4762,6 +4762,7 @@ img, svg { display: block; }
   min-width: 0;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 @media (min-width: 840px) {
   .contact-card {
@@ -4771,6 +4772,14 @@ img, svg { display: block; }
 .contact-card--info {
   gap: 0;
   min-height: 0;
+}
+@media (min-width: 840px) {
+  .contact-card--info .contact-map {
+    flex: 1 1 auto;
+    min-height: 220px;
+    aspect-ratio: auto;
+    height: auto;
+  }
 }
 .contact-notice {
   border-radius: 12px;
@@ -5015,7 +5024,9 @@ img, svg { display: block; }
 .contact-panel {
   display: flex;
   flex-direction: column;
+  flex: 1;
   min-width: 0;
+  min-height: 0;
 }
 .contact-panel-lead {
   margin: 0 0 20px;
