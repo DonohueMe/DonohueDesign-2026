@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="Contact | Donohue Design" />
   <meta name="twitter:description" content="Get in touch with Donohue Design in Santa Rosa. Schedule a free consultation for website design, marketing, and graphic design." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo-4x.png" />
-  <link rel="stylesheet" href="styles.css?v=contact-book12" />
+  <link rel="stylesheet" href="styles.css?v=contact-calendly-resize3" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <link rel="preconnect" href="https://calendly.com" />
   <link rel="preconnect" href="https://assets.calendly.com" />
@@ -344,13 +344,7 @@
           x-cloak
         >
           <p class="contact-panel-lead">Free 45-minute discovery call for website, marketing, graphic design, and AI projects. Pick a time at least 24 hours out — a few quick questions help me come prepared.</p>
-          <div class="contact-calendly" aria-label="Schedule a consultation">
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/james-donohuedesign/45min?hide_event_type_details=1&hide_gdpr_banner=1"
-              style="min-width:320px;height:700px;"
-            ></div>
-          </div>
+          <div class="contact-calendly" id="contact-calendly-mount" aria-label="Schedule a consultation"></div>
         </div>
 
         <div
@@ -495,30 +489,41 @@
 </footer>
 
 <script src="contact-form.js"></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-  (function () {
-    function setCalendlyHeight(height) {
-      if (!height) return;
-      var widget = document.querySelector('.contact-calendly .calendly-inline-widget');
-      if (!widget) return;
-      var px = height + 'px';
-      widget.style.height = px;
-      var container = widget.closest('.contact-calendly');
-      if (container) container.style.height = px;
-      var iframe = widget.querySelector('iframe');
-      if (iframe) iframe.style.height = px;
-    }
-
-    window.addEventListener('message', function (e) {
-      if (e.origin !== 'https://calendly.com' || !e.data) return;
-      var eventName = e.data.event || e.data.type;
-      if (eventName === 'calendly.page_height') {
-        setCalendlyHeight(e.data.payload && e.data.payload.height);
-      }
+  window.initContactCalendly = function () {
+    if (!window.Calendly) return;
+    var mount = document.getElementById('contact-calendly-mount');
+    if (!mount || mount.dataset.initialized) return;
+    mount.dataset.initialized = '1';
+    Calendly.initInlineWidget({
+      url: 'https://calendly.com/james-donohuedesign/45min?hide_event_type_details=1&hide_gdpr_banner=1',
+      parentElement: mount,
+      resize: true
     });
-  })();
+  };
 
+  /* Grow the embed to fit Calendly's content so the page scrolls
+     instead of an inner scrollbar. Calendly posts its content height
+     via postMessage whenever the view changes. */
+  window.addEventListener('message', function (e) {
+    if (typeof e.origin !== 'string' || e.origin.indexOf('calendly.com') === -1) return;
+    var d = e.data;
+    if (typeof d === 'string') { try { d = JSON.parse(d); } catch (err) { return; } }
+    if (!d || d.event !== 'calendly.page_height' || !d.payload || !d.payload.height) return;
+    var mount = document.getElementById('contact-calendly-mount');
+    if (!mount) return;
+    var h = parseInt(d.payload.height, 10);
+    if (!h || h < 400) return;
+    mount.style.height = h + 'px';
+    var widget = mount.querySelector('.calendly-inline-widget');
+    if (widget) widget.style.height = h + 'px';
+    var iframe = mount.querySelector('iframe');
+    if (iframe) iframe.style.height = h + 'px';
+  });
+</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async onload="initContactCalendly()"></script>
+<script>
+  window.addEventListener('load', initContactCalendly);
   document.addEventListener('alpine:init', function () {
     Alpine.data('contactTabs', function () {
       return {
@@ -541,9 +546,6 @@
             url.searchParams.delete('message');
           }
           history.replaceState(null, '', url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash);
-          if (next === 'book') {
-            window.dispatchEvent(new Event('resize'));
-          }
         }
       };
     });

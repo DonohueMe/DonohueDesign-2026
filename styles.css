@@ -5046,12 +5046,16 @@ img, svg { display: block; }
   position: relative;
   width: 100%;
   min-width: 0;
-  overflow: visible;
+  min-height: 700px;
+  height: auto;
+  overflow: hidden;
   border-radius: 12px;
   border: 1px solid var(--clr-border);
   background: #fff;
 }
-.contact-calendly .calendly-inline-widget {
+#calendly-mount,
+.contact-calendly .calendly-inline-widget,
+#contact-calendly-mount .calendly-inline-widget {
   width: 100% !important;
   min-width: 320px !important;
   background: #fff;
