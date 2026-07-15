@@ -4929,6 +4929,12 @@ img, svg { display: block; }
   gap: 16px;
   min-width: 0;
 }
+.contact-info-item--align-start {
+  align-items: flex-start;
+}
+.contact-info-item--align-start .contact-info-icon {
+  margin-top: 1px;
+}
 .contact-info-icon {
   flex-shrink: 0;
   width: 44px;
@@ -4953,6 +4959,8 @@ img, svg { display: block; }
 }
 .contact-info-address {
   margin: 0;
+  flex: 1;
+  min-width: 0;
   font-size: 17px;
   line-height: 1.5;
   color: #1d1d1f;
