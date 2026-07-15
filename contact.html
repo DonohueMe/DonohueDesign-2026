@@ -18,7 +18,10 @@
   <meta name="twitter:title" content="Contact | Donohue Design" />
   <meta name="twitter:description" content="Get in touch with Donohue Design in Santa Rosa. Schedule a free consultation for website design, marketing, and graphic design." />
   <meta name="twitter:image" content="https://donohuedesign.com/ddc-logo-4x.png" />
-  <link rel="stylesheet" href="styles.css?v=anim-slow40" />
+  <link rel="stylesheet" href="styles.css?v=contact-book9" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://calendly.com" />
+  <link rel="preconnect" href="https://assets.calendly.com" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -303,11 +306,62 @@
 
   <section class="contact-page">
     <h1 style="font-size:34px;font-weight:800;letter-spacing:-0.04em;color:#1d1d1f;margin:0 0 12px;line-height:1.36;">I would love to hear from you</h1>
-    <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0 0 32px;">Send a message and I'll get back to you within one business day.</p>
+    <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0 0 32px;">Book a free discovery call, or send a message and I'll get back to you within one business day.</p>
 
     <div class="contact-grid">
-      <div class="contact-card">
-        <h2 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#1d1d1f;margin:0 0 18px;line-height:1.3;">Send a message</h2>
+      <div class="contact-card" x-data="contactTabs()" x-init="init()">
+        <div class="contact-tabs" role="tablist" aria-label="Contact options">
+          <button
+            type="button"
+            class="contact-tabs__btn"
+            role="tab"
+            id="contact-tab-book"
+            aria-controls="contact-panel-book"
+            :aria-selected="tab === 'book'"
+            :tabindex="tab === 'book' ? 0 : -1"
+            :class="{ 'is-active': tab === 'book' }"
+            @click="setTab('book')"
+          >Book a consultation</button>
+          <button
+            type="button"
+            class="contact-tabs__btn"
+            role="tab"
+            id="contact-tab-message"
+            aria-controls="contact-panel-message"
+            :aria-selected="tab === 'message'"
+            :tabindex="tab === 'message' ? 0 : -1"
+            :class="{ 'is-active': tab === 'message' }"
+            @click="setTab('message')"
+          >Send a message</button>
+        </div>
+
+        <div
+          id="contact-panel-book"
+          class="contact-panel"
+          role="tabpanel"
+          aria-labelledby="contact-tab-book"
+          x-show="tab === 'book'"
+          x-cloak
+        >
+          <p class="contact-panel-lead">Free 45-minute discovery call for website, marketing, graphic design, and AI projects. Pick a time at least 24 hours out — a few quick questions help me come prepared.</p>
+          <div class="contact-calendly" aria-label="Schedule a consultation">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/james-donohuedesign/45min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff"
+              data-resize="true"
+              style="min-width:320px;height:630px;"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          id="contact-panel-message"
+          class="contact-panel"
+          role="tabpanel"
+          aria-labelledby="contact-tab-message"
+          x-show="tab === 'message'"
+          x-cloak
+        >
         <div id="form-notification" class="contact-notice" role="alert" hidden></div>
 
         <form id="contact-form" class="contact-form" action="https://contact-worker.jim-7af.workers.dev/contact" method="POST" novalidate>
@@ -350,6 +404,7 @@
             Send Message
           </button>
         </form>
+        </div>
       </div>
 
       <div class="contact-card contact-card--info">
@@ -432,5 +487,73 @@
 </footer>
 
 <script src="contact-form.js"></script>
+<script>
+  (function () {
+    var widget = document.querySelector('.contact-calendly .calendly-inline-widget');
+    if (!widget) return;
+    var url = widget.getAttribute('data-url') || '';
+    var host = location.hostname;
+    var embedDomain = (host === 'localhost' || host === '127.0.0.1' || host === '::1')
+      ? 'donohuedesign.com'
+      : location.host;
+    if (url.indexOf('embed_domain=') === -1) {
+      widget.setAttribute('data-url', url + '&embed_domain=' + encodeURIComponent(embedDomain) + '&embed_type=Inline');
+    }
+  })();
+</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  (function () {
+    function setCalendlyHeight(height) {
+      if (!height) return;
+      var widget = document.querySelector('.contact-calendly .calendly-inline-widget');
+      if (!widget) return;
+      var px = height + 'px';
+      widget.style.height = px;
+      var container = widget.closest('.contact-calendly');
+      if (container) container.style.height = px;
+      var iframe = widget.querySelector('iframe');
+      if (iframe) iframe.style.height = px;
+    }
+
+    window.addEventListener('message', function (e) {
+      if (e.origin !== 'https://calendly.com' || !e.data) return;
+      var eventName = e.data.event || e.data.type;
+      if (eventName === 'calendly.page_height') {
+        setCalendlyHeight(e.data.payload && e.data.payload.height);
+      }
+    });
+  })();
+
+  document.addEventListener('alpine:init', function () {
+    Alpine.data('contactTabs', function () {
+      return {
+        tab: 'book',
+        init: function () {
+          var params = new URLSearchParams(window.location.search);
+          if (params.has('message') || params.get('tab') === 'message') {
+            this.tab = 'message';
+          } else {
+            this.tab = 'book';
+          }
+        },
+        setTab: function (next) {
+          this.tab = next;
+          var url = new URL(window.location.href);
+          if (next === 'message') {
+            url.searchParams.set('tab', 'message');
+          } else {
+            url.searchParams.delete('tab');
+            url.searchParams.delete('message');
+          }
+          history.replaceState(null, '', url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash);
+          if (next === 'book') {
+            window.dispatchEvent(new Event('resize'));
+          }
+        }
+      };
+    });
+  });
+</script>
 </body>
 </html>

@@ -4746,7 +4746,7 @@ img, svg { display: block; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  align-items: stretch;
+  align-items: start;
 }
 @media (min-width: 840px) {
   .contact-grid {
@@ -4762,7 +4762,6 @@ img, svg { display: block; }
   min-width: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 @media (min-width: 840px) {
   .contact-card {
@@ -4977,6 +4976,81 @@ img, svg { display: block; }
   width: 100%;
   height: 100%;
   border: 0;
+}
+.contact-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 24px;
+  background: #f5f5f7;
+  border-radius: 14px;
+}
+.contact-tabs__btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: #6e6e73;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+@media (min-width: 480px) {
+  .contact-tabs__btn {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+}
+.contact-tabs__btn:hover:not(.is-active) {
+  color: #1d1d1f;
+}
+.contact-tabs__btn.is-active {
+  background: #fff;
+  color: #1d1d1f;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.contact-tabs__btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.25);
+}
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.contact-panel-lead {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3d3d3f;
+}
+.contact-calendly {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--clr-border);
+  background: #fff;
+}
+.contact-calendly .calendly-inline-widget {
+  width: 100% !important;
+  min-width: 320px !important;
+  background: #fff;
+}
+.contact-calendly iframe {
+  display: block;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100%;
+  border: 0;
+  color-scheme: light;
 }
 
 .home-map-section {
