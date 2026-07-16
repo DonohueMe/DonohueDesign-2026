@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=anim-slow69" />
+  <link rel="stylesheet" href="styles.css?v=hero-light10" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -246,35 +246,15 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--mesh-grain" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
-  <div class="site-hero__mesh" aria-hidden="true"></div>
-  <div class="site-hero__grain" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="hero-grain-gd" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.35" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#hero-grain-gd)" />
-    </svg>
-  </div>
-  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="hero-grain-gd-fine" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.25" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#hero-grain-gd-fine)" />
-    </svg>
-  </div>
-  <div class="site-hero__vignette" aria-hidden="true"></div>
+<section class="site-hero" style="position:relative;overflow:hidden;background:radial-gradient(ellipse at 12% 20%, rgba(106,178,255,0.83) 0%, transparent 45%),radial-gradient(ellipse at 85% 15%, rgba(88,224,201,0.78) 0%, transparent 45%),radial-gradient(ellipse at 50% 62%, rgba(116,201,250,0.64) 0%, transparent 50%),radial-gradient(ellipse at 80% 85%, rgba(98,242,196,0.74) 0%, transparent 40%),#e2f4ff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
   <div class="site-hero__content">
-    <p class="site-hero__headline">Built for the inbox.<br />Designed to convert.</p>
+    <p class="hero-display">Built for the inbox.<br />Designed to convert.</p>
         <div class="site-hero__sub">
-            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:21px 0 24px;" />
-      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-      <a href="/contact" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+      <hr style="border:none;border-top:1px solid rgba(0,0,0,0.18);width:100px;margin:21px 0 24px;" />
+      <p style="font-size:18px;color:#3d3d3f;font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">One partner. One strategy. More customers.</p>
+      <a href="/contact" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Book a Free Discovery Call</a>
     </div>
-  </div>
+</div>
 </section>
 
 <!-- ═══ BODY: editorial + sidebar ═══ -->
@@ -445,7 +425,7 @@
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Businesses that treat email as a living part of their marketing see measurable results. The ones that don't wonder why nobody opens their emails.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Want to turn your list into something that actually earns its keep?</p>
 
-      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Start with a free call</a>
+      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Book a Free Discovery Call</a>
     </section>
 
     <template x-teleport="body">

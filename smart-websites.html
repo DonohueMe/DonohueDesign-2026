@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=anim-slow106" />
+  <link rel="stylesheet" href="styles.css?v=hero-light10" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -246,79 +246,15 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--mesh-grain site-hero--mesh-smart" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
-  <div class="site-hero__mesh" aria-hidden="true"></div>
-  <div class="site-hero__mesh-fx" aria-hidden="true">
-    <div class="site-hero__smart-reflex" aria-hidden="true">
-      <span class="site-hero__smart-reflex-btn"></span>
-      <span class="site-hero__smart-reflex-track"></span>
-      <span class="site-hero__smart-reflex-packet"></span>
-      <span class="site-hero__smart-reflex-target"></span>
-    </div>
-    <div class="site-hero__smart-reflex site-hero__smart-reflex--2" aria-hidden="true">
-      <span class="site-hero__smart-reflex-btn"></span>
-      <span class="site-hero__smart-reflex-track"></span>
-      <span class="site-hero__smart-reflex-packet"></span>
-      <span class="site-hero__smart-reflex-target"></span>
-    </div>
-    <div class="site-hero__smart-brain" aria-hidden="true">
-      <svg class="site-hero__smart-brain-svg" viewBox="0 0 160 140" aria-hidden="true">
-        <path class="site-hero__smart-brain-outline" d="M80,18 C52,18 34,38 30,62 C26,82 34,108 52,118 C62,124 72,126 80,124 C88,126 98,124 108,118 C126,108 134,82 130,62 C126,38 108,18 80,18 Z" fill="none" stroke="rgba(200,160,255,0.35)" stroke-width="1.5" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--1" d="M80,40 L52,58" fill="none" stroke="rgba(140,210,255,0.4)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--2" d="M80,40 L108,58" fill="none" stroke="rgba(255,104,176,0.4)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--3" d="M80,55 L48,78" fill="none" stroke="rgba(140,210,255,0.35)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--4" d="M80,55 L112,78" fill="none" stroke="rgba(255,176,64,0.35)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--5" d="M80,70 L80,100" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--6" d="M80,70 L58,95" fill="none" stroke="rgba(140,210,255,0.3)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--7" d="M80,70 L102,95" fill="none" stroke="rgba(255,104,176,0.3)" stroke-width="1" />
-      </svg>
-      <span class="site-hero__smart-core"></span>
-      <span class="site-hero__smart-synapse site-hero__smart-synapse--1"></span>
-      <span class="site-hero__smart-synapse site-hero__smart-synapse--2"></span>
-      <span class="site-hero__smart-synapse site-hero__smart-synapse--3"></span>
-      <span class="site-hero__smart-synapse site-hero__smart-synapse--4"></span>
-      <span class="site-hero__smart-memory site-hero__smart-memory--1"></span>
-      <span class="site-hero__smart-memory site-hero__smart-memory--2"></span>
-      <span class="site-hero__smart-memory site-hero__smart-memory--3"></span>
-      <span class="site-hero__smart-adapt"></span>
-    </div>
-    <div class="site-hero__smart-brain site-hero__smart-brain--sm" aria-hidden="true">
-      <svg class="site-hero__smart-brain-svg" viewBox="0 0 100 88" aria-hidden="true">
-        <path class="site-hero__smart-brain-outline" d="M50,12 C34,12 22,26 20,42 C18,54 24,68 36,74 C42,78 48,79 50,78 C52,79 58,78 64,74 C76,68 82,54 80,42 C78,26 66,12 50,12 Z" fill="none" stroke="rgba(200,160,255,0.3)" stroke-width="1.2" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--1" d="M50,28 L34,40" fill="none" stroke="rgba(140,210,255,0.35)" stroke-width="1" />
-        <path class="site-hero__smart-brain-path site-hero__smart-brain-path--2" d="M50,28 L66,40" fill="none" stroke="rgba(255,104,176,0.35)" stroke-width="1" />
-      </svg>
-      <span class="site-hero__smart-core"></span>
-      <span class="site-hero__smart-adapt"></span>
-    </div>
-  </div>
-  <div class="site-hero__grain" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="hero-grain-wd" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.28" numOctaves="5" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.35" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#hero-grain-wd)" />
-    </svg>
-  </div>
-  <div class="site-hero__grain site-hero__grain--fine" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <filter id="hero-grain-wd-fine" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="fractalNoise" baseFrequency="1.85" numOctaves="4" stitchTiles="stitch" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="0.25" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#hero-grain-wd-fine)" />
-    </svg>
-  </div>
-  <div class="site-hero__vignette" aria-hidden="true"></div>
+<section class="site-hero" style="position:relative;overflow:hidden;background:radial-gradient(ellipse at 12% 20%, rgba(106,178,255,0.83) 0%, transparent 45%),radial-gradient(ellipse at 85% 15%, rgba(88,224,201,0.78) 0%, transparent 45%),radial-gradient(ellipse at 50% 62%, rgba(116,201,250,0.64) 0%, transparent 50%),radial-gradient(ellipse at 80% 85%, rgba(98,242,196,0.74) 0%, transparent 40%),#e2f4ff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
   <div class="site-hero__content">
-    <p class="site-hero__headline">Built on strategy.<br />Powered by AI.</p>
+    <p class="hero-display">Built on strategy.<br />Powered by AI.</p>
         <div class="site-hero__sub">
-            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:21px 0 24px;" />
-      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-      <a href="/contact" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+      <hr style="border:none;border-top:1px solid rgba(0,0,0,0.18);width:100px;margin:21px 0 24px;" />
+      <p style="font-size:18px;color:#3d3d3f;font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">One partner. One strategy. More customers.</p>
+      <a href="/contact" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Book a Free Discovery Call</a>
     </div>
-  </div>
+</div>
 </section>
 
 <!-- ═══ BODY: editorial + sidebar ═══ -->
@@ -467,7 +403,7 @@
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Your website should generate leads and turn browsers into buyers. If it's not doing that, it's not working for you.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Curious what your site could be doing instead? Give me a call, and I'll take an honest look.</p>
 
-      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Start with a free call</a>
+      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Book a Free Discovery Call</a>
     </section>
 
     <template x-teleport="body">

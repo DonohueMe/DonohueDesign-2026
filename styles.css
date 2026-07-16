@@ -634,9 +634,9 @@ img, svg { display: block; }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='gwdx'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23gwdx)'/%3E%3C/svg%3E");
   background-size: 170px 170px;
 }
-/* Fast color-cycling applied to every hero (white text/buttons are unaffected by hue-rotate) */
+/* Light discovery heroes stay static; mesh variants can opt into hue cycling if reintroduced */
 .site-hero {
-  animation: mesh-hue-cycle 12s linear infinite;
+  animation: none;
 }
 @keyframes mesh-hue-cycle {
   0% {
@@ -644,6 +644,144 @@ img, svg { display: block; }
   }
   100% {
     filter: hue-rotate(360deg);
+  }
+}
+
+/* Homepage aurora hero — warm yellow / peach / pink with blue accents */
+.site-hero--aurora {
+  position: relative;
+  overflow: hidden;
+  background: #fff7ec;
+}
+.site-hero__aurora {
+  position: absolute;
+  inset: -30%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(54px) saturate(1.05);
+  animation: aurora-hue-oscillate 20s ease-in-out infinite alternate;
+  will-change: filter, transform;
+}
+.site-hero__aurora-blob {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  will-change: transform;
+}
+/* Dominant warm field — left / upper */
+.site-hero__aurora-blob--yellow {
+  width: 72%;
+  height: 78%;
+  left: -18%;
+  top: -8%;
+  background: radial-gradient(circle at 42% 40%, #ffe875 0%, #ffd84e 36%, #ffc75c 58%, transparent 74%);
+  animation: aurora-drift-yellow 16s ease-in-out infinite alternate;
+}
+.site-hero__aurora-blob--gold {
+  width: 58%;
+  height: 62%;
+  left: 8%;
+  top: 18%;
+  background: radial-gradient(circle at 50% 45%, #ffbf6c 0%, #ffa45c 42%, transparent 72%);
+  opacity: 0.9;
+  animation: aurora-drift-gold 18s ease-in-out infinite alternate;
+}
+.site-hero__aurora-blob--peach {
+  width: 52%;
+  height: 56%;
+  left: 28%;
+  top: -4%;
+  background: radial-gradient(circle at 50% 50%, #ffb896 0%, #ff9a7c 45%, transparent 72%);
+  opacity: 0.88;
+  animation: aurora-drift-peach 17s ease-in-out infinite alternate;
+}
+/* Pink / magenta accents — top center & right */
+.site-hero__aurora-blob--pink {
+  width: 48%;
+  height: 52%;
+  left: 38%;
+  top: -10%;
+  background: radial-gradient(circle at 45% 40%, #ff8bce 0%, #ff5fbf 44%, transparent 72%);
+  animation: aurora-drift-pink 15s ease-in-out infinite alternate;
+}
+.site-hero__aurora-blob--magenta {
+  width: 46%;
+  height: 50%;
+  right: -10%;
+  top: 6%;
+  background: radial-gradient(circle at 48% 42%, #ff6eb8 0%, #ff4ea4 40%, transparent 70%);
+  animation: aurora-drift-magenta 19s ease-in-out infinite alternate;
+}
+/* Cool field — bottom left + top right */
+.site-hero__aurora-blob--blue {
+  width: 58%;
+  height: 62%;
+  right: -12%;
+  top: -14%;
+  bottom: auto;
+  background: radial-gradient(circle at 50% 50%, #87d5ff 0%, #5cb8ff 42%, #4ea8f2 62%, transparent 76%);
+  opacity: 0.95;
+  animation: aurora-drift-blue 18s ease-in-out infinite alternate;
+}
+.site-hero__aurora-blob--cyan {
+  width: 56%;
+  height: 60%;
+  left: -8%;
+  bottom: -16%;
+  background: radial-gradient(circle at 50% 50%, #96e2ff 0%, #7cceff 44%, transparent 74%);
+  opacity: 0.92;
+  animation: aurora-drift-cyan 20s ease-in-out infinite alternate;
+}
+.site-hero--aurora > .site-hero__content {
+  position: relative;
+  z-index: 1;
+}
+@keyframes aurora-hue-oscillate {
+  0% {
+    filter: blur(54px) saturate(1.02) hue-rotate(-6deg);
+    transform: scale(1.04) translate(0, 0);
+  }
+  50% {
+    filter: blur(58px) saturate(1.1) hue-rotate(10deg);
+    transform: scale(1.08) translate(-1.5%, 1%);
+  }
+  100% {
+    filter: blur(54px) saturate(1.05) hue-rotate(22deg);
+    transform: scale(1.05) translate(1.5%, -1%);
+  }
+}
+@keyframes aurora-drift-yellow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(10%, 8%) scale(1.12); }
+}
+@keyframes aurora-drift-gold {
+  0% { transform: translate(0, 0) scale(1.06); }
+  100% { transform: translate(12%, -8%) scale(1); }
+}
+@keyframes aurora-drift-peach {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-10%, 10%) scale(1.1); }
+}
+@keyframes aurora-drift-pink {
+  0% { transform: translate(0, 0) scale(1.04); }
+  100% { transform: translate(-8%, 12%) scale(1.14); }
+}
+@keyframes aurora-drift-magenta {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-14%, 8%) scale(1.12); }
+}
+@keyframes aurora-drift-blue {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-10%, -12%) scale(1.1); }
+}
+@keyframes aurora-drift-cyan {
+  0% { transform: translate(0, 0) scale(1.05); }
+  100% { transform: translate(14%, -8%) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-hero__aurora,
+  .site-hero__aurora-blob {
+    animation: none;
   }
 }
 /* Marketing Consultant pages: cycle hero color green -> blue instead of full spectrum */
@@ -4707,6 +4845,7 @@ img, svg { display: block; }
   letter-spacing: -0.04em;
   margin: 0 0 14px;
   color: #1d1d1f;
+  text-align: center;
   text-wrap: balance;
 }
 .hero-display--light,

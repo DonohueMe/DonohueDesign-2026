@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=landscape-flat3" />
+  <link rel="stylesheet" href="styles.css?v=hero-light10" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -246,131 +246,15 @@
   </div>
 </header>
 <!-- ═══ HERO ═══ -->
-<section class="site-hero site-hero--ai-bokeh site-hero--bokeh-emotions site-hero--ripple-rings" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:40px;padding-right:40px;">
-  <div class="site-hero__bokeh-scene" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <filter id="cai-bokeh-blur" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="58" />
-        </filter>
-        <filter id="cai-bokeh-blur-soft" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="42" />
-        </filter>
-        <filter id="cai-noise-coarse" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="5" stitchTiles="stitch" result="noise" />
-          <feColorMatrix type="saturate" values="0" in="noise" result="mono" />
-          <feComponentTransfer in="mono">
-            <feFuncA type="linear" slope="1.15" intercept="-0.12" />
-          </feComponentTransfer>
-        </filter>
-        <filter id="cai-noise-fine" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="1.55" numOctaves="4" stitchTiles="stitch" result="noise" />
-          <feColorMatrix type="saturate" values="0" in="noise" />
-        </filter>
-        <linearGradient id="cai-bottom-black" x1="0" y1="280" x2="0" y2="560" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#000" stop-opacity="0" />
-          <stop offset="50%" stop-color="#000" stop-opacity="0.72" />
-          <stop offset="100%" stop-color="#000" stop-opacity="1" />
-        </linearGradient>
-      </defs>
-
-      <rect width="1440" height="560" fill="#000" />
-
-      <g class="site-hero__bokeh-orbs" filter="url(#cai-bokeh-blur)">
-        <!-- orange / amber — upper left -->
-        <ellipse cx="200" cy="195" rx="310" ry="240" fill="#ff9020" opacity="0.98" />
-        <ellipse cx="130" cy="250" rx="220" ry="180" fill="#ffb840" opacity="0.82" />
-        <!-- lime green — faint above center -->
-        <ellipse cx="600" cy="95" rx="260" ry="120" fill="#b8f060" opacity="0.52" />
-        <!-- blue heart — center -->
-        <ellipse cx="560" cy="175" rx="155" ry="145" fill="#3090ff" opacity="1" />
-        <ellipse cx="720" cy="175" rx="155" ry="145" fill="#3090ff" opacity="1" />
-        <ellipse cx="640" cy="265" rx="280" ry="230" fill="#0640e0" opacity="0.94" />
-        <ellipse cx="640" cy="220" rx="240" ry="200" fill="#60a8ff" opacity="0.88" />
-        <!-- pink / magenta — upper right with bright core -->
-        <ellipse cx="1210" cy="210" rx="330" ry="270" fill="#e81880" opacity="1" />
-        <ellipse cx="1240" cy="185" rx="200" ry="175" fill="#ff4898" opacity="0.95" />
-      </g>
-
-      <g class="site-hero__bokeh-highlight" filter="url(#cai-bokeh-blur-soft)">
-        <circle cx="1250" cy="175" r="95" fill="#ffffff" opacity="0.82" />
-        <circle cx="1235" cy="190" r="55" fill="#ffffff" opacity="0.65" />
-      </g>
-
-      <rect width="1440" height="560" fill="url(#cai-bottom-black)" />
-      <rect width="1440" height="560" filter="url(#cai-noise-coarse)" opacity="0.42" />
-      <rect width="1440" height="560" filter="url(#cai-noise-fine)" opacity="0.3" />
-    </svg>
-    <div class="site-hero__bokeh-grain" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
-        <filter id="cai-grain-coarse" x="-10%" y="-10%" width="120%" height="120%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="6" stitchTiles="stitch" result="noise" />
-          <feColorMatrix type="saturate" values="0" in="noise" />
-        </filter>
-        <rect width="100%" height="100%" filter="url(#cai-grain-coarse)" />
-      </svg>
-    </div>
-    <div class="site-hero__bokeh-grain site-hero__bokeh-grain--fine" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
-        <filter id="cai-grain-fine" x="-10%" y="-10%" width="120%" height="120%">
-          <feTurbulence type="fractalNoise" baseFrequency="1.75" numOctaves="5" stitchTiles="stitch" result="noise" />
-          <feColorMatrix type="saturate" values="0" in="noise" />
-        </filter>
-        <rect width="100%" height="100%" filter="url(#cai-grain-fine)" />
-      </svg>
-    </div>
-  </div>
-
-  <div class="site-hero__bokeh-neural" aria-hidden="true">
-    <svg class="site-hero__bokeh-neural-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--1" x1="720" y1="190" x2="360" y2="100" />
-      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--2" x1="720" y1="190" x2="1080" y2="95" />
-      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--3" x1="720" y1="190" x2="170" y2="190" />
-      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--4" x1="720" y1="190" x2="1270" y2="180" />
-      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--5" x1="720" y1="190" x2="490" y2="245" />
-      <line fill="none" class="site-hero__bokeh-neural-line site-hero__bokeh-neural-line--6" x1="720" y1="190" x2="950" y2="235" />
-    </svg>  </div>
-    <div class="site-hero__ripple-rings" aria-hidden="true">
-    <svg class="site-hero__ripple-rings-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g class="site-hero__ripple-cluster site-hero__ripple-cluster--left" fill="none" stroke="#9d72f3" stroke-width="1.2">
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="40" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="70" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="100" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="130" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="160" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="190" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="220" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="250" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="280" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="310" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="340" />
-        <circle class="site-hero__ripple-ring" cx="70" cy="280" r="370" />
-      </g>
-      <g class="site-hero__ripple-cluster site-hero__ripple-cluster--right" fill="none" stroke="#9d72f3" stroke-width="1.2">
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="40" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="70" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="100" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="130" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="160" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="190" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="220" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="250" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="280" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="310" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="340" />
-        <circle class="site-hero__ripple-ring" cx="1370" cy="280" r="370" />
-      </g>
-    </svg>
-  </div>
-<div class="site-hero__bokeh-vignette" aria-hidden="true"></div>
+<section class="site-hero" style="position:relative;overflow:hidden;background:radial-gradient(ellipse at 12% 20%, rgba(106,178,255,0.83) 0%, transparent 45%),radial-gradient(ellipse at 85% 15%, rgba(88,224,201,0.78) 0%, transparent 45%),radial-gradient(ellipse at 50% 62%, rgba(116,201,250,0.64) 0%, transparent 50%),radial-gradient(ellipse at 80% 85%, rgba(98,242,196,0.74) 0%, transparent 40%),#e2f4ff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
   <div class="site-hero__content">
-    <p class="site-hero__headline">AI that listens.<br />Agents that convert.</p>
+    <p class="hero-display">AI that listens.<br />Agents that convert.</p>
         <div class="site-hero__sub">
-            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.9);width:100px;margin:21px 0 24px;" />
-      <p style="font-size:18px;color:rgba(255,255,255,0.70);font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">Schedule your free consultation now.</p>
-      <a href="/contact" style="display:inline-block;background:#fff;color:#1a0a30;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
+      <hr style="border:none;border-top:1px solid rgba(0,0,0,0.18);width:100px;margin:21px 0 24px;" />
+      <p style="font-size:18px;color:#3d3d3f;font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">One partner. One strategy. More customers.</p>
+      <a href="/contact" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Book a Free Discovery Call</a>
     </div>
-  </div>
+</div>
 </section>
 
 <!-- ═══ BODY: editorial + sidebar ═══ -->
@@ -485,7 +369,7 @@
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">I've worked with businesses around Old Courthouse Square and out toward the McDonald District, where reputation is everything. One bad interaction sticks around, and a review mentioning a "useless chatbot" can sting for months. The handoff protocol keeps the AI in its lane — answering what it knows cold and escalating what it doesn't. The system gets sharper over time. If the same question triggers escalation three times in a week, I update the knowledge base so it handles that topic going forward.</p>
       <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">Your customers never need to know they're talking to AI until it matters. When it does, a real person is already on the line. That's how you protect your reputation around the clock without burning out your staff.</p>
 
-      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Start with a free call</a>
+      <a href="/contact" style="display:inline-block;margin-top:24px;background:#1d1d1f;color:#fff;border-radius:980px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;font-family:var(--font-sf);">Book a Free Discovery Call</a>
     </section>
 
     <template x-teleport="body">

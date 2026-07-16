@@ -24,8 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=reviews-carousel4" />
-  <!-- deploy-pipeline-test: 2026-07-08 -->
+  <link rel="stylesheet" href="styles.css?v=hero-light10" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
   {
@@ -43,7 +42,6 @@
         "founder": { "@type": "Person", "name": "Jim Donohue" },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1891 Bennett Meadows Ln",
           "addressLocality": "Santa Rosa",
           "addressRegion": "CA",
           "postalCode": "95405",
@@ -146,7 +144,7 @@
             <a href="/lead-generation" class="site-header-megamenu__link">Lead Generation</a>
           </div>
           <div class="site-header-megamenu__group">
-            <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4v3.5M17 26.5V31"/><path d="M6.5 10 9 12.5M25 25l2.5 2.5"/><path d="M4 17h3.5M26.5 17H31"/><path d="M6.5 24 9 21.5M25 9l2.5-2.5"/><rect x="10" y="13" width="14" height="12" rx="3"/><circle cx="14" cy="18.5" r="1.2"/><circle cx="20" cy="18.5" r="1.2"/><path d="M14.5 22h5"/></svg><span>Internet Marketing Service</span></p>
+            <p class="site-header-megamenu__heading"><svg class="site-header-megamenu__icon" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 4v3.5M17 26.5V31"/><path d="M6.5 10 9 12.5M25 25l2.5 2.5"/><path d="M4 17h3.5M26.5 17H31"/><path d="M6.5 24 9 21.5M25 9l2.5-2.5"/><rect x="10" y="13" width="14" height="12" rx="3"/><circle cx="14" cy="18.5" r="1.2"/><circle cx="20" cy="18.5" r="1.2"/><path d="M14.5 22h5"/></svg><span>AI Tools</span></p>
             <a href="/ai-receptionist" class="site-header-megamenu__link">AI Receptionist</a>
             <a href="/conversational-ai-agent" class="site-header-megamenu__link">Conversational AI Agent</a>
           </div>
@@ -212,7 +210,7 @@
 
       <div x-data="{open:false}" style="border-bottom:1px solid var(--clr-border);">
         <button @click="open=!open" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-family:var(--font-sf);">
-          <span style="font-size:18px;font-weight:500;color:var(--clr-text);">Internet Marketing Service</span>
+          <span style="font-size:18px;font-weight:500;color:var(--clr-text);">AI Tools</span>
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" :style="open?'transform:rotate(180deg)':''" style="display:block;transition:transform 0.2s;flex-shrink:0;"><path d="M2 4l4 4 4-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div x-show="open" x-transition:enter="transition-all ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" style="padding-bottom:8px;overflow:hidden;">
@@ -233,46 +231,51 @@
 
 <main class="site-page">
 <!-- ═══ HERO ═══ -->
-<section class="site-hero" style="position:relative;overflow:hidden;background:radial-gradient(ellipse at 12% 20%, rgba(90,170,255,0.90) 0%, transparent 45%),radial-gradient(ellipse at 85% 15%, rgba(70,220,195,0.85) 0%, transparent 45%),radial-gradient(ellipse at 50% 62%, rgba(100,195,250,0.70) 0%, transparent 50%),radial-gradient(ellipse at 80% 85%, rgba(80,240,190,0.80) 0%, transparent 40%),#dff3ff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-  <div class="site-hero__content">
-    <!-- Hero display copy only — not h1 -->
-    <p class="hero-display">Beautiful websites.<br />Powered by smart marketing.</p>
-    <div class="site-hero__sub">
-            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.18);width:100px;margin:21px 0 24px;" />
-      <p style="font-size:18px;color:#3d3d3f;font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">
-      Schedule your free consultation now.
-      </p>
-      <a href="/contact" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Get Started</a>
-    </div>
+<section class="site-hero site-hero--aurora" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+  <div class="site-hero__aurora" aria-hidden="true">
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--yellow"></span>
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--gold"></span>
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--peach"></span>
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--pink"></span>
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--magenta"></span>
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--blue"></span>
+    <span class="site-hero__aurora-blob site-hero__aurora-blob--cyan"></span>
   </div>
+  <div class="site-hero__content">
+    <p class="hero-display">Smart design. Real results.<br />Your business.</p>
+        <div class="site-hero__sub">
+      <hr style="border:none;border-top:1px solid rgba(0,0,0,0.18);width:100px;margin:21px 0 24px;" />
+      <p style="font-size:18px;color:#3d3d3f;font-weight:500;margin:0 0 20px;letter-spacing:-0.01em;">One partner. One strategy. More customers.</p>
+      <a href="/contact" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Book a Free Discovery Call</a>
+    </div>
+</div>
 </section>
 
 <!-- ═══ INTRO ═══ -->
 <section class="bio-intro">
   <div class="body-prose" style="max-width:1280px;margin:0 auto;text-align:center;padding:0 var(--side-pad);">
     <h1>Website Designer Santa Rosa, California</h1>
-    <p>Is your website paying you back?</p>
-    <p>Pretty doesn't pay the bills. Strategy does.</p>
-    <p>That's where I come in.</p>
+    <p>Most websites and marketing materials just sit there. Pretty gets you noticed, strategy gets you paid, and good design does both.</p>
     <ul>
-      <li>Get found locally — SEO that puts you at the top of Google when Santa Rosa customers are searching</li>
-      <li>Lead generation — marketing that turns searches into calls, quotes, and booked jobs</li>
-      <li>Branding — graphic design that makes you the name customers think of first</li>
-      <li>AI that never sleeps — tools that answer calls and qualify prospects 24/7, even after hours</li>
+      <li><a href="/local-seo" style="color:#2997ff;text-decoration:none;font-weight:400;">Get found locally</a> — SEO that puts you at the top of Google when Santa Rosa customers are searching</li>
+      <li><a href="/lead-generation" style="color:#2997ff;text-decoration:none;font-weight:400;">Lead generation</a> — marketing that turns searches into calls, quotes, and booked jobs</li>
+      <li><a href="/graphic-designer" style="color:#2997ff;text-decoration:none;font-weight:400;">Branding</a> — graphic design that makes you the name customers think of first</li>
+      <li><a href="/ai-receptionist" style="color:#2997ff;text-decoration:none;font-weight:400;">AI that never sleeps</a> — tools that answer calls and qualify prospects 24/7, even after hours</li>
     </ul>
-    <p class="bio-intro__tagline">One partner. One strategy. More customers.</p>
   </div>
+</section>
+
+<!-- ═══ CREDIBILITY ═══ -->
+<section class="home-page-inner" style="padding-top:52px;padding-bottom:0;">
+  <h2 style="font-size:26px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#1d1d1f;margin:0 0 16px;">Experience your competitors can't match</h2>
+  <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0;">I'm Jim Donohue. I've spent 30+ years designing experiences that get people to act — senior UX roles at Apple, Wells Fargo, Deloitte, and Intel Security, on products used by millions. And through it all, I've run Donohue Design, partnering with startups, agencies, and Bay Area businesses.</p>
 </section>
 
 <!-- ═══ RECOMMENDATIONS ═══ -->
 <div class="reviews-section">
   <div class="home-page-inner">
-    <hr class="home-divider home-divider--top" />
+    <hr class="home-divider home-divider--top" style="margin-top:48px;margin-bottom:28px;" />
     <div style="padding:0 0 8px;">
-      <div class="reviews-header">
-        <p class="reviews-header__title">Recommendations</p>
-        <a class="reviews-header__link" href="https://www.linkedin.com/in/jimdonohue/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">via LinkedIn <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      </div>
       <div class="reviews-block"
         x-data="{
           page: 0,
@@ -305,6 +308,11 @@
           prev() { this.page = (this.page - 1 + this.pageCount) % this.pageCount; },
           next() { this.page = (this.page + 1) % this.pageCount; }
         }">
+        <div class="reviews-header" style="margin-bottom:18px;align-items:center;">
+          <p class="reviews-header__title" style="margin:0;">Recommendations</p>
+          <a class="reviews-header__link" href="https://www.linkedin.com/in/jimdonohue/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">via LinkedIn <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <p style="margin:0 0 0 auto;background:#f5f5f7;border-radius:20px;padding:4px 12px;font-size:13px;font-weight:700;color:#1d1d1f;letter-spacing:0.04em;" x-text="(page + 1) + ' / ' + pageCount"></p>
+        </div>
         <div class="reviews-carousel">
           <button type="button" class="reviews-nav reviews-nav--prev" @click="prev()" aria-label="Previous recommendations">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
@@ -327,15 +335,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
           </button>
         </div>
-        <p class="reviews-page" x-text="(page + 1) + ' / ' + pageCount"></p>
       </div>
     </div>
-    <hr class="home-divider home-divider--bottom" />
+    <hr class="home-divider home-divider--bottom" style="margin-top:20px;margin-bottom:28px;" />
   </div>
 </div>
 
 <!-- ═══ SERVICE TILES + SIDEBAR ═══ -->
-<div class="tiles-section tiles-section--home">
+<div class="tiles-section tiles-section--home" style="padding-top:28px !important;">
   <div class="tiles-outer site-layout-with-sidebar" style="max-width:1280px;margin:0 auto;padding:0 var(--side-pad);">
 
     <!-- Left: tiles -->
@@ -421,11 +428,11 @@
         </div>
       </div>
 
-      <!-- Tile 4: Internet Marketing Service -->
+      <!-- Tile 4: AI Tools -->
       <div class="tile-shadow" style="background:#fff;border-radius:20px;padding:44px 56px;">
         <div class="tile-inner tile-reverse">
           <div class="tile-text">
-            <h2 style="font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#e2602b;margin:0 0 14px;line-height:23px;"><a href="/internet-marketing-service" style="color:inherit;text-decoration:none;" onmouseenter="this.style.opacity='0.65'" onmouseleave="this.style.opacity='1'">Internet Marketing Service Santa Rosa</a></h2>
+            <h2 style="font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#e2602b;margin:0 0 14px;line-height:23px;"><a href="/internet-marketing-service" style="color:inherit;text-decoration:none;" onmouseenter="this.style.opacity='0.65'" onmouseleave="this.style.opacity='1'">AI Tools for Santa Rosa Business</a></h2>
             <h3 style="font-size:26px;font-weight:700;letter-spacing:-0.03em;line-height:1.23;color:#1d1d1f;margin:0 0 20px;">Never miss a lead again.</h3>
             <p style="font-size:18px;color:#1d1d1f;line-height:1.5;margin:0;">AI-powered tools running around the clock — answering calls, qualifying prospects, and keeping conversations going long after your team clocks out.</p>
           </div>
@@ -506,13 +513,51 @@
   </div>
 </div>
 
-<div class="home-map-section">
+<!-- ═══ SELECTED WORK ═══ -->
+<section style="max-width:1280px;margin:0 auto;padding:56px var(--side-pad) 16px;">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px;">
+    <h2 style="font-size:26px;font-weight:700;letter-spacing:-0.03em;color:#1d1d1f;margin:0;">Selected work</h2>
+    <a href="/case-studies" style="font-size:17px;color:#2997ff;text-decoration:none;" onmouseenter="this.style.opacity='0.65'" onmouseleave="this.style.opacity='1'">View all case studies ›</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;">
+    <a href="/case-studies" style="display:block;background:#fff;border:1px solid #e5e5ea;border-radius:16px;overflow:hidden;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
+      <img src="images/apple-email-1-sm.webp" alt="Email campaign design for Apple" loading="lazy" decoding="async" style="display:block;width:100%;height:180px;object-fit:cover;object-position:top;" />
+      <span style="display:block;padding:14px 16px;">
+        <span style="display:block;font-size:16px;font-weight:600;color:#1d1d1f;">Apple</span>
+        <span style="display:block;font-size:14px;color:#6e6e73;">Email campaign design</span>
+      </span>
+    </a>
+    <a href="/case-studies" style="display:block;background:#fff;border:1px solid #e5e5ea;border-radius:16px;overflow:hidden;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
+      <img src="images/tech-cu-email-sm.webp" alt="Branch marketing campaign for Tech CU credit union" loading="lazy" decoding="async" style="display:block;width:100%;height:180px;object-fit:cover;object-position:top;" />
+      <span style="display:block;padding:14px 16px;">
+        <span style="display:block;font-size:16px;font-weight:600;color:#1d1d1f;">Tech CU</span>
+        <span style="display:block;font-size:14px;color:#6e6e73;">Branch launch campaign</span>
+      </span>
+    </a>
+    <a href="/case-studies" style="display:block;background:#fff;border:1px solid #e5e5ea;border-radius:16px;overflow:hidden;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
+      <img src="images/GenesisClub-sm.webp" alt="Brand identity for Genesis Club, Genuine Introductions" loading="lazy" decoding="async" style="display:block;width:100%;height:180px;object-fit:cover;object-position:top;" />
+      <span style="display:block;padding:14px 16px;">
+        <span style="display:block;font-size:16px;font-weight:600;color:#1d1d1f;">Genesis Club</span>
+        <span style="display:block;font-size:14px;color:#6e6e73;">Brand built from scratch — 5,000 members</span>
+      </span>
+    </a>
+    <a href="/case-studies" style="display:block;background:#fff;border:1px solid #e5e5ea;border-radius:16px;overflow:hidden;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
+      <img src="images/hp-flyer-sm.webp" alt="Direct mail design for HP" loading="lazy" decoding="async" style="display:block;width:100%;height:180px;object-fit:cover;object-position:top;" />
+      <span style="display:block;padding:14px 16px;">
+        <span style="display:block;font-size:16px;font-weight:600;color:#1d1d1f;">HP</span>
+        <span style="display:block;font-size:14px;color:#6e6e73;">Direct mail campaign</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<div class="home-map-section" style="padding-bottom:50px;">
   <div class="home-map-section__container">
-    <h2 class="site-location-map__title">Serving Santa Rosa, Sonoma, Marin &amp; Napa Counties.</h2>
+    <h2 class="site-location-map__title">Serving Santa Rosa, Sonoma, Marin &amp; Napa Counties</h2>
     <div class="contact-map home-map-section__map">
       <iframe
-        title="Donohue Design location map"
-        src="https://maps.google.com/maps?q=1891+Bennett+Meadows+Ln,+Santa+Rosa,+CA+95405&amp;hl=en&amp;z=14&amp;output=embed"
+        title="Map of Santa Rosa, California — Donohue Design service area"
+        src="https://maps.google.com/maps?q=Santa+Rosa,+CA&amp;hl=en&amp;z=12&amp;output=embed"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen
@@ -520,6 +565,13 @@
     </div>
   </div>
 </div>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="home-page-inner" style="padding-top:32px;padding-bottom:80px;text-align:left;">
+  <h2 style="font-size:32px;font-weight:800;letter-spacing:-0.04em;line-height:1.25;color:#1d1d1f;margin:0 0 16px;">Let's find out what your website could be doing for you</h2>
+  <p style="font-size:18px;line-height:1.5;color:#3d3d3f;font-weight:400;margin:0 0 28px;">A free 45-minute discovery call. We'll walk through your site, your Google presence, and where leads are slipping away — you'll leave with clear next steps whether we work together or not.</p>
+  <a href="/contact" style="display:inline-block;background:#000;color:#fff;font-size:16px;font-weight:600;letter-spacing:-0.01em;padding:14px 32px;border-radius:40px;text-decoration:none;transition:opacity 0.15s;" onmouseenter="this.style.opacity='0.82'" onmouseleave="this.style.opacity='1'">Book a Free Discovery Call</a>
+</section>
 
 </main>
 
@@ -531,7 +583,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <p style="font-size:22px;font-weight:700;color:#fff;margin:0 0 6px;letter-spacing:-0.01em;">Donohue Design</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 4px;">1891 Bennett Meadows Ln, Santa Rosa, CA 95405</p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 4px;">Santa Rosa, CA</p>
         <p style="font-size:15px;color:rgba(255,255,255,0.78);font-weight:500;margin:0 0 20px;">Serving Sonoma, Marin &amp; Napa Counties</p>
         <div style="display:flex;gap:12px;margin-bottom:20px;">
           <a href="https://www.linkedin.com/in/jimdonohue" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="width:48px;height:48px;border-radius:50%;background:#363636;display:flex;align-items:center;justify-content:center;text-decoration:none;">
@@ -547,7 +599,7 @@
         <a href="/website-designer">Website Designer</a>
         <a href="/marketing-consultant">Marketing Consultant</a>
         <a href="/graphic-designer">Graphic Designer</a>
-        <a href="/internet-marketing-service">Internet Marketing Service</a>
+        <a href="/internet-marketing-service">AI Tools</a>
         <a href="/case-studies">Case Studies</a>
         <a href="/pricing">Pricing</a>
         <a href="/about">About</a>
