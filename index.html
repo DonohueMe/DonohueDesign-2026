@@ -24,7 +24,7 @@
       theme: { screens: { sm: '640px', md: '840px', lg: '1024px', xl: '1280px', '2xl': '1536px' } }
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=anim-slow54" />
+  <link rel="stylesheet" href="styles.css?v=reviews-carousel4" />
   <!-- deploy-pipeline-test: 2026-07-08 -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script type="application/ld+json">
@@ -264,39 +264,70 @@
   </div>
 </section>
 
-<!-- ═══ REVIEWS ═══ -->
+<!-- ═══ RECOMMENDATIONS ═══ -->
 <div class="reviews-section">
   <div class="home-page-inner">
     <hr class="home-divider home-divider--top" />
     <div style="padding:0 0 8px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:32px;">
-        <p style="font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#2997ff;margin:0;">Client Reviews</p>
-        <div style="display:flex;gap:2px;"><span style="color:#FFB800;font-size:14px;">★</span><span style="color:#FFB800;font-size:14px;">★</span><span style="color:#FFB800;font-size:14px;">★</span><span style="color:#FFB800;font-size:14px;">★</span><span style="color:#FFB800;font-size:14px;">★</span></div>
-        <span style="font-size:13px;color:#6e6e73;">5.0 · Google</span>
+      <div class="reviews-header">
+        <p class="reviews-header__title">Recommendations</p>
+        <a class="reviews-header__link" href="https://www.linkedin.com/in/jimdonohue/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">via LinkedIn <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
       <div class="reviews-block"
         x-data="{
+          page: 0,
+          perPage: 3,
           reviews: [
-            { initial: 'M', name: 'Maria T.', location: 'Santa Rosa, CA', quote: 'Jim redesigned our winery site and bookings went up 30% in the first month. He actually understood what we needed before we did.' },
-            { initial: 'D', name: 'Derek H.', location: 'Petaluma, CA', quote: 'We went from page 3 to page 1 on Google for our main keyword. The SEO strategy Jim put together was exactly what our shop needed.' },
-            { initial: 'L', name: 'Lisa M.', location: 'Healdsburg, CA', quote: 'The AI receptionist handles after-hours calls now. We haven\'t missed a lead in weeks. Worth every penny.' }
-          ]
+            { id: 'buck', initial: 'B', name: 'Buck French', role: 'General Partner, X10 Capital', quote: 'Jim did fantastic work for me. He was always given a very tight timeline and he always delivered high quality work.' },
+            { id: 'david-r', initial: 'D', name: 'David Roualdes', role: 'Executive Leader & Consultant', quote: 'Brilliant designs, careful planning, great execution. Hire Jim at the first chance you get.' },
+            { id: 'scott', initial: 'S', name: 'Scott Plamondon', role: 'Senior Director, AI Content Innovation', quote: 'Jim and I worked together as a Senior Art Direct/Senior Copywriter team concepting direct mail pieces for HP. Jim is highly creative, a hard worker, and has an excellent eye for design. We made a great team and I recommend him to anyone.' },
+            { id: 'david-g', initial: 'D', name: 'David Groode', role: 'Personal Intuitive Life Coach', quote: 'Jim\'s work is impeccable and cutting edge. He always meets deadlines under pressure... His designs have created breakthrough results for me when promoting different events. I would absolutely hire him again for any project.' },
+            { id: 'mike', initial: 'M', name: 'Mike Silvey', role: 'VP of Marketing, Dexterra', quote: 'Jim did a fantastic job at interpreting our marketing vision and message and created excellent marketing and communication pieces... Jim has always been collaborative, inventive, very fast in both concepts and ideas and content turnaround... I have recommended Jim many times and will continue to do so.' },
+            { id: 'john', initial: 'J', name: 'John Noble', role: 'Co-founder, Genuine Introductions Ltd', quote: 'When it comes to design and creativity, Jim is the best in the business... After 18 months of trading we have built an active database of 5,000 members. Much of this credit goes to Jim, who developed the brand name and logo from scratch... Without Jim\'s input, the business would not be where it is today.' }
+          ],
+          init() {
+            const mq = window.matchMedia('(min-width: 840px)');
+            const sync = () => {
+              const next = mq.matches ? 3 : 1;
+              if (next !== this.perPage) {
+                this.perPage = next;
+                this.page = 0;
+              }
+            };
+            sync();
+            mq.addEventListener('change', sync);
+          },
+          get pageCount() { return Math.ceil(this.reviews.length / this.perPage); },
+          get visible() {
+            const start = this.page * this.perPage;
+            return this.reviews.slice(start, start + this.perPage);
+          },
+          prev() { this.page = (this.page - 1 + this.pageCount) % this.pageCount; },
+          next() { this.page = (this.page + 1) % this.pageCount; }
         }">
-        <div class="reviews-grid">
-          <template x-for="review in reviews" :key="review.name">
-            <div class="review-card">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#e0e7ff,#c7d2fe);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4338ca;flex-shrink:0;" x-text="review.initial"></div>
-                <div>
-                  <p style="font-size:14px;font-weight:700;color:#1d1d1f;margin:0;line-height:1.2;" x-text="review.name"></p>
-                  <p style="font-size:12px;color:#8e8e93;margin:0;" x-text="review.location"></p>
+        <div class="reviews-carousel">
+          <button type="button" class="reviews-nav reviews-nav--prev" @click="prev()" aria-label="Previous recommendations">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="reviews-grid" :class="'reviews-grid--' + perPage">
+            <template x-for="review in visible" :key="review.id">
+              <div class="review-card">
+                <div class="review-card__head">
+                  <div class="review-card__avatar" x-text="review.initial"></div>
+                  <div>
+                    <p class="review-card__name" x-text="review.name"></p>
+                    <p class="review-card__role" x-text="review.role"></p>
+                  </div>
                 </div>
-                <div style="margin-left:auto;display:flex;gap:1px;" aria-hidden="true"><span style="color:#FFB800;font-size:12px;">★</span><span style="color:#FFB800;font-size:12px;">★</span><span style="color:#FFB800;font-size:12px;">★</span><span style="color:#FFB800;font-size:12px;">★</span><span style="color:#FFB800;font-size:12px;">★</span></div>
+                <p class="review-card__quote" x-text="review.quote"></p>
               </div>
-              <p style="font-size:15px;color:#3d3d3f;line-height:1.5;margin:0;" x-text="review.quote"></p>
-            </div>
-          </template>
+            </template>
+          </div>
+          <button type="button" class="reviews-nav reviews-nav--next" @click="next()" aria-label="Next recommendations">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
+        <p class="reviews-page" x-text="(page + 1) + ' / ' + pageCount"></p>
       </div>
     </div>
     <hr class="home-divider home-divider--bottom" />
