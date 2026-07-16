@@ -7853,3 +7853,158 @@ footer:not(.site-footer) {
     transform: none;
   }
 }
+
+/* AI receptionist — what it does infographic (matches call-flow neon style) */
+.ai-recept-does {
+  width: 100%;
+  margin: 28px 0 0;
+}
+.ai-recept-does__frame {
+  --ai-cyan: #5ce1ff;
+  --ai-magenta: #ff4ec8;
+  --ai-amber: #ffb040;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e5ea;
+  border-radius: 18px;
+  padding: clamp(28px, 5vw, 44px) clamp(22px, 4vw, 40px);
+  color: #fff;
+  background:
+    radial-gradient(ellipse 55% 40% at 0% 20%, rgba(92, 225, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 45% at 100% 70%, rgba(255, 78, 200, 0.2), transparent 58%),
+    radial-gradient(ellipse 40% 30% at 80% 10%, rgba(255, 78, 200, 0.12), transparent 50%),
+    #0a0a0c;
+  isolation: isolate;
+}
+.ai-recept-does__header {
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(92, 225, 255, 0.28);
+}
+.ai-recept-does__title {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.ai-recept-does__title span {
+  color: var(--ai-magenta);
+}
+.ai-recept-does__sub {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+.ai-recept-does__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+.ai-recept-does__list::before {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--ai-cyan), var(--ai-magenta));
+  opacity: 0.55;
+}
+.ai-recept-does__item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  position: relative;
+}
+.ai-recept-does__icon {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ai-cyan);
+  background: #0a0a0c;
+  border: 1.5px solid var(--ai-cyan);
+  box-shadow: 0 0 18px rgba(92, 225, 255, 0.35);
+  align-self: center;
+}
+.ai-recept-does__icon svg {
+  width: 26px;
+  height: 26px;
+}
+.ai-recept-does__card {
+  padding: 14px 16px 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(rgba(10, 10, 12, 0.92), rgba(10, 10, 12, 0.92)),
+    linear-gradient(90deg, var(--ai-cyan), var(--ai-magenta));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.ai-recept-does__label {
+  margin: 0 0 6px;
+  font-size: clamp(15px, 2.4vw, 18px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ai-amber);
+  line-height: 1.25;
+}
+.ai-recept-does__label span {
+  color: var(--ai-magenta);
+}
+.ai-recept-does__copy {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.82);
+}
+.ai-recept-does__footer {
+  margin: 28px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(92, 225, 255, 0.28);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+.ai-recept-does__footer span {
+  color: var(--ai-cyan);
+}
+.ai-recept-does__footer {
+  color: var(--ai-magenta);
+}
+@media (max-width: 560px) {
+  .ai-recept-does__list::before {
+    left: 19px;
+  }
+  .ai-recept-does__item {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .ai-recept-does__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .ai-recept-does__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
