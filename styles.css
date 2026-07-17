@@ -5307,7 +5307,7 @@ img, svg { display: block; }
   height: auto;
   overflow: hidden;
   border-radius: 12px;
-  border: 1px solid var(--clr-border);
+  border: none;
   background: #fff;
 }
 #calendly-mount,
