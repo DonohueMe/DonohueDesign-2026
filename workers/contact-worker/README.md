@@ -2,6 +2,8 @@
 
 Handles `POST /contact` from `contact.html`: validates fields, verifies Cloudflare Turnstile, sends email via [Resend](https://resend.com/docs/send-with-cloudflare-workers).
 
+**Note:** JD Home Repair uses a **separate** Worker (`contact-worker-jd-homerepair-contact`). Keep `CONTACT_TO` as the same inbox (`jim@donohue.tech`) if you want both forms on one Resend free plan. Do not deploy both sites under the same Worker name — that overwrites one with the other.
+
 ## Prerequisites
 
 1. **Resend** — API key + verified domain at [resend.com/domains](https://resend.com/domains)
@@ -35,7 +37,7 @@ npx wrangler secret put TURNSTILE_SECRET_KEY
 
 Turnstile secret: Cloudflare Dashboard → **Turnstile** → your widget → **Secret key**.
 
-Or set both under **Workers & Pages → contact-worker → Settings → Variables and Secrets**.
+Or set both under **Workers & Pages → contact-worker-donohuedesign-2026 → Settings → Variables and Secrets**.
 
 ### 4. Deploy
 
@@ -45,9 +47,9 @@ npm run deploy
 
 Your form already posts to:
 
-`https://contact-worker.jim-7af.workers.dev/contact`
+`https://contact-worker-donohuedesign-2026.jim-7af.workers.dev/contact`
 
-If this deploys to the same worker name (`contact-worker`), the URL stays the same. If you create a new worker, update the `action` on the form in `contact.html`.
+Keep this Worker named `contact-worker-donohuedesign-2026`. JD Home Repair uses `contact-worker-jd-homerepair-contact` and the same `CONTACT_TO` inbox when sharing a Resend free plan.
 
 ## Local testing
 

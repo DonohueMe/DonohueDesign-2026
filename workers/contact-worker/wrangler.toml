@@ -1,10 +1,11 @@
-name = "contact-worker"
+name = "contact-worker-donohuedesign-2026"
 main = "src/index.js"
 compatibility_date = "2024-08-01"
 
 # Non-secret config — update to your verified Resend sender and inbox.
 [vars]
 CONTACT_FROM = "Donohue Design <contact@donohue.tech>"
+# Same inbox as JD Home Repair is fine (one Resend free plan). JD uses Worker `jd-homerepair-contact`.
 CONTACT_TO = "jim@donohue.tech"
 ALLOWED_ORIGINS = "https://donohuedesign.com,https://www.donohuedesign.com"
 
