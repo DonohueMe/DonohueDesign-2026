@@ -1,49 +1,43 @@
-# Strip .html — canonical URLs have no extension
-/about.html /about 301
-/contact.html /contact 301
-/pricing.html /pricing 301
-/case-studies.html /case-studies 301
-/website-designer.html /website-designer 301
-/website-design-strategy.html /website-design-strategy 301
-/smart-websites.html /smart-websites 301
-/website-development.html /website-development 301
-/marketing-consultant.html /marketing-consultant 301
-/local-seo.html /local-seo 301
-/email-marketing.html /email-marketing 301
-/lead-generation.html /lead-generation 301
-/graphic-designer.html /graphic-designer 301
-/logo-design.html /logo-design 301
-/brochure-flyer-design.html /brochure-design 301
-/brochure-design.html /brochure-design 301
-/flyer-design.html /flyer-design 301
-/presentation-design.html /presentation-design 301
-/email-design.html /email-design 301
-/internet-marketing-service.html /internet-marketing-service 301
-/ai-receptionist.html /ai-receptionist 301
-/conversational-ai-agent.html /conversational-ai-agent 301
-/index.html / 301
-
-# Trailing slashes — 301 to canonical (no slash)
-/about/ /about 301
-/contact/ /contact 301
-/pricing/ /pricing 301
-/case-studies/ /case-studies 301
-/website-designer/ /website-designer 301
-/website-design-strategy/ /website-design-strategy 301
-/smart-websites/ /smart-websites 301
-/website-development/ /website-development 301
-/marketing-consultant/ /marketing-consultant 301
-/local-seo/ /local-seo 301
-/email-marketing/ /email-marketing 301
-/lead-generation/ /lead-generation 301
-/graphic-designer/ /graphic-designer 301
-/logo-design/ /logo-design 301
-/brochure-flyer-design/ /brochure-design 301
+# Legacy path rename (Cloudflare Pages already handles .html → clean URL and trailing-slash cleanup)
 /brochure-flyer-design /brochure-design 301
-/brochure-design/ /brochure-design 301
-/flyer-design/ /flyer-design 301
-/presentation-design/ /presentation-design 301
-/email-design/ /email-design 301
-/internet-marketing-service/ /internet-marketing-service 301
-/ai-receptionist/ /ai-receptionist 301
-/conversational-ai-agent/ /conversational-ai-agent 301
+/brochure-flyer-design/ /brochure-design 301
+/brochure-flyer-design.html /brochure-design 301
+
+# Specific overrides (must precede category wildcards)
+/website/bersin-deloitte-activy-feed /website-design-strategy 301
+/website/bersin-deloitte-activy-feed/ /website-design-strategy 301
+/website/bersin-deloitte-activy-feed.html /website-design-strategy 301
+/services / 301
+/services/ / 301
+/services.html / 301
+/reviews / 301
+/reviews/ / 301
+/reviews.html / 301
+
+# Category roots (exact paths that would 404 without a splat match)
+/website /website-development 301
+/website/ /website-development 301
+/website.html /website-development 301
+/logo-branding /logo-design 301
+/logo-branding/ /logo-design 301
+/logo-branding.html /logo-design 301
+/email /email-design 301
+/email/ /email-design 301
+/email.html /email-design 301
+/marketing-materials /brochure-design 301
+/marketing-materials/ /brochure-design 301
+/marketing-materials.html /brochure-design 301
+/direct-mail /brochure-design 301
+/direct-mail/ /brochure-design 301
+/direct-mail.html /brochure-design 301
+/website-design /website-designer 301
+/website-design/ /website-designer 301
+/website-design.html /website-designer 301
+
+# Category wildcards (Cloudflare Pages splat: * greedily matches subpaths including .html)
+/website/* /website-development 301
+/logo-branding/* /logo-design 301
+/email/* /email-design 301
+/marketing-materials/* /brochure-design 301
+/direct-mail/* /brochure-design 301
+/website-design/* /website-designer 301
