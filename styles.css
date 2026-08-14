@@ -4836,7 +4836,7 @@ img, svg { display: block; }
 .body-prose > p:last-child {
   margin-bottom: 0 !important;
 }
-/* Hero display copy — marketing line only; not the page h1 (GMB/SEO reads .page-h1 below) */
+/* Hero display copy — marketing line only; not the page h1 (Google Business Profile/SEO reads .page-h1 below) */
 .hero-display,
 .site-hero__headline {
   font-size: clamp(36px, 7vw, 80px);
@@ -4873,7 +4873,7 @@ img, svg { display: block; }
   }
 }
 
-/* Single page h1 — local SEO / GMB; always below hero, never in hero */
+/* Single page h1 — local SEO / Google Business Profile; always below hero, never in hero */
 .page-h1 {
   font-size: 34px;
   font-weight: 800;
