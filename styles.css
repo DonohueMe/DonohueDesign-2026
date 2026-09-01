@@ -4497,6 +4497,7 @@ img, svg { display: block; }
   color: var(--clr-tile-title);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  line-height: calc(1.2em + 3px) !important;
 }
 .sidebar-promo-card__label {
   font-size: 15px;
