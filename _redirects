@@ -1,3 +1,7 @@
+# Case study rename
+/case-studies-2 /case-studies-wf-search 301
+/case-studies-2.html /case-studies-wf-search 301
+
 # Legacy path rename (Cloudflare Pages already handles .html → clean URL and trailing-slash cleanup)
 /brochure-flyer-design /brochure-design 301
 /brochure-flyer-design/ /brochure-design 301

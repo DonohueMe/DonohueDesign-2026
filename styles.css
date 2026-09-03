@@ -4917,13 +4917,13 @@ img, svg { display: block; }
   margin-bottom: 0 !important;
 }
 /* Hero display copy — marketing line only; not the page h1 (Google Business Profile/SEO reads .page-h1 below)
-   Typography standard: letter-spacing -0.05em; line-height 1.375 desktop (10% over 1.25), 1.32 mobile ≤839px (10% over 1.2) */
+   Typography standard: letter-spacing -0.01em; line-height 1.375 desktop (10% over 1.25), 1.32 mobile ≤839px (10% over 1.2) */
 .hero-display,
 .site-hero__headline {
   font-size: clamp(36px, 7vw, 80px);
   font-weight: 700;
   line-height: 1.375;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.01em;
   margin: 0 0 14px;
   color: #1d1d1f;
   text-align: center;
@@ -4942,7 +4942,7 @@ img, svg { display: block; }
   .site-hero__headline {
     font-size: clamp(32.5px, 9vw, 60px);
     line-height: 1.32;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
   .site-hero__content {
     padding-left: 6px;
@@ -7092,10 +7092,13 @@ footer:not(.site-footer) {
   max-width: 100%;
   margin: 0;
 }
-.body-image-lightbox__standalone .body-image-lightbox__figure--full.body-image-lightbox__figure--match-landscape-h .body-image-lightbox__thumb {
+/* website-design-strategy.html — portfolio thumbs share Deloitte display height */
+#worth .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb,
+#after-launch .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb {
   overflow: hidden;
 }
-.body-image-lightbox__standalone .body-image-lightbox__figure--full.body-image-lightbox__figure--match-landscape-h .body-image-lightbox__thumb img {
+#worth .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb img,
+#after-launch .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb img {
   aspect-ratio: 3002 / 1465;
   object-fit: cover;
   object-position: top center;
@@ -7457,7 +7460,7 @@ footer:not(.site-footer) {
   font-weight: 600;
 }
 
-/* Full-width case study page (case-studies-2) */
+/* Full-width case study page (case-studies-wf-search) */
 .case-study {
   max-width: 920px;
   margin: 0 auto;
