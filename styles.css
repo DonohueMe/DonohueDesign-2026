@@ -7092,14 +7092,13 @@ footer:not(.site-footer) {
   max-width: 100%;
   margin: 0;
 }
-/* website-design-strategy.html — portfolio thumbs share Deloitte display height */
-#worth .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb,
-#after-launch .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb {
+/* Full-width portfolio thumbs — fixed 400px crop height */
+.body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb {
   overflow: hidden;
 }
-#worth .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb img,
-#after-launch .body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb img {
-  aspect-ratio: 3002 / 1465;
+.body-image-lightbox__standalone .body-image-lightbox__figure--full .body-image-lightbox__thumb img {
+  width: 100%;
+  height: 400px;
   object-fit: cover;
   object-position: top center;
 }
